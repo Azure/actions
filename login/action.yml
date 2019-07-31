@@ -1,0 +1,14 @@
+# Login action is moved to azure/login repository, update your workflows to use the new action.
+name: 'Login Azure'
+description: 'Login Azure wraps the az login, allowing for Azure actions to log into Azure'
+inputs: 
+  creds:
+    description: 'Paste output of `az ad sp create-for-rbac` as value of secret variable: AZURE_CREDENTIALS'
+    deprecationMessage: 'This Login action is ARCHIVED and will not receive any updates, update your workflows to use the new action azure/login@v1'
+    required: true
+branding:
+  icon: 'login.svg'
+  color: 'blue'
+runs:
+  using: 'node12'
+  main: 'lib/main.js'
