@@ -1,3 +1,41 @@
+## Azure Login metadata file
+```yaml
+# action.yml
+
+# Login to Azure subscription
+name: 'Login Azure'
+description: 'Login Azure wraps the az login, allowing for Azure actions to log into Azure'
+inputs: 
+  creds: # id of input
+    description: 'Paste the contents of `az ad sp create-for-rbac --name <SPN name> --scopes /subscriptions/<subsciption-id>/resourceGroups/<resource-group> --role contributor --sdk-auth` as value of secret variable: AZURE_CREDENTIALS'
+    required: true
+branding:
+  icon: 'login.svg' # vector art to display in the GitHub Marketplace
+  color: 'blue' # optional, decorates the entry in the GitHub Marketplace
+runs:
+  using: 'node'
+  main: 'main.js'
+```
+
+## Sample workflow file
+
+```yaml
+# File: .github/workflows/workflow.yml
+
+on: [push, pull_request]
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: azure/actions/login@master
+      with:
+        creds: '${{ secrets.AZURE_CREDENTIALS }}'
+```
+## Usage instructions
+- Define a new secret under &lt;Your repo &gt;/settings/secrets : “Add a new secret”
+- Paste the contents of `az ad sp create-for-rbac --name <SPN name> --scopes /subscriptions/<subscription-id>/resourceGroups/<resource-group> --role contributor --sdk-- auth` as value of secret variable say 'AZURE_CREDENTIALS'
+- Now in the workflow file in your branch: .github/workflows/workflow.yml set the action input value using `secrets` context
+
 
 # Contributing
 
