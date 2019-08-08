@@ -1,6 +1,12 @@
-# Azure actions
+# Azure Actions for GitHub
 
-Automate your GitHub workflows using Azure Actions
+## Automate your GitHub workflows using Azure Actions
+
+GitHub Actions gives you the flexibility to build an automated software development lifecycle workflow. With GitHub Azure Actions you can create workflows that you can set up in your repository to build, test, package, release and **deploy** to Azure. 
+
+[About GitHub Actions](https://help.github.com/en/articles/about-github-actions) 
+
+# Azure Actions listing
 
 - Azure login - this repository
 - [AppService actions](https://github.com/Azure/appservice-actions)
@@ -13,7 +19,6 @@ Automate your GitHub workflows using Azure Actions
   - K8s create secret
   - K8s deploy
 - More coming soon!
-
 
 
 ## Azure Login metadata file
