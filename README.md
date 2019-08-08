@@ -51,7 +51,7 @@ jobs:
 ```
 ## Usage instructions
 - Define a new secret under &lt;Your repo &gt;/settings/secrets : “Add a new secret”
-- Paste the contents of `az ad sp create-for-rbac --name <SPN name> --scopes /subscriptions/<subscription-id>/resourceGroups/<resource-group> --role contributor --sdk-- auth` as value of secret variable say 'AZURE_CREDENTIALS'
+- Paste the contents of `az ad sp create-for-rbac --name <SPN name> --scopes /subscriptions/<subscription-id>/resourceGroups/<resource-group> --role contributor --sdk-auth` as value of secret variable say 'AZURE_CREDENTIALS'
 - Now in the workflow file in your branch: .github/workflows/workflow.yml set the action input value using `secrets` context
 
 
