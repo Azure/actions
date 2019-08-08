@@ -1,3 +1,21 @@
+# Azure actions
+
+Automate your GitHub workflows using Azure Actions
+
+- Azure login - this repository
+- [AppService actions](https://github.com/Azure/appservice-actions)
+  - Azure WebApp (Windows / Linux WebApps)
+  - Azure Web app for containers (Single / multi-container apps)
+- [Contaner / Kubernetes actions](https://github.com/Azure/k8s-actions)
+  - Docker login
+  - Kubectl tool installer
+  - Kubernetes set context
+  - K8s create secret
+  - K8s deploy
+- More coming soon!
+
+
+
 ## Azure Login metadata file
 ```yaml
 # action.yml
