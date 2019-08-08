@@ -1,4 +1,4 @@
-# Azure actions
+# Azure Actions for GitHub
 
 Automate your GitHub workflows using Azure Actions
 
