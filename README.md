@@ -8,12 +8,14 @@ GitHub Actions gives you the flexibility to build an automated software developm
 
 # Azure Actions listing
 
-- Azure login - this repository
+- [Azure login](https://github.com/Azure/actions) - this repository
+  - Azure login using Service Principal
 - [AppService actions](https://github.com/Azure/appservice-actions)
   - Azure WebApp (Windows / Linux WebApps)
   - Azure Web app for containers (Single / multi-container apps)
+- [Contaner actions](https://github.com/Azure/container-actions)
+  - Docker login/logout
 - [Contaner / Kubernetes actions](https://github.com/Azure/k8s-actions)
-  - Docker login
   - Kubectl tool installer
   - Kubernetes set context
   - K8s create secret
