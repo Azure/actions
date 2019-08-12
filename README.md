@@ -2,9 +2,7 @@
 
 ## Automate your GitHub workflows using Azure Actions
 
-GitHub Actions gives you the flexibility to build an automated software development lifecycle workflow. With GitHub Azure Actions you can create workflows that you can set up in your repository to build, test, package, release and **deploy** to Azure. 
-
-[About GitHub Actions](https://help.github.com/en/articles/about-github-actions) 
+[GitHub Actions](https://help.github.com/en/articles/about-github-actions)  gives you the flexibility to build an automated software development lifecycle workflow. With GitHub Azure Actions you can create workflows that you can set up in your repository to build, test, package, release and **deploy** to Azure. 
 
 # Azure Actions listing
 
