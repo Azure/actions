@@ -11,7 +11,7 @@
 - [AppService actions](https://github.com/Azure/appservice-actions)
   - Azure WebApp (Windows / Linux WebApps)
   - Azure Web app for containers (Single / multi-container apps)
-- [Contaner actions](https://github.com/Azure/container-actions)
+- [Container actions](https://github.com/Azure/container-actions)
   - Docker login/logout
 - [Kubernetes actions](https://github.com/Azure/k8s-actions)
   - Kubectl tool installer
