@@ -26,7 +26,7 @@ Usage information for individual actions can be found in their respective reposi
 
 ### Azure action
 
-### Sample workflow that uses Azure login action to run az cli
+#### Sample workflow that uses Azure login action to run az cli
 
 ```yaml
 
