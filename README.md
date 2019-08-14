@@ -85,7 +85,7 @@ name: 'Login Azure'
 description: 'Login Azure wraps the az login, allowing for Azure actions to log into Azure'
 inputs: 
   creds: # id of input
-    description: 'Paste the contents of `az ad sp create-for-rbac --name <SPN name> --scopes /subscriptions/<subsciption-id>/resourceGroups/<resource-group> --role contributor --sdk-auth` as value of secret variable: AZURE_CREDENTIALS'
+    description: 'Paste the contents of `az ad sp create-for-rbac... as value of secret variable: AZURE_CREDENTIALS'
     required: true
 branding:
   icon: 'login.svg' # vector art to display in the GitHub Marketplace
