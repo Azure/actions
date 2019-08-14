@@ -20,9 +20,64 @@
   - K8s deploy
 - More coming soon!
 
+# Usage
+
+Usage information for individual actions can be found in their respective repositories.
+
+### Azure action
+
+Sample workflow that uses Azure login action to establish a session and run az cli
+
+## Sample workflow that uses Azure login action to run az cli
+
+```yaml
+
+# File: .github/workflows/workflow.yml
+
+on: [push]
+
+name: AzureLoginSample
+
+jobs:
+
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+    
+    - uses: azure/actions/login@master
+      with:
+        creds: ${{ secrets.AZURE_CREDENTIALS }}
+    
+    - run: |
+        az webapp list --query "[?state=='Running']"
+
+```
+
+#### Configure deployment credentials:
+
+For any credentials like Azure Service Principal, Publish Profile etc add them as [secrets](https://developer.github.com/actions/managing-workflows/storing-secrets/) in the GitHub repository and then use them in the workflow.
+
+The above example uses user-level credentials i.e., Azure Service Principal for deployment. 
+
+Follow the steps to configure the secret:
+  * Define a new secret under your repository settings, Add secret menu
+  * Paste the contents of the below [az cli](https://docs.microsoft.com/en-us/cli/azure/?view=azure-cli-latest) command as the value of secret variable, for example 'AZURE_CREDENTIALS'
+```bash  
+
+   az ad sp create-for-rbac --name "myApp" --role contributor \
+                            --scopes /subscriptions/{subscription-id}/resourceGroups/{resource-group} \
+                            --sdk-auth
+                            
+  # Replace {subscription-id}, {resource-group} with the subscription, resource group details
+  
+```
+  * Now in the workflow file in your branch: `.github/workflows/workflow.yml` replace the secret in Azure login action with your secret (Refer to the example above)
+
 
 ## Azure Login metadata file
+
 ```yaml
+
 # action.yml
 
 # Login to Azure subscription
@@ -39,26 +94,6 @@ runs:
   using: 'node'
   main: 'main.js'
 ```
-
-## Sample workflow file
-
-```yaml
-# File: .github/workflows/workflow.yml
-
-on: [push, pull_request]
-jobs:
-  build-and-deploy:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: azure/actions/login@master
-      with:
-        creds: '${{ secrets.AZURE_CREDENTIALS }}'
-```
-## Usage instructions
-- Define a new secret under &lt;Your repo &gt;/settings/secrets : “Add a new secret”
-- Paste the contents of `az ad sp create-for-rbac --name <SPN name> --scopes /subscriptions/<subscription-id>/resourceGroups/<resource-group> --role contributor --sdk-auth` as value of secret variable say 'AZURE_CREDENTIALS'
-- Now in the workflow file in your branch: .github/workflows/workflow.yml set the action input value using `secrets` context
-
 
 # Contributing
 
