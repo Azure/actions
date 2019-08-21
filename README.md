@@ -16,6 +16,7 @@
 - [Kubernetes actions](https://github.com/Azure/k8s-actions)
   - Kubectl tool installer
   - Kubernetes set context
+  - AKS set context
   - K8s create secret
   - K8s deploy
 - More coming soon!
