@@ -27,9 +27,9 @@ async function main() {
        };
       throwIfError(execSync("az", "login --service-principal -u \"" + servicePrincipalId + "\" -p \"" + servicePrincipalKey + "\" --tenant \"" + tenantId + "\"", option));
       throwIfError(execSync("az", "account set --subscription \"" + subscriptionId + "\"", option));
-      
+      console.log("Login successful.");    
     } catch (error) {
-      core.debug("Login failed.");
+      console.log("Login failed.");
       core.setFailed(error);
     }
   }

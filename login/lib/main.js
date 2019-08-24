@@ -43,9 +43,10 @@ function main() {
             };
             throwIfError(utility_1.execSync("az", "login --service-principal -u \"" + servicePrincipalId + "\" -p \"" + servicePrincipalKey + "\" --tenant \"" + tenantId + "\"", option));
             throwIfError(utility_1.execSync("az", "account set --subscription \"" + subscriptionId + "\"", option));
+            console.log("Login successful.");
         }
         catch (error) {
-            core.debug("Login failed.");
+            console.log("Login failed.");
             core.setFailed(error);
         }
     });
