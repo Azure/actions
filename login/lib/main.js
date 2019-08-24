@@ -46,7 +46,7 @@ function main() {
             console.log("Login successful.");
         }
         catch (error) {
-            console.log("Login failed.");
+            console.log("Login failed. Please check the credentials.");
             core.setFailed(error);
         }
     });
