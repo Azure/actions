@@ -54,7 +54,7 @@ jobs:
 
 #### Configure deployment credentials:
 
-For any credentials like Azure Service Principal, Publish Profile etc add them as [secrets](https://developer.github.com/actions/managing-workflows/storing-secrets/) in the GitHub repository and then use them in the workflow.
+For any credentials like Azure Service Principal, Publish Profile etc add them as [secrets](https://help.github.com/en/articles/virtual-environments-for-github-actions#creating-and-using-secrets-encrypted-variables) in the GitHub repository and then use them in the workflow.
 
 The above example uses user-level credentials i.e., Azure Service Principal for deployment. 
 
