@@ -43,7 +43,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     
-    - uses: azure/actions/login@master
+    - uses: azure/actions/login@v1
       with:
         creds: ${{ secrets.AZURE_CREDENTIALS }}
     
