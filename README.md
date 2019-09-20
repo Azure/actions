@@ -8,9 +8,12 @@
 
 - [Azure login](https://github.com/Azure/actions) - this repository
   - Azure login using Service Principal
-- [AppService actions](https://github.com/Azure/appservice-actions)
-  - Azure WebApp (Windows / Linux WebApps)
-  - Azure Web app for containers (Single / multi-container apps)
+- AppService actions
+  - [Azure WebApp](https://github.com/Azure/webapps-deploy) (Windows / Linux WebApps)
+  - [Azure Web app for containers](https://github.com/Azure/appservice-actions) (Single / multi-container apps)
+  - [Azure Functions](https://github.com/Azure/functions-action) (Windows / Linux WebApps)
+  - [Azure Functions for containers](https://github.com/Azure/functions-container-action) (Single / multi-container apps)
+  
 - [Container actions](https://github.com/Azure/container-actions)
   - Docker login/logout
 - [Kubernetes actions](https://github.com/Azure/k8s-actions)
