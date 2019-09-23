@@ -57,13 +57,13 @@ jobs:
 
 #### Configure deployment credentials:
 
-For any credentials like Azure Service Principal, Publish Profile etc add them as [secrets](https://developer.github.com/actions/managing-workflows/storing-secrets/) in the GitHub repository and then use them in the workflow.
+For any credentials like Azure Service Principal, Publish Profile etc add them as [secrets](https://help.github.com/en/articles/virtual-environments-for-github-actions#creating-and-using-secrets-encrypted-variables) in the GitHub repository and then use them in the workflow.
 
 The above example uses user-level credentials i.e., Azure Service Principal for deployment. 
 
 Follow the steps to configure the secret:
   * Define a new secret under your repository settings, Add secret menu
-  * Paste the contents of the below [az cli](https://docs.microsoft.com/en-us/cli/azure/?view=azure-cli-latest) command as the value of secret variable, for example 'AZURE_CREDENTIALS'
+  * Store the output of the below [az cli](https://docs.microsoft.com/en-us/cli/azure/?view=azure-cli-latest) command as the value of secret variable, for example 'AZURE_CREDENTIALS'
 ```bash  
 
    az ad sp create-for-rbac --name "myApp" --role contributor \
@@ -71,6 +71,16 @@ Follow the steps to configure the secret:
                             --sdk-auth
                             
   # Replace {subscription-id}, {resource-group} with the subscription, resource group details
+
+  # The command should output a JSON object similar to this:
+
+  {
+    "clientId": "<GUID>",
+    "clientSecret": "<GUID>",
+    "subscriptionId": "<GUID>",
+    "tenantId": "<GUID>",
+    (...)
+  }
   
 ```
   * Now in the workflow file in your branch: `.github/workflows/workflow.yml` replace the secret in Azure login action with your secret (Refer to the example above)
