@@ -14,14 +14,15 @@
   - [Azure Functions](https://github.com/Azure/functions-action) (Windows / Linux WebApps)
   - [Azure Functions for containers](https://github.com/Azure/functions-container-action) (Single / multi-container apps)
   
-- [Container actions](https://github.com/Azure/container-actions)
-  - Docker login/logout
-- [Kubernetes actions](https://github.com/Azure/k8s-actions)
-  - Kubectl tool installer
-  - Kubernetes set context
-  - AKS set context
-  - K8s create secret
-  - K8s deploy
+- Container actions
+  - [Docker login/logout](https://github.com/Azure/docker-login)
+- Kubernetes actions
+  - [Kubectl tool installer](https://github.com/Azure/setup-kubectl)
+  - [Kubernetes set context](https://github.com/Azure/k8s-set-context)
+  - [AKS set context](https://github.com/Azure/aks-set-context)
+  - [K8s create secret](https://github.com/Azure/k8s-create-secret)
+  - [K8s deploy](https://github.com/Azure/k8s-deploy)
+
 - More coming soon!
 
 # Usage
