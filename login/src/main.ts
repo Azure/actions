@@ -32,6 +32,9 @@ async function main() {
       console.log("Login failed. Please check the credentials.");
       core.setFailed(error);
     }
+    finally {
+      core.warning('This action is moved to azure/login repository, update your workflows to use the new action.');
+    }
   }
 
 function throwIfError(resultOfToolExecution: IExecSyncResult, errormsg?: string) {
