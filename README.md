@@ -1,12 +1,14 @@
 # GitHub Actions for deploying to Azure
 
-## Automate your GitHub workflows using Azure Actions
+[GitHub Actions](https://help.github.com/en/articles/about-github-actions)  gives you the flexibility to build an automated software development lifecycle workflow. 
 
-[GitHub Actions](https://help.github.com/en/articles/about-github-actions)  gives you the flexibility to build an automated software development lifecycle workflow. With GitHub Actions for Azure you can create workflows that you can set up in your repository to build, test, package, release and **deploy** to Azure. 
+With GitHub Actions for Azure you can create workflows that you can set up in your repository to build, test, package, release and **deploy** to Azure. 
 
-# GitHub Actions for Azure listing
+Get started today with a [free Azure account](https://azure.com/free/open-source)!
 
-- [Azure login](https://github.com/Azure/actions) - this repository
+# GitHub Actions for Azure 
+
+- [Azure login](https://github.com/Azure/login) 
   - Azure login using Service Principal
 - AppService actions
   - [Azure WebApp](https://github.com/Azure/webapps-deploy) (Windows / Linux WebApps)
@@ -47,7 +49,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     
-    - uses: azure/actions/login@v1
+    - uses: azure/login@v1
       with:
         creds: ${{ secrets.AZURE_CREDENTIALS }}
     
