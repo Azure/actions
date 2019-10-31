@@ -28,8 +28,8 @@ Get started today with a [free Azure account](https://azure.com/free/open-source
   - [Kubectl tool installer](https://github.com/Azure/setup-kubectl)
   - [Kubernetes set context](https://github.com/Azure/k8s-set-context)
   - [AKS set context](https://github.com/Azure/aks-set-context)
-  - [K8s create secret](https://github.com/Azure/k8s-create-secret)
-  - [K8s deploy](https://github.com/Azure/k8s-deploy)
+  - [Kubernetes create secret](https://github.com/Azure/k8s-create-secret)
+  - [Kubernetes deploy](https://github.com/Azure/k8s-deploy)
 
 - More coming soon!
 
