@@ -6,18 +6,24 @@ With GitHub Actions for Azure you can create workflows that you can set up in yo
 
 Get started today with a [free Azure account](https://azure.com/free/open-source)!
 
-# GitHub Actions for Azure 
+# List of GitHub Actions for Azure 
 
 - [Azure login](https://github.com/Azure/login) 
   - Azure login using Service Principal
+
 - AppService actions
   - [Azure WebApp](https://github.com/Azure/webapps-deploy) (Windows / Linux WebApps)
   - [Azure Web app for containers](https://github.com/Azure/appservice-actions) (Single / multi-container apps)
   - [Azure Functions](https://github.com/Azure/functions-action) (Windows / Linux WebApps)
   - [Azure Functions for containers](https://github.com/Azure/functions-container-action) (Single / multi-container apps)
+  - [Configure settings on Azure App Service](https://github.com/Azure/appservice-settings) (App settings / Connection Strings / Other generic settings)
+ 
+- Database actions
+  - [Azure SQL](https://github.com/Azure/sql-action) (Use DACPAC/SQL scripts to deploy to your Azure SQL database )
   
 - Container actions
   - [Docker login/logout](https://github.com/Azure/docker-login)
+  
 - Kubernetes actions
   - [Kubectl tool installer](https://github.com/Azure/setup-kubectl)
   - [Kubernetes set context](https://github.com/Azure/k8s-set-context)
@@ -28,87 +34,9 @@ Get started today with a [free Azure account](https://azure.com/free/open-source
 - More coming soon!
 
 # Usage
+Please refer to the [starter workflow samples](https://github.com/Azure/actions-workflow-samples) for helping GitHub developers to easily get started with the above GitHub Actions to automate their deployment workflows targeting Azure.
 
-Usage information for individual actions can be found in their respective repositories.
-
-### Azure action
-
-#### Sample workflow that uses Azure login action to run az cli
-
-```yaml
-
-# File: .github/workflows/workflow.yml
-
-on: [push]
-
-name: AzureLoginSample
-
-jobs:
-
-  build-and-deploy:
-    runs-on: ubuntu-latest
-    steps:
-    
-    - uses: azure/login@v1
-      with:
-        creds: ${{ secrets.AZURE_CREDENTIALS }}
-    
-    - run: |
-        az webapp list --query "[?state=='Running']"
-
-```
-
-#### Configure deployment credentials:
-
-For any credentials like Azure Service Principal, Publish Profile etc add them as [secrets](https://help.github.com/en/articles/virtual-environments-for-github-actions#creating-and-using-secrets-encrypted-variables) in the GitHub repository and then use them in the workflow.
-
-The above example uses user-level credentials i.e., Azure Service Principal for deployment. 
-
-Follow the steps to configure the secret:
-  * Define a new secret under your repository settings, Add secret menu
-  * Store the output of the below [az cli](https://docs.microsoft.com/en-us/cli/azure/?view=azure-cli-latest) command as the value of secret variable, for example 'AZURE_CREDENTIALS'
-```bash  
-
-   az ad sp create-for-rbac --name "myApp" --role contributor \
-                            --scopes /subscriptions/{subscription-id}/resourceGroups/{resource-group} \
-                            --sdk-auth
-                            
-  # Replace {subscription-id}, {resource-group} with the subscription, resource group details
-
-  # The command should output a JSON object similar to this:
-
-  {
-    "clientId": "<GUID>",
-    "clientSecret": "<GUID>",
-    "subscriptionId": "<GUID>",
-    "tenantId": "<GUID>",
-    (...)
-  }
-  
-```
-  * Now in the workflow file in your branch: `.github/workflows/workflow.yml` replace the secret in Azure login action with your secret (Refer to the example above)
-
-
-## Azure Login metadata file
-
-```yaml
-
-# action.yml
-
-# Login to Azure subscription
-name: 'Login Azure'
-description: 'Login Azure wraps the az login, allowing for Azure actions to log into Azure'
-inputs: 
-  creds: # id of input
-    description: 'Paste the contents of `az ad sp create-for-rbac... as value of secret variable: AZURE_CREDENTIALS'
-    required: true
-branding:
-  icon: 'login.svg' # vector art to display in the GitHub Marketplace
-  color: 'blue' # optional, decorates the entry in the GitHub Marketplace
-runs:
-  using: 'node'
-  main: 'main.js'
-```
+Also the individual Action repos above have a sample workflow included in their Readme file to help you quickly get started.
 
 # Contributing
 
