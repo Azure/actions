@@ -13,7 +13,7 @@ Get started today with a [free Azure account](https://azure.com/free/open-source
 
 - AppService actions
   - [Azure WebApp](https://github.com/Azure/webapps-deploy) (Windows / Linux WebApps)
-  - [Azure Web app for containers](https://github.com/Azure/appservice-actions) (Single / multi-container apps)
+  - [Azure Web app for containers](https://github.com/Azure/webapps-container-deploy) (Single / multi-container apps)
   - [Azure Functions](https://github.com/Azure/functions-action) (Windows / Linux WebApps)
   - [Azure Functions for containers](https://github.com/Azure/functions-container-action) (Single / multi-container apps)
   - [Configure settings on Azure App Service](https://github.com/Azure/appservice-settings) (App settings / Connection Strings / Other generic settings)
