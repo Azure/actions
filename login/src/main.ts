@@ -2,8 +2,6 @@ import * as core from '@actions/core';
 
 import { IExecSyncResult, execSync } from './utility';
 
-import stream = require('stream');
-
 async function main() {
     try{
       throwIfError(execSync("az", "--version"));
