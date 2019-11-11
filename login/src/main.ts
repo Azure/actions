@@ -1,5 +1,7 @@
 import * as core from '@actions/core';
-import { execSync, IExecSyncResult, IExecSyncOptions } from './utility';
+
+import { IExecSyncResult, execSync } from './utility';
+
 import stream = require('stream');
 
 async function main() {
@@ -15,18 +17,14 @@ async function main() {
 
       let servicePrincipalId = credsObject["clientId"];
       let servicePrincipalKey = credsObject["clientSecret"];
+      core.setSecret(servicePrincipalKey);
       let tenantId = credsObject["tenantId"];
       let subscriptionId = credsObject["subscriptionId"];
       if (!servicePrincipalId || !servicePrincipalKey || !tenantId || !subscriptionId) {
           throw new Error("Not all values are present in the creds object. Ensure clientId, clientSecret, tenantId and subscriptionId are supplied");
       }
-      let option: IExecSyncOptions = {
-        silent:true, 
-        outStream: <stream.Writable>process.stdout,
-        errStream: <stream.Writable>process.stderr
-       };
-      throwIfError(execSync("az", "login --service-principal -u \"" + servicePrincipalId + "\" -p \"" + servicePrincipalKey + "\" --tenant \"" + tenantId + "\"", option));
-      throwIfError(execSync("az", "account set --subscription \"" + subscriptionId + "\"", option));
+      throwIfError(execSync("az", "login --service-principal -u \"" + servicePrincipalId + "\" -p \"" + servicePrincipalKey + "\" --tenant \"" + tenantId + "\""));
+      throwIfError(execSync("az", "account set --subscription \"" + subscriptionId + "\""));
       console.log("Login successful.");    
     } catch (error) {
       console.log("Login failed. Please check the credentials.");
