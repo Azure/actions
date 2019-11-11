@@ -31,18 +31,14 @@ function main() {
             }
             let servicePrincipalId = credsObject["clientId"];
             let servicePrincipalKey = credsObject["clientSecret"];
+            core.setSecret(servicePrincipalKey);
             let tenantId = credsObject["tenantId"];
             let subscriptionId = credsObject["subscriptionId"];
             if (!servicePrincipalId || !servicePrincipalKey || !tenantId || !subscriptionId) {
                 throw new Error("Not all values are present in the creds object. Ensure clientId, clientSecret, tenantId and subscriptionId are supplied");
             }
-            let option = {
-                silent: true,
-                outStream: process.stdout,
-                errStream: process.stderr
-            };
-            throwIfError(utility_1.execSync("az", "login --service-principal -u \"" + servicePrincipalId + "\" -p \"" + servicePrincipalKey + "\" --tenant \"" + tenantId + "\"", option));
-            throwIfError(utility_1.execSync("az", "account set --subscription \"" + subscriptionId + "\"", option));
+            throwIfError(utility_1.execSync("az", "login --service-principal -u \"" + servicePrincipalId + "\" -p \"" + servicePrincipalKey + "\" --tenant \"" + tenantId + "\""));
+            throwIfError(utility_1.execSync("az", "account set --subscription \"" + subscriptionId + "\""));
             console.log("Login successful.");
         }
         catch (error) {
