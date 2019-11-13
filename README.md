@@ -17,7 +17,7 @@ Please try out the GitHub Actions for Azure and share your feedback via Twitter 
 - [Azure CLI](https://github.com/Azure/CLI) (`azure/cli`) action sets up the GitHub Action runner environment with the latest (or any user-specified) version of the [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest). 
 You can then run Azure CLI scripts to create and manage any Azure resource.
 
-Refer to [starter templates](https://github.com/Azure/actions-workflow-samples/tree/master/AzurePipelines) for examples.
+Refer to [starter templates](https://github.com/Azure/actions-workflow-samples/tree/master/AzureCLI) for examples.
 
 ## Deploy a Web app
 Azure App Service is a managed platform for deploying and scaling web applications. You can easily deploy your web app to Azure App Service with 
