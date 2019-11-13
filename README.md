@@ -17,6 +17,8 @@ Please try out the GitHub Actions for Azure and share your feedback via Twitter 
 - [Azure CLI](https://github.com/Azure/CLI) (`azure/cli`) action sets up the GitHub Action runner environment with the latest (or any user-specified) version of the [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest). 
 You can then run Azure CLI scripts to create and manage any Azure resource.
 
+Refer to [starter templates](https://github.com/Azure/actions-workflow-samples/tree/master/AzurePipelines) for examples.
+
 ## Deploy a Web app
 Azure App Service is a managed platform for deploying and scaling web applications. You can easily deploy your web app to Azure App Service with 
 - [Azure WebApp](https://github.com/Azure/webapps-deploy) (`azure/webapps-deploy`) and 
@@ -49,20 +51,20 @@ We have released multiple actions to help you connect to a Kubernetes cluster ru
 
 To deploy to a cluster on Azure Kubernetes Service, you could use `azure/aks-set-context` to communicate with the AKS cluster, and then use `azure/k8s-create-secret` to create a pull image secret and finally use the `azure/k8s-deploy` to deploy the manifest files.
 
-Refer to [starter templates](https://github.com/Azure/actions-workflow-samples/tree/master/kubernetes) for more examples.
+Refer to [starter templates](https://github.com/Azure/actions-workflow-samples/tree/master/Kubernetes) for more examples.
 
 ## Deploy to databases
 We now have an actions for daabase deployments
 - [Azure SQL database](https://github.com/Azure/sql-action)(`azure/sql-action`) that uses a connection string for authentication and DACPAC/SQL scripts to deploy to your Azure SQL database.
 - [Azure MySQL action](https://github.com/Azure/mysql-action)(`azure/mysql-action`) if you would like to deploy to an Azure MySQL database using MySQL scripts.
 
-Refer to [starter templates](https://github.com/Azure/actions-workflow-samples/tree/master/database) for examples.
+Refer to [starter templates](https://github.com/Azure/actions-workflow-samples/tree/master/Database) for examples.
 
 ## Trigger a run in Azure Pipelines
 While GitHub Actions makes it easy to build, test, and deploy your code right from GitHub, you can also use it to trigger external CI/CD tools and services. For example, you could use GitHub Actions for Continuous Integration, and [Azure Pipelines](https://azure.com/pipelines) for Continuous Delivery to leverage features like Environments and deep integration with Kubernetes.
 - [Azure Pipelines](https://github.com/Azure/pipelines)(`azure/pipelines`) action enables you to trigger an Azure Pipelines run as part of your Actions workflow.
 
-Refer to [starter templates](https://github.com/Azure/actions-workflow-samples/tree/master/Others) for examples.
+Refer to [starter templates](https://github.com/Azure/actions-workflow-samples/tree/master/AzurePipelines) for examples.
 
 ## Utility Actions
 - [variable substitution](https://github.com/Microsoft/variable-substitution)(`Microsoft/variable-substitution`) action enables you to parameterize the values in JSON, XML or YAML files (including configuration files, manifests, etc) within a GitHub Action workflow.
