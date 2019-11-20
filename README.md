@@ -54,7 +54,7 @@ To deploy to a cluster on Azure Kubernetes Service, you could use `azure/aks-set
 Refer to [starter templates](https://github.com/Azure/actions-workflow-samples/tree/master/Kubernetes) for more examples.
 
 ## Deploy to databases
-We now have an actions for daabase deployments
+We now have actions for database deployments
 - [Azure SQL database](https://github.com/Azure/sql-action)(`azure/sql-action`) that uses a connection string for authentication and DACPAC/SQL scripts to deploy to your Azure SQL database.
 - [Azure MySQL action](https://github.com/Azure/mysql-action)(`azure/mysql-action`) if you would like to deploy to an Azure MySQL database using MySQL scripts.
 
