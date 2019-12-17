@@ -19,6 +19,11 @@ You can then run Azure CLI scripts to create and manage any Azure resource.
 
 Refer to [starter templates](https://github.com/Azure/actions-workflow-samples/tree/master/AzureCLI) for examples.
 
+## Get Secrets from Azure Key Vault
+With the [Get KeyVault Secrets](https://github.com/Azure/get-keyvault-secrets)(`azure/get-keyvault-secrets`) action, you can fetch one or more secrets from an [Azure keyvault](https://docs.microsoft.com/azure/key-vault/about-keys-secrets-and-certificates) instance and consume in your GitHub Action workflows.
+
+Secrets fetched will be set as [outputs](https://help.github.com/en/actions/automating-your-workflow-with-github-actions/metadata-syntax-for-github-actions#outputs) of the keyvault action step and also as environment variables. All the variables are automatically masked if printed to the console or to logs.
+
 ## Deploy a Web app
 Azure App Service is a managed platform for deploying and scaling web applications. You can easily deploy your web app to Azure App Service with 
 - [Azure WebApp](https://github.com/Azure/webapps-deploy) (`azure/webapps-deploy`) and 
