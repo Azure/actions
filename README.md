@@ -50,7 +50,7 @@ We have released multiple actions to help you connect to a Kubernetes cluster ru
 -	[Kubernetes set context](https://github.com/Azure/k8s-set-context)(`azure/k8s-set-context`): Used for setting the target Kubernetes cluster context which will be used by other actions or run any kubectl commands.
 -	[AKS set context](https://github.com/Azure/aks-set-context)(`azure/aks-set-context`): Used for setting the target Azure Kubernetes Service cluster context .
 -	[Kubernetes create secret](https://github.com/Azure/k8s-create-secret)(`azure/k8s-create-secret`): Create a generic secret or docker-registry secret in the Kubernetes cluster.
--	[Kubernetes deploy](https://github.com/Azure/k8s-deploy)(`azure/ k8s-deploy`): Use this to bake and deploy manifests to Kubernetes clusters.
+-	[Kubernetes deploy](https://github.com/Azure/k8s-deploy)(`azure/k8s-deploy`): Use this to bake and deploy manifests to Kubernetes clusters.
 -	[Setup Helm](https://github.com/Azure/setup-helm)(`azure/setup-helm`): Install a specific version of Helm binary on the runner.
 -	[Kubernetes bake](https://github.com/Azure/k8s-bake)(`azure/k8s-bake`): Use this action to bake manifest file to be used for deployments using helm2, kustomize or kompose.
 
