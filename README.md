@@ -43,7 +43,7 @@ Streamline the deployment of your serverless applications to Azure Functions, an
 For containerized apps (single- or multi-containers) to create a complete workflow 
 - use [Docker login](https://github.com/Azure/docker-login)(`azure/docker-login`) 
 to build container images, push to a container registry (Docker Hub or Azure Container Registry) and then deploy the images to a Azure Web App or Azure Function for Containers, or to Kubernetes. 
-- use [Deploy to Azure Container Instances](https://github.com/Azure/aci-deploy-action)(`azure/aci-deploy-action`) to deploy your container images to Azure Container Instances.
+- use [Deploy to Azure Container Instances](https://github.com/Azure/aci-deploy)(`azure/aci-deploy`) to deploy your container images to Azure Container Instances.
 
 ## Deploy to Kubernetes 
 We have released multiple actions to help you connect to a Kubernetes cluster running on-premises or on any cloud (including Azure Kubernetes Service – AKS), bake and deploy manifests, substitute artifacts, check rollout status, and handle secrets within the cluster. 
