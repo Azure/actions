@@ -20,9 +20,9 @@ You can then run Azure CLI scripts to create and manage any Azure resource.
 Refer to [starter templates](https://github.com/Azure/actions-workflow-samples/tree/master/AzureCLI) for examples.
 
 ## Manage resources by deploying ARM Templates
--  [Azure ARM](https://github.com/Azure/ARM)(`azure/arm`) action can be used to specify a resource group, location and deploy the ARM templates for creating, updating and deleting resources. 
+-  [ARM](https://github.com/Azure/ARM)(`azure/arm`) action can be used to specify a resource group, location and deploy the ARM templates for creating, updating and deleting resources. 
 
-Refer to [starter templates](https://github.com/Azure/actions-workflow-samples/tree/master/AzureARM) for examples.
+Refer to [starter templates](https://github.com/Azure/actions-workflow-samples/tree/master/ARM) for examples.
 
 ## Get Secrets from Azure Key Vault
 With the [Get KeyVault Secrets](https://github.com/Azure/get-keyvault-secrets)(`azure/get-keyvault-secrets`) action, you can fetch one or more secrets from an [Azure keyvault](https://docs.microsoft.com/azure/key-vault/about-keys-secrets-and-certificates) instance and consume in your GitHub Action workflows.
