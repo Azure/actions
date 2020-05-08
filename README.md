@@ -20,7 +20,7 @@ You can then run Azure CLI scripts to create and manage any Azure resource.
 Refer to [starter templates](https://github.com/Azure/actions-workflow-samples/tree/master/AzureCLI) for examples.
 
 ## Manage resources by deploying ARM Templates
--  [ARM](https://github.com/Azure/ARM)(`azure/arm`) action can be used to specify a resource group, location and deploy the ARM templates for creating, updating and deleting resources. 
+-  [[Azure CLI](https://github.com/Azure/CLI) (`azure/cli`) action can be used to specify a resource group, location and deploy the ARM templates for creating, updating and deleting resources. 
 
 Refer to [starter templates](https://github.com/Azure/actions-workflow-samples/tree/master/ARM) for examples.
 
