@@ -28,8 +28,7 @@ Secrets fetched will be set as [outputs](https://help.github.com/en/actions/auto
 
 ## Deploy a Web app
 Azure App Service is a managed platform for deploying and scaling web applications. You can easily deploy your web app to Azure App Service with 
-- [Azure WebApp](https://github.com/Azure/webapps-deploy) (`azure/webapps-deploy`) and 
-- [Azure Web app for containers](https://github.com/Azure/webapps-container-deploy)(`azure/webapps-container-deploy`) actions. 
+- [Azure WebApp](https://github.com/Azure/webapps-deploy) (`azure/webapps-deploy@v2`) 
 
 You could also configure App settings and Connection Strings using the actions:
 - [Azure App Service settings](https://github.com/Azure/appservice-settings)(`azure/appservice-settings`). 
