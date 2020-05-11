@@ -13,9 +13,11 @@ Please try out the GitHub Actions for Azure and share your feedback via Twitter 
 # GitHub Actions for Azure
 
 ## Connect to Azure
--  [Azure login](https://github.com/Azure/login)(`azure/login`) action can be used to authenticate to your Azure subscription using a service principal. 
+- [Azure login](https://github.com/Azure/login)(`azure/login`) action can be used to authenticate to your Azure subscription using a service principal. 
 - [Azure CLI](https://github.com/Azure/CLI) (`azure/cli`) action sets up the GitHub Action runner environment with the latest (or any user-specified) version of the [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest). 
-You can then run Azure CLI scripts to create and manage any Azure resource.
+- [Azure PowerShell](https://github.com/Azure/PowerShell) (`azure/PowerShell`) action sets up the GitHub Action runner environment with the latest (or any user-specified) version of the Azure PowerShell module. 
+
+You can then run Azure CLI or Azure PowerShell scripts to create and manage any Azure resource.
 
 Refer to [starter templates](https://github.com/Azure/actions-workflow-samples/tree/master/AzureCLI) for examples.
 
@@ -29,8 +31,9 @@ Azure App Service is a managed platform for deploying and scaling web applicatio
 - [Azure WebApp](https://github.com/Azure/webapps-deploy) (`azure/webapps-deploy`) and 
 - [Azure Web app for containers](https://github.com/Azure/webapps-container-deploy)(`azure/webapps-container-deploy`) actions. 
 
-You could also configure App settings and Connection Strings using the 
-- [Azure App Service settings](https://github.com/Azure/appservice-settings)(`azure/appservice-settings`) action. 
+You could also configure App settings and Connection Strings using the actions:
+- [Azure App Service settings](https://github.com/Azure/appservice-settings)(`azure/appservice-settings`). 
+- [Azure App Configuration Sync](https://github.com/Azure/AppConfiguration-Sync)(`azure/appconfiguration-sync`)
 
 Learn more about deploying web applications to Azure using GitHub Actions from the documentation of respective actions and [starter templates](https://github.com/Azure/actions-workflow-samples/tree/master/AppService).
 
@@ -65,6 +68,13 @@ We now have actions for database deployments
 - [Azure MySQL action](https://github.com/Azure/mysql-action)(`azure/mysql-action`) if you would like to deploy to an Azure MySQL database using MySQL scripts.
 
 Refer to [starter templates](https://github.com/Azure/actions-workflow-samples/tree/master/Database) for examples.
+
+## Deploy Machine Learning models
+- [Azure Machine Learning Deploy](https://github.com/Azure/aml-deploy) action deploys your model on Azure Machine Learning and creates a real-time endpoint for use in other systems. The action currently supports Azure Container Instance and Azure Kubernetes Service as compute target and also supports the no-code deployment of Azure Machine Learning, if the model is registered accordingly.
+
+This action is one in a series of ML actions that can be used to setup an ML Ops process. Get started using the example templates:
+1. Simple example: [ml-template-azure](https://github.com/machine-learning-apps/ml-template-azure) and
+2. Comprehensive example: [aml-template](https://github.com/Azure/aml-template).
 
 ## Trigger a run in Azure Pipelines
 While GitHub Actions makes it easy to build, test, and deploy your code right from GitHub, you can also use it to trigger external CI/CD tools and services. For example, you could use GitHub Actions for Continuous Integration, and [Azure Pipelines](https://azure.com/pipelines) for Continuous Delivery to leverage features like Environments and deep integration with Kubernetes.
