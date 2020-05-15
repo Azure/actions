@@ -74,12 +74,13 @@ We now have actions for database deployments
 
 Refer to [starter templates](https://github.com/Azure/actions-workflow-samples/tree/master/Database) for examples.
 
-## Deploy Machine Learning models
-- [Azure Machine Learning Deploy](https://github.com/Azure/aml-deploy) action deploys your model on Azure Machine Learning and creates a real-time endpoint for use in other systems. The action currently supports Azure Container Instance and Azure Kubernetes Service as compute target and also supports the no-code deployment of Azure Machine Learning, if the model is registered accordingly.
+## Train and Deploy Machine Learning models
+- [Azure Machine Learning Login](https://github.com/Azure/aml-workspace) action to login / connect with Azure Machine Learning
+- [Azure Machine Learning Train](https://github.com/Azure/aml-run) action for training machine learning models using Azure Machine Learning
+- [Azure Machine Learning Deploy](https://github.com/Azure/aml-deploy) action deploys your model on Azure Machine Learning and creates a real-time endpoint for use in other systems. The endpoint can be hosted either on an Azure Container Instance or on an Azure Kubernetes Service. 
 
-This action is one in a series of ML actions that can be used to setup an ML Ops process. Get started using the example templates:
-1. Simple example: [ml-template-azure](https://github.com/machine-learning-apps/ml-template-azure) and
-2. Comprehensive example: [aml-template](https://github.com/Azure/aml-template).
+Refer to these two example templates:  [simple](https://github.com/machine-learning-apps/ml-template-azure) and
+[advanced](https://github.com/Azure/aml-template).
 
 ## Trigger a run in Azure Pipelines
 While GitHub Actions makes it easy to build, test, and deploy your code right from GitHub, you can also use it to trigger external CI/CD tools and services. For example, you could use GitHub Actions for Continuous Integration, and [Azure Pipelines](https://azure.com/pipelines) for Continuous Delivery to leverage features like Environments and deep integration with Kubernetes.
