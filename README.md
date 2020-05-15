@@ -79,8 +79,7 @@ Refer to [starter templates](https://github.com/Azure/actions-workflow-samples/t
 - [Azure Machine Learning Train](https://github.com/Azure/aml-run) action for training machine learning models using Azure Machine Learning
 - [Azure Machine Learning Deploy](https://github.com/Azure/aml-deploy) action deploys your model on Azure Machine Learning and creates a real-time endpoint for use in other systems. The endpoint can be hosted either on an Azure Container Instance or on an Azure Kubernetes Service. 
 
-Refer to these two example templates:  [simple](https://github.com/machine-learning-apps/ml-template-azure) and
-[advanced](https://github.com/Azure/aml-template).
+Refer to [starter templates](https://github.com/Azure/actions-workflow-samples/tree/master/MachineLearning) for examples.
 
 ## Trigger a run in Azure Pipelines
 While GitHub Actions makes it easy to build, test, and deploy your code right from GitHub, you can also use it to trigger external CI/CD tools and services. For example, you could use GitHub Actions for Continuous Integration, and [Azure Pipelines](https://azure.com/pipelines) for Continuous Delivery to leverage features like Environments and deep integration with Kubernetes.
