@@ -62,6 +62,7 @@ We have released multiple actions to help you connect to a Kubernetes cluster ru
 -	[Kubernetes deploy](https://github.com/Azure/k8s-deploy)(`azure/k8s-deploy`): Use this to bake and deploy manifests to Kubernetes clusters.
 -	[Setup Helm](https://github.com/Azure/setup-helm)(`azure/setup-helm`): Install a specific version of Helm binary on the runner.
 -	[Kubernetes bake](https://github.com/Azure/k8s-bake)(`azure/k8s-bake`): Use this action to bake manifest file to be used for deployments using helm2, kustomize or kompose.
+-   [Kubernetes lint](https://github.com/azure/k8s-lint)(`azure/k8s-lint`): Use this action to validate/lint your manifest files.
 
 To deploy to a cluster on Azure Kubernetes Service, you could use `azure/aks-set-context` to communicate with the AKS cluster, and then use `azure/k8s-create-secret` to create a pull image secret and finally use the `azure/k8s-deploy` to deploy the manifest files.
 
