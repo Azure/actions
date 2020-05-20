@@ -33,10 +33,11 @@ With the [Get KeyVault Secrets](https://github.com/Azure/get-keyvault-secrets)(`
 Secrets fetched will be set as [outputs](https://help.github.com/en/actions/automating-your-workflow-with-github-actions/metadata-syntax-for-github-actions#outputs) of the keyvault action step and also as environment variables. All the variables are automatically masked if printed to the console or to logs.
 
 ## Deploy a Web app
-Azure App Service is a managed platform for deploying and scaling web applications. You can easily deploy your web app to Azure App Service with 
+[Azure App Service](https://docs.microsoft.com/azure/app-service/) is a managed platform for deploying and scaling web applications. You can easily deploy your web app to Azure App Service with 
 - [Azure WebApp](https://github.com/Azure/webapps-deploy) (`azure/webapps-deploy@v2`) 
-Deploy a Static Web app using:
-- [Azure/static-web-apps-deploy](https://docs.microsoft.com/en-us/azure/static-web-apps/getting-started?tabs=angular)
+
+Deploy a [Static Web app](https://docs.microsoft.com/azure/static-web-apps/) using:
+- [Azure/static-web-apps-deploy](https://docs.microsoft.com/azure/static-web-apps/getting-started?tabs=angular)
 
 You could also configure App settings and Connection Strings using the actions:
 - [Azure App Service settings](https://github.com/Azure/appservice-settings)(`azure/appservice-settings`). 
@@ -45,7 +46,7 @@ You could also configure App settings and Connection Strings using the actions:
 Learn more about deploying web applications to Azure using GitHub Actions from the documentation of respective actions and [starter templates](https://github.com/Azure/actions-workflow-samples/tree/master/AppService).
 
 ## Deploy a serverless app
-Streamline the deployment of your serverless applications to Azure Functions, an event-driven serverless compute platform, by using the below actions and [starter templates](https://github.com/Azure/actions-workflow-samples/tree/master/FunctionApp).
+Streamline the deployment of your serverless applications to [Azure Functions](https://docs.microsoft.com/azure/azure-functions/), an event-driven serverless compute platform, by using the below actions and [starter templates](https://github.com/Azure/actions-workflow-samples/tree/master/FunctionApp).
 - [Azure Functions](https://github.com/Azure/functions-action) (`azure/functions-action`) by bringing your code  or 
 - [Azure Functions for containers](https://github.com/Azure/functions-container-action)(`azure/functions-container-action`) by bringing your custom container image 
 
@@ -56,7 +57,7 @@ to build container images, push to a container registry (Docker Hub or Azure Con
 - use [Deploy to Azure Container Instances](https://github.com/Azure/aci-deploy)(`azure/aci-deploy`) to deploy your container images to Azure Container Instances.
 
 ## Deploy to Kubernetes 
-We have released multiple actions to help you connect to a Kubernetes cluster running on-premises or on any cloud (including Azure Kubernetes Service – AKS), bake and deploy manifests, substitute artifacts, check rollout status, and handle secrets within the cluster. 
+We have released multiple actions to help you connect to a Kubernetes cluster running on-premises or on any cloud, including [Azure Kubernetes Service – AKS](https://docs.microsoft.com/en-us/azure/aks/), bake and deploy manifests, substitute artifacts, check rollout status, and handle secrets within the cluster. 
 -	[Kubectl tool installer](https://github.com/Azure/setup-kubectl)(`azure/setup-kubectl`): Installs a specific version of kubectl on the runner.
 -	[Kubernetes set context](https://github.com/Azure/k8s-set-context)(`azure/k8s-set-context`): Used for setting the target Kubernetes cluster context which will be used by other actions or run any kubectl commands.
 -	[AKS set context](https://github.com/Azure/aks-set-context)(`azure/aks-set-context`): Used for setting the target Azure Kubernetes Service cluster context .
