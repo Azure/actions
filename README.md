@@ -55,6 +55,7 @@ For containerized apps (single- or multi-containers) to create a complete workfl
 - use [Docker login](https://github.com/Azure/docker-login)(`azure/docker-login`) 
 to build container images, push to a container registry (Docker Hub or Azure Container Registry) and then deploy the images to a Azure Web App or Azure Function for Containers, or to Kubernetes. 
 - use [Deploy to Azure Container Instances](https://github.com/Azure/aci-deploy)(`azure/aci-deploy`) to deploy your container images to Azure Container Instances.
+- use [Container scanning action](https://github.com/Azure/container-scan)(`azure/container-scan`) to add additional checks to secure your Docker Images created as part of CI or PR workflows. This would help scan for any common vulnerabilities in the docker images and gain confidence before pushing them to a container registry or deploy them to a containerized web app or a Kubernetes cluster.
 
 ## Deploy to Kubernetes 
 We have released multiple actions to help you connect to a Kubernetes cluster running on-premises or on any cloud, including [Azure Kubernetes Service – AKS](https://docs.microsoft.com/en-us/azure/aks/), bake and deploy manifests, substitute artifacts, check rollout status, and handle secrets within the cluster. 
