@@ -79,6 +79,9 @@ We now have actions for database deployments
 
 Refer to [starter templates](https://github.com/Azure/actions-workflow-samples/tree/master/Database) for examples.
 
+## Run Azure Policy Compliance Scans
+- [Azure Policy Compliance Scan](https://github.com/Azure/policy-compliance-scan): With this action, you can now easily trigger a [on demand  scan](https://docs.microsoft.com/en-us/azure/governance/policy/how-to/get-compliance-data#on-demand-evaluation-scan) from your GitHub workflow on one or multiple resources, resource groups or subscriptions, and continue/fail the workflow based on the compliance state of resources. You can also use this Github Action to generate a report on the compliance state of scanned resources for further analysis or archiving. 
+
 ## Train and Deploy Machine Learning models
 - [Azure Machine Learning Login](https://github.com/Azure/aml-workspace) action to login / connect with Azure Machine Learning
 - [Azure Machine Learning Train](https://github.com/Azure/aml-run) action for training machine learning models using Azure Machine Learning
