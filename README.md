@@ -75,8 +75,8 @@ Refer to [starter templates](https://github.com/Azure/actions-workflow-samples/t
 ## Deploy to databases
 We now have actions for database deployments
 - [Azure SQL database](https://github.com/Azure/sql-action)(`azure/sql-action`) that uses a connection string for authentication and DACPAC/SQL scripts to deploy to your Azure SQL database.
-- [Azure MySQL action](https://github.com/Azure/mysql-action)(`azure/mysql-action`) if you would like to deploy to an Azure MySQL database using MySQL scripts.
-
+- [Azure MySQL action](https://github.com/Azure/mysql)(`azure/mysql`) if you would like to deploy to an Azure MySQL database using MySQL scripts.
+- [Azure Postgresql action](https://github.com/Azure/postgresql)(`azure/postgresql`) if you would like to deploy to an Azure PostgreSQL database using PL/SQL scripts.
 Refer to [starter templates](https://github.com/Azure/actions-workflow-samples/tree/master/Database) for examples.
 
 ## Run Azure Policy Compliance Scans
