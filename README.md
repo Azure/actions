@@ -22,8 +22,7 @@ You can then run Azure CLI or Azure PowerShell scripts to create and manage any 
 Refer to [starter templates](https://github.com/Azure/actions-workflow-samples/tree/master/AzureCLI) for examples.
 
 ## Manage resources by deploying ARM Templates
--  [Azure CLI](https://github.com/Azure/CLI) (`azure/cli`) action can be used to specify a resource group, location and deploy the ARM templates for creating, updating and deleting resources. 
-The Action requires a CLI Script, which includes the location or URI of the ARM Template and the name and location of the Resource Group.
+-  [ARM Deploy](https://github.com/Azure/arm-deploy) (`azure/arm-deploy`) action can be used to deploy the ARM templates.This action can be used to deploy Azure Resource Manager templates at different [deployment scopes](https://docs.microsoft.com/bs-latn-ba/Azure/azure-resource-manager/resource-group-template-deploy-rest#deployment-scope) -  resource group deployment scope, subscription deployment scope and management group deployment scopes. 
 
 Refer to [starter templates](https://github.com/Azure/actions-workflow-samples/tree/master/ARM) for examples and the relevant CLI Commands to use.
 
