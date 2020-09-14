@@ -24,7 +24,7 @@ Refer to [starter templates](https://github.com/Azure/actions-workflow-samples/t
 ## Manage resources by deploying ARM Templates
 -  [ARM Deploy](https://github.com/Azure/arm-deploy) (`azure/arm-deploy`) action can be used to deploy the ARM templates.This action can be used to deploy Azure Resource Manager templates at different [deployment scopes](https://docs.microsoft.com/bs-latn-ba/Azure/azure-resource-manager/resource-group-template-deploy-rest#deployment-scope) -  resource group deployment scope, subscription deployment scope and management group deployment scopes. 
 
-Refer to [starter templates](https://github.com/Azure/actions-workflow-samples/tree/master/ARM) for examples and the relevant CLI Commands to use.
+Refer to [starter templates](https://github.com/Azure/actions-workflow-samples/tree/master/ARM) for examples.
 
 ## Get Secrets from Azure Key Vault
 With the [Get KeyVault Secrets](https://github.com/Azure/get-keyvault-secrets)(`azure/get-keyvault-secrets`) action, you can fetch one or more secrets from an [Azure keyvault](https://docs.microsoft.com/azure/key-vault/about-keys-secrets-and-certificates) instance and consume in your GitHub Action workflows.
