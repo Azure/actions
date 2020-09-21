@@ -72,7 +72,7 @@ To deploy to a cluster on Azure Kubernetes Service, you could use `azure/aks-set
 Refer to [starter templates](https://github.com/Azure/actions-workflow-samples/tree/master/Kubernetes) for more examples.
 
 ## Create Virtual Machine Images
-- [Build Azure Virtual Machine Images](hhttps://github.com/Azure/build-vm-image): Creates custom virtual machine images by injecting artifacts built in CI workflows as well as running custom installation scripts. Also easily shares images using Azure services like Shared Image Gallery.
+- [Build Azure Virtual Machine Images](https://github.com/Azure/build-vm-image): Creates custom virtual machine images by injecting artifacts built in CI workflows as well as running custom installation scripts. Also easily shares images using Azure services like Shared Image Gallery.
 
 ## Deploy to databases
 We now have actions for database deployments
