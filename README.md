@@ -71,6 +71,9 @@ To deploy to a cluster on Azure Kubernetes Service, you could use `azure/aks-set
 
 Refer to [starter templates](https://github.com/Azure/actions-workflow-samples/tree/master/Kubernetes) for more examples.
 
+## Create Virtual Machine Images
+- [Build Azure Virtual Machine Images](hhttps://github.com/Azure/build-vm-image): Creates custom virtual machine images by injecting artifacts built in CI workflows as well as running custom installation scripts. Also easily shares images using Azure services like Shared Image Gallery.
+
 ## Deploy to databases
 We now have actions for database deployments
 - [Azure SQL database](https://github.com/Azure/sql-action)(`azure/sql-action`) that uses a connection string for authentication and DACPAC/SQL scripts to deploy to your Azure SQL database.
@@ -78,7 +81,8 @@ We now have actions for database deployments
 - [Azure Postgresql action](https://github.com/Azure/postgresql)(`azure/postgresql`) if you would like to deploy to an Azure PostgreSQL database using PL/SQL scripts.
 Refer to [starter templates](https://github.com/Azure/actions-workflow-samples/tree/master/Database) for examples.
 
-## Run Azure Policy Compliance Scans
+## Manage Azure Policy and trigger Compliance Scans
+- [Manage Azure Policy](https://github.com/Azure/manage-azure-policy): You can now easily start on the journey of managing Azure policy from GitHub repository. All changes that are made to policy files in GitHub can be pushed to Azure Policy using this action in an orchestrated manner following safe deployment practices.
 - [Azure Policy Compliance Scan](https://github.com/Azure/policy-compliance-scan): With this action, you can now easily trigger a [on demand  scan](https://docs.microsoft.com/en-us/azure/governance/policy/how-to/get-compliance-data#on-demand-evaluation-scan) from your GitHub workflow on one or multiple resources, resource groups or subscriptions, and continue/fail the workflow based on the compliance state of resources. You can also use this Github Action to generate a report on the compliance state of scanned resources for further analysis or archiving. 
 
 ## Train and Deploy Machine Learning models
