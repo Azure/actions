@@ -1,0 +1,5 @@
+title: GitHub Actions for deploying to Azure
+description: Create workflows to build, test, package, release and deploy to Azure
+show_downloads: true
+google_analytics:
+theme: jekyll-theme-architect
