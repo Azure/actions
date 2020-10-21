@@ -23,9 +23,9 @@ GitHub Accelerators provide an easy getting started experience to explore GH Act
 
 
 ## Sample workflow templates
-1.**Basic workflows** to build and deploy an application
-1.**Multi-stage workflows** for Inner-source/Dev stage, Staging and Prod stages
-1.**Workflows for advanced CD features** like Deployment strategies, Approvals, Gates ( Code quality checks, container scanning checks, policy & security compliance checks)
-1.**Workflows for advanced Enterprise features** like Infrastructure as code, Policy as code, GitOps, AzOps
+- **[Basic workflows](https://github.com/Azure/actions-workflow-samples/tree/workflow-templates/workflow-templates)** to build and deploy an application
+- **Multi-stage workflows** for Inner-source/Dev stage, Staging and Prod stages
+- **Workflows for advanced CD features** like Deployment strategies, Approvals, Gates ( Code quality checks, container scanning checks, policy & security compliance checks)
+- **Workflows for advanced Enterprise features** like Infrastructure as code, Policy as code, GitOps, AzOps
 
 [back](./)
