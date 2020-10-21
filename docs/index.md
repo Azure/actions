@@ -2,7 +2,7 @@
 layout: default
 ---
 
-[GitHub Accelerators](./accelerators.html).
+[GitHub Accelerators](./another-page.html).
 
 [GitHub Actions](https://help.github.com/en/articles/about-github-actions) gives you the flexibility to build an automated software development lifecycle workflow.
 
