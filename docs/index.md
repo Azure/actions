@@ -110,7 +110,7 @@ Refer to [starter templates](https://github.com/Azure/actions-workflow-samples/t
 ## More coming soon!
 We will continue improving upon our available set of GitHub Actions, and will release new ones to cover more Azure services.
 
-
+<!---
 
 ### Header 3
 
@@ -213,3 +213,4 @@ Long, single-line code blocks should not wrap. They should horizontally scroll i
 ```
 The final element.
 ```
+--->
