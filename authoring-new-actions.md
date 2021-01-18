@@ -34,6 +34,13 @@ Request a new repo from the below links as suitable:
 Ensure to select **Engineering system: GitHub for Open Source** as GitHub Actions for Azure or Microsoft are published as Open Source in repos created
 Microsoft's official GitHub.com organizations, powered by GitHub Enterprise Cloud.
 
+## Guidelines for setting permissions on the repo
+Following is the permission model to be followed across various action repos within the [**Azure**](https://github.com/Azure) and [**Microsoft**](https://github.com/Microsoft) GitHub org:
+
+- [actions-admin](https://github.com/orgs/Azure/teams/actions-admin/members) team would be added with "admin" role to every new GH repo created for authoring any new action under the Azure org (github.com/azure/)
+- Owners of the individual actions could manage the "maintainer" permissions for their teams by [creating a new github team handle](https://github.com/orgs/Azure/new-team) for their crews and adding this handle with "admin"/"maintainer" role as needed
+- Kindly request the corresponding Azure product teams to include their team handle as "Admins"/"Maintainers" to facilitate raising any commits from their side for feature enhancements or for fixing supportability issues
+
 ## Guidelines during Development phase
 
 <Link to complete guidance during development>
