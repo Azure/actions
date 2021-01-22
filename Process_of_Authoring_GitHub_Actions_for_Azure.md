@@ -2,7 +2,7 @@
 
 [GitHub Actions](https://help.github.com/en/articles/about-github-actions) is a community-led and community-powered approach to enable developers to automate their code to cloud workflows directly from their repositories.
 There are now 6900+ community-developed actions available in [GitHub Marketplace](https://github.com/marketplace). 
-Since releasing Actions in November 2017, GitHub partners including Cloud partners like AWS, Azure, Google, and many others have also contributed to this list to help developers(teams) can extend and automate workflows with their existing tools.
+Since releasing Actions in November 2017, GitHub partners including Cloud partners like AWS, Azure, Google, and many others have also contributed to this list to help developers (teams) to extend and automate workflows with their existing tools.
 
 # GitHub Actions for Azure
 [GitHub Actions for Azure](https://github.com/Azure/actions) are released to GitHub Marketplace for creating workflows to package, release, and deploy apps to [Azure](https://azure.microsoft.com/) from GitHub. These actions enable developers to target the breadth of Azure services, from Web Apps to serverless Functions, as well as Azure SQL and MySQL databases. We also released Actions for building and deploying container-based applications that work with Docker and Kubernetes on any environment and cloud, in addition to their managed Azure Kubernetes Service.
@@ -51,9 +51,6 @@ Once the repo is created, following is the permission model that is followed acr
 
 - Kindly request the corresponding Azure product teams to include their team handle as "Admins"/"Maintainers" to facilitate raising any commits from their side for feature enhancements or for fixing supportability issues
 
-## Guidelines during Development phase
-
-<Link to complete guidance during development>
 
 ## ReadMe.md &amp; action.yml files
 
