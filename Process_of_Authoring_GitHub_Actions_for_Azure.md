@@ -11,7 +11,7 @@ To help GH developers easily create GitHub CI/CD workflows targeting Azure, we a
 
 GitHub Actions for Azure are also integrated into Visual Studio Code, Azure CLI, and the Azure Portal simplifying the experience of [deploying to Azure from your favorite tools.](https://azure.microsoft.com/en-us/blog/deploy-to-azure-using-github-actions-from-your-favorite-tools/)
 
-This document is intended to help developers with the recommended process to create, publish and contribute to actions for Azure. Please reach out to the [vTeam](mailto:ace-team@github.com) for any queries.
+This document is intended to help developers with the recommended process to create, publish and contribute to actions for Azure. Please reach out to the [ACE Team](mailto:ace-team@github.com) for any queries. 
 
 # Creating a new GitHub Action for Azure or Microsoft
 
@@ -39,12 +39,13 @@ Microsoft's official GitHub.com organizations, powered by GitHub Enterprise Clou
 
 Either-ways, there is an Open Source compliance request that automatically gets created at the end of the repo creation step. Creators receive an e-mail to complete the additional steps required to complete the setup process.
 
-If you are an external (non-Microsoft) contributor, please reach out to the [vTeam](mailto:ace-team@github.com) for help.
+If you are an external (non-Microsoft) contributor, please reach out to the [ACE Team](mailto:ace-team@github.com) for help. 
 
 ## Guidelines for setting permissions on the repo
 Once the repo is created, following is the permission model that is followed across various action repos within the [**Azure**](https://github.com/Azure) and [**Microsoft**](https://github.com/Microsoft) GitHub orgs:
 
-- [actions-admin](https://github.com/orgs/Azure/teams/actions-admin/members) team would be added with "admin" role to every new GH repo created for authoring any new action under the Azure org (github.com/azure/)
+- [actions-admin](https://github.com/orgs/Azure/teams/actions-admin/members) team would be added with "admin" role to every new GH repo created for authoring any new action under the Azure org (github.com/azure/). This will ensure that ACE team can act in admin role to ensure that the process guidelines for authoring & publishing the actions are completely followed.
+
 - Owners of the individual actions could manage the "maintainer" permissions for their teams by [creating a new github team handle](https://github.com/orgs/Azure/new-team) for their crews and adding this handle with "admin"/"maintainer" role as needed. 
 
 **Note:** It is recommended that team handles are used for maintaining permissions instead of adding individual member's github handles.
@@ -79,7 +80,7 @@ Official Release Management Guidance from GH platform team: https://docs.githu
 
 - Versioning guidelines mentioned above section are adhered to and you have a version tag
 - Well documented readme.md is in place at the root of the repo
-- V-team is involved for review process and sign off by mailing @[V team Alias](mailto:ace-team@github.com)
+- V-team is involved for review process and sign off by mailing @[ACE team Alias](mailto:ace-team@github.com)
 
 Finally [publish the action to GitHub Marketplace](https://docs.github.com/free-pro-team@latest/actions/creating-actions/publishing-actions-in-github-marketplace)
   - Typically for all actions intended to &quot;deploy to Azure&quot;, we mark Primary Category as &quot;Deployment&quot;
@@ -94,4 +95,4 @@ Various starter templates are made available to help users easily get started wi
 
 It is recommended that a suitable workflow template is added to this repo: [https://github.com/Azure/actions-workflow-samples](https://github.com/Azure/actions-workflow-samples) by raising a PR into the relevant folder.
 
-For more help, please reach out to @[V Team Alias](mailto:ace-team@github.com)
+For more help, please reach out to @[ACE Team Alias](mailto:ace-team@github.com)
