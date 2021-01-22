@@ -32,7 +32,7 @@ If you are a Microsoft employee,
   - [https://repos.opensource.microsoft.com/orgs/Azure/new](https://repos.opensource.microsoft.com/Azure) for creating repos under github.com/Azure Org
   - [https://repos.opensource.microsoft.com/orgs/Microsoft/new](https://repos.opensource.microsoft.com/microsoft) for creating repos under github.com/Microsoft Org
 
-Ensure to select **Engineering system: GitHub for Open Source** as GitHub Actions for Azure or Microsoft are published as Open Source in repos created
+Ensure to select **Engineering system: GitHub for Open Source** as GitHub Actions for Azure or Microsoft are published as Open Source in repos created in
 Microsoft's official GitHub.com organizations, powered by GitHub Enterprise Cloud.
 
 2. Alternatively, Microsoft users who might already have required permissions on github.com/azure and github.com/Microsoft orgs could just directly create a repo in the respective org without going through the above open-source portal URLs. 
@@ -54,9 +54,9 @@ Once the repo is created, following is the permission model that is followed acr
 
 ## ReadMe.md &amp; action.yml files
 
-Once the Action development is complete, ensure that it is documented well in the readme.md file at the root of the repo of the Master branch. Please note that this content is used when the Action is published to the GitHub Marketplace. Hence including a sample workflow which covers the best usage of the Action is always recommended.
+Once the Action development is complete, ensure that it is documented well in the **readme.md** file at the root of the repo of the Master branch. Please note that this content is used when the Action is published to the GitHub Marketplace. Hence including a sample workflow which covers the best usage of the Action is always recommended.
 
-Also ensure that the Action.yml is present in the root of the repo and has the Action name &amp; description well defined. Also choose the icon &amp; color suitably under branding as these are used when the Action is listed in Marketplace catalog.
+Also ensure that the **action.yml** is present in the root of the repo and has the Action name &amp; description well defined. Also choose the icon &amp; color suitably under branding as these are used when the Action is listed in Marketplace catalog.
 
 Note: All actions published from **Azure** GitHub org are branded using the Azure icon irrespective of the icon used in the action.yml. This is to leverage the recall value of Azure brand and icon as compared to the individual icons of various Azure services. 
 
