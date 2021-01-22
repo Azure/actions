@@ -1,7 +1,7 @@
 # GitHub Actions
 
 [GitHub Actions](https://help.github.com/en/articles/about-github-actions) is a community-led and community-powered approach to enable developers to automate their code to cloud workflows directly from their repositories.
-There are now over 6,700+ community-developed actions available in [GitHub Marketplace](https://github.com/marketplace). 
+There are now 6900+ community-developed actions available in [GitHub Marketplace](https://github.com/marketplace). 
 Since releasing Actions in November 2017, GitHub partners including Cloud partners like AWS, Azure, Google, and many others have also contributed to this list to help developers(teams) can extend and automate workflows with their existing tools.
 
 # GitHub Actions for Azure
@@ -11,7 +11,7 @@ To help GH developers easily create GitHub CI/CD workflows targeting Azure, we a
 
 GitHub Actions for Azure are also integrated into Visual Studio Code, Azure CLI, and the Azure Portal simplifying the experience of [deploying to Azure from your favorite tools.](https://azure.microsoft.com/en-us/blog/deploy-to-azure-using-github-actions-from-your-favorite-tools/)
 
-This document is intended to help developers with the recommended process to create, publish and contribute to actions for Azure. Please reach out to the [vTeam](mailto:) for any queries.
+This document is intended to help developers with the recommended process to create, publish and contribute to actions for Azure. Please reach out to the [vTeam](mailto:ace-team@github.com) for any queries.
 
 # Creating a new GitHub Action for Azure or Microsoft
 
@@ -21,24 +21,34 @@ This guidance is to enable developers and teams intending to create a new GitHub
 
 ## Before you author
 
-- Kindly confirm that the new action would enable a new developer scenario that can not be accomplished by the existing set of [Actions for Azure](https://github.com/marketplace?type=actions&query=Azure) or by enhancing them through contributions.
+- Kindly confirm that the new action would enable a new developer scenario that can **not** be accomplished by the existing set of [Actions for Azure](https://github.com/marketplace?type=actions&query=Azure) or by enhancing them through contributions.
 - Choose the right GitHub org to create a repo. For example, for all Actions targeting an Azure service, choose [https://github.com/Azure/](https://github.com/Azure/) as the Org. Else for any generic utility actions which are cloud agnostic, chose [https://github.com/Microsoft](https://github.com/Microsoft) as the org for hosting the Action repo.
 - Ensure that only one action is present per repo. Create new repo for each of your actions.
 
 ## Steps to create a new Action repo 
 
-Request a new repo from the below links as suitable:
+If you are a Microsoft employee, 
+1. Request a new repo from the below links as suitable:
   - [https://repos.opensource.microsoft.com/orgs/Azure/new](https://repos.opensource.microsoft.com/Azure) for creating repos under github.com/Azure Org
   - [https://repos.opensource.microsoft.com/orgs/Microsoft/new](https://repos.opensource.microsoft.com/microsoft) for creating repos under github.com/Microsoft Org
 
 Ensure to select **Engineering system: GitHub for Open Source** as GitHub Actions for Azure or Microsoft are published as Open Source in repos created
 Microsoft's official GitHub.com organizations, powered by GitHub Enterprise Cloud.
 
+2. Alternatively, Microsoft users who might already have required permissions on github.com/azure and github.com/Microsoft orgs could just directly create a repo in the respective org without going through the above open-source portal URLs. 
+
+Either-ways, there is an Open Source compliance request that automatically gets created at the end of the repo creation step. Creators receive an e-mail to complete the additional steps required to complete the setup process.
+
+If you are an external (non-Microsoft) contributor, please reach out to the [vTeam](mailto:ace-team@github.com) for help.
+
 ## Guidelines for setting permissions on the repo
-Following is the permission model to be followed across various action repos within the [**Azure**](https://github.com/Azure) and [**Microsoft**](https://github.com/Microsoft) GitHub org:
+Once the repo is created, following is the permission model that is followed across various action repos within the [**Azure**](https://github.com/Azure) and [**Microsoft**](https://github.com/Microsoft) GitHub orgs:
 
 - [actions-admin](https://github.com/orgs/Azure/teams/actions-admin/members) team would be added with "admin" role to every new GH repo created for authoring any new action under the Azure org (github.com/azure/)
-- Owners of the individual actions could manage the "maintainer" permissions for their teams by [creating a new github team handle](https://github.com/orgs/Azure/new-team) for their crews and adding this handle with "admin"/"maintainer" role as needed
+- Owners of the individual actions could manage the "maintainer" permissions for their teams by [creating a new github team handle](https://github.com/orgs/Azure/new-team) for their crews and adding this handle with "admin"/"maintainer" role as needed. 
+
+**Note:** It is recommended that team handles are used for maintaining permissions instead of adding individual member's github handles.
+
 - Kindly request the corresponding Azure product teams to include their team handle as "Admins"/"Maintainers" to facilitate raising any commits from their side for feature enhancements or for fixing supportability issues
 
 ## Guidelines during Development phase
@@ -47,7 +57,7 @@ Following is the permission model to be followed across various action repos wit
 
 ## ReadMe.md &amp; action.yml files
 
-Once the Action implementation is complete, ensure that it is documented well in the readme.md file at the root of the repo of the Master branch. Please note that this content is used when the Action is published to the GitHub Marketplace. Hence including a sample workflow which covers the best usage of the Action is always recommended.
+Once the Action development is complete, ensure that it is documented well in the readme.md file at the root of the repo of the Master branch. Please note that this content is used when the Action is published to the GitHub Marketplace. Hence including a sample workflow which covers the best usage of the Action is always recommended.
 
 Also ensure that the Action.yml is present in the root of the repo and has the Action name &amp; description well defined. Also choose the icon &amp; color suitably under branding as these are used when the Action is listed in Marketplace catalog.
 
@@ -59,7 +69,7 @@ Note: All actions published from **Azure** GitHub org are branded using the Azur
 
 Official Release Management Guidance from GH platform team: https://docs.github.com/en/free-pro-team@latest/actions/creating-actions/about-actions#using-release-management-for-actions
 
-**Note:** Introduce a new major version of the branch (releases/v2) and tag (v2) if changes break the existing workflow. Ensure to move the major version tag to always point to the most recent minor version tag to ensure all the existing users of the major version would automatically gain the benefits from the new enhancements added in the minor version release.
+**Note:** Introduce a new major version of the branch (releases/v2) and tag (v2) if changes break the existing workflows using the previous version. In case of Minor version releases, ensure to move the major version tag to always point to the most recent minor version tag to ensure all the existing users of the major version would automatically gain the benefits from the new enhancements added in the minor version release.
 
 
 ## Publish the action to Marketplace
@@ -71,15 +81,15 @@ Official Release Management Guidance from GH platform team: https://docs.githu
 &quot;DO NOT PUBLISH THE ACTION TO THE MARKETPLACE UNTIL LEGAL REVIEW IS COMPLETE&quot;
 
 - Versioning guidelines mentioned above section are adhered to and you have a version tag
-- Have a readme.md in place with documentation
-- Include V-team for review process and sign off by mailing@ [V team Alias](mailto:)
+- Well documented readme.md is in place at the root of the repo
+- V-team is involved for review process and sign off by mailing @[V team Alias](mailto:ace-team@github.com)
 
 Finally [publish the action to GitHub Marketplace](https://docs.github.com/free-pro-team@latest/actions/creating-actions/publishing-actions-in-github-marketplace)
   - Typically for all actions intended to &quot;deploy to Azure&quot;, we mark Primary Category as &quot;Deployment&quot;
   - Secondary Category can be chosen based on the intent of the Action
 - Give a suitable release title and write up. Tip: Include a sample workflow and License details
 - &quot;Publish release&quot;
-- Navigate to [https://github.com/marketplace?type=actions](https://github.com/marketplace?type=actions) and search for your Action to ensure everything is right in place.
+- Navigate to [https://github.com/marketplace?type=actions](https://github.com/marketplace?type=actions) and search for your Action to ensure everything shown is as needed.
 
 ### Include a starter template in the [Azure/actions-workflow-sample](https://github.com/Azure/actions-workflow-samples)s repo
 
@@ -87,4 +97,4 @@ Various starter templates are made available to help users easily get started wi
 
 It is recommended that a suitable workflow template is added to this repo: [https://github.com/Azure/actions-workflow-samples](https://github.com/Azure/actions-workflow-samples) by raising a PR into the relevant folder.
 
-For more help, please reach out to @ [V Team Alias](mailto:)
+For more help, please reach out to @[V Team Alias](mailto:ace-team@github.com)
