@@ -26,14 +26,17 @@ This document is to set communication guidelines, processes for making GitHub Ac
 ## Entities involved:
 #### 1. ACE team:
 Team responsible for building infrastructure & platform, maintaining and advocating Actions for Azure. This is us. 
-  a) DL - ace-team@github.com
-  b) GitHub Team handles -at GitHub org - , Azure Org, MS Org
+> a. DL - ace-team@github.com
+
+> b. GitHub Team handles -GitHub org, Azure Org, MS Org
   
 #### 2. ACE Steering Committee: 
 Steering body for the Azure Actions. This should be ACE Team + key stakeholders from Azure & MS. Ex for all the key decision making for Azure Actions it would be ACE Team + Key Stakeholders from Azure.
-  a) This can have folks from the MS team or community.
- b) Need to have a Teams channel for each org (for internal communication between ACE Team & MS Partner Team). Need github handles & MS email ids for these members
- c) Need Team handles for these - would be used for tagging in any communication with Azure org/MS org, code reviews etc
+> a) This can have folks from the MS team or community.
+
+> b) Need to have a Teams channel for each org (for internal communication between ACE Team & MS Partner Team). Need github handles & MS email ids for these members
+
+> c) Need Team handles for these - would be used for tagging in any communication with Azure org/MS org, code reviews etc
 
 #### 3. Action Maintainer Group: 
 For each Action, the Action maintainer group would include ACE Team + Owners of the specific Action. The owners would be decided by the team who creates the Action. 
@@ -50,12 +53,15 @@ For each Action, the Action maintainer group would include ACE Team + Owners of 
 ## How will ACE Team communicate with the community/partner teams:
 1. Roadmap & Milestones
 2. Release notes to community which would include
-  Breaking update or security related or regular update.
-  New Action/New version Announcements 
+> a. Breaking update or security related or regular update.
+
+> b. New Action/New version Announcements 
 3. Action Mantainers Group about :
-  Breaking changes
-  Security changes
-  Regular updates
+> a. Breaking changes
+
+> b. Security changes
+
+> c.Regular updates
 
 ## Administrative scenarios (will be taken care by Team handles, no action item)
 1. Employee leaving
