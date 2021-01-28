@@ -22,24 +22,26 @@ This guidance is to enable developers and teams intending to create a new GitHub
 ## Before you author
 
 - Kindly confirm that the new action would enable a new developer scenario that can **not** be accomplished by the existing set of [Actions for Azure](https://github.com/marketplace?type=actions&query=Azure) or by enhancing them through contributions.
-- Choose the right GitHub org to create a repo. For example, for all Actions targeting an Azure service, choose [https://github.com/Azure/](https://github.com/Azure/) as the Org. Else for any generic utility actions which are cloud agnostic, chose [https://github.com/Microsoft](https://github.com/Microsoft) as the org for hosting the Action repo.
 - Ensure that only one action is present per repo. Create new repo for each of your actions.
 
 ## Steps to create a new Action repo 
 
 If you are a Microsoft employee, 
-1. Request a new repo from the below links as suitable:
+
+1. Choose the right GitHub org to create a repo. For example, for all Actions targeting an Azure service, choose [https://github.com/Azure/](https://github.com/Azure/) as the Org. Else for any generic utility actions which are cloud agnostic, chose [https://github.com/Microsoft](https://github.com/Microsoft) as the org for hosting the Action repo.
+
+2. Request a new repo from the below links as suitable:
   - [https://repos.opensource.microsoft.com/orgs/Azure/new](https://repos.opensource.microsoft.com/Azure) for creating repos under github.com/Azure Org
   - [https://repos.opensource.microsoft.com/orgs/Microsoft/new](https://repos.opensource.microsoft.com/microsoft) for creating repos under github.com/Microsoft Org
 
 Ensure to select **Engineering system: GitHub for Open Source** as GitHub Actions for Azure or Microsoft are published as Open Source in repos created in
 Microsoft's official GitHub.com organizations, powered by GitHub Enterprise Cloud.
 
-2. Alternatively, Microsoft users who might already have required permissions on github.com/azure and github.com/Microsoft orgs could just directly create a repo in the respective org without going through the above open-source portal URLs. 
+3. Alternatively, Microsoft users who might already have required permissions on github.com/azure and github.com/Microsoft orgs could just directly create a repo in the respective org without going through the above open-source portal URLs. 
 
 Either-ways, there is an Open Source compliance request that automatically gets created at the end of the repo creation step. Creators receive an e-mail to complete the additional steps required to complete the setup process.
 
-If you are an external (non-Microsoft) contributor, please reach out to the [ACE Team](mailto:ace-team@github.com) for help. 
+If you are an external (non-Microsoft) contributor, you could either raise PRs to the existing Actions in Azure &n Microsoft Orgs or create new action repos in your individual GitHub orgs and can reach out to the [ACE Team](mailto:ace-team@github.com) for any guidance.
 
 ## Guidelines for setting permissions on the repo
 Once the repo is created, following is the permission model that is followed across various action repos within the [**Azure**](https://github.com/Azure) and [**Microsoft**](https://github.com/Microsoft) GitHub orgs:
