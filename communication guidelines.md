@@ -1,14 +1,13 @@
 ## Purpose:
 [GitHub Actions](https://docs.github.com/en/actions/learn-github-actions) gives you the flexibility to build an automated software development lifecycle workflow. With [GitHub Actions for Azure](https://docs.microsoft.com/en-gb/azure/developer/github/) you can create workflows that you can set up in your repository to build, test, package, release and deploy to Azure
-This document is to set communication guidelines, processes for making GitHub Actions ready for the external community. We want to set a robust framework for communication, and governance for anything related to Azure Actions, for enabling both internal and external users to be always updated on any change in this area.
+This document is to set communication guidelines for making GitHub Actions ready for the external community. We want to set a robust framework for communication, and governance for anything related to GitHib Actions for Azure, for enabling both internal and external users to be always updated on any change in this area.
 
-## Background information needed:
-1. Microsoft open source program office’s protocols and definitions.
+## Ground Rules for Communication:
+1. ANy form of communciation should abide by the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/)
 2. We would use GitHub aliases for all the communication
-3. All the communication (except for a few cases) we would want all communication to be public Do we ever need private communication? Is there anything proprietary? 
-4. In case of communication that involves strategic decisions which partner team would not want to go public earlier official announcement, have all the communication and key decisions in the form of GH Discussions/Issues inside the private repo. Once right time arises, the repo would be made public
+3. We would want all communication to be public. In case of communication that involves strategic decisions which partner team would not want to go public earlier official announcement, have all the communication and key decisions in the form of GH Discussions/Issues inside the private repo. Once right time arises, the repo would be made public
 
-## What should be Open-Sourced:
+## What should be communicated:
 1. Anything that is relevant to external developers
 2. Common utilities
 3. Guidelines for contribution
@@ -17,7 +16,7 @@ This document is to set communication guidelines, processes for making GitHub Ac
 6. Discussions related to issues & features
 7. Roadmap & milestone planning
 
-## What should not be Open-Sourced:
+## What should not be be included in Open Source Communications:
 1. Individual contact information or internal channel information (anything that is related to PII)
 2. Internal processes that are not relevant or will not be used by external developers
 3. Internal discussions and decisions on formulating open source guidelines
