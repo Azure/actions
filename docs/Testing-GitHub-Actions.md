@@ -42,10 +42,10 @@ Functional tests are essential to catch bugs in preflight development branches b
 
 Release process consists of below steps:
 
-- forking out a branch releases/Vn from the master branch
-- check-in the required dependencies
-- testing
-- tagging the commit with appropriate tag
+- Forking out a branch releases/Vn from the master branch
+- Check-in the required dependencies
+- Testing
+- Tagging the commit with appropriate tag
 
 On every code push into master and releases branch always run the right set of function tests to validate the code quality. Unless all functional tests are passed, don&#39;t proceed for releasing a new version / hotfix.
 
@@ -56,15 +56,21 @@ Running functional tests automatically on each code push can be achieved by usin
 - Each job should test action for different customer scenarios.
 - For master branch build the code and test the build action ( As master branch does not contain the supporting modules checked-in)
 - Jobs should be executed conditionally depending on the branch where code got pushed.
-- The secrets used in this workflow should be managed using [secret variables](https://docs.github.com/en/free-pro-team@latest/actions/reference/encrypted-secrets). PR updating this workflow should be carefully reviewed for any malicious updates on secrets.
+- **The secrets used in this workflow should be managed using [secret variables](https://docs.github.com/en/free-pro-team@latest/actions/reference/encrypted-secrets).**
 - This workflow needs to be updated to cover the newly added features / fixes. Update is nothing but adding the action with appropriate inputs covering newly added changes.
+- PR reviewer's check list:
+  - Secret logging / Updates: PR updating test workflows should be carefully reviewed for any malicious updates on secrets.
+  - Code coverage: Review the code coverage result posted against PR. It should meet the code coverage bar.
 
 ## Open items
 
-1. How to ensure template YAML update is available to other actions?
-2. How to run unit tests and functional tests during development in VS Code/ VS IDE or from the command line?
+1. YAML running Unit tests / Functional test got updated in template repo, how we ensure the update is available to other actions repos?
+2. A. Dev box scenario ( Inner dev loop ) -  How to run unit tests using VS Code / VS IDE
 
-          To start with scoped down for node JS based actions provide the guidance.
+        To start with scoped down for node JS based actions provide the guidance.
+
+   B. Functional tests what is our recommendation to run these from dev box
+          
 
 3. How to author tests ?
 
