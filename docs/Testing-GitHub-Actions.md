@@ -62,7 +62,8 @@ Running functional tests automatically on each code push can be achieved by usin
   - Secret logging / Updates: PR updating test workflows should be carefully reviewed for any malicious updates on secrets.
   - Code coverage: Review the code coverage result posted against PR. It should meet the code coverage bar.
 
-## Open items
+## [Open items](https://github.com/github/GitHub-EcoSystem/issues/923)
+
 
 1. YAML running Unit tests / Functional test got updated in template repo, how we ensure the update is available to other actions repos?
 2. A. Dev box scenario ( Inner dev loop ) -  How to run unit tests using VS Code / VS IDE
