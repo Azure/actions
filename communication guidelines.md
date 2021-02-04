@@ -72,5 +72,4 @@ For each Action, the Action maintainer group would include ACE Team + Owners of 
 1. Communication open to the public is better than private only communication.
 2. Communication should remain available even if people change.
 3. Issues, discussion or chatops channels remain available.
-4. Communication should be modelled as much as on GitHub way of doing things.
-5. Communication should be automated. Bots based communication have better acceptance.
+4. Communication should be automated. Bots based communication have better acceptance.
