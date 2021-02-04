@@ -1,11 +1,11 @@
 ## Purpose:
 [GitHub Actions](https://docs.github.com/en/actions/learn-github-actions) gives you the flexibility to build an automated software development lifecycle workflow. With [GitHub Actions for Azure](https://docs.microsoft.com/en-gb/azure/developer/github/) you can create workflows that you can set up in your repository to build, test, package, release and deploy to Azure
-This document is to set communication guidelines for making GitHub Actions ready for the external community. We want to set a robust framework for communication, and governance for anything related to GitHib Actions for Azure, for enabling both internal and external users to be always updated on any change in this area.
+This document is to set communication guidelines for making GitHub Actions ready for the external community. We want to set a robust framework for communication, and governance for anything related to GitHub Actions for Azure, for enabling both internal and external users to be always updated on any change in this area.
 
 ## Ground Rules for Communication:
-1. ANy form of communciation should abide by the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/)
+1. Any form of communciation should abide by the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/)
 2. We would use GitHub aliases for all the communication
-3. We would want all communication to be public. In case of communication that involves strategic decisions which partner team would not want to go public earlier official announcement, have all the communication and key decisions in the form of GH Discussions/Issues inside the private repo. Once right time arises, the repo would be made public
+3. We would want all communication to be public. 
 
 ## What should be communicated:
 1. Anything that is relevant to external developers
@@ -71,6 +71,6 @@ For each Action, the Action maintainer group would include ACE Team + Owners of 
 ## Guiding principles
 1. Communication open to the public is better than private only communication.
 2. Communication should remain available even if people change.
-3. Issues, discussion or chatops channels remain available. Mail doesn’t.
+3. Issues, discussion or chatops channels remain available.
 4. Communication should be modelled as much as on GitHub way of doing things.
 5. Communication should be automated. Bots based communication have better acceptance.
