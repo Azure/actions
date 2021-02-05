@@ -3,7 +3,9 @@
 This repository provides a framework, guidleines and processes to author new and contribute to existing GitHub Actions deploying to Azure.
 
 ## Table of contents
-- [GitHub Actions for deploying to Azure](#github-actions-for-deploying-to-azure)
+- [Introduction to GitHub Actions for Azure](#introduction-to-github-actions-for-azure)
+  - [What is GitHub Actions for Azure](https://docs.microsoft.com/en-in/azure/developer/github/github-actions)
+  - [Starter Action Workflows to deploy to Azure](https://github.com/Azure/actions-workflow-samples)
 - Contributing to Azure Actions
   - [Create a new GitHub Action for Azure or Microsoft](https://github.com/Azure/actions/blob/master/docs/Process_of_Authoring_GitHub_Actions_for_Azure.md#creating-a-new-github-action-for-azure-or-microsoft)
   - [Guidelines for repository permissions](https://github.com/Azure/actions/blob/master/docs/Process_of_Authoring_GitHub_Actions_for_Azure.md#guidelines-for-setting-permissions-on-the-repo)
@@ -12,7 +14,7 @@ This repository provides a framework, guidleines and processes to author new and
   - [Publish to Marketplace](https://github.com/Azure/actions/blob/master/docs/Process_of_Authoring_GitHub_Actions_for_Azure.md#publish-the-action-to-marketplace)
   - [Communication guidelines](https://github.com/Azure/actions/blob/master/communication%20guidelines.md)
 
-# GitHub Actions for deploying to Azure
+# Introduction to GitHub Actions for Azure
 
 [GitHub Actions](https://help.github.com/en/articles/about-github-actions)  gives you the flexibility to build an automated software development lifecycle workflow. 
 
@@ -24,7 +26,7 @@ To easily create GitHub CI/CD workflows targeting Azure, use our [Azure starter 
 
 Please try out the [GitHub Actions for Azure](https://docs.microsoft.com/azure/developer/github/github-actions) and share your feedback via Twitter on [@Azure](https://twitter.com/azuredevops). If you encounter a problem, please open an issue on the GitHub repository for the specific action.
 
-# Existing GitHub Actions for Azure
+# GitHub Actions for Azure
 
 ## Connect to Azure
 - [Azure login](https://github.com/Azure/login)(`azure/login`) action can be used to authenticate to your Azure subscription using a service principal. 
