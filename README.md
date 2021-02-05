@@ -7,12 +7,12 @@ This repository provides a framework, guidleines and processes to author new and
   - [What is GitHub Actions for Azure](https://docs.microsoft.com/en-in/azure/developer/github/github-actions)
   - [Starter Action Workflows to deploy to Azure](https://github.com/Azure/actions-workflow-samples)
 - Contributing to Azure Actions
-  - [Create a new GitHub Action for Azure or Microsoft](https://github.com/Azure/actions/blob/master/docs/Process_of_Authoring_GitHub_Actions_for_Azure.md#creating-a-new-github-action-for-azure-or-microsoft)
-  - [Guidelines for repository permissions](https://github.com/Azure/actions/blob/master/docs/Process_of_Authoring_GitHub_Actions_for_Azure.md#guidelines-for-setting-permissions-on-the-repo)
-  - [Action Versioning](https://github.com/Azure/actions/blob/master/docs/Process_of_Authoring_GitHub_Actions_for_Azure.md#action-versioning)
-  - [Testing GitHub Actions](https://github.com/Azure/actions/blob/master/docs/Testing-GitHub-Actions.md)
-  - [Publish to Marketplace](https://github.com/Azure/actions/blob/master/docs/Process_of_Authoring_GitHub_Actions_for_Azure.md#publish-the-action-to-marketplace)
-  - [Communication guidelines](https://github.com/Azure/actions/blob/master/communication%20guidelines.md)
+  - [Create a new GitHub Action for Azure or Microsoft](docs/Process_of_Authoring_GitHub_Actions_for_Azure.md#creating-a-new-github-action-for-azure-or-microsoft)
+  - [Guidelines for repository permissions](docs/Process_of_Authoring_GitHub_Actions_for_Azure.md#guidelines-for-setting-permissions-on-the-repo)
+  - [Action Versioning](docs/Process_of_Authoring_GitHub_Actions_for_Azure.md#action-versioning)
+  - [Testing GitHub Actions](docs/Testing-GitHub-Actions.md)
+  - [Publish to Marketplace](docs/Process_of_Authoring_GitHub_Actions_for_Azure.md#publish-the-action-to-marketplace)
+  - [Communication guidelines](communication%20guidelines.md)
 
 # Introduction to GitHub Actions for Azure
 
