@@ -1,3 +1,10 @@
+# Actions - GitHub Actions for Azure
+
+This repository provides a framework, guidleines and processes to author new and contribute to existing GitHub Actions deploying to Azure.
+
+## Table of contents
+- [GitHub Actions for deploying to Azure](#github-actions-for-deploying-to-azure)
+
 # GitHub Actions for deploying to Azure
 
 [GitHub Actions](https://help.github.com/en/articles/about-github-actions)  gives you the flexibility to build an automated software development lifecycle workflow. 
