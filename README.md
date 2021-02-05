@@ -12,7 +12,7 @@ This repository provides a framework, guidleines and processes to author new and
   - [Action Versioning](https://github.com/Azure/actions/blob/master/Process_of_Authoring_GitHub_Actions_for_Azure.md#action-versioning)
   - [Testing GitHub Actions](https://github.com/Azure/actions/blob/master/docs/Testing-GitHub-Actions.md)
   - [Publish to Marketplace](https://github.com/Azure/actions/blob/master/Process_of_Authoring_GitHub_Actions_for_Azure.md#publish-the-action-to-marketplace)
-  - [Communication guidelines](https://github.com/Azure/actions/communication-guidelines.md)
+  - [Communication guidelines](https://github.com/Azure/actions/communication%20guidelines.md)
 - [Code of Conduct](#code-of-conduct)
 
 # GitHub Actions for deploying to Azure
