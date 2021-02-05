@@ -4,16 +4,14 @@ This repository provides a framework, guidleines and processes to author new and
 
 ## Table of contents
 - [GitHub Actions for deploying to Azure](#github-actions-for-deploying-to-azure)
-- [GitHub Actions for Azure](#github-actions-for-azure)
-- [Contributing to Azure Actions](#contributing-to-azure-actions)
+- [Existing GitHub Actions for Azure](#github-actions-for-azure)
+- [Contributing to Azure Actions]
   - [Create a new GitHub Action for Azure or Microsoft](https://github.com/Azure/actions/blob/master/docs/Process_of_Authoring_GitHub_Actions_for_Azure.md#creating-a-new-github-action-for-azure-or-microsoft)
   - [Guidelines for repository permissions](https://github.com/Azure/actions/blob/master/docs/Process_of_Authoring_GitHub_Actions_for_Azure.md#guidelines-for-setting-permissions-on-the-repo)
   - [Action Versioning](https://github.com/Azure/actions/blob/master/docs/Process_of_Authoring_GitHub_Actions_for_Azure.md#action-versioning)
   - [Testing GitHub Actions](https://github.com/Azure/actions/blob/master/docs/Testing-GitHub-Actions.md)
   - [Publish to Marketplace](https://github.com/Azure/actions/blob/master/docs/Process_of_Authoring_GitHub_Actions_for_Azure.md#publish-the-action-to-marketplace)
   - [Communication guidelines](https://github.com/Azure/actions/blob/master/communication%20guidelines.md)
-- [Contributing to this repo](#contributing-to-this-repository)
-- [Code of Conduct](#code-of-conduct)
 
 # GitHub Actions for deploying to Azure
 
@@ -27,7 +25,7 @@ To easily create GitHub CI/CD workflows targeting Azure, use our [Azure starter 
 
 Please try out the [GitHub Actions for Azure](https://docs.microsoft.com/azure/developer/github/github-actions) and share your feedback via Twitter on [@Azure](https://twitter.com/azuredevops). If you encounter a problem, please open an issue on the GitHub repository for the specific action.
 
-# GitHub Actions for Azure
+# Existing GitHub Actions for Azure
 
 ## Connect to Azure
 - [Azure login](https://github.com/Azure/login)(`azure/login`) action can be used to authenticate to your Azure subscription using a service principal. 
@@ -123,9 +121,7 @@ Refer to [starter templates](https://github.com/Azure/actions-workflow-samples/t
 ## More coming soon!
 We will continue improving upon our available set of GitHub Actions, and will release new ones to cover more Azure services.
 
-# Contributing to Azure Actions
-
-# Contributing to this repository
+# Contributing
 
 This project welcomes contributions and suggestions.  Most contributions require you to agree to a
 Contributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us
