@@ -1,4 +1,20 @@
-# GitHub Actions for deploying to Azure
+# Actions - GitHub Actions for Azure
+
+This repository provides a framework, guidleines and processes to author new and contribute to existing GitHub Actions deploying to Azure.
+
+## Table of contents
+- [Introduction to GitHub Actions for Azure](#introduction-to-github-actions-for-azure)
+  - [What is GitHub Actions for Azure](https://docs.microsoft.com/en-in/azure/developer/github/github-actions)
+  - [Starter Action Workflows to deploy to Azure](https://github.com/Azure/actions-workflow-samples)
+- Contributing to Azure Actions
+  - [Create a new GitHub Action for Azure or Microsoft](docs/Process_of_Authoring_GitHub_Actions_for_Azure.md#creating-a-new-github-action-for-azure-or-microsoft)
+  - [Guidelines for repository permissions](docs/Process_of_Authoring_GitHub_Actions_for_Azure.md#guidelines-for-setting-permissions-on-the-repo)
+  - [Action Versioning](docs/Process_of_Authoring_GitHub_Actions_for_Azure.md#action-versioning)
+  - [Testing GitHub Actions](docs/Testing-GitHub-Actions.md)
+  - [Publish to Marketplace](docs/Process_of_Authoring_GitHub_Actions_for_Azure.md#publish-the-action-to-marketplace)
+  - [Communication guidelines](communication%20guidelines.md)
+
+# Introduction to GitHub Actions for Azure
 
 [GitHub Actions](https://help.github.com/en/articles/about-github-actions)  gives you the flexibility to build an automated software development lifecycle workflow. 
 
@@ -106,7 +122,6 @@ Refer to [starter templates](https://github.com/Azure/actions-workflow-samples/t
 ## More coming soon!
 We will continue improving upon our available set of GitHub Actions, and will release new ones to cover more Azure services.
 
-
 # Contributing
 
 This project welcomes contributions and suggestions.  Most contributions require you to agree to a
@@ -117,6 +132,7 @@ When you submit a pull request, a CLA bot will automatically determine whether y
 a CLA and decorate the PR appropriately (e.g., status check, comment). Simply follow the instructions
 provided by the bot. You will only need to do this once across all repos using our CLA.
 
+# Code of Conduct
 This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
 For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or
 contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
