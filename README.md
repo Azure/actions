@@ -7,6 +7,12 @@ This repository provides a framework, guidleines and processes to author new and
 - [GitHub Actions for Azure](#github-actions-for-azure)
 - [Contributing to Azure Actions](#contributing-to-azure-actions)
 - [Contributing to this repo](#contributing-to-this-repository)
+  - [Create a new GitHub Action for Azure or Microsoft](https://github.com/Azure/actions/blob/master/Process_of_Authoring_GitHub_Actions_for_Azure.md#creating-a-new-github-action-for-azure-or-microsoft)
+  - [Guidelines for repository permissions](https://github.com/Azure/actions/blob/master/Process_of_Authoring_GitHub_Actions_for_Azure.md#guidelines-for-setting-permissions-on-the-repo)
+  - [Action Versioning](https://github.com/Azure/actions/blob/master/Process_of_Authoring_GitHub_Actions_for_Azure.md#action-versioning)
+  - [Testing GitHub Actions](https://github.com/Azure/actions/blob/master/docs/Testing-GitHub-Actions.md)
+  - [Publish to Marketplace](https://github.com/Azure/actions/blob/master/Process_of_Authoring_GitHub_Actions_for_Azure.md#publish-the-action-to-marketplace)
+  - [Communication guidelines](https://github.com/Azure/actions/communication-guidelines.md)
 - [Code of Conduct](#code-of-conduct)
 
 # GitHub Actions for deploying to Azure
