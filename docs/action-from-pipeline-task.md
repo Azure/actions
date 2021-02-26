@@ -40,5 +40,9 @@ You can ignore the above attributes while converting your task.json
 
 Please find some examples below - 
 
-
+| From | To |
+|-----|-----|
+|“inputs”: [{<br>        "name": "<name>",<br>        "type": "<any-type>",<br>        "label": "<label>",<br>        "required": false,<br>        "defaultValue": "<default>",<br>        "options": {<br>        ....options<br>        },<br>        "helpMarkDown": "<helpText>"<br><br>    }],|inputs:<br>  <name>:<br>      description: <description><br>      required: false<br>      default: ‘<default>’|
+  |"outputVariables": [<br>        {<br>            "name": "<outputVariable>",<br>            "description": "<description>"<br>        }<br>    ],|outputs:<br>  outputVariable: # id of the output<br>    description: '<description>'|
+  |"prejobexecution": { // optional<br>        "Node10": {<br>            "target": "pre-job.js"<br>        }<br>   },<br> "execution": {<br>        "Node10": {<br>            "target": "src/main.js"<br>        }<br>    },<br> "postjobexecution": { // optional<br>        "Node10": {<br>            "target": "post-job.js"<br>        }<br>    }|runs:<br>  using: 'node12'<br>  main:'src/main.js'<br>  pre: ‘pre-job.js’ # optional<br>  post: ‘post-job.js’ # optional|
 
