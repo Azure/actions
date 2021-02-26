@@ -8,6 +8,7 @@ This repository provides a framework, guidleines and processes to author new and
   - [Starter Action Workflows to deploy to Azure](https://github.com/Azure/actions-workflow-samples)
 - Contributing to Azure Actions
   - [Create a new GitHub Action for Azure or Microsoft](docs/Process_of_Authoring_GitHub_Actions_for_Azure.md#creating-a-new-github-action-for-azure-or-microsoft)
+  - [Create a Github Action based on a Pipleine Task](docs/action-from-pipeline-task.md)
   - [Guidelines for repository permissions](docs/Process_of_Authoring_GitHub_Actions_for_Azure.md#guidelines-for-setting-permissions-on-the-repo)
   - [Action Versioning](docs/Process_of_Authoring_GitHub_Actions_for_Azure.md#action-versioning)
   - [Testing GitHub Actions](docs/Testing-GitHub-Actions.md)
