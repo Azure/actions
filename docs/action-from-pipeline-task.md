@@ -22,18 +22,23 @@ If any of your code logic is completely independent of tasks-lib and any depende
 Refer to this document for more information: https://docs.github.com/en/actions/creating-actions/metadata-syntax-for-github-actions 
 
 Fields which exist in task.json but not in actions.yml
-ID 
-friendlyName
-helpUrl
-helpMarkDown
-Category
-Visibility
-Groups
-Version
-Demands
-Groups
-dataSourceBindings
-instanceNameFormat
-Messages
+* ID 
+* friendlyName
+* helpUrl
+* helpMarkDown
+* Category
+* Visibility
+* Groups
+* Version
+* Demands
+* Groups
+* dataSourceBindings
+* instanceNameFormat
+* Messages
 
 You can ignore the above attributes while converting your task.json
+
+Please find some examples below - 
+
+
+
