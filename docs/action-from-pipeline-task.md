@@ -1,7 +1,25 @@
-# Create a Github Action based on a Pipleine Task
+# Building GitHub Actions from Azure Pipeline Tasks
 
-In a pipeline task, the pipeline task lib is used for all the  platform functionalities. This has been broken down into multiple smaller modules like @actions/io @actions/exec @actions/core. 
-This document covers the basic conversions you need to transform your tasks code into a GitHub action.
+## Introduction
+
+GitHub Actions and Azure Pipelines share several configuration similarities, which makes migrating to GitHub Actions relatively straightforward. 
+
+[Migrating from Azure Pipelines to GitHub Actions](https://docs.github.com/en/actions/learn-github-actions/migrating-from-azure-pipelines-to-github-actions) highlights the similarities and the key differences between Actions and Azure Pipelines. It describes syntax differences and migration required for Azure pipleines to Actions workflow.
+
+For more information on GitHub Actions, please see [Core concepts for GitHub Actions.](https://docs.github.com/en/actions/learn-github-actions/introduction-to-github-actions)
+
+This document describes the basic conversions you need to transform your pipeline tasks code to actions.
+
+## Steps to transform Tasks to Actions 
+
+### 1. Replace Task libraries with Action libraries
+
+In a pipeline task, the pipeline task lib is used for all the  platform functionalities. In Actions, the common functionalities have  been broken down into multiple smaller modules like @actions/io @actions/exec @actions/core. 
+
+a. The code logic that is completely independent of the tasks library and any dependencies from the common-npm-packages folder can be re-used as in the Action.
+
+b. For replacing the Task lib with the Actions libraries, below list contains some example conversions to help you get started. 
+You might also be internally using certain modules built especially for tasks. When converting to action, please ensure any of your dependencies aren’t bringing in any `vsts-task-lib` references, as that could potentially lead into unexpected problems during runtime.
 
 | Tasks                | Actions                                                                                      | Remarks                                                                                                                                                                    |
 |----------------------|----------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -13,15 +31,12 @@ This document covers the basic conversions you need to transform your tasks code
 | tl.getPathInput()    | core.getInput()                                                                              | Given that path input was a UI feature and workflows are exclusively yaml based, you should use core.getInput instead, reading the content as plain text                   |
 | tl.getBoolInput()    | core.getInput()  Convert to type later                                                       |                                                                                                                                                                            |
 
-The above list contains a few observed conversions to help you get started. You might also internally use certain modules built especially for tasks, when converting to action, validate if any of your dependencies aren’t bringing in any `vsts-task-lib` references; you could potentially run into unexpected problems during runtime.
 
-If any of your code logic is completely independent of tasks-lib and any dependencies from the common-npm-packages folder. You can use the file/module/class as it is.
+### 2. Converting task.json to action.yml
 
-## Converting task.json to action.yml
+Please refer to this document for more information on the syntax for authoring Action yml: https://docs.github.com/en/actions/creating-actions/metadata-syntax-for-github-actions 
 
-Refer to this document for more information: https://docs.github.com/en/actions/creating-actions/metadata-syntax-for-github-actions 
-
-Fields which exist in task.json but not in actions.yml
+Following are the fields which exist in task.json but not in actions.yml
 * ID 
 * friendlyName
 * helpUrl
@@ -38,7 +53,7 @@ Fields which exist in task.json but not in actions.yml
 
 You can ignore the above attributes while converting your task.json
 
-Please find some examples below - 
+Please find below some examples for conversion - 
 
 | From | To |
 |-----|-----|
