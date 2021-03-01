@@ -5,7 +5,8 @@
 GitHub Actions and Azure Pipelines share several configuration similarities, which makes migrating to GitHub Actions relatively straightforward. 
 
 [Migrating from Azure Pipelines to GitHub Actions](https://docs.github.com/en/actions/learn-github-actions/migrating-from-azure-pipelines-to-github-actions) highlights the similarities and the key differences between Actions and Azure Pipelines. It describes syntax differences and migration required for Azure pipleines to Actions workflow.
-(For more information on GitHub Actions, please see "[Core concepts for GitHub Actions.](https://docs.github.com/en/actions/learn-github-actions/introduction-to-github-actions)")
+
+For more information on GitHub Actions, please see [Core concepts for GitHub Actions.](https://docs.github.com/en/actions/learn-github-actions/introduction-to-github-actions)
 
 This document descibes the basic conversions you need to transform your pipeline tasks code to actions.
 
