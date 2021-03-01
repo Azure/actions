@@ -8,7 +8,7 @@ GitHub Actions and Azure Pipelines share several configuration similarities, whi
 
 For more information on GitHub Actions, please see [Core concepts for GitHub Actions.](https://docs.github.com/en/actions/learn-github-actions/introduction-to-github-actions)
 
-This document descibes the basic conversions you need to transform your pipeline tasks code to actions.
+This document describes the basic conversions you need to transform your pipeline tasks code to actions.
 
 ## Steps to transform Tasks to Actions 
 
