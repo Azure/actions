@@ -17,11 +17,11 @@ jobs:
           with: 
             token: ${{ secrets.GITHUB_TOKEN }}
             configPath: issues-report-config.yml
-        - if: ${{ github.ref == 'refs/heads/users/kaverma/actionReposHealth' }}
+        - if: ${{ github.ref == 'refs/heads/users/kaverma/actionReposHealth1' }}
           run: |
             git config --local user.email "action@github.com"
             git config --local user.name "GitHubAction" 
             git pull
             git add ./_reports
             git commit -m "adding reports"
-            git push origin refs/heads/users/kaverma/actionReposHealth
+            git push origin refs/heads/users/kaverma/actionReposHealth1
