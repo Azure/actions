@@ -1,0 +1,18 @@
+[
+  {
+    "number": 33,
+    "title": "Arm deployment for Azure Data Factory failed without error message",
+    "html_url": "https://github.com/Azure/arm-deploy/issues/33",
+    "labels": [
+      {
+        "id": 2375301264,
+        "node_id": "MDU6TGFiZWwyMzc1MzAxMjY0",
+        "url": "https://api.github.com/repos/Azure/arm-deploy/labels/default",
+        "name": "default",
+        "color": "75bc0b",
+        "default": false,
+        "description": ""
+      }
+    ]
+  }
+]

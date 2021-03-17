@@ -1,0 +1,29 @@
+{
+  "status": 200,
+  "url": "https://api.github.com/repos/azure/appconfiguration-sync/issues?state=open&per_page=100",
+  "headers": {
+    "access-control-allow-origin": "*",
+    "access-control-expose-headers": "ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Used, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, Deprecation, Sunset",
+    "cache-control": "private, max-age=60, s-maxage=60",
+    "connection": "close",
+    "content-length": "2",
+    "content-security-policy": "default-src 'none'",
+    "content-type": "application/json; charset=utf-8",
+    "date": "Wed, 17 Mar 2021 07:02:09 GMT",
+    "etag": "\"811955c4ba3209a559c202f71e9e8bc747050d310bc49b32b10ed565812b3b90\"",
+    "referrer-policy": "origin-when-cross-origin, strict-origin-when-cross-origin",
+    "server": "GitHub.com",
+    "strict-transport-security": "max-age=31536000; includeSubdomains; preload",
+    "vary": "Accept, Authorization, Cookie, X-GitHub-OTP, Accept-Encoding, Accept, X-Requested-With",
+    "x-content-type-options": "nosniff",
+    "x-frame-options": "deny",
+    "x-github-media-type": "github.squirrel-girl-preview; format=json, github.inertia-preview; format=json, github.starfox-preview; format=json, github.mockingbird-preview; param=sailor-v-preview; format=json, github.squirrel-girl-preview; format=json, github.inertia-preview; format=json, github.starfox-preview; format=json, github.mockingbird-preview; param=sailor-v-preview; format=json",
+    "x-github-request-id": "0750:6F14:4121F09:6AC4469:6051A970",
+    "x-ratelimit-limit": "15000",
+    "x-ratelimit-remaining": "14977",
+    "x-ratelimit-reset": "1615967143",
+    "x-ratelimit-used": "23",
+    "x-xss-protection": "0"
+  },
+  "data": []
+}

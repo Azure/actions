@@ -1,0 +1,34 @@
+[
+  {
+    "number": 98,
+    "title": "There was an error fetching tenants",
+    "html_url": "https://github.com/Azure/login/issues/98",
+    "labels": [
+      {
+        "id": 2387335285,
+        "node_id": "MDU6TGFiZWwyMzg3MzM1Mjg1",
+        "url": "https://api.github.com/repos/Azure/login/labels/need-to-triage",
+        "name": "need-to-triage",
+        "color": "efe373",
+        "default": false,
+        "description": ""
+      }
+    ]
+  },
+  {
+    "number": 117,
+    "title": "Install private repository during deploy",
+    "html_url": "https://github.com/Azure/webapps-deploy/issues/117",
+    "labels": [
+      {
+        "id": 2387353928,
+        "node_id": "MDU6TGFiZWwyMzg3MzUzOTI4",
+        "url": "https://api.github.com/repos/Azure/webapps-deploy/labels/need-to-triage",
+        "name": "need-to-triage",
+        "color": "fbca04",
+        "default": false,
+        "description": ""
+      }
+    ]
+  }
+]

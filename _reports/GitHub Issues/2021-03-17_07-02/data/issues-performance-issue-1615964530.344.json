@@ -1,0 +1,18 @@
+[
+  {
+    "number": 20,
+    "title": "Login consistently takes 30s-60s  to complete",
+    "html_url": "https://github.com/Azure/login/issues/20",
+    "labels": [
+      {
+        "id": 2419412224,
+        "node_id": "MDU6TGFiZWwyNDE5NDEyMjI0",
+        "url": "https://api.github.com/repos/Azure/login/labels/performance-issue",
+        "name": "performance-issue",
+        "color": "5319e7",
+        "default": false,
+        "description": ""
+      }
+    ]
+  }
+]
