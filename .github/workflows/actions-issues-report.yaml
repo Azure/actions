@@ -15,7 +15,7 @@ jobs:
         - uses: actions/checkout@v2
         - uses: bryanmacfarlane/project-reports-action@v1-alpha5
           with: 
-            token: ${{ secrets.PROJECT_TOKEN }}
+            token: ${{ secrets.GITHUB_TOKEN }}
             configPath: issues-report-config.yml
         - if: ${{ github.ref == 'refs/heads/users/kaverma/actionReposHealth' }}
           run: |
