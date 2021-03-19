@@ -23,6 +23,8 @@ where username/reponame@branch is your forked repo. Remember to checkin __node_m
 
 8. Once code is tested and unit tests are added, please raise a PR against the actual repo’s main branch. Note that __node_modules__ should __not__ be pushed while raising PR against __main__ branch.
 
-9. Once your PR is merged, cherry pick your changes to __releases/v(latest)__ branch. After that PR is merged the repo maintainer will create a new release with a new tag. This release will be pre-release mode until certain bug bashes/regressive testing is done. Here for __releases/v(latest)__ branch, checkin your __node_modules__ if there is a new dependency in package.json.
+9. Once your PR is merged, cherry pick your changes to __releases/v(latest)__ branch and create a PR against this releases branch. 
+
+10. After that PR is merged the repo maintainer will create a new release with a new tag. This release will be pre-release mode until certain bug bashes/regressive testing is done. Here for __releases/v(latest)__ branch, checkin your __node_modules__ if there is a new dependency in package.json.
 
 
