@@ -122,7 +122,7 @@ reports:
               "stale",
               "backlog"
             ]
-       - name: "repo-issues"
+      - name: "repo-issues"
         targets: ['container-scan']
         config: 
           breakdown-by-labels:
