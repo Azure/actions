@@ -43,47 +43,46 @@ targets:
   azure-cli:
     type: repo
     htmlUrl: https://github.com/Azure/cli
- aks-set-context:
+  aks-set-context:
     type: repo
     htmlUrl: https://github.com/Azure/aks-set-context
- container-scan:
+  container-scan:
     type: repo
     htmlUrl: https://github.com/Azure/container-scan
- docker-login:
+  docker-login:
     type: repo
     htmlUrl: https://github.com/Azure/docker-login
- k8s-bake:
+  k8s-bake:
     type: repo
     htmlUrl: https://github.com/Azure/k8s-bake
- k8s-create-secret:
+  k8s-create-secret:
     type: repo
     htmlUrl: https://github.com/Azure/k8s-create-secret
- k8s-deploy:
+  k8s-deploy:
     type: repo
     htmlUrl: https://github.com/Azure/k8s-deploy
- k8s-lint:
+  k8s-lint:
     type: repo
     htmlUrl: https://github.com/Azure/k8s-lint
- k8s-set-context:
+  k8s-set-context:
     type: repo
     htmlUrl: https://github.com/Azure/k8s-set-context
- manage-azure-policy:
+  manage-azure-policy:
     type: repo
     htmlUrl: https://github.com/Azure/manage-azure-policy
- pipelines:
+  pipelines:
     type: repo
     htmlUrl: https://github.com/Azure/pipelines
- policy-compliance-scan:
+  policy-compliance-scan:
     type: repo
     htmlUrl: https://github.com/Azure/policy-compliance-scan
- setup-helm:
+  setup-helm:
     type: repo
     htmlUrl: https://github.com/Azure/setup-helm
- setup-kubectl:
+  setup-kubectl:
     type: repo
     htmlUrl: https://github.com/Azure/setup-kubectl
  
-  
 output: "_reports"
 
 reports:
