@@ -1,0 +1,25 @@
+{
+  "identifier": 1617177984.057,
+  "issues": {
+    "default": [
+      {
+        "number": 25,
+        "title": "Unable to use with non-admin users",
+        "html_url": "https://github.com/Azure/aks-set-context/issues/25",
+        "labels": [
+          {
+            "id": 2871890444,
+            "node_id": "MDU6TGFiZWwyODcxODkwNDQ0",
+            "url": "https://api.github.com/repos/Azure/aks-set-context/labels/default",
+            "name": "default",
+            "color": "C8BA7F",
+            "default": false,
+            "description": ""
+          }
+        ]
+      }
+    ],
+    "stale": [],
+    "backlog": []
+  }
+}

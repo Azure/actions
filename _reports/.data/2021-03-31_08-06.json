@@ -1,0 +1,199 @@
+{
+  "datetime": "2021-03-31T08:06:18.987Z",
+  "config": {
+    "name": "GitHub Issues",
+    "targets": {
+      "loginRepo": {
+        "type": "repo",
+        "htmlUrl": "https://github.com/azure/login"
+      },
+      "powershellRepo": {
+        "type": "repo",
+        "htmlUrl": "https://github.com/azure/PowerShell"
+      },
+      "webAppDeployRepo": {
+        "type": "repo",
+        "htmlUrl": "https://github.com/azure/webapps-deploy"
+      },
+      "appsettingsRepo": {
+        "type": "repo",
+        "htmlUrl": "https://github.com/azure/appservice-settings"
+      },
+      "sqlactionRepo": {
+        "type": "repo",
+        "htmlUrl": "https://github.com/azure/sql-action"
+      },
+      "mysqlactionRepo": {
+        "type": "repo",
+        "htmlUrl": "https://github.com/Azure/mysql"
+      },
+      "postgresqlactionRepo": {
+        "type": "repo",
+        "htmlUrl": "https://github.com/Azure/postgresql"
+      },
+      "appconfigsyncRepo": {
+        "type": "repo",
+        "htmlUrl": "https://github.com/azure/appconfiguration-sync"
+      },
+      "staticwebappRepo": {
+        "type": "repo",
+        "htmlUrl": "https://github.com/azure/static-web-apps-deploy"
+      },
+      "functionRepo": {
+        "type": "repo",
+        "htmlUrl": "https://github.com/azure/functions-action"
+      },
+      "functioncontainerRepo": {
+        "type": "repo",
+        "htmlUrl": "https://github.com/azure/functions-container-action"
+      },
+      "variablesubstitutionRepo": {
+        "type": "repo",
+        "htmlUrl": "https://github.com/Microsoft/variable-substitution"
+      },
+      "azure-arm-deploy": {
+        "type": "repo",
+        "htmlUrl": "https://github.com/Azure/arm-deploy"
+      },
+      "azure-cli": {
+        "type": "repo",
+        "htmlUrl": "https://github.com/Azure/cli"
+      },
+      "aks-set-context": {
+        "type": "repo",
+        "htmlUrl": "https://github.com/Azure/aks-set-context"
+      },
+      "container-scan": {
+        "type": "repo",
+        "htmlUrl": "https://github.com/Azure/container-scan"
+      },
+      "docker-login": {
+        "type": "repo",
+        "htmlUrl": "https://github.com/Azure/docker-login"
+      },
+      "k8s-bake": {
+        "type": "repo",
+        "htmlUrl": "https://github.com/Azure/k8s-bake"
+      },
+      "k8s-create-secret": {
+        "type": "repo",
+        "htmlUrl": "https://github.com/Azure/k8s-create-secret"
+      },
+      "k8s-deploy": {
+        "type": "repo",
+        "htmlUrl": "https://github.com/Azure/k8s-deploy"
+      },
+      "k8s-lint": {
+        "type": "repo",
+        "htmlUrl": "https://github.com/Azure/k8s-lint"
+      },
+      "k8s-set-context": {
+        "type": "repo",
+        "htmlUrl": "https://github.com/Azure/k8s-set-context"
+      },
+      "manage-azure-policy": {
+        "type": "repo",
+        "htmlUrl": "https://github.com/Azure/manage-azure-policy"
+      },
+      "pipelines": {
+        "type": "repo",
+        "htmlUrl": "https://github.com/Azure/pipelines"
+      },
+      "policy-compliance-scan": {
+        "type": "repo",
+        "htmlUrl": "https://github.com/Azure/policy-compliance-scan"
+      },
+      "setup-helm": {
+        "type": "repo",
+        "htmlUrl": "https://github.com/Azure/setup-helm"
+      },
+      "setup-kubectl": {
+        "type": "repo",
+        "htmlUrl": "https://github.com/Azure/setup-kubectl"
+      }
+    },
+    "output": "_reports",
+    "reports": [
+      {
+        "name": "GitHub Issues",
+        "title": "{{{ config.name }}} Report",
+        "kind": "markdown",
+        "timezoneOffset": 5.5,
+        "sections": [
+          {
+            "name": "repo-issues",
+            "targets": [
+              "loginRepo",
+              "powershellRepo",
+              "webAppDeployRepo",
+              "appsettingsRepo",
+              "sqlactionRepo",
+              "mysqlactionRepo",
+              "postgresqlactionRepo",
+              "appconfigsyncRepo",
+              "staticwebappRepo",
+              "functionRepo",
+              "functioncontainerRepo",
+              "variablesubstitutionRepo"
+            ],
+            "config": {
+              "breakdown-by-labels": [
+                "need-to-triage",
+                "under-investigation",
+                "question",
+                "bug",
+                "enhancement",
+                "documentation",
+                "suggestion",
+                "performance-issue",
+                "waiting-for-customer",
+                "external-dependency"
+              ]
+            }
+          },
+          {
+            "name": "repo-issues",
+            "targets": [
+              "azure-arm-deploy"
+            ],
+            "config": {
+              "breakdown-by-labels": [
+                "default",
+                "stale",
+                "backlog"
+              ]
+            }
+          },
+          {
+            "name": "repo-issues",
+            "targets": [
+              "azure-cli"
+            ],
+            "config": {
+              "breakdown-by-labels": [
+                "default",
+                "stale",
+                "backlog"
+              ]
+            }
+          },
+          {
+            "name": "repo-issues",
+            "targets": [
+              "aks-set-context"
+            ],
+            "config": {
+              "breakdown-by-labels": [
+                "default",
+                "stale",
+                "backlog"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "datetimeString": "2021-03-31_08-06",
+  "rootPath": "/home/runner/work/actions/actions/_reports"
+}
