@@ -12,6 +12,10 @@
 > not assigned  
   `enhancement`
   
+###  [Provide the commit message in the zip deploy API](https://github.com/Azure/webapps-deploy/issues/118)  
+> not assigned  
+  `enhancement`
+  
 ###  [Ability to swap slots?](https://github.com/Azure/webapps-deploy/issues/113)  
 > not assigned  
   `enhancement`
@@ -49,6 +53,10 @@
   `enhancement`
   
 ###  [deploying WebJob](https://github.com/Azure/webapps-deploy/issues/3)  
+> not assigned  
+  `enhancement`
+  
+###  [feature request : Add support of Xml PublishProfile configuration](https://github.com/Azure/sql-action/issues/32)  
 > not assigned  
   `enhancement`
   

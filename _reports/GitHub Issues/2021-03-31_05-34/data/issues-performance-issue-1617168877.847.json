@@ -1,0 +1,34 @@
+[
+  {
+    "number": 20,
+    "title": "Login consistently takes 30s-60s  to complete",
+    "html_url": "https://github.com/Azure/login/issues/20",
+    "labels": [
+      {
+        "id": 2419412224,
+        "node_id": "MDU6TGFiZWwyNDE5NDEyMjI0",
+        "url": "https://api.github.com/repos/Azure/login/labels/performance-issue",
+        "name": "performance-issue",
+        "color": "5319e7",
+        "default": false,
+        "description": ""
+      }
+    ]
+  },
+  {
+    "number": 31,
+    "title": "slow azure blob upload with the powershell action",
+    "html_url": "https://github.com/Azure/powershell/issues/31",
+    "labels": [
+      {
+        "id": 2871547828,
+        "node_id": "MDU6TGFiZWwyODcxNTQ3ODI4",
+        "url": "https://api.github.com/repos/Azure/powershell/labels/performance-issue",
+        "name": "performance-issue",
+        "color": "B3CEF2",
+        "default": false,
+        "description": ""
+      }
+    ]
+  }
+]
