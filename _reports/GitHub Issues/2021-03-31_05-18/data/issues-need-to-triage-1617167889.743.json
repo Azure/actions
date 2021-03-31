@@ -1,0 +1,162 @@
+[
+  {
+    "number": 100,
+    "title": "Azure Portal - No update Customer Managed Keys option",
+    "html_url": "https://github.com/Azure/login/issues/100",
+    "labels": [
+      {
+        "id": 2387335285,
+        "node_id": "MDU6TGFiZWwyMzg3MzM1Mjg1",
+        "url": "https://api.github.com/repos/Azure/login/labels/need-to-triage",
+        "name": "need-to-triage",
+        "color": "efe373",
+        "default": false,
+        "description": ""
+      }
+    ]
+  },
+  {
+    "number": 98,
+    "title": "There was an error fetching tenants",
+    "html_url": "https://github.com/Azure/login/issues/98",
+    "labels": [
+      {
+        "id": 2387335285,
+        "node_id": "MDU6TGFiZWwyMzg3MzM1Mjg1",
+        "url": "https://api.github.com/repos/Azure/login/labels/need-to-triage",
+        "name": "need-to-triage",
+        "color": "efe373",
+        "default": false,
+        "description": ""
+      }
+    ]
+  },
+  {
+    "number": 31,
+    "title": "slow azure blob upload with the powershell action",
+    "html_url": "https://github.com/Azure/powershell/issues/31",
+    "labels": [
+      {
+        "id": 2387352602,
+        "node_id": "MDU6TGFiZWwyMzg3MzUyNjAy",
+        "url": "https://api.github.com/repos/Azure/powershell/labels/need-to-triage",
+        "name": "need-to-triage",
+        "color": "fbca04",
+        "default": false,
+        "description": ""
+      }
+    ]
+  },
+  {
+    "number": 120,
+    "title": "Add log stream to deployment",
+    "html_url": "https://github.com/Azure/webapps-deploy/issues/120",
+    "labels": [
+      {
+        "id": 2387353928,
+        "node_id": "MDU6TGFiZWwyMzg3MzUzOTI4",
+        "url": "https://api.github.com/repos/Azure/webapps-deploy/labels/need-to-triage",
+        "name": "need-to-triage",
+        "color": "fbca04",
+        "default": false,
+        "description": ""
+      }
+    ]
+  },
+  {
+    "number": 119,
+    "title": "Add docs for efficiently deploying Node.js Express apps",
+    "html_url": "https://github.com/Azure/webapps-deploy/issues/119",
+    "labels": [
+      {
+        "id": 2387353928,
+        "node_id": "MDU6TGFiZWwyMzg3MzUzOTI4",
+        "url": "https://api.github.com/repos/Azure/webapps-deploy/labels/need-to-triage",
+        "name": "need-to-triage",
+        "color": "fbca04",
+        "default": false,
+        "description": ""
+      }
+    ]
+  },
+  {
+    "number": 118,
+    "title": "Provide the commit message in the zip deploy API",
+    "html_url": "https://github.com/Azure/webapps-deploy/issues/118",
+    "labels": [
+      {
+        "id": 2387353928,
+        "node_id": "MDU6TGFiZWwyMzg3MzUzOTI4",
+        "url": "https://api.github.com/repos/Azure/webapps-deploy/labels/need-to-triage",
+        "name": "need-to-triage",
+        "color": "fbca04",
+        "default": false,
+        "description": ""
+      }
+    ]
+  },
+  {
+    "number": 117,
+    "title": "Install private repository during deploy",
+    "html_url": "https://github.com/Azure/webapps-deploy/issues/117",
+    "labels": [
+      {
+        "id": 2387353928,
+        "node_id": "MDU6TGFiZWwyMzg3MzUzOTI4",
+        "url": "https://api.github.com/repos/Azure/webapps-deploy/labels/need-to-triage",
+        "name": "need-to-triage",
+        "color": "fbca04",
+        "default": false,
+        "description": ""
+      }
+    ]
+  },
+  {
+    "number": 32,
+    "title": "feature request : Add support of Xml PublishProfile configuration",
+    "html_url": "https://github.com/Azure/sql-action/issues/32",
+    "labels": [
+      {
+        "id": 2387356227,
+        "node_id": "MDU6TGFiZWwyMzg3MzU2MjI3",
+        "url": "https://api.github.com/repos/Azure/sql-action/labels/need-to-triage",
+        "name": "need-to-triage",
+        "color": "fbca04",
+        "default": false,
+        "description": ""
+      }
+    ]
+  },
+  {
+    "number": 69,
+    "title": "publish-profile : should be a valid XML.",
+    "html_url": "https://github.com/Azure/functions-action/issues/69",
+    "labels": [
+      {
+        "id": 2387358263,
+        "node_id": "MDU6TGFiZWwyMzg3MzU4MjYz",
+        "url": "https://api.github.com/repos/Azure/functions-action/labels/need-to-triage",
+        "name": "need-to-triage",
+        "color": "fbca04",
+        "default": false,
+        "description": ""
+      }
+    ]
+  },
+  {
+    "number": 13,
+    "title": "defunct?",
+    "html_url": "https://github.com/Azure/functions-container-action/issues/13",
+    "labels": [
+      {
+        "id": 2387358838,
+        "node_id": "MDU6TGFiZWwyMzg3MzU4ODM4",
+        "url": "https://api.github.com/repos/Azure/functions-container-action/labels/need-to-triage",
+        "name": "need-to-triage",
+        "color": "fbca04",
+        "default": false,
+        "description": ""
+      }
+    ]
+  }
+]
