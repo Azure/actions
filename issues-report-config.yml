@@ -122,7 +122,13 @@ reports:
               "stale",
               "backlog"
             ]
-      - name: "repo-issues"
-        targets: [‘aks-set-context’,’container-scan’,’docker-login’,’k8s-bake’,’k8s-create-secret’,’k8s-deploy’,’k8s-lint’,’k8s-set-context’,’manage-azure-policy’,’pipelines’,’policy-compliance-scan’,’setup-helm’,’setup-kubectl’]
-        config:
-          breakdown-by-labels: ['']
+       - name: "repo-issues"
+        targets: ['container-scan']
+        config: 
+          breakdown-by-labels:
+            [
+              "default",
+              "stale",
+              "backlog"
+            ]
+            
