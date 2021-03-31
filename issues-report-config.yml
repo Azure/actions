@@ -43,6 +43,46 @@ targets:
   azure-cli:
     type: repo
     htmlUrl: https://github.com/Azure/cli
+ aks-set-context:
+    type: repo
+    htmlUrl: https://github.com/Azure/aks-set-context
+ container-scan:
+    type: repo
+    htmlUrl: https://github.com/Azure/container-scan
+ docker-login:
+    type: repo
+    htmlUrl: https://github.com/Azure/docker-login
+ k8s-bake:
+    type: repo
+    htmlUrl: https://github.com/Azure/k8s-bake
+ k8s-create-secret:
+    type: repo
+    htmlUrl: https://github.com/Azure/k8s-create-secret
+ k8s-deploy:
+    type: repo
+    htmlUrl: https://github.com/Azure/k8s-deploy
+ k8s-lint:
+    type: repo
+    htmlUrl: https://github.com/Azure/k8s-lint
+ k8s-set-context:
+    type: repo
+    htmlUrl: https://github.com/Azure/k8s-set-context
+ manage-azure-policy:
+    type: repo
+    htmlUrl: https://github.com/Azure/manage-azure-policy
+ pipelines:
+    type: repo
+    htmlUrl: https://github.com/Azure/pipelines
+ policy-compliance-scan:
+    type: repo
+    htmlUrl: https://github.com/Azure/policy-compliance-scan
+ setup-helm:
+    type: repo
+    htmlUrl: https://github.com/Azure/setup-helm
+ setup-kubectl:
+    type: repo
+    htmlUrl: https://github.com/Azure/setup-kubectl
+ 
   
 output: "_reports"
 
@@ -74,3 +114,7 @@ reports:
               "stale",
               "backlog"
             ]
+      - name: "repo-issues"
+        targets: [‘aks-set-context’,’container-scan’,’docker-login’,’k8s-bake’,’k8s-create-secret’,’k8s-deploy’,’k8s-lint’,’k8s-set-context’,’manage-azure-policy’,’pipelines’,’policy-compliance-scan’,’setup-helm’,’setup-kubectl’]
+        config:
+          breakdown-by-labels: ['need-to-triage','under-investigation','question','bug','enhancement','documentation','suggestion','performance-issue','waiting-for-customer','external-dependency']
