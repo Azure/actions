@@ -1,6 +1,6 @@
 name: "Generate a report for Open issues for Azure Actions"
 on:
- push:
+  push:
   workflow_dispatch:
     
 jobs:
