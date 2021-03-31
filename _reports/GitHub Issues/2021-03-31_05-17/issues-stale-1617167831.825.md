@@ -1,6 +1,14 @@
 ## Issues for stale
   
+###  [Performance](https://github.com/Azure/cli/issues/37)  
+> not assigned  
+  `default` `stale`
+  
 ###  [Easier to identify container based action](https://github.com/Azure/cli/issues/36)  
+> not assigned  
+  `default` `stale`
+  
+###  [Misleading docs: Azure Login is NOT required](https://github.com/Azure/cli/issues/32)  
 > not assigned  
   `default` `stale`
   
