@@ -82,7 +82,7 @@ targets:
   setup-kubectl:
     type: repo
     htmlUrl: https://github.com/Azure/setup-kubectl
- 
+    
 output: "_reports"
 
 reports:
