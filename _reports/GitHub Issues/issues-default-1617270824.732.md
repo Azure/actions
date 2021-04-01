@@ -1,5 +1,9 @@
 ## Issues for default
   
+###  [Arm deployment for Azure Data Factory failed without error message](https://github.com/Azure/arm-deploy/issues/33)  
+> not assigned  
+  `default`
+  
 ###  [Performance](https://github.com/Azure/cli/issues/37)  
 > not assigned  
   `default` `stale`
