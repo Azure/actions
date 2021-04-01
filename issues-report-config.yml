@@ -96,16 +96,7 @@ reports:
         config:
           breakdown-by-labels: ['need-to-triage','under-investigation','question','bug','enhancement','documentation','suggestion','performance-issue','waiting-for-customer','external-dependency']
       - name: "repo-issues"
-        targets: ['azure-arm-deploy']
-        config: 
-          breakdown-by-labels:
-            [
-              "default",
-              "stale",
-              "backlog"
-            ]
-      - name: "repo-issues"
-        targets: ['azure-cli']
+        targets: ['azure-arm-deploy','azure-cli']
         config: 
           breakdown-by-labels:
             [
