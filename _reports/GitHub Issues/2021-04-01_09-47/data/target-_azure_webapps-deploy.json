@@ -1,0 +1,242 @@
+[
+  {
+    "number": 120,
+    "title": "Add log stream to deployment",
+    "html_url": "https://github.com/Azure/webapps-deploy/issues/120",
+    "labels": [
+      {
+        "id": 2387353928,
+        "node_id": "MDU6TGFiZWwyMzg3MzUzOTI4",
+        "url": "https://api.github.com/repos/Azure/webapps-deploy/labels/need-to-triage",
+        "name": "need-to-triage",
+        "color": "fbca04",
+        "default": false,
+        "description": ""
+      }
+    ]
+  },
+  {
+    "number": 119,
+    "title": "Add docs for efficiently deploying Node.js Express apps",
+    "html_url": "https://github.com/Azure/webapps-deploy/issues/119",
+    "labels": [
+      {
+        "id": 2387353928,
+        "node_id": "MDU6TGFiZWwyMzg3MzUzOTI4",
+        "url": "https://api.github.com/repos/Azure/webapps-deploy/labels/need-to-triage",
+        "name": "need-to-triage",
+        "color": "fbca04",
+        "default": false,
+        "description": ""
+      }
+    ]
+  },
+  {
+    "number": 118,
+    "title": "Provide the commit message in the zip deploy API",
+    "html_url": "https://github.com/Azure/webapps-deploy/issues/118",
+    "labels": [
+      {
+        "id": 1536433398,
+        "node_id": "MDU6TGFiZWwxNTM2NDMzMzk4",
+        "url": "https://api.github.com/repos/Azure/webapps-deploy/labels/enhancement",
+        "name": "enhancement",
+        "color": "a2eeef",
+        "default": true,
+        "description": "New feature or request"
+      }
+    ]
+  },
+  {
+    "number": 117,
+    "title": "Install private repository during deploy",
+    "html_url": "https://github.com/Azure/webapps-deploy/issues/117",
+    "labels": [
+      {
+        "id": 1536433402,
+        "node_id": "MDU6TGFiZWwxNTM2NDMzNDAy",
+        "url": "https://api.github.com/repos/Azure/webapps-deploy/labels/question",
+        "name": "question",
+        "color": "d876e3",
+        "default": true,
+        "description": "Further information is requested"
+      }
+    ]
+  },
+  {
+    "number": 113,
+    "title": "Ability to swap slots?",
+    "html_url": "https://github.com/Azure/webapps-deploy/issues/113",
+    "labels": [
+      {
+        "id": 1536433398,
+        "node_id": "MDU6TGFiZWwxNTM2NDMzMzk4",
+        "url": "https://api.github.com/repos/Azure/webapps-deploy/labels/enhancement",
+        "name": "enhancement",
+        "color": "a2eeef",
+        "default": true,
+        "description": "New feature or request"
+      }
+    ]
+  },
+  {
+    "number": 109,
+    "title": "App service gives \"service unavailable 503\" after successful deployment",
+    "html_url": "https://github.com/Azure/webapps-deploy/issues/109",
+    "labels": [
+      {
+        "id": 2607217254,
+        "node_id": "MDU6TGFiZWwyNjA3MjE3MjU0",
+        "url": "https://api.github.com/repos/Azure/webapps-deploy/labels/under-investigation",
+        "name": "under-investigation",
+        "color": "3278C8",
+        "default": false,
+        "description": ""
+      }
+    ]
+  },
+  {
+    "number": 106,
+    "title": "Action does not support app service with kind api",
+    "html_url": "https://github.com/Azure/webapps-deploy/issues/106",
+    "labels": [
+      {
+        "id": 1536433398,
+        "node_id": "MDU6TGFiZWwxNTM2NDMzMzk4",
+        "url": "https://api.github.com/repos/Azure/webapps-deploy/labels/enhancement",
+        "name": "enhancement",
+        "color": "a2eeef",
+        "default": true,
+        "description": "New feature or request"
+      }
+    ]
+  },
+  {
+    "number": 88,
+    "title": "##***error***Deployment Failed with Error: Error: Action does not support app service with kind app,migration.",
+    "html_url": "https://github.com/Azure/webapps-deploy/issues/88",
+    "labels": [
+      {
+        "id": 1536433398,
+        "node_id": "MDU6TGFiZWwxNTM2NDMzMzk4",
+        "url": "https://api.github.com/repos/Azure/webapps-deploy/labels/enhancement",
+        "name": "enhancement",
+        "color": "a2eeef",
+        "default": true,
+        "description": "New feature or request"
+      }
+    ]
+  },
+  {
+    "number": 83,
+    "title": "Inconsistent \"Error: Deployment Failed with Error: Error: Action does not support app service with kind linux,container.\"",
+    "html_url": "https://github.com/Azure/webapps-deploy/issues/83",
+    "labels": [
+      {
+        "id": 1536433398,
+        "node_id": "MDU6TGFiZWwxNTM2NDMzMzk4",
+        "url": "https://api.github.com/repos/Azure/webapps-deploy/labels/enhancement",
+        "name": "enhancement",
+        "color": "a2eeef",
+        "default": true,
+        "description": "New feature or request"
+      }
+    ]
+  },
+  {
+    "number": 64,
+    "title": "Running subsequent jobs only after the deployment triggered by the webapps-deploy action completes",
+    "html_url": "https://github.com/Azure/webapps-deploy/issues/64",
+    "labels": [
+      {
+        "id": 1536433398,
+        "node_id": "MDU6TGFiZWwxNTM2NDMzMzk4",
+        "url": "https://api.github.com/repos/Azure/webapps-deploy/labels/enhancement",
+        "name": "enhancement",
+        "color": "a2eeef",
+        "default": true,
+        "description": "New feature or request"
+      }
+    ]
+  },
+  {
+    "number": 49,
+    "title": "How can we deploy app to the root directory?",
+    "html_url": "https://github.com/Azure/webapps-deploy/issues/49",
+    "labels": [
+      {
+        "id": 1536433398,
+        "node_id": "MDU6TGFiZWwxNTM2NDMzMzk4",
+        "url": "https://api.github.com/repos/Azure/webapps-deploy/labels/enhancement",
+        "name": "enhancement",
+        "color": "a2eeef",
+        "default": true,
+        "description": "New feature or request"
+      }
+    ]
+  },
+  {
+    "number": 33,
+    "title": "It isn't possible to deploy to a virtual application",
+    "html_url": "https://github.com/Azure/webapps-deploy/issues/33",
+    "labels": [
+      {
+        "id": 1536433398,
+        "node_id": "MDU6TGFiZWwxNTM2NDMzMzk4",
+        "url": "https://api.github.com/repos/Azure/webapps-deploy/labels/enhancement",
+        "name": "enhancement",
+        "color": "a2eeef",
+        "default": true,
+        "description": "New feature or request"
+      }
+    ]
+  },
+  {
+    "number": 25,
+    "title": "app-name setting incorrect when creating GH action from portal",
+    "html_url": "https://github.com/Azure/webapps-deploy/issues/25",
+    "labels": [
+      {
+        "id": 1536433398,
+        "node_id": "MDU6TGFiZWwxNTM2NDMzMzk4",
+        "url": "https://api.github.com/repos/Azure/webapps-deploy/labels/enhancement",
+        "name": "enhancement",
+        "color": "a2eeef",
+        "default": true,
+        "description": "New feature or request"
+      }
+    ]
+  },
+  {
+    "number": 6,
+    "title": "WebApp action continues when appname-slotname mismatches SCM credentials",
+    "html_url": "https://github.com/Azure/webapps-deploy/issues/6",
+    "labels": [
+      {
+        "id": 1536433398,
+        "node_id": "MDU6TGFiZWwxNTM2NDMzMzk4",
+        "url": "https://api.github.com/repos/Azure/webapps-deploy/labels/enhancement",
+        "name": "enhancement",
+        "color": "a2eeef",
+        "default": true,
+        "description": "New feature or request"
+      }
+    ]
+  },
+  {
+    "number": 3,
+    "title": "deploying WebJob",
+    "html_url": "https://github.com/Azure/webapps-deploy/issues/3",
+    "labels": [
+      {
+        "id": 1536433398,
+        "node_id": "MDU6TGFiZWwxNTM2NDMzMzk4",
+        "url": "https://api.github.com/repos/Azure/webapps-deploy/labels/enhancement",
+        "name": "enhancement",
+        "color": "a2eeef",
+        "default": true,
+        "description": "New feature or request"
+      }
+    ]
+  }
+]
