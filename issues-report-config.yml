@@ -185,5 +185,23 @@ reports:
               "stale",
               "backlog"
             ]
+      - name: "repo-issues"
+        targets: ['manage-azure-policy']
+        config: 
+          breakdown-by-labels:
+            [
+              "default",
+              "stale",
+              "backlog"
+            ]
+      - name: "repo-issues"
+        targets: ['pipelines’,’policy-compliance-scan’,’setup-helm’,’setup-kubectl’]
+        config: 
+          breakdown-by-labels:
+            [
+              "default",
+              "stale",
+              "backlog"
+            ]
       
             
