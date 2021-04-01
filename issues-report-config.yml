@@ -159,7 +159,7 @@ reports:
               "backlog"
             ]
       - name: "repo-issues"
-        targets: ['k8s-deploy']
+        targets: ['k8s-deploy','k8s-bake','k8s-create-secret']
         config: 
           breakdown-by-labels:
             [
