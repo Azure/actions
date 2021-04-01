@@ -131,4 +131,59 @@ reports:
               "stale",
               "backlog"
             ]
+      - name: "repo-issues"
+        targets: ['docker-login']
+        config: 
+          breakdown-by-labels:
+            [
+              "default",
+              "stale",
+              "backlog"
+            ]
+      - name: "repo-issues"
+        targets: ['k8s-bake']
+        config: 
+          breakdown-by-labels:
+            [
+              "default",
+              "stale",
+              "backlog"
+            ]
+      - name: "repo-issues"
+        targets: ['k8s-create-secret']
+        config: 
+          breakdown-by-labels:
+            [
+              "default",
+              "stale",
+              "backlog"
+            ]
+      - name: "repo-issues"
+        targets: ['k8s-deploy']
+        config: 
+          breakdown-by-labels:
+            [
+              "default",
+              "stale",
+              "backlog"
+            ]
+      - name: "repo-issues"
+        targets: ['k8s-set-context']
+        config: 
+          breakdown-by-labels:
+            [
+              "default",
+              "stale",
+              "backlog"
+            ]
+      - name: "repo-issues"
+        targets: ['k8s-lint']
+        config: 
+          breakdown-by-labels:
+            [
+              "default",
+              "stale",
+              "backlog"
+            ]
+      
             
