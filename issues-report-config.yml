@@ -105,7 +105,7 @@ reports:
               "backlog"
             ]
       - name: "repo-issues"
-        targets: ['aks-set-context']
+        targets: ['aks-set-context','k8s-bake','k8s-deploy','k8s-bake','k8s-create-secret','k8s-set-context','k8s-lint','setup-kubectl','setup-helm']
         config: 
           breakdown-by-labels:
             [
@@ -124,15 +124,6 @@ reports:
             ]
       - name: "repo-issues"
         targets: ['docker-login']
-        config: 
-          breakdown-by-labels:
-            [
-              "default",
-              "stale",
-              "backlog"
-            ]
-      - name: "repo-issues"
-        targets: ['k8s-bake','k8s-deploy','k8s-bake','k8s-create-secret','k8s-set-context','k8s-lint','setup-kubectl','setup-helm']
         config: 
           breakdown-by-labels:
             [
