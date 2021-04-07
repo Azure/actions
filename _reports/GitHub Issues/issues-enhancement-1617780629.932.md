@@ -12,6 +12,10 @@
 > not assigned  
   `enhancement`
   
+###  [Add docs for efficiently deploying Node.js Express apps](https://github.com/Azure/webapps-deploy/issues/119)  
+> not assigned  
+  `enhancement`
+  
 ###  [Provide the commit message in the zip deploy API](https://github.com/Azure/webapps-deploy/issues/118)  
 > not assigned  
   `enhancement`
