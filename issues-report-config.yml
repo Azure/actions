@@ -114,6 +114,15 @@ reports:
               "backlog"
             ]
       - name: "repo-issues"
+        targets: ['manage-azure-policy','policy-compliance-scan']
+        config: 
+          breakdown-by-labels:
+            [
+              "default",
+              "stale",
+              "backlog"
+            ]
+      - name: "repo-issues"
         targets: ['container-scan']
         config: 
           breakdown-by-labels:
@@ -131,12 +140,4 @@ reports:
               "stale",
               "backlog"
             ]
-      - name: "repo-issues"
-        targets: ['manage-azure-policy','policy-compliance-scan']
-        config: 
-          breakdown-by-labels:
-            [
-              "default",
-              "stale",
-              "backlog"
-            ]
+
