@@ -1,8 +1,12 @@
 ## Issues for default
   
-###  [Arm deployment for Azure Data Factory failed without error message](https://github.com/Azure/arm-deploy/issues/33)  
+###  [JSON array as parameter input](https://github.com/Azure/arm-deploy/issues/36)  
 > not assigned  
   `default`
+  
+###  [Arm deployment for Azure Data Factory failed without error message](https://github.com/Azure/arm-deploy/issues/33)  
+> not assigned  
+  `default` `stale`
   
 ###  [Performance](https://github.com/Azure/cli/issues/37)  
 > not assigned  
