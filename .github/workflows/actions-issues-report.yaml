@@ -13,7 +13,7 @@ jobs:
 
         steps:
         - uses: actions/checkout@v2
-        - uses: bryanmacfarlane/project-reports-action@v1-alpha5
+        - uses: github/project-reports-action@main
           with: 
             token: ${{ secrets.GITHUB_TOKEN }}
             configPath: issues-report-config.yml
