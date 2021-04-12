@@ -10,6 +10,7 @@ This repository provides a framework, guidleines and processes to author new and
   - [Create a new GitHub Action for Azure or Microsoft](docs/Process_of_Authoring_GitHub_Actions_for_Azure.md#creating-a-new-github-action-for-azure-or-microsoft)
   - [Contributing to the existing actions](docs/developer-guildelines.md)
   - [Building GitHub Actions from Azure Pipeline Tasks](docs/action-from-pipeline-task.md)
+  - [Azure Actions toolkit](https://github.com/Azure/actions-toolkit) hosting node modules to help write your azure actions
   - [Guidelines for repository permissions](docs/Process_of_Authoring_GitHub_Actions_for_Azure.md#guidelines-for-setting-permissions-on-the-repo)
   - [Action Versioning](docs/Process_of_Authoring_GitHub_Actions_for_Azure.md#action-versioning)
   - [Testing GitHub Actions](docs/Testing-GitHub-Actions.md)
