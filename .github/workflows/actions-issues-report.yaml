@@ -13,7 +13,7 @@ jobs:
 
         steps:
         - uses: actions/checkout@v2
-        - uses: github/project-reports-action@v1-alpha8
+        - uses: bryanmacfarlane/project-reports-action@v1-alpha5
           with: 
             token: ${{ secrets.GITHUB_TOKEN }}
             configPath: issues-report-config.yml
@@ -25,4 +25,3 @@ jobs:
             git add ./_reports
             git commit -m "adding reports"
             git push origin refs/heads/users/kaverma/actionReposHealth1
-            
