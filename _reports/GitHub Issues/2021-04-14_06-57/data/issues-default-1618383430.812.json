@@ -1,0 +1,66 @@
+[
+  {
+    "number": 25,
+    "title": "Unable to use with non-admin users",
+    "html_url": "https://github.com/Azure/aks-set-context/issues/25",
+    "labels": [
+      {
+        "id": 2871890444,
+        "node_id": "MDU6TGFiZWwyODcxODkwNDQ0",
+        "url": "https://api.github.com/repos/Azure/aks-set-context/labels/default",
+        "name": "default",
+        "color": "C8BA7F",
+        "default": false,
+        "description": ""
+      }
+    ]
+  },
+  {
+    "number": 126,
+    "title": "Support different manifest delimiters",
+    "html_url": "https://github.com/Azure/k8s-deploy/issues/126",
+    "labels": [
+      {
+        "id": 2912923114,
+        "node_id": "MDU6TGFiZWwyOTEyOTIzMTE0",
+        "url": "https://api.github.com/repos/Azure/k8s-deploy/labels/default",
+        "name": "default",
+        "color": "896960",
+        "default": false,
+        "description": ""
+      }
+    ]
+  },
+  {
+    "number": 120,
+    "title": "Support running in an in-cluster self-hosted worker without separately setting context",
+    "html_url": "https://github.com/Azure/k8s-deploy/issues/120",
+    "labels": [
+      {
+        "id": 2912923114,
+        "node_id": "MDU6TGFiZWwyOTEyOTIzMTE0",
+        "url": "https://api.github.com/repos/Azure/k8s-deploy/labels/default",
+        "name": "default",
+        "color": "896960",
+        "default": false,
+        "description": ""
+      }
+    ]
+  },
+  {
+    "number": 112,
+    "title": "Potential issue in Annotations",
+    "html_url": "https://github.com/Azure/k8s-deploy/issues/112",
+    "labels": [
+      {
+        "id": 2912923114,
+        "node_id": "MDU6TGFiZWwyOTEyOTIzMTE0",
+        "url": "https://api.github.com/repos/Azure/k8s-deploy/labels/default",
+        "name": "default",
+        "color": "896960",
+        "default": false,
+        "description": ""
+      }
+    ]
+  }
+]

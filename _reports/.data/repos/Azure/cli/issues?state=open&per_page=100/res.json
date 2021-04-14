@@ -9,8 +9,8 @@
     "content-encoding": "gzip",
     "content-security-policy": "default-src 'none'",
     "content-type": "application/json; charset=utf-8",
-    "date": "Wed, 07 Apr 2021 07:30:30 GMT",
-    "etag": "W/\"d0fc6e55f05fdc07ab020443c5dd724319e1a099d41a6fd2f1537500b9aef451\"",
+    "date": "Wed, 14 Apr 2021 06:57:08 GMT",
+    "etag": "W/\"3430fb3afe829c8c874c6e87c49ec5c4e1c629e2ce34629b8538787f31345b67\"",
     "referrer-policy": "origin-when-cross-origin, strict-origin-when-cross-origin",
     "server": "GitHub.com",
     "strict-transport-security": "max-age=31536000; includeSubdomains; preload",
@@ -19,11 +19,11 @@
     "x-content-type-options": "nosniff",
     "x-frame-options": "deny",
     "x-github-media-type": "github.squirrel-girl-preview; format=json, github.inertia-preview; format=json, github.starfox-preview; format=json, github.mockingbird-preview; param=sailor-v-preview; format=json, github.squirrel-girl-preview; format=json, github.inertia-preview; format=json, github.starfox-preview; format=json, github.mockingbird-preview; param=sailor-v-preview; format=json",
-    "x-github-request-id": "07DC:7C9C:4CE8AC:50CD62:606D5F96",
+    "x-github-request-id": "07DC:2056:1359593:21977E1:60769244",
     "x-ratelimit-limit": "15000",
-    "x-ratelimit-remaining": "14765",
-    "x-ratelimit-reset": "1617781328",
-    "x-ratelimit-used": "235",
+    "x-ratelimit-remaining": "14973",
+    "x-ratelimit-reset": "1618387023",
+    "x-ratelimit-used": "27",
     "x-xss-protection": "0"
   },
   "data": [
@@ -145,15 +145,6 @@
           "color": "74f785",
           "default": false,
           "description": ""
-        },
-        {
-          "id": 2374375809,
-          "node_id": "MDU6TGFiZWwyMzc0Mzc1ODA5",
-          "url": "https://api.github.com/repos/Azure/cli/labels/stale",
-          "name": "stale",
-          "color": "ededed",
-          "default": false,
-          "description": null
         }
       ],
       "state": "open",
@@ -161,9 +152,9 @@
       "assignee": null,
       "assignees": [],
       "milestone": null,
-      "comments": 2,
+      "comments": 4,
       "created_at": "2021-03-05T18:14:33Z",
-      "updated_at": "2021-03-13T00:03:20Z",
+      "updated_at": "2021-04-07T18:11:04Z",
       "closed_at": null,
       "author_association": "NONE",
       "active_lock_reason": null,
@@ -301,15 +292,6 @@
           "color": "74f785",
           "default": false,
           "description": ""
-        },
-        {
-          "id": 2374375809,
-          "node_id": "MDU6TGFiZWwyMzc0Mzc1ODA5",
-          "url": "https://api.github.com/repos/Azure/cli/labels/stale",
-          "name": "stale",
-          "color": "ededed",
-          "default": false,
-          "description": null
         }
       ],
       "state": "open",
@@ -317,9 +299,9 @@
       "assignee": null,
       "assignees": [],
       "milestone": null,
-      "comments": 16,
+      "comments": 18,
       "created_at": "2021-01-11T02:28:00Z",
-      "updated_at": "2021-02-24T12:06:36Z",
+      "updated_at": "2021-04-07T18:11:06Z",
       "closed_at": null,
       "author_association": "NONE",
       "active_lock_reason": null,
@@ -379,15 +361,6 @@
           "color": "74f785",
           "default": false,
           "description": ""
-        },
-        {
-          "id": 2374375809,
-          "node_id": "MDU6TGFiZWwyMzc0Mzc1ODA5",
-          "url": "https://api.github.com/repos/Azure/cli/labels/stale",
-          "name": "stale",
-          "color": "ededed",
-          "default": false,
-          "description": null
         }
       ],
       "state": "open",
@@ -435,9 +408,9 @@
         }
       ],
       "milestone": null,
-      "comments": 16,
+      "comments": 19,
       "created_at": "2020-12-28T10:56:46Z",
-      "updated_at": "2021-02-24T12:06:38Z",
+      "updated_at": "2021-04-07T18:11:07Z",
       "closed_at": null,
       "author_association": "NONE",
       "active_lock_reason": null,

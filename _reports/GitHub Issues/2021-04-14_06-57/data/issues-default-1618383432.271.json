@@ -1,0 +1,34 @@
+[
+  {
+    "number": 28,
+    "title": "Documentation request:  clarify why use this action",
+    "html_url": "https://github.com/Azure/docker-login/issues/28",
+    "labels": [
+      {
+        "id": 2912916259,
+        "node_id": "MDU6TGFiZWwyOTEyOTE2MjU5",
+        "url": "https://api.github.com/repos/Azure/docker-login/labels/default",
+        "name": "default",
+        "color": "bfdadc",
+        "default": false,
+        "description": ""
+      }
+    ]
+  },
+  {
+    "number": 25,
+    "title": "Managed identity authentication support",
+    "html_url": "https://github.com/Azure/docker-login/issues/25",
+    "labels": [
+      {
+        "id": 2912916259,
+        "node_id": "MDU6TGFiZWwyOTEyOTE2MjU5",
+        "url": "https://api.github.com/repos/Azure/docker-login/labels/default",
+        "name": "default",
+        "color": "bfdadc",
+        "default": false,
+        "description": ""
+      }
+    ]
+  }
+]
