@@ -31,7 +31,7 @@ Please try out the [GitHub Actions for Azure](https://docs.microsoft.com/azure/d
 
 # GitHub Actions for Azure
 
-[azure.github.io/actions/](azure.github.io/actions/)
+[azure.github.io/actions/](https://azure.github.io/actions/)
 
 # Contributing
 
