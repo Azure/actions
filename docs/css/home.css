@@ -307,7 +307,7 @@ section#home {
     bottom: 0;
 }
 .shapes .wave {
-	background: url(/../img/wave-1.svg) no-repeat;
+	background: url('../img/wave-1.svg') no-repeat;
     background-size: contain;
     position: absolute;
     bottom: -190px;
@@ -323,7 +323,7 @@ section#home {
     transition: all 0.2s ease-out;
 }
 .shapes .wave:nth-of-type(2) {
-    background: url(/../img/wave-2.svg) no-repeat;
+    background: url('../img/wave-2.svg') no-repeat;
     background-size: contain;
     z-index: 2;
     opacity: 0.35;
@@ -559,7 +559,7 @@ section#resources .logo img{
         width: 47%;
     }
 }
-/* Desktops - Pantalla pequeña */
+/* Desktops - Pantalla pequeÃ±a */
 @media (min-width: 768px) and (max-width: 1024px) {
     nav#menu a.list-group-item-action {
         width: 75px !important;
