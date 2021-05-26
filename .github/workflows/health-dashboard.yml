@@ -1,4 +1,4 @@
-name: main
+name: health-dashboard
 'on':
   - workflow_dispatch
 jobs:
@@ -15,7 +15,7 @@ jobs:
             title: 'Health Dashboard'
             output:
               format: html
-              filename: 'main.html'
+              filename: 'health-dashboard.html'
             setup: | 
                   const repos = 'repo:Azure/login repo:Azure/webapps-deploy repo:Azure/aci-deploy repo:build-vm-image repo:Azure/deploy-to-azure-cli-extension repo:Azure/functions-action repo:Azure/functions-container-action repo:Azure/mysql repo:Azure/postgresql repo:Azure/powershell repo:Azure/sql-action'
                   userdata.count = async function(itemType,label) {
@@ -114,11 +114,10 @@ jobs:
               - type: 'string'
                 value: 'PR detailed information'
                 url: 'pr.html'
-
-          token: '${{ github.token }}'
+          token: "${{ github.token }}"
       - name: Commit files
         id: commit
-        continue-on-error: true # commit will fail if the code wasn't changed. Prevent the build to fail in this case.
+        continue-on-error: true
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
@@ -135,4 +134,4 @@ jobs:
         if: steps.commit.outputs.push == 'true'
         uses: ad-m/github-push-action@master
         with:
-          github_token: '${{ secrets.GITHUB_TOKEN }}'
+          github_token: "${{ secrets.GITHUB_TOKEN }}"
