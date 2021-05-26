@@ -1,0 +1,384 @@
+# This is a basic workflow to help you get started with Actions
+
+name: issue-view-workflow
+
+on: [workflow_dispatch]
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: windows-latest
+    steps:
+    - name: Check out repository
+      uses: actions/checkout@v2
+
+    - name: 'Generate Dashboard'
+      id: dashboard
+      uses: ethomson/issue-dashboard@v1
+      with:
+        config: |
+          title: 'Issues detailed view'
+          output:
+            format: html
+            filename: 'issue.html'
+          setup: |
+              userdata.count = async function(repo,label) {
+                function sleep(milliseconds) {
+                  const date = Date.now();
+                  let currentDate = null;
+                  do {
+                    currentDate = Date.now();
+                  } while (currentDate - date < milliseconds);
+                }
+                sleep(2000)
+                const state = (label==="closed")? "closed" : "open"
+                var results;
+                if(label === "" || label === "closed") {
+                    results = await github.search.issuesAndPullRequests(
+                    { q: `repo:${repo} is:issue is:${state}` }
+                    )
+                }
+                else if(label === "stale") {
+                    results = await github.search.issuesAndPullRequests(
+                    { q: `repo:${repo} is:issue is:${state} created:<${date("-90 days")}`}
+                    )
+                }
+                else{
+                  results = await github.search.issuesAndPullRequests(
+                  { q: `repo:${repo} is:issue is:${state} label:${label}`}
+                  )
+                }
+                if(results.data.items.length === 0){
+                  return '0'
+                }
+                else{
+                  return results.data.total_count 
+                }
+              }
+              userdata.url = async function(repo,label) {
+                function sleep(milliseconds) {
+                  const date = Date.now();
+                  let currentDate = null;
+                  do {
+                    currentDate = Date.now();
+                  } while (currentDate - date < milliseconds);
+                }
+                sleep(2000)
+                const state = (label==="closed")? "closed" : "open"
+                var url;
+                if(label === "" || label === "closed") {
+                url = 'https://github.com/'+repo+'/issues?q=is%3Aissue+is%3A'+ state
+                }
+                else if(label === "stale") {
+                  var today = new Date();
+                  var PastDate=new Date(today);
+                  PastDate.setDate(PastDate.getDate() - 90);
+                  var staledate = PastDate.toISOString().split("T")[0];
+                  url = 'https://github.com/' + repo + '/issues?q=is%3Aissue+is%3A' + state + '+created%3A<'+staledate+'+'
+                }
+                else{
+                  url = 'https://github.com/'+repo+'/issues?q=is%3Aissue+is%3A'+state+'+label%3A'+label
+                }
+                return url
+              } 
+          sections:
+          - title: ''
+            widgets:
+            - type: 'table'
+              headers:
+              - 'action'
+              - 'open issues'
+              - 'need-to-triage'
+              - 'enhancement'
+              - 'question'
+              - 'bug'
+              - 'documentation'
+              - 'performance-issue'
+              - 'waiting-for-customer'
+              - 'external-dependency'
+              - 'idle(inactive>14days)'
+              - 'stale(90 days old)'
+              elements:
+              - - value: 'Azure login'
+                - value: '{{ userdata.count("Azure/login","") }}'
+                  url: '{{ userdata.url("Azure/login","") }}'
+                - value: '{{ userdata.count("Azure/login","need-to-triage") }}'
+                  url: '{{ userdata.url("Azure/login","need-to-triage") }}'
+                - value: '{{ userdata.count("Azure/login","enhancement") }}'
+                  url: '{{ userdata.url("Azure/login","enhancement") }}'
+                - value: '{{ userdata.count("Azure/login","question") }}'
+                  url: '{{ userdata.url("Azure/login","question") }}'
+                - value: '{{ userdata.count("Azure/login","bug") }}'
+                  url: '{{ userdata.url("Azure/login","bug") }}'
+                - value: '{{ userdata.count("Azure/login","documentation") }}'
+                  url: '{{ userdata.url("Azure/login","documentation") }}'
+                - value: '{{ userdata.count("Azure/login","performance-issue") }}'
+                  url: '{{ userdata.url("Azure/login","performance-issue") }}'
+                - value: '{{ userdata.count("Azure/login","waiting-for-customer") }}'
+                  url: '{{ userdata.url("Azure/login","waiting-for-customer") }}'
+                - value: '{{ userdata.count("Azure/login","external-dependency") }}'
+                  url: '{{ userdata.url("Azure/login","external-dependency") }}'
+                - value: '{{ userdata.count("Azure/login","idle") }}'
+                  url: '{{ userdata.url("Azure/login","idle") }}'
+                - value: '{{ userdata.count("Azure/login","stale") }}'
+                  url: '{{ userdata.url("Azure/login","stale") }}'
+                 
+              - - value: 'webapps-deploy'
+                - value: '{{ userdata.count("Azure/webapps-deploy","") }}'
+                  url: '{{ userdata.url("Azure/webapps-deploy","") }}'
+                - value: '{{ userdata.count("Azure/webapps-deploy","need-to-triage") }}'
+                  url: '{{ userdata.url("Azure/webapps-deploy","need-to-triage") }}'
+                - value: '{{ userdata.count("Azure/webapps-deploy","enhancement") }}'
+                  url: '{{ userdata.url("Azure/webapps-deploy","enhancement") }}'
+                - value: '{{ userdata.count("Azure/webapps-deploy","question") }}'
+                  url: '{{ userdata.url("Azure/webapps-deploy","question") }}'
+                - value: '{{ userdata.count("Azure/webapps-deploy","bug") }}'
+                  url: '{{ userdata.url("Azure/webapps-deploy","bug") }}'
+                - value: '{{ userdata.count("Azure/webapps-deploy","documentation") }}'
+                  url: '{{ userdata.url("Azure/webapps-deploy","documentation") }}'
+                - value: '{{ userdata.count("Azure/webapps-deploy","performance-issue") }}'
+                  url: '{{ userdata.url("Azure/webapps-deploy","performance-issue") }}'
+                - value: '{{ userdata.count("Azure/webapps-deploy","waiting-for-customer") }}'
+                  url: '{{ userdata.url("Azure/webapps-deploy","waiting-for-customer") }}'
+                - value: '{{ userdata.count("Azure/webapps-deploy","external-dependency") }}'
+                  url: '{{ userdata.url("Azure/webapps-deploy","external-dependency") }}'
+                - value: '{{ userdata.count("Azure/webapps-deploy","idle") }}'
+                  url: '{{ userdata.url("Azure/webapps-deploy","idle") }}'
+                - value: '{{ userdata.count("Azure/webapps-deploy","stale") }}'
+                  url: '{{ userdata.url("Azure/webapps-deploy","stale") }}'
+              - - value: 'aci-deploy'
+                - value: '{{ userdata.count("Azure/aci-deploy","") }}'
+                  url: '{{ userdata.url("Azure/aci-deploy","") }}'
+                - value: '{{ userdata.count("Azure/aci-deploy","need-to-triage") }}'
+                  url: '{{ userdata.url("Azure/aci-deploy","need-to-triage") }}'
+                - value: '{{ userdata.count("Azure/aci-deploy","enhancement") }}'
+                  url: '{{ userdata.url("Azure/aci-deploy","enhancement") }}'
+                - value: '{{ userdata.count("Azure/aci-deploy","question") }}'
+                  url: '{{ userdata.url("Azure/aci-deploy","question") }}'
+                - value: '{{ userdata.count("Azure/aci-deploy","bug") }}'
+                  url: '{{ userdata.url("Azure/aci-deploy","bug") }}'
+                - value: '{{ userdata.count("Azure/aci-deploy","documentation") }}'
+                  url: '{{ userdata.url("Azure/aci-deploy","documentation") }}'
+                - value: '{{ userdata.count("Azure/aci-deploy","performance-issue") }}'
+                  url: '{{ userdata.url("Azure/aci-deploy","performance-issue") }}'
+                - value: '{{ userdata.count("Azure/aci-deploy","waiting-for-customer") }}'
+                  url: '{{ userdata.url("Azure/aci-deploy","waiting-for-customer") }}'
+                - value: '{{ userdata.count("Azure/aci-deploy","external-dependency") }}'
+                  url: '{{ userdata.url("Azure/aci-deploy","external-dependency") }}'
+                - value: '{{ userdata.count("Azure/aci-deploy","idle") }}'
+                  url: '{{ userdata.url("Azure/aci-deploy","idle") }}'
+                - value: '{{ userdata.count("Azure/aci-deploy","stale") }}'
+                  url: '{{ userdata.url("Azure/aci-deploy","stale") }}'
+              - - value: 'build-vm-image'
+                - value: '{{ userdata.count("Azure/build-vm-image","") }}'
+                  url: '{{ userdata.url("Azure/build-vm-image","") }}'
+                - value: '{{ userdata.count("Azure/build-vm-image","need-to-triage") }}'
+                  url: '{{ userdata.url("Azure/build-vm-image","need-to-triage") }}'
+                - value: '{{ userdata.count("Azure/build-vm-image","enhancement") }}'
+                  url: '{{ userdata.url("Azure/build-vm-image","enhancement") }}'
+                - value: '{{ userdata.count("Azure/build-vm-image","question") }}'
+                  url: '{{ userdata.url("Azure/build-vm-image","question") }}'
+                - value: '{{ userdata.count("Azure/build-vm-image","bug") }}'
+                  url: '{{ userdata.url("Azure/build-vm-image","bug") }}'
+                - value: '{{ userdata.count("Azure/build-vm-image","documentation") }}'
+                  url: '{{ userdata.url("Azure/build-vm-image","documentation") }}'
+                - value: '{{ userdata.count("Azure/build-vm-image","performance-issue") }}'
+                  url: '{{ userdata.url("Azure/build-vm-image","performance-issue") }}'
+                - value: '{{ userdata.count("Azure/build-vm-image","waiting-for-customer") }}'
+                  url: '{{ userdata.url("Azure/build-vm-image","waiting-for-customer") }}'
+                - value: '{{ userdata.count("Azure/build-vm-image","external-dependency") }}'
+                  url: '{{ userdata.url("Azure/build-vm-image","external-dependency") }}'
+                - value: '{{ userdata.count("Azure/build-vm-image","idle") }}'
+                  url: '{{ userdata.url("Azure/build-vm-image","idle") }}'
+                - value: '{{ userdata.count("Azure/build-vm-image","stale") }}'
+                  url: '{{ userdata.url("Azure/build-vm-image","stale") }}'
+              - - value: 'deploy-to-azure-cli-extension'
+                - value: '{{ userdata.count("Azure/deploy-to-azure-cli-extension","") }}'
+                  url: '{{ userdata.url("Azure/deploy-to-azure-cli-extension","") }}'
+                - value: '{{ userdata.count("Azure/deploy-to-azure-cli-extension","need-to-triage") }}'
+                  url: '{{ userdata.url("Azure/deploy-to-azure-cli-extension","need-to-triage") }}'
+                - value: '{{ userdata.count("Azure/deploy-to-azure-cli-extension","enhancement") }}'
+                  url: '{{ userdata.url("Azure/deploy-to-azure-cli-extension","enhancement") }}'
+                - value: '{{ userdata.count("Azure/deploy-to-azure-cli-extension","question") }}'
+                  url: '{{ userdata.url("Azure/deploy-to-azure-cli-extension","question") }}'
+                - value: '{{ userdata.count("Azure/deploy-to-azure-cli-extension","bug") }}'
+                  url: '{{ userdata.url("Azure/deploy-to-azure-cli-extension","bug") }}'
+                - value: '{{ userdata.count("Azure/deploy-to-azure-cli-extension","documentation") }}'
+                  url: '{{ userdata.url("Azure/deploy-to-azure-cli-extension","documentation") }}'
+                - value: '{{ userdata.count("Azure/deploy-to-azure-cli-extension","performance-issue") }}'
+                  url: '{{ userdata.url("Azure/deploy-to-azure-cli-extension","performance-issue") }}'
+                - value: '{{ userdata.count("Azure/deploy-to-azure-cli-extension","waiting-for-customer") }}'
+                  url: '{{ userdata.url("Azure/deploy-to-azure-cli-extension","waiting-for-customer") }}'
+                - value: '{{ userdata.count("Azure/deploy-to-azure-cli-extension","external-dependency") }}'
+                  url: '{{ userdata.url("Azure/deploy-to-azure-cli-extension","external-dependency") }}'
+                - value: '{{ userdata.count("Azure/deploy-to-azure-cli-extension","idle") }}'
+                  url: '{{ userdata.url("Azure/deploy-to-azure-cli-extension","idle") }}'
+                - value: '{{ userdata.count("Azure/deploy-to-azure-cli-extension","stale") }}'
+                  url: '{{ userdata.url("Azure/deploy-to-azure-cli-extension","stale") }}'
+              - - value: 'functions-action'
+                - value: '{{ userdata.count("Azure/functions-action","") }}'
+                  url: '{{ userdata.url("Azure/functions-action","") }}'
+                - value: '{{ userdata.count("Azure/functions-action","need-to-triage") }}'
+                  url: '{{ userdata.url("Azure/functions-action","need-to-triage") }}'
+                - value: '{{ userdata.count("Azure/functions-action","enhancement") }}'
+                  url: '{{ userdata.url("Azure/functions-action","enhancement") }}'
+                - value: '{{ userdata.count("Azure/functions-action","question") }}'
+                  url: '{{ userdata.url("Azure/functions-action","question") }}'
+                - value: '{{ userdata.count("Azure/functions-action","bug") }}'
+                  url: '{{ userdata.url("Azure/functions-action","bug") }}'
+                - value: '{{ userdata.count("Azure/functions-action","documentation") }}'
+                  url: '{{ userdata.url("Azure/functions-action","documentation") }}'
+                - value: '{{ userdata.count("Azure/functions-action","performance-issue") }}'
+                  url: '{{ userdata.url("Azure/functions-action","performance-issue") }}'
+                - value: '{{ userdata.count("Azure/functions-action","waiting-for-customer") }}'
+                  url: '{{ userdata.url("Azure/functions-action","waiting-for-customer") }}'
+                - value: '{{ userdata.count("Azure/functions-action","external-dependency") }}'
+                  url: '{{ userdata.url("Azure/functions-action","external-dependency") }}'
+                - value: '{{ userdata.count("Azure/functions-action","idle") }}'
+                  url: '{{ userdata.url("Azure/functions-action","idle") }}'
+                - value: '{{ userdata.count("Azure/functions-action","stale") }}'
+                  url: '{{ userdata.url("Azure/functions-action","stale") }}'
+                  
+              - - value: 'functions-container-action'
+                - value: '{{ userdata.count("Azure/functions-container-action","") }}'
+                  url: '{{ userdata.url("Azure/functions-container-action","") }}'
+                - value: '{{ userdata.count("Azure/functions-container-action","need-to-triage") }}'
+                  url: '{{ userdata.url("Azure/functions-container-action","need-to-triage") }}'
+                - value: '{{ userdata.count("Azure/functions-container-action","enhancement") }}'
+                  url: '{{ userdata.url("Azure/functions-container-action","enhancement") }}'
+                - value: '{{ userdata.count("Azure/functions-container-action","question") }}'
+                  url: '{{ userdata.url("Azure/functions-container-action","question") }}'
+                - value: '{{ userdata.count("Azure/functions-container-action","bug") }}'
+                  url: '{{ userdata.url("Azure/functions-container-action","bug") }}'
+                - value: '{{ userdata.count("Azure/functions-container-action","documentation") }}'
+                  url: '{{ userdata.url("Azure/functions-container-action","documentation") }}'
+                - value: '{{ userdata.count("Azure/functions-container-action","performance-issue") }}'
+                  url: '{{ userdata.url("Azure/functions-container-action","performance-issue") }}'
+                - value: '{{ userdata.count("Azure/functions-container-action","waiting-for-customer") }}'
+                  url: '{{ userdata.url("Azure/functions-container-action","waiting-for-customer") }}'
+                - value: '{{ userdata.count("Azure/functions-container-action","external-dependency") }}'
+                  url: '{{ userdata.url("Azure/functions-container-action","external-dependency") }}'
+                - value: '{{ userdata.count("Azure/functions-container-action","idle") }}'
+                  url: '{{ userdata.url("Azure/functions-container-action","idle") }}'
+                - value: '{{ userdata.count("Azure/functions-container-action","stale") }}'
+                  url: '{{ userdata.url("Azure/functions-container-action","stale") }}'
+                  
+              - - value: 'mysql'
+                - value: '{{ userdata.count("Azure/mysql","") }}'
+                  url: '{{ userdata.url("Azure/mysql","") }}'
+                - value: '{{ userdata.count("Azure/mysql","need-to-triage") }}'
+                  url: '{{ userdata.url("Azure/mysql","need-to-triage") }}'
+                - value: '{{ userdata.count("Azure/mysql","enhancement") }}'
+                  url: '{{ userdata.url("Azure/mysql","enhancement") }}'
+                - value: '{{ userdata.count("Azure/mysql","question") }}'
+                  url: '{{ userdata.url("Azure/mysql","question") }}'
+                - value: '{{ userdata.count("Azure/mysql","bug") }}'
+                  url: '{{ userdata.url("Azure/mysql","bug") }}'
+                - value: '{{ userdata.count("Azure/mysql","documentation") }}'
+                  url: '{{ userdata.url("Azure/mysql","documentation") }}'
+                - value: '{{ userdata.count("Azure/mysql","performance-issue") }}'
+                  url: '{{ userdata.url("Azure/mysql","performance-issue") }}'
+                - value: '{{ userdata.count("Azure/mysql","waiting-for-customer") }}'
+                  url: '{{ userdata.url("Azure/mysql","waiting-for-customer") }}'
+                - value: '{{ userdata.count("Azure/mysql","external-dependency") }}'
+                  url: '{{ userdata.url("Azure/mysql","external-dependency") }}'
+                - value: '{{ userdata.count("Azure/mysql","idle") }}'
+                  url: '{{ userdata.url("Azure/mysql","idle") }}'
+                - value: '{{ userdata.count("Azure/mysql","stale") }}'
+                  url: '{{ userdata.url("Azure/mysql","stale") }}'
+
+              - - value: 'postgresql'
+                - value: '{{ userdata.count("Azure/postgresql","") }}'
+                  url: '{{ userdata.url("Azure/postgresql","") }}'
+                - value: '{{ userdata.count("Azure/postgresql","need-to-triage") }}'
+                  url: '{{ userdata.url("Azure/postgresql","need-to-triage") }}'
+                - value: '{{ userdata.count("Azure/postgresql","enhancement") }}'
+                  url: '{{ userdata.url("Azure/postgresql","enhancement") }}'
+                - value: '{{ userdata.count("Azure/postgresql","question") }}'
+                  url: '{{ userdata.url("Azure/postgresql","question") }}'
+                - value: '{{ userdata.count("Azure/postgresql","bug") }}'
+                  url: '{{ userdata.url("Azure/postgresql","bug") }}'
+                - value: '{{ userdata.count("Azure/postgresql","documentation") }}'
+                  url: '{{ userdata.url("Azure/postgresql","documentation") }}'
+                - value: '{{ userdata.count("Azure/postgresql","performance-issue") }}'
+                  url: '{{ userdata.url("Azure/postgresql","performance-issue") }}'
+                - value: '{{ userdata.count("Azure/postgresql","waiting-for-customer") }}'
+                  url: '{{ userdata.url("Azure/postgresql","waiting-for-customer") }}'
+                - value: '{{ userdata.count("Azure/postgresql","external-dependency") }}'
+                  url: '{{ userdata.url("Azure/postgresql","external-dependency") }}'
+                - value: '{{ userdata.count("Azure/postgresql","idle") }}'
+                  url: '{{ userdata.url("Azure/postgresql","idle") }}'
+                - value: '{{ userdata.count("Azure/postgresql","stale") }}'
+                  url: '{{ userdata.url("Azure/postgresql","stale") }}'
+                  
+              - - value: 'powershell'
+                - value: '{{ userdata.count("Azure/powershell","") }}'
+                  url: '{{ userdata.url("Azure/powershell","") }}'
+                - value: '{{ userdata.count("Azure/powershell","need-to-triage") }}'
+                  url: '{{ userdata.url("Azure/powershell","need-to-triage") }}'
+                - value: '{{ userdata.count("Azure/powershell","enhancement") }}'
+                  url: '{{ userdata.url("Azure/powershell","enhancement") }}'
+                - value: '{{ userdata.count("Azure/powershell","question") }}'
+                  url: '{{ userdata.url("Azure/powershell","question") }}'
+                - value: '{{ userdata.count("Azure/powershell","bug") }}'
+                  url: '{{ userdata.url("Azure/powershell","bug") }}'
+                - value: '{{ userdata.count("Azure/powershell","documentation") }}'
+                  url: '{{ userdata.url("Azure/powershell","documentation") }}'
+                - value: '{{ userdata.count("Azure/powershell","performance-issue") }}'
+                  url: '{{ userdata.url("Azure/powershell","performance-issue") }}'
+                - value: '{{ userdata.count("Azure/powershell","waiting-for-customer") }}'
+                  url: '{{ userdata.url("Azure/powershell","waiting-for-customer") }}'
+                - value: '{{ userdata.count("Azure/powershell","external-dependency") }}'
+                  url: '{{ userdata.url("Azure/powershell","external-dependency") }}'
+                - value: '{{ userdata.count("Azure/powershell","idle") }}'
+                  url: '{{ userdata.url("Azure/powershell","idle") }}'
+                - value: '{{ userdata.count("Azure/powershell","stale") }}'
+                  url: '{{ userdata.url("Azure/powershell","stale") }}'
+                  
+              - - value: 'sql-action'
+                - value: '{{ userdata.count("Azure/sql-action","") }}'
+                  url: '{{ userdata.url("Azure/sql-action","") }}'
+                - value: '{{ userdata.count("Azure/sql-action","need-to-triage") }}'
+                  url: '{{ userdata.url("Azure/sql-action","need-to-triage") }}'
+                - value: '{{ userdata.count("Azure/sql-action","enhancement") }}'
+                  url: '{{ userdata.url("Azure/sql-action","enhancement") }}'
+                - value: '{{ userdata.count("Azure/sql-action","question") }}'
+                  url: '{{ userdata.url("Azure/sql-action","question") }}'
+                - value: '{{ userdata.count("Azure/sql-action","bug") }}'
+                  url: '{{ userdata.url("Azure/sql-action","bug") }}'
+                - value: '{{ userdata.count("Azure/sql-action","documentation") }}'
+                  url: '{{ userdata.url("Azure/sql-action","documentation") }}'
+                - value: '{{ userdata.count("Azure/sql-action","performance-issue") }}'
+                  url: '{{ userdata.url("Azure/sql-action","performance-issue") }}'
+                - value: '{{ userdata.count("Azure/sql-action","waiting-for-customer") }}'
+                  url: '{{ userdata.url("Azure/sql-action","waiting-for-customer") }}'
+                - value: '{{ userdata.count("Azure/sql-action","external-dependency") }}'
+                  url: '{{ userdata.url("Azure/sql-action","external-dependency") }}'
+                - value: '{{ userdata.count("Azure/sql-action","idle") }}'
+                  url: '{{ userdata.url("Azure/sql-action","idle") }}'
+                - value: '{{ userdata.count("Azure/sql-action","stale") }}'
+                  url: '{{ userdata.url("Azure/sql-action","stale") }}'
+        token: ${{ github.token }}
+
+    - name: Commit files
+      id: commit
+      continue-on-error: true
+      run: |
+        git config --local user.email "kanika1894@github.com"
+        git config --local user.name "kanika1894"
+        git add --all
+        if [-z "$(git status --porcelain)"]; then
+           echo "::set-output name=push::false"
+        else
+           git commit -m "Add changes" -a
+           echo "::set-output name=push::true"
+        fi
+      shell: bash
+ 
+    - name: Push changes
+      if: steps.commit.outputs.push == 'true'
+      uses: ad-m/github-push-action@master
+      with:
+         github_token: ${{ secrets.GITHUB_TOKEN }}
