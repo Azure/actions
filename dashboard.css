@@ -1,6 +1,6 @@
 body {
     font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
-    width: 100%;
+    width: 100%; /* edit : Changed from 1000px to adjust screen display */
     background-color: #eeeeee;
 }
 
@@ -31,10 +31,13 @@ a {
     --color-black-border: #333333;
 }
 
-/* Header / footer */
+/* edit : Added to have a background color */
 div#analytics {
     background-color: #4D9294;
 }
+
+/* Header / footer */
+
 
 div#analytics h1 {
     width: 900px;
@@ -53,7 +56,7 @@ div#footer {
 
 div.sections {
     background-color: #ffffff;
-    width: 90%;
+    width: 90%;  /* edit: Updated from 900px to adjust screen display */
     min-height: 250px;
     padding: 15px 50px 50px 50px;
     border: solid 1px #dddddd;
@@ -113,7 +116,7 @@ div.number_widget {
     margin: 0 5px 5px 0;
     float: left;
     position: relative;
-    background-color: #A8DEDB;
+    background-color: #A8DEDB; /* edit: Adding default tile color*/
     border: solid 1px #dddddd;
     color: #000000;
 }
@@ -166,7 +169,7 @@ div.number_widget .value {
 div.string_widget {
     width: 558px;
     padding: 15px 20px;
-    background-color: #81B7B4;
+    background-color: #81B7B4; /* edit: Adding default bg color */
     border: solid 1px #dddddd;
     color: #000000;
 }
