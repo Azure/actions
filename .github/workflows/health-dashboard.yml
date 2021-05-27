@@ -58,7 +58,7 @@ jobs:
                       url = 'https://github.com/search?q=' + repos + '+is%3A' + itemType + '+is%3A' + state + '+created%3A<'+ staledate
                     }
                     else{
-                      url = 'https://github.com/search?q='+ repos + '+is%3A'+ itemType + '+is%3A' + '+label%3A' + label
+                      url = 'https://github.com/search?q='+ repos + '+is%3A'+ itemType + '+is%3A' + state + '+label%3A' + label
                     }
                     return url
                   } 
