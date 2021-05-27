@@ -46,9 +46,9 @@ jobs:
                     )
                 }
                 else{
-                  results = await github.search.issuesAndPullRequests(
-                  { q: `repo:${repo} is:issue is:${state} label:${label}`}
-                  )
+                    results = await github.search.issuesAndPullRequests(
+                    { q: `repo:${repo} is:issue is:${state} label:${label}`}
+                    )
                 }
                 if(results.data.items.length === 0){
                   return '0'
@@ -148,6 +148,7 @@ jobs:
                   url: '{{ userdata.url("Azure/webapps-deploy","idle") }}'
                 - value: '{{ userdata.count("Azure/webapps-deploy","stale") }}'
                   url: '{{ userdata.url("Azure/webapps-deploy","stale") }}'
+                  
               - - value: 'aci-deploy'
                 - value: '{{ userdata.count("Azure/aci-deploy","") }}'
                   url: '{{ userdata.url("Azure/aci-deploy","") }}'
@@ -171,6 +172,7 @@ jobs:
                   url: '{{ userdata.url("Azure/aci-deploy","idle") }}'
                 - value: '{{ userdata.count("Azure/aci-deploy","stale") }}'
                   url: '{{ userdata.url("Azure/aci-deploy","stale") }}'
+                  
               - - value: 'build-vm-image'
                 - value: '{{ userdata.count("Azure/build-vm-image","") }}'
                   url: '{{ userdata.url("Azure/build-vm-image","") }}'
@@ -194,6 +196,7 @@ jobs:
                   url: '{{ userdata.url("Azure/build-vm-image","idle") }}'
                 - value: '{{ userdata.count("Azure/build-vm-image","stale") }}'
                   url: '{{ userdata.url("Azure/build-vm-image","stale") }}'
+                  
               - - value: 'deploy-to-azure-cli-extension'
                 - value: '{{ userdata.count("Azure/deploy-to-azure-cli-extension","") }}'
                   url: '{{ userdata.url("Azure/deploy-to-azure-cli-extension","") }}'
@@ -217,6 +220,7 @@ jobs:
                   url: '{{ userdata.url("Azure/deploy-to-azure-cli-extension","idle") }}'
                 - value: '{{ userdata.count("Azure/deploy-to-azure-cli-extension","stale") }}'
                   url: '{{ userdata.url("Azure/deploy-to-azure-cli-extension","stale") }}'
+                  
               - - value: 'functions-action'
                 - value: '{{ userdata.count("Azure/functions-action","") }}'
                   url: '{{ userdata.url("Azure/functions-action","") }}'
