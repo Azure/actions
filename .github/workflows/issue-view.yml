@@ -1,5 +1,6 @@
-name: issue-view-workflow
-on: [workflow_dispatch]
+name: testin_table
+'on':
+  - workflow_dispatch
 jobs:
   build:
     runs-on: windows-latest
@@ -16,14 +17,13 @@ jobs:
               format: html
               filename: 'issue.html'
             setup: |
-                userdata.count = async function(repo,label) {
-                  function sleep(milliseconds) {
+                function sleep(milliseconds) {
                     const date = Date.now();
                     let currentDate = null;
-                    do {
-                      currentDate = Date.now();
-                    } while (currentDate - date < milliseconds);
-                  }
+                    do {currentDate = Date.now();} 
+                    while (currentDate - date < milliseconds);
+                }
+                userdata.count = async function(repo,label) {
                   sleep(2000)
                   const state = (label==="closed")? "closed" : "open"
                   var results;
@@ -38,9 +38,9 @@ jobs:
                       )
                   }
                   else{
-                      results = await github.search.issuesAndPullRequests(
-                      { q: `repo:${repo} is:issue is:${state} label:${label}`}
-                      )
+                    results = await github.search.issuesAndPullRequests(
+                    { q: `repo:${repo} is:issue is:${state} label:${label}`}
+                    )
                   }
                   if(results.data.items.length === 0){
                     return '0'
@@ -50,18 +50,11 @@ jobs:
                   }
                 }
                 userdata.url = async function(repo,label) {
-                  function sleep(milliseconds) {
-                    const date = Date.now();
-                    let currentDate = null;
-                    do {
-                      currentDate = Date.now();
-                    } while (currentDate - date < milliseconds);
-                  }
                   sleep(2000)
                   const state = (label==="closed")? "closed" : "open"
                   var url;
                   if(label === "" || label === "closed") {
-                  url = 'https://github.com/'+repo+'/issues?q=is%3Aissue+is%3A'+ state
+                    url = 'https://github.com/'+repo+'/issues?q=is%3Aissue+is%3A'+ state
                   }
                   else if(label === "stale") {
                     var today = new Date();
@@ -80,18 +73,18 @@ jobs:
               widgets:
               - type: 'table'
                 headers:
-                - 'action'
-                - 'open issues'
-                - 'need-to-triage'
-                - 'enhancement'
-                - 'question'
-                - 'bug'
-                - 'documentation'
-                - 'performance-issue'
-                - 'waiting-for-customer'
-                - 'external-dependency'
-                - 'idle(inactive>14days)'
-                - 'stale(90 days old)'
+                - 'Action'
+                - 'Open issues'
+                - 'Need-to-triage'
+                - 'Enhancement'
+                - 'Question'
+                - 'Bug'
+                - 'Documentation'
+                - 'Performance-issue'
+                - 'Waiting-for-customer'
+                - 'External-dependency'
+                - 'Idle(inactive>14days)'
+                - 'Stale(90 days old)'
                 elements:
                 - - value: 'Azure login'
                   - value: '{{ userdata.count("Azure/login","") }}'
@@ -140,7 +133,7 @@ jobs:
                     url: '{{ userdata.url("Azure/webapps-deploy","idle") }}'
                   - value: '{{ userdata.count("Azure/webapps-deploy","stale") }}'
                     url: '{{ userdata.url("Azure/webapps-deploy","stale") }}'
-                    
+
                 - - value: 'aci-deploy'
                   - value: '{{ userdata.count("Azure/aci-deploy","") }}'
                     url: '{{ userdata.url("Azure/aci-deploy","") }}'
@@ -164,7 +157,7 @@ jobs:
                     url: '{{ userdata.url("Azure/aci-deploy","idle") }}'
                   - value: '{{ userdata.count("Azure/aci-deploy","stale") }}'
                     url: '{{ userdata.url("Azure/aci-deploy","stale") }}'
-                    
+
                 - - value: 'build-vm-image'
                   - value: '{{ userdata.count("Azure/build-vm-image","") }}'
                     url: '{{ userdata.url("Azure/build-vm-image","") }}'
@@ -188,7 +181,7 @@ jobs:
                     url: '{{ userdata.url("Azure/build-vm-image","idle") }}'
                   - value: '{{ userdata.count("Azure/build-vm-image","stale") }}'
                     url: '{{ userdata.url("Azure/build-vm-image","stale") }}'
-                    
+
                 - - value: 'deploy-to-azure-cli-extension'
                   - value: '{{ userdata.count("Azure/deploy-to-azure-cli-extension","") }}'
                     url: '{{ userdata.url("Azure/deploy-to-azure-cli-extension","") }}'
