@@ -1,4 +1,4 @@
-name: pr-view-workflow
+name: pr_view_workflow
 
 on: [workflow_dispatch]
 
