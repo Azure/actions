@@ -17,7 +17,7 @@ jobs:
           title: 'Pull requests detailed view'
           output:
             format: html
-            filename: 'pr.html'
+            filename: 'GitHubPages/pr.html'
           setup: |
                 function sleep(milliseconds) {
                   const date = Date.now();
