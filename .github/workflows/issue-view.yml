@@ -1,4 +1,4 @@
-name: testin_table
+name: issue_view_workflow
 'on':
   - workflow_dispatch
 jobs:
