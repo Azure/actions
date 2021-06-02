@@ -1,5 +1,7 @@
-name: pr-view-workflow
+name: pr-counter
+
 on: [workflow_dispatch]
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -17,30 +19,33 @@ jobs:
             format: html
             filename: 'pr.html'
           setup: |
-                userdata.count = async function(repo,label) {
-                  function sleep(milliseconds) {
+                function sleep(milliseconds) {
                   const date = Date.now();
                   let currentDate = null;
-                  do {
-                    currentDate = Date.now();
-                  } while (currentDate - date < milliseconds);
-                  }
+                  do {currentDate = Date.now();} 
+                  while (currentDate - date < milliseconds);
+                }
+                userdata.count = async function(repo,label) {
                   sleep(1000)
-                  const state = (label==="closed")? "closed" : "open"
                   var results;
-                  if(label === "" || label === "closed") {
-                      results = await github.search.issuesAndPullRequests(
-                      { q: `repo:${repo} is:pr is:${state}` }
-                      )
+                  if(label === "" ) {
+                    results = await github.search.issuesAndPullRequests(
+                    { q: `repo:${repo} is:pr is:open` }
+                    )
+                  }
+                  else if(label === "closed") {
+                    results = await github.search.issuesAndPullRequests(
+                    { q: `repo:${repo} is:pr is:closed closed:>${date("-30 days")}`}
+                    )
                   }
                   else if(label === "stale") {
-                      results = await github.search.issuesAndPullRequests(
-                      { q: `repo:${repo} is:pr is:${state} created:<${date("-90 days")}`}
-                      )
+                    results = await github.search.issuesAndPullRequests(
+                    { q: `repo:${repo} is:pr is:open created:<${date("-90 days")}`}
+                    )
                   }
                   else{
                     results = await github.search.issuesAndPullRequests(
-                    { q: `repo:${repo} is:pr is:${state} label:${label}`}
+                    { q: `repo:${repo} is:pr is:open label:${label}`}
                     )
                   }
                   if(results.data.items.length === 0){
@@ -51,29 +56,26 @@ jobs:
                   }
                 }
                 userdata.url = async function(repo,label) {
-                  function sleep(milliseconds) {
-                  const date = Date.now();
-                  let currentDate = null;
-                  do {
-                    currentDate = Date.now();
-                  } while (currentDate - date < milliseconds);
-                  }
                   sleep(1000)
-                  const state = (label==="closed")? "closed" : "open"
                   var url;
-                  if(label === "" || label === "closed") {
-                  url = 'https://github.com/'+repo+'/pulls?q=is%3Apr+is%3A'+ state
+                  var today = new Date();
+                  var pastDate = new Date(today);
+
+                  if(label === "") {
+                    url = 'https://github.com/'+repo+'/pulls?q=is%3Apr+is%3A'+ 'open'
+                  }
+                  else if(label === "closed") {
+                    pastDate.setDate(pastDate.getDate() - 30);
+                    var closedDate = pastDate.toISOString().split("T")[0];
+                    url = 'https://github.com/' + repo + '/pulls?q=is%3Aissue+is%3A' + 'closed' + '+closed%3A>'+ closedDate
                   }
                   else if(label === "stale") {
-                    var today = new Date();
-                    var PastDate=new Date(today);
-                    PastDate.setDate(PastDate.getDate() - 90);
-                    var staledate = PastDate.toISOString().split("T")[0];
-                    url = 'https://github.com/' + repo + '/pulls?q=is%3Apr+is%3A' + state + '+created%3A<'+staledate+'+'
-
+                    pastDate.setDate(pastDate.getDate() - 90);
+                    var staledate = pastDate.toISOString().split("T")[0];
+                    url = 'https://github.com/' + repo + '/pulls?q=is%3Apr+is%3A' + 'open' + '+created%3A<'+staledate
                   }
                   else{
-                    url = 'https://github.com/'+repo+'/pulls?q=is%3Apr+is%3A'+state+'+label%3A'+label
+                    url = 'https://github.com/'+repo+'/pulls?q=is%3Apr+is%3A'+'open'+'+label%3A'+label
                   }
                   return url
                 } 
@@ -84,113 +86,111 @@ jobs:
             - type: 'table'
               headers:
               - 'Action'
-              - 'Open PR'
-              - 'Stale PR(90 days old)'
-              - 'Idle PR(inactive > 14 days)'	
-              - 'Closed PR'
+              - 'Open'
+              - 'Idle(inactive>14days)'	
+              - 'Stale(90_days_old)'
+              - 'Closed(last_30_days)'
               elements:
-              - - value: 'Azure login'
+              - - value: 'azure login'
                 - value: '{{ userdata.count("Azure/login","") }}'
                   url: '{{ userdata.url("Azure/login","") }}'
-                - value: '{{ userdata.count("Azure/login","stale") }}'
-                  url: '{{ userdata.url("Azure/login","stale") }}'
                 - value: '{{ userdata.count("Azure/login","idle") }}'
                   url: '{{ userdata.url("Azure/login","idle") }}'
+                - value: '{{ userdata.count("Azure/login","stale") }}'
+                  url: '{{ userdata.url("Azure/login","stale") }}'
                 - value: '{{ userdata.count("Azure/login","closed") }}'
                   url: '{{ userdata.url("Azure/login","closed") }}'
               - - value: 'webapps-deploy'
                 - value: '{{ userdata.count("Azure/webapps-deploy","") }}'
                   url: '{{ userdata.url("Azure/webapps-deploy","") }}'
-                - value: '{{ userdata.count("Azure/webapps-deploy","stale") }}'
-                  url: '{{ userdata.url("Azure/webapps-deploy","stale") }}'
                 - value: '{{ userdata.count("Azure/webapps-deploy","idle") }}'
                   url: '{{ userdata.url("Azure/webapps-deploy","idle") }}'
+                - value: '{{ userdata.count("Azure/webapps-deploy","stale") }}'
+                  url: '{{ userdata.url("Azure/webapps-deploy","stale") }}'
                 - value: '{{ userdata.count("Azure/webapps-deploy","closed") }}'
                   url: '{{ userdata.url("Azure/webapps-deploy","closed") }}'
               - - value: 'aci-deploy'
                 - value: '{{ userdata.count("Azure/aci-deploy","") }}'
                   url: '{{ userdata.url("Azure/aci-deploy","") }}'
-                - value: '{{ userdata.count("Azure/aci-deploy","stale") }}'
-                  url: '{{ userdata.url("Azure/aci-deploy","stale") }}'
                 - value: '{{ userdata.count("Azure/aci-deploy","idle") }}'
                   url: '{{ userdata.url("Azure/aci-deploy","idle") }}'
+                - value: '{{ userdata.count("Azure/aci-deploy","stale") }}'
+                  url: '{{ userdata.url("Azure/aci-deploy","stale") }}'
                 - value: '{{ userdata.count("Azure/aci-deploy","closed") }}'
                   url: '{{ userdata.url("Azure/aci-deploy","closed") }}'
               - - value: 'build-vm-image' 
                 - value: '{{ userdata.count("Azure/build-vm-image","") }}'
                   url: '{{ userdata.url("Azure/build-vm-image","") }}'
-                - value: '{{ userdata.count("Azure/build-vm-image","stale") }}'
-                  url: '{{ userdata.url("Azure/build-vm-image","stale") }}'
                 - value: '{{ userdata.count("Azure/build-vm-image","idle") }}'
                   url: '{{ userdata.url("Azure/build-vm-image","idle") }}'
+                - value: '{{ userdata.count("Azure/build-vm-image","stale") }}'
+                  url: '{{ userdata.url("Azure/build-vm-image","stale") }}'
                 - value: '{{ userdata.count("Azure/build-vm-image","closed") }}'
                   url: '{{ userdata.url("Azure/build-vm-image","closed") }}'
               - - value: 'deploy-to-azure-cli-extension' 
                 - value: '{{ userdata.count("Azure/deploy-to-azure-cli-extension","") }}'
                   url: '{{ userdata.url("Azure/deploy-to-azure-cli-extension","") }}'
-                - value: '{{ userdata.count("Azure/deploy-to-azure-cli-extension","stale") }}'
-                  url: '{{ userdata.url("Azure/deploy-to-azure-cli-extension","stale") }}'
                 - value: '{{ userdata.count("Azure/deploy-to-azure-cli-extension","idle") }}'
                   url: '{{ userdata.url("Azure/deploy-to-azure-cli-extension","idle") }}'
+                - value: '{{ userdata.count("Azure/deploy-to-azure-cli-extension","stale") }}'
+                  url: '{{ userdata.url("Azure/deploy-to-azure-cli-extension","stale") }}'
                 - value: '{{ userdata.count("Azure/deploy-to-azure-cli-extension","closed") }}'
                   url: '{{ userdata.url("Azure/deploy-to-azure-cli-extension","closed") }}'
               - - value: 'functions-action' 
                 - value: '{{ userdata.count("Azure/functions-action","") }}'
                   url: '{{ userdata.url("Azure/functions-action","") }}'
-                - value: '{{ userdata.count("Azure/functions-action","stale") }}'
-                  url: '{{ userdata.url("Azure/functions-action","stale") }}'
                 - value: '{{ userdata.count("Azure/functions-action","idle") }}'
                   url: '{{ userdata.url("Azure/functions-action","idle") }}'
+                - value: '{{ userdata.count("Azure/functions-action","stale") }}'
+                  url: '{{ userdata.url("Azure/functions-action","stale") }}'
                 - value: '{{ userdata.count("Azure/functions-action","closed") }}'
                   url: '{{ userdata.url("Azure/functions-action","closed") }}'
               - - value: 'functions-container-action' 
                 - value: '{{ userdata.count("Azure/functions-container-action","") }}'
                   url: '{{ userdata.url("Azure/functions-container-action","") }}'
-                - value: '{{ userdata.count("Azure/functions-container-action","stale") }}'
-                  url: '{{ userdata.url("Azure/functions-container-action","stale") }}'
                 - value: '{{ userdata.count("Azure/functions-container-action","idle") }}'
                   url: '{{ userdata.url("Azure/functions-container-action","idle") }}'
+                - value: '{{ userdata.count("Azure/functions-container-action","stale") }}'
+                  url: '{{ userdata.url("Azure/functions-container-action","stale") }}'
                 - value: '{{ userdata.count("Azure/functions-container-action","closed") }}'
                   url: '{{ userdata.url("Azure/functions-container-action","closed") }}'
               - - value: 'mysql' 
                 - value: '{{ userdata.count("Azure/mysql","") }}'
                   url: '{{ userdata.url("Azure/mysql","") }}'
-                - value: '{{ userdata.count("Azure/mysql","stale") }}'
-                  url: '{{ userdata.url("Azure/mysql","stale") }}'
                 - value: '{{ userdata.count("Azure/mysql","idle") }}'
                   url: '{{ userdata.url("Azure/mysql","idle") }}'
+                - value: '{{ userdata.count("Azure/mysql","stale") }}'
+                  url: '{{ userdata.url("Azure/mysql","stale") }}'
                 - value: '{{ userdata.count("Azure/mysql","closed") }}'
                   url: '{{ userdata.url("Azure/mysql","closed") }}'
               - - value: 'postgresql' 
                 - value: '{{ userdata.count("Azure/postgresql","") }}'
                   url: '{{ userdata.url("Azure/postgresql","") }}'
-                - value: '{{ userdata.count("Azure/postgresql","stale") }}'
-                  url: '{{ userdata.url("Azure/postgresql","stale") }}'
                 - value: '{{ userdata.count("Azure/postgresql","idle") }}'
                   url: '{{ userdata.url("Azure/postgresql","idle") }}'
+                - value: '{{ userdata.count("Azure/postgresql","stale") }}'
+                  url: '{{ userdata.url("Azure/postgresql","stale") }}'
                 - value: '{{ userdata.count("Azure/postgresql","closed") }}'
                   url: '{{ userdata.url("Azure/postgresql","closed") }}'
               - - value: 'powershell' 
                 - value: '{{ userdata.count("Azure/powershell","") }}'
                   url: '{{ userdata.url("Azure/powershell","") }}'
-                - value: '{{ userdata.count("Azure/powershell","stale") }}'
-                  url: '{{ userdata.url("Azure/powershell","stale") }}'
                 - value: '{{ userdata.count("Azure/powershell","idle") }}'
                   url: '{{ userdata.url("Azure/powershell","idle") }}'
+                - value: '{{ userdata.count("Azure/powershell","stale") }}'
+                  url: '{{ userdata.url("Azure/powershell","stale") }}'
                 - value: '{{ userdata.count("Azure/powershell","closed") }}'
                   url: '{{ userdata.url("Azure/powershell","closed") }}'
               - - value: 'sql-action ' 
                 - value: '{{ userdata.count("Azure/sql-action","") }}'
                   url: '{{ userdata.url("Azure/sql-action","") }}'
-                - value: '{{ userdata.count("Azure/sql-action","stale") }}'
-                  url: '{{ userdata.url("Azure/sql-action","stale") }}'
                 - value: '{{ userdata.count("Azure/sql-action","idle") }}'
                   url: '{{ userdata.url("Azure/sql-action","idle") }}'
+                - value: '{{ userdata.count("Azure/sql-action","stale") }}'
+                  url: '{{ userdata.url("Azure/sql-action","stale") }}'
                 - value: '{{ userdata.count("Azure/sql-action","closed") }}'
                   url: '{{ userdata.url("Azure/sql-action","closed") }}'
-              
-          
-                    
+  
         token: ${{ github.token }}
 
     - name: Commit files
