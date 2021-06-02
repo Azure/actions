@@ -1,0 +1,172 @@
+---
+title: GitHub Actions for Azure
+---
+
+<!DOCTYPE html>
+<html>
+    <head>
+        {% include head.html %}
+        {% include additional-head.html %}
+    </head>
+<body>
+    <!-- START - SIDENAV -->
+    <nav id="menu" class="navbar navbar-expand-md navbar-light bg-light list-group sidenav">
+        <div class="navbar-header">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#items" aria-controls="items" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse" id="items">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item"><a class="list-group-item list-group-item-action" href="#home"><img src={{site.data.home.hero.navIcon}}><span>{{site.data.home.hero.navTitle}}</span></a></li>
+                {% for block in site.data.home.sections %}
+                    <li class="nav-item"><a class="list-group-item list-group-item-action" href={{'#' | append: block.id }}><img src={{block.navIcon}}><span>{{block.navTitle}}</span></a></li>
+                {% endfor %}
+                <li class="nav-item"><a class="list-group-item list-group-item-action" href="#resources"><img src={{site.data.home.footer.navIcon}}><span>{{site.data.home.footer.navTitle}}</span></a></li>
+            </ul>
+        </div>
+    </nav>
+    <!-- END - SIDENAV -->
+
+    <!-- <main data-bs-spy="scroll" data-bs-target="#menu" data-bs-offset="0" class="scrollspy"> -->
+    <main>
+        <!-- START - HOME SECTION -->
+        <section id="home">
+            <div class="raindrops">
+                <div class="drops one">
+                    <img class="rectangle" src="img/rectangle.svg">
+                </div>
+                <div class="drops two">
+                    <img class="line" src="img/line.svg">
+                    <img class="rectangle" src="img/rectangle.svg">
+                </div>
+                <div class="drops three">
+                    <img class="line" src="img/line.svg">
+                    <img class="rectangle" src="img/rectangle.svg">
+                </div>
+                <div class="drops four">
+                    <img class="line" src="img/line.svg">
+                    <img class="rectangle" src="img/rectangle.svg">
+                </div>
+                <div class="drops five">
+                    <img class="line" src="img/line.svg">
+                    <img class="rectangle" src="img/rectangle.svg">
+                </div>
+                <div class="drops six">
+                    <img class="rectangle" src="img/rectangle.svg">
+                </div>
+                <div class="drops seven">
+                    <img class="line" src="img/line.svg">
+                    <img class="rectangle" src="img/rectangle.svg">
+                </div>
+                <div class="drops eight">
+                    <img class="rectangle" src="img/rectangle.svg">
+                </div>
+                <div class="drops nine">
+                    <img class="line" src="img/line.svg">
+                    <img class="rectangle" src="img/rectangle.svg">
+                </div>
+                <div class="drops ten">
+                    <img class="rectangle" src="img/rectangle.svg">
+                </div>
+                <div class="drops eleven">
+                    <img class="rectangle" src="img/rectangle.svg">
+                </div>
+                <div class="drops twelve">
+                    <img class="line" src="img/line.svg">
+                    <img class="rectangle" src="img/rectangle.svg">
+                </div>
+                <div class="drops thirteen">
+                    <img class="line" src="img/line.svg">
+                    <img class="rectangle" src="img/rectangle.svg">
+                </div>
+                <div class="drops fourteen">
+                    <img class="line" src="img/line.svg">
+                    <img class="rectangle" src="img/rectangle.svg">
+                </div>
+                <div class="drops fifteen">
+                    <img class="line" src="img/line.svg">
+                    <img class="rectangle" src="img/rectangle.svg">
+                </div>
+                <div class="drops sixteen">
+                    <img class="rectangle" src="img/rectangle.svg">
+                </div>
+                <div class="drops seventeen">
+                    <img class="line" src="img/line.svg">
+                    <img class="rectangle" src="img/rectangle.svg">
+                </div>
+            </div>
+            <div class="content px-3 text-center">
+                <img src="img/logo-microsoft.svg" class="logo wow animate__fadeIn" data-wow-duration="2s" data-wow-delay=".5s" data-wow-offset="0">
+                <h1 class="title wow animate__fadeInDown" data-wow-duration="1.5s" data-wow-delay="0s">{{site.data.home.hero.h1}}</h1>
+                {% assign num_sections = site.data.home.hero.sections.size %}
+                {% for block in site.data.home.hero.sections %}
+                    <p class="wow animate__fadeIn" data-wow-duration="3s" data-wow-delay="0s" data-wow-offset="0"><span class="rectangle"></span>{{block.text}}</p>
+                    {% if forloop.index != num_sections %}
+                        <img class="rectangle" src="img/rectangle.svg">
+                    {% endif %}
+                {% endfor %}
+                <div class="arrow_down">
+                    <a href="#automate">
+                        <img class="arrow-down-icon" src="img/arrow-down-icon.svg">
+                    </a>
+                </div>
+            </div>
+            <div class="shapes">
+                <span class="wave layer1"></span>
+                <span class="wave layer2"></span>
+            </div>
+        </section>
+        <!-- END - HOME SECTION -->
+
+        <!-- START - Jekyllized SECTIONS -->
+        {% for block in site.data.home.sections %}
+            <section id={{block.id}}>
+                <div class="container">
+                    <div class="row intro">
+                        <div class="col wow animate__fadeInUp" data-wow-duration="0.6s">
+                            <h2 class="title">{{block.title}}</h2>
+                            <p>{{block.intro}}</p>
+                        </div>
+                        <div class="col wow animate__fadeIn" data-wow-duration="0.6s">
+                            <img src={{block.animation}} alt="Animation">
+                        </div>
+                    </div>
+
+                    <div class="row content">
+                        {% for action in block.actions %}
+                            <div class="col-12 col-sm-6 item wow animate__fadeInUp" data-wow-duration="0.6s">
+                                <img src={{action.icon}} class="section-action-icon" alt="Deploy Web App Image">
+                                <h3 class="title">{{action.title}}</h3>
+                                <p>{{action.description}}</p>
+                                <a href={{action.link}} target="_blank" alt="Link">Learn more</a>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </section>
+        {% endfor %}
+        <!-- END - Jekyllized SECTIONS -->
+
+        <!-- START - RESOURCES SECTION -->
+        <section id={{site.data.home.footer.id}}>
+            <div class="container">
+                <h2 class="title wow animate__fadeInUp" data-wow-duration="0.6s">{{site.data.home.footer.title}}</h2>
+                <p class="wow animate__fadeInUp" data-wow-duration="0.6s" data-wow-offset="0">{{site.data.home.footer.intro}}</p>
+                <div class="row">
+                    {% for section in site.data.home.footer.sections %}
+                        <a class="col-12 col-sm-4 wow animate__fadeInUp" data-wow-duration="0.6s" data-wow-offset="0" target="_blank" href={{section.link}}>{{section.title}}</a>
+                    {% endfor %}
+                </div>
+                <div class="logo"><img src="img/logo--microsoft-dark.svg"></div>
+            </div>
+        </section>
+        <!-- END - RESOURCES SECTION -->
+
+    </main>
+
+    <footer>
+        {% include home-js.html %}
+    </footer>
+</body>
+</html>

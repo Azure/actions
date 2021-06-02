@@ -1,0 +1,49 @@
+<svg width="600" height="450" viewBox="0 0 600 450" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="600" height="450" fill="#005A9E"/>
+<rect y="299" width="600" height="151" fill="#0078D4"/>
+<rect x="186" y="299" width="228" height="151" fill="#005A9E"/>
+<path d="M284 128.356V216.64" stroke="#26FC90" stroke-width="2" stroke-miterlimit="10"/>
+<path d="M294.281 128.356V216.64" stroke="#26FC90" stroke-width="2" stroke-miterlimit="10"/>
+<path d="M304.961 128.356V216.64" stroke="#26FC90" stroke-width="2" stroke-miterlimit="10"/>
+<path d="M315.542 128.356V216.64" stroke="#26FC90" stroke-width="2" stroke-miterlimit="10"/>
+<path d="M0 261.156H24.4561V215.573H43.7208V233.5H63.5V202.015H92.0322V219.843H135.253V207H155.216V219.843H161.904V190H179.871V237.99H194.145V255.818H215.406V298.839H0V261.156Z" fill="#2B88D8"/>
+<path d="M384.794 259.661H400.765V211.623H426V235.855H438.829V181.412H465V235.108H502.578V186.429H515.854V198.812H543.204V244.396H561.171V262.864H582.432V214.185H600V299.053H384.794V259.661Z" fill="#2B88D8"/>
+<path d="M245 102H129V176" stroke="#26FC90" stroke-width="2" stroke-miterlimit="10"/>
+<path d="M255 112L141 112L141 176" stroke="#26FC90" stroke-width="2" stroke-miterlimit="10"/>
+<path d="M248 92H117V176" stroke="#26FC90" stroke-width="2" stroke-miterlimit="10"/>
+<path d="M360.5 113.247H452.271V151.5" stroke="#26FC90" stroke-width="2" stroke-miterlimit="10"/>
+<path d="M360 102H462V151" stroke="#26FC90" stroke-width="2" stroke-miterlimit="10"/>
+<path d="M353.5 92L471.607 92V150.987" stroke="#26FC90" stroke-width="2" stroke-miterlimit="10"/>
+<path d="M345.467 86.4024C343.67 86.4024 341.973 86.6159 340.376 87.1496C339.178 66.76 323.307 50.5337 303.943 50.5337C289.669 50.5337 277.292 59.2874 271.303 72.0976C270.404 71.9909 269.506 71.9909 268.607 71.9909C253.934 71.9909 242.056 84.6944 242.056 100.387C242.056 116.079 253.934 128.783 268.607 128.783H345.467C356.347 128.783 365.23 119.282 365.23 107.646C365.23 96.0101 356.347 86.4024 345.467 86.4024Z" fill="#51E5FF"/>
+<path d="M148 175H107V299H148V175Z" fill="#004578"/>
+<path d="M121 249H51V299H121V249Z" fill="#004578"/>
+<path d="M69 274H0V299H69V274Z" fill="#004578"/>
+<path d="M230 249H161V299H230V249Z" fill="#004578"/>
+<path d="M186 207H92V299H186V207Z" fill="#004578"/>
+<path d="M486.309 151H438.996V298.958H486.309V151Z" fill="#004578"/>
+<path d="M462 222H414V299H462V222Z" fill="#004578"/>
+<path d="M514 207H482V299H514V207Z" fill="#004578"/>
+<path d="M561 232H514V299H561V232Z" fill="#004578"/>
+<path d="M600 251H553V299H600V251Z" fill="#004578"/>
+<path d="M421 243H374V299H421V243Z" fill="#004578"/>
+<path d="M384.589 215.359H215V332.039H384.589V215.359Z" fill="#004578"/>
+<path d="M384.589 332.252H215V382.426H384.589V332.252Z" fill="#0078D4"/>
+<path d="M384.589 382.639H215V388.618H384.589V382.639Z" fill="#106EBE"/>
+<path d="M377.602 337.483H221.987V362.89H377.602V337.483Z" fill="#2B88D8"/>
+<path d="M317.911 367.16H281.578V377.942H317.911V367.16Z" fill="#2B88D8"/>
+<path d="M377.802 221.764H221.688V325.634H377.802V221.764Z" fill="#2B88D8"/>
+<path d="M280 232H233V311H280V232Z" fill="#51E5FF"/>
+<path d="M333.914 232.012H287V269.162H333.914V232.012Z" fill="white"/>
+<path d="M369 232H341V287H369V232Z" fill="#51E5FF"/>
+<path d="M369 293H341V311H369V293Z" fill="white"/>
+<path d="M333.914 273.539H287V310.689H333.914V273.539Z" fill="#51E5FF"/>
+<rect x="213" y="109" width="7" height="7" fill="#005A9E" stroke="#26FC90" stroke-width="2"/>
+<rect x="280" y="153" width="7" height="7" fill="#005A9E" stroke="#26FC90" stroke-width="2"/>
+<rect x="291" y="195" width="7" height="7" fill="#005A9E" stroke="#26FC90" stroke-width="2"/>
+<rect x="312" y="140" width="7" height="7" fill="#005A9E" stroke="#26FC90" stroke-width="2"/>
+<rect x="406" y="110" width="7" height="7" fill="#005A9E" stroke="#26FC90" stroke-width="2"/>
+<rect x="468" y="137" width="7" height="7" fill="#005A9E" stroke="#26FC90" stroke-width="2"/>
+<rect x="447" y="98" width="7" height="7" fill="#005A9E" stroke="#26FC90" stroke-width="2"/>
+<rect x="150" y="88" width="7" height="7" fill="#005A9E" stroke="#26FC90" stroke-width="2"/>
+<rect x="125" y="136" width="7" height="7" fill="#005A9E" stroke="#26FC90" stroke-width="2"/>
+</svg>

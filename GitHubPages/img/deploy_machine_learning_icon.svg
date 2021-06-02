@@ -1,0 +1,15 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect width="64" height="64" fill="#26FC90"/>
+    <g class="point" transform="translate(15,14)">
+        <rect width="6" height="6" fill="#004578"/>
+        <rect y="14" width="6" height="6" fill="#004578"/>
+        <rect y="28" width="6" height="6" fill="#004578"/>
+        <rect x="14" width="6" height="6" fill="#004578"/>
+        <path d="M31 3L3 31M3 3L31 31M31 17H3M17 3V31" stroke="#004578" stroke-width="2"/>
+        <rect x="14" y="14" width="6" height="6" fill="#004578"/>
+        <rect x="14" y="28" width="6" height="6" fill="#004578"/>
+        <rect x="28" width="6" height="6" fill="#004578"/>
+        <rect x="28" y="14" width="6" height="6" fill="#004578"/>
+        <rect x="28" y="28" width="6" height="6" fill="#004578"/>
+    </g>
+</svg>
