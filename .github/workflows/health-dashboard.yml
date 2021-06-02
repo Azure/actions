@@ -7,11 +7,6 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v2
-      - name: Check out GitHub Pages branch
-        uses: actions/checkout@v2
-        with:
-          ref: 'GitHubPages'
-          path: 'out'
       - name: Generate Dashboard
         id: dashboard
         uses: ethomson/issue-dashboard@v1
@@ -137,12 +132,23 @@ jobs:
                 value: 'PR detailed information'
                 url: 'pr.html'
           token: "${{ github.token }}"
-
-      - name: Publish Documentation
+      - name: Commit files
+        id: commit
+        continue-on-error: true
         run: |
-          git add .
-          git config user.name 'GitHub Action'
-          git config user.email 'action@github.com'
-          git commit -m 'Documentation update' --allow-empty
-          git push origin GitHubPages
-        working-directory: out
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git pull
+          git add --all
+          if [-z "$(git status --porcelain)"]; then
+             echo "::set-output name=push::false"
+          else
+             git commit -m "Add changes" -a
+             echo "::set-output name=push::true"
+          fi
+        shell: bash
+      - name: Push changes
+        if: steps.commit.outputs.push == 'true'
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: "${{ secrets.GITHUB_TOKEN }}"
