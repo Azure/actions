@@ -92,8 +92,8 @@ jobs:
                 - 'Waiting-for-customer'
                 - 'External-dependency'
                 - 'Idle(inactive>14days)'
-                - 'Stale(90_days_old)'
-                - 'Closed(last_30_days)'
+                - 'Stale(90_days old)'
+                - 'Closed(last_30 days)'
                 elements:
                 - - value: 'azure login'
                   - value: '{{ userdata.count("Azure/login","") }}'
@@ -397,7 +397,7 @@ jobs:
              echo "::set-output name=push::true"
           fi
         shell: bash
-        
+
       - name: Push changes
         if: steps.commit.outputs.push == 'true'
         uses: ad-m/github-push-action@master
