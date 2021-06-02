@@ -1,4 +1,4 @@
-name: pr-counter
+name: pr-view-workflow
 
 on: [workflow_dispatch]
 
