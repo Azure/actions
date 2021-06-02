@@ -15,7 +15,7 @@ jobs:
             title: 'Issues detailed view'
             output:
               format: html
-              filename: 'GitHubPages/issue.html'
+              filename: 'docs/issue.html'
             setup: |
                 function sleep(milliseconds) {
                   const date = Date.now();
