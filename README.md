@@ -1,12 +1,27 @@
-# Actions - GitHub Actions for Azure
+# Actions - [GitHub Actions for Azure](https://azure.github.io/actions/)
 
-This repository provides a framework, guidleines and processes to author new and contribute to existing GitHub Actions deploying to Azure.
+This repository provides a framework, guidleines and processes to author new and contribute to existing [GitHub Actions deploying to Azure](https://azure.github.io/actions/).
 
 ## Table of contents
-- [Introduction to GitHub Actions for Azure](#introduction-to-github-actions-for-azure)
-  - [What is GitHub Actions for Azure](https://docs.microsoft.com/en-in/azure/developer/github/github-actions)
-  - [Starter Action Workflows to deploy to Azure](https://github.com/Azure/actions-workflow-samples)
-- Contributing to Azure Actions
+- [Introduction to GitHub Actions for Azure and Starter Action Workflows](#introduction-to-github-actions-for-azure-and-starter-action-workflows) 
+- [Contributing to Azure Actions](#introduction-to-github-actions-for-azure-and-starter-action-workflows)
+  - [Health Dashboard for Azure Action repos](https://azure.github.io/actions/health-dashboard.html)
+
+# Introduction to GitHub Actions for Azure and Starter Action Workflows
+
+[GitHub Actions](https://help.github.com/en/articles/about-github-actions)  gives you the flexibility to build an automated software development lifecycle workflow. 
+
+With [GitHub Actions for Azure](https://azure.github.io/actions/) you can create workflows that you can set up in your repository to build, test, package, release and **deploy** to Azure. [Learn more about all other integrations with Azure.](http://aka.ms/GitHubonAzure)
+
+Get started today with a [free Azure account](https://azure.com/free/open-source)!
+
+To easily create GitHub CI/CD workflows targeting Azure, use our [Azure starter templates](https://github.com/Azure/actions-workflow-samples) to deploy your apps created with popular languages and frameworks such as .NET, Node.js, Java, PHP, Ruby or Python, in containers or running on any operating system. Also the individual Action repos have a sample workflow included in their Readme file to help you quickly get started.
+
+Please try out the [GitHub Actions for Azure](https://docs.microsoft.com/azure/developer/github/github-actions) and share your feedback via Twitter on [@Azure](https://twitter.com/azuredevops). If you encounter a problem, please open an issue on the GitHub repository for the specific action.
+
+# Contributing to Azure Actions
+
+Following are the guideliens to author new Azure Actions and also to contribute to the existing ones.
   - [Create a new GitHub Action for Azure or Microsoft](docs/Process_of_Authoring_GitHub_Actions_for_Azure.md#creating-a-new-github-action-for-azure-or-microsoft)
   - [Contributing to the existing actions](docs/developer-guildelines.md)
   - [Building GitHub Actions from Azure Pipeline Tasks](docs/action-from-pipeline-task.md)
@@ -17,23 +32,11 @@ This repository provides a framework, guidleines and processes to author new and
   - [Publish to Marketplace](docs/Process_of_Authoring_GitHub_Actions_for_Azure.md#publish-the-action-to-marketplace)
   - [Communication guidelines](communication%20guidelines.md)
 
-# Introduction to GitHub Actions for Azure
+## Health Dashboard for Azure Action repos
 
-[GitHub Actions](https://help.github.com/en/articles/about-github-actions)  gives you the flexibility to build an automated software development lifecycle workflow. 
+This [health dashboard](https://azure.github.io/actions/health-dashboard.html) provides information on open issues and PRs for all the Azure Action repos.
 
-With [GitHub Actions for Azure](https://docs.microsoft.com/azure/developer/github/) you can create workflows that you can set up in your repository to build, test, package, release and **deploy** to Azure. [Learn more about all other integrations with Azure.](http://aka.ms/GitHubonAzure)
-
-Get started today with a [free Azure account](https://azure.com/free/open-source)!
-
-To easily create GitHub CI/CD workflows targeting Azure, use our [Azure starter templates](https://github.com/Azure/actions-workflow-samples) to deploy your apps created with popular languages and frameworks such as .NET, Node.js, Java, PHP, Ruby or Python, in containers or running on any operating system. Also the individual Action repos have a sample workflow included in their Readme file to help you quickly get started.
-
-Please try out the [GitHub Actions for Azure](https://docs.microsoft.com/azure/developer/github/github-actions) and share your feedback via Twitter on [@Azure](https://twitter.com/azuredevops). If you encounter a problem, please open an issue on the GitHub repository for the specific action.
-
-# GitHub Actions for Azure
-
-[azure.github.io/actions/](https://azure.github.io/actions/)
-
-# Contributing
+## Contributing License Agreement
 
 This project welcomes contributions and suggestions.  Most contributions require you to agree to a
 Contributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us
