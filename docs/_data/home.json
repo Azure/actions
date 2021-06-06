@@ -1,0 +1,189 @@
+{
+  "hero": {
+    "h1": "GitHub Actions for Azure",
+    "navTitle": "Home",
+    "navIcon": "img/home-icon.svg",
+    "id": "home",
+    "sections": [
+      {
+        "text": "Automate workflows"
+      },
+      {
+        "text": "Shift security and compliance left"
+      },
+      {
+        "text": "Operate seamlessly"
+      },
+      {
+        "text": "Accelerate developer velocity"
+      }
+    ]
+  },
+  "sections": [
+    {
+      "title": "Automate workflows",
+      "intro": "Easily automate your code-to-cloud workflows on any GitHub event, such as code commits, creation of pull requests, or new GitHub releases. Deploy apps to Azure across popular languages and frameworks—including .NET, Node.js, Java, PHP, Ruby, Python—in containers, or running on any operating system.",
+      "animation": "img/automate_workflows_gif.gif",
+      "navTitle": "Automate",
+      "navIcon": "img/automate-icon.svg",
+      "id": "automate",
+      "actions": [
+        {
+          "icon": "img/deploy_web_app_icon.svg",
+          "title": "Deploy web app",
+          "description": "Quickly build and deploy web apps and APIs with GitHub Actions for Azure App Service. Work across languages including .NET, .NET Core, Node.js, Java, Python, PHP, in containers, or running on Windows or Linux.",
+          "link": "https://docs.microsoft.com/en-us/azure/app-service/deploy-github-actions?tabs=applevel"
+        },
+        {
+          "icon": "img/deploy_serverless_icon.svg",
+          "title": "Deploy serverless",
+          "description": "Build, deploy, and process events with serverless code efficiently using GitHub Actions for Azure Functions.",
+          "link": "https://docs.microsoft.com/en-us/azure/azure-functions/functions-how-to-github-actions?tabs=dotnet"
+        },
+        {
+          "icon": "img/deploy_containers_kubernetes_icon.svg",
+          "title": "Deploy to containers and Kubernetes",
+          "description": "Develop and manage containerized applications faster with fully managed container services on Azure. Create automation workflows using GitHub Actions for Azure Kubernetes Service (AKS) and Azure Container Instances (ACI).",
+          "link": "https://docs.microsoft.com/en-us/azure/aks/kubernetes-action"
+        },
+        {
+          "icon": "img/deploy_machine_learning_icon.svg",
+          "title": "Deploy to machine learning",
+          "description": "Create the next generation of applications using Azure Artificial Intelligence (AI) and Machine Learning (ML) capabilities. Build, deploy and train ML models from the cloud to the Edge.",
+          "link": "https://docs.microsoft.com/en-us/azure/machine-learning/how-to-github-actions-machine-learning"
+        },
+        {
+          "icon": "img/deploy_databases_icon.svg",
+          "title": "Deploy to databases",
+          "description": "Support rapid growth and innovate faster with secure, enterprise-grade, and fully managed database services. Streamline database deployments with GitHub Actions for Azure SQL, MySQL, and PostgreSQL.",
+          "link": "https://docs.microsoft.com/en-in/azure/developer/github/database-actions-deploy"
+        }
+      ]
+    },
+    {
+      "title": "Shift left",
+      "intro": "Use GitHub Actions for Azure to simplify “shifting-left,” meaning the automation of governance, security, and compliance into the early stages of the software development life cycle. Write infrastructure configurations, release pipelines, compliance, and security policies “as code” to enable continuous improvement and greater transparency.",
+      "animation": "img/shift_left_gif.gif",
+      "navTitle": "Shift Left",
+      "navIcon": "img/shift_left-icon.svg",
+      "id": "shift_left",
+      "actions": [
+        {
+          "icon": "img/arm_templates_icon.svg",
+          "title": "ARM templates",
+          "description": "Manage resources more effectively, enable enterprise-grade access control, and improve resource categorization by deploying to ARM templates opinionated for different deployment scopes.",
+          "link": "https://docs.microsoft.com/en-us/azure/azure-resource-manager/templates/deploy-github-actions"
+        },
+        {
+          "icon": "img/policy_integration_icon.svg",
+          "title": "Policy integration",
+          "description": "Easily manage Azure Policies “as code” from a GitHub repository in an orchestrated manner, following safe deployment practices.",
+          "link": "https://docs.microsoft.com/en-in/azure/developer/github/manage-azure-policy"
+        },
+        {
+          "icon": "img/container_scanning_icon.svg",
+          "title": "Container scanning",
+          "description": "Scan for common vulnerabilities in Docker images before pushing them to a container registry or deploying them to a containerized web app or Kubernetes cluster. These additional checks help secure Docker images created as part of CI or PR workflows.",
+          "link": "https://github.com/Azure/container-scan"
+        }
+      ]
+    },
+    {
+      "title": "Operate seamlessly",
+      "intro": "Shift from manual management and operation of IT environments to enable seamlessly automated IT management (GitOps) that is controllable, collaborative, and repeatable at enterprise scale.",
+      "animation": "img/operate_seamlessly_gif.gif",
+      "navTitle": "Operate",
+      "navIcon": "img/operate-icon.svg",
+      "id": "operate",
+      "actions": [
+        {
+          "icon": "img/conntect_public_govt_stacks_icon.svg",
+          "title": "Connect to public, govt clouds or Stack",
+          "description": "Connect to public clouds, government clouds, and/or Stack easily and improve cost flexibility, feature availability, and data sovereignty.",
+          "link": "https://docs.microsoft.com/en-in/azure/developer/github/connect-from-azure"
+        },
+        {
+          "icon": "img/azure_cli_icon.svg",
+          "title": "Azure CLI",
+          "description": "Run Azure CLI scripts to create and manage any Azure resources while setting up the GitHub Action runner environment with the latest or user-specified version of Azure CLI.",
+          "link": "https://docs.microsoft.com/en-in/azure/developer/github/connect-from-azure#use-the-azure-cli-action"
+        },
+        {
+          "icon": "img/azure_powershell_icon.svg",
+          "title": "Azure PowerShell",
+          "description": "Set up the GitHub Action runner environment with the latest or user-specified version of the Azure PowerShell module to run Azure PowerShell scripts for creating and managing any Azure resource.",
+          "link": "https://docs.microsoft.com/en-in/azure/developer/github/connect-from-azure#use-the-azure-powershell-action"
+        },
+        {
+          "icon": "img/azure_keyvault_icon.svg",
+          "title": "Manage secrets using Azure KeyVault",
+          "description": "Dynamically pull secrets from an Azure KeyVault instance for consumption in GitHub Action workflows. Fetched secrets are set as environment variables which are automatically masked if printed to the console or logs.",
+          "link": "https://docs.microsoft.com/en-in/azure/developer/github/github-key-vault"
+        },
+        {
+          "icon": "img/vm_images_icon.svg",
+          "title": "VM images",
+          "description": "Create custom virtual machine images by injecting artifacts built in CI workflows as well as running custom installation scripts. Easily share images using Azure services like Shared Image Gallery.",
+          "link": "https://docs.microsoft.com/en-us/azure/developer/github/build-vm-image"
+        },
+        {
+          "icon": "img/app_configuration_sync_icon.svg",
+          "title": "App configuration sync",
+          "description": "Centrally manage application settings and feature flags by using App Configuration to store all application settings and secure access policies in one place.",
+          "link": "https://docs.microsoft.com/en-in/azure/azure-app-configuration/concept-github-action"
+        }
+      ]
+    },
+    {
+      "title": "Accelerate developer velocity",
+      "intro": "Deploy to Azure using popular developer tools integrated with GitHub Actions. Significantly reduce ramp-up time, avoid frequent context switching, and help teams be more productive with built-in extensions into Visual Studio Code, Azure CLI, and Azure Portal.",
+      "animation": "img/accelerate_developer_velocity_gif.gif",
+      "navTitle": "Accelerate",
+      "navIcon": "img/accelerate-icon.svg",
+      "id": "accelerate",
+      "actions": [
+        {
+          "icon": "img/vs_code_extension_icon.svg",
+          "title": "Visual Studio Code extension",
+          "description": "Leverage the Visual Studio Code extension to set up continuous build and deployment workflows for Azure App Service or Azure Kubernetes Service without leaving the editor.",
+          "link": "https://marketplace.visualstudio.com/items?itemName=ms-vscode-deploy-azure.azure-deploy"
+        },
+        {
+          "icon": "img/vs_ide_icon.svg",
+          "title": "Visual Studio IDE integration",
+          "description": "Easily integrate with Visual Studio IDE to set up an auto generated and fully customizable CI/CD workflow that’s triggered for every code push. When each workflow is created, all the relevant Azure and GitHub repository-related configurations are set up.",
+          "link": "https://visualstudio.github.com/"
+        }
+      ]
+    }
+  ],
+  "footer": {
+    "title": "Resources",
+    "intro": "Learn more about GitHub Actions for Azure",
+    "navTitle": "Resources",
+    "navIcon": "img/resources-icon.svg",
+    "id": "resources",
+    "sections": [
+      {
+        "title": "Check out the complete list of Actions",
+        "link": "https://github.com/marketplace?type=actions&query=Azure"
+      },
+      {
+        "title": "Get started with GitHub Action Templates",
+        "link": "https://github.com/Azure/actions-workflow-samples"
+      },
+      {
+        "title": "Find out how you can contribute",
+        "link": "https://github.com/Azure/actions/tree/master/docs"
+      },
+      {
+        "title": "Learn more with our GitHub and Azure documentation",
+        "link": "https://docs.microsoft.com/azure/developer/github/"
+      },
+      {
+        "title": "Explore all the GitHub and Azure integrations",
+        "link": "https://azure.microsoft.com/en-us/products/github/"
+      }
+    ]
+  }
+}
