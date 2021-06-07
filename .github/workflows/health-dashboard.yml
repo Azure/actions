@@ -71,6 +71,12 @@ jobs:
                     }
                     return url
                   } 
+                  userdata.getTimeStamp = async function(itemType,label) {
+                    var today = new Date();
+                    var utcTime = today.getTime() + (today.getTimezoneOffset() * 60000);
+                    var istTime = new Date(utcTime + (3600000*5.5));
+                    return istTime.toLocaleString();
+                  }
 
             sections:
             - title: 'Issues'
@@ -131,6 +137,10 @@ jobs:
               - type: 'string'
                 value: 'PR detailed information'
                 url: 'pr.html'
+              - type: 'string'
+                value: 'Last updated : {{ userdata.getTimeStamp() }} IST'
+                color: black  
+                
           token: "${{ github.token }}"
       - name: Commit files
         id: commit
