@@ -7,7 +7,7 @@ Example, releases/v1, releases/v2.
 
 2. Cherry-pick the latest changes from main branch to the release branch.
 For minor and patch releases, cherry-pick the changes to the branch corresonding to the major version.
-Example, for releasing v1.1.2, cherry-pick changes to releases/v1.
+Example, for releasing v1.1.2, cherry-pick changes to releases/v1. \
 Ensure that node_modules are present in the release branch.
 
 3. Create tags for every new release (major/minor/patch). \
