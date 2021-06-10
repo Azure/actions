@@ -28,3 +28,7 @@ where username/reponame@branch is your forked repo. Remember to checkin __node_m
 ## PR for `main` branch
 
 Once code is tested and unit tests are added, please raise a PR against the actual repo’s main branch. Note that __node_modules__ should __not__ be pushed while raising PR against __main__ branch.
+
+## Releasing a new version
+
+Proper release tags should be maintained for releasing new versions of the Action. A standard [release process](release-process.md) is to be followed.
