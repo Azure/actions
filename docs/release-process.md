@@ -2,10 +2,10 @@
 
 Semanting versioning is used to release different versions of the action. Following steps are to be followed :
 
-1. Create a new branch for every major version. \
+1. For every major version release, create a new branch from main branch. Add node_modules to the release branch. \
 Example, releases/v1, releases/v2.
 
-2. Cherry-pick the latest changes from main branch to the release branch.
+2. For minor/patch version release, cherry-pick the latest changes from main branch to the corresponding major version release branch.
 For minor and patch releases, cherry-pick the changes to the branch corresonding to the major version.
 Example, for releasing v1.1.2, cherry-pick changes to releases/v1. \
 Ensure that node_modules are present in the release branch.
