@@ -1,6 +1,6 @@
 # Actions - [GitHub Actions for Azure](https://azure.github.io/actions/)
 
-This repository provides a framework, guidleines and processes to author new and contribute to existing [GitHub Actions deploying to Azure](https://azure.github.io/actions/).
+This repository provides a framework, guidelines and processes to author new and contribute to existing [GitHub Actions deploying to Azure](https://azure.github.io/actions/).
 
 ## Table of contents
 - [Introduction to GitHub Actions for Azure and Starter Action Workflows](#introduction-to-github-actions-for-azure-and-starter-action-workflows) 
@@ -28,6 +28,7 @@ Following are the guideliens to author new Azure Actions and also to contribute 
   - [Azure Actions toolkit](https://github.com/Azure/actions-toolkit) hosting node modules to help write your azure actions
   - [Guidelines for repository permissions](docs/Process_of_Authoring_GitHub_Actions_for_Azure.md#guidelines-for-setting-permissions-on-the-repo)
   - [Action Versioning](docs/Process_of_Authoring_GitHub_Actions_for_Azure.md#action-versioning)
+  - [Releasing a new version](docs/release-process.md)
   - [Testing GitHub Actions](docs/Testing-GitHub-Actions.md)
   - [Publish to Marketplace](docs/Process_of_Authoring_GitHub_Actions_for_Azure.md#publish-the-action-to-marketplace)
   - [Communication guidelines](communication%20guidelines.md)
