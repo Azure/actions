@@ -1,6 +1,8 @@
 name: health-dashboard
-'on':
-  - workflow_dispatch
+on:
+  workflow_dispatch:
+  schedule:
+    - cron:  '30 4 * * *'
 jobs:
   build:
     runs-on: ubuntu-latest

@@ -1,6 +1,8 @@
 name: issue_view_workflow
-'on':
-  - workflow_dispatch
+on:
+  workflow_dispatch:
+  schedule:
+    - cron:  '40 4 * * *'
 jobs:
   build:
     runs-on: windows-latest
