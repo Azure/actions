@@ -4,10 +4,7 @@
 
 1. **Create set of labels**
 
- \
-In the action repository, define the following labels: \
-
-
+In the action repository, define the following labels: 
 
 <table>
   <tr>
@@ -123,7 +120,7 @@ While triaging any issue, you can assign any of these labels to the issue, accor
 
 2. **Workflow for assigning default labels**
 
-Add a workflow file to create default labels to the action repository. \
+Add a workflow file to create default labels to the action repository. 
 If there are existing separate workflow files doing the same, they can be replaced by this [workflow file](https://github.com/Azure/actions/blob/main/.github/workflows/defaultLabels.yml).
 
 
@@ -133,11 +130,10 @@ If there are existing separate workflow files doing the same, they can be replac
     For issues that will get created in the repo, the default label should be “need-to-triage”. This can be ensured using an issue template as follows :
 
 *   On GitHub, navigate to the main page of the repository.
-*   Under your repository name, click Settings. \
+*   Under your repository name, click Settings. 
 
 
 <p id="gdcalert1" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image1.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert2">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
 
 ![alt_text](images/image1.png "image_tooltip")
 
