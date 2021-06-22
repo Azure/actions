@@ -2,7 +2,7 @@ name: pr_view_workflow
 on:
   workflow_dispatch:
   schedule:
-    - cron:  '30 4 * * *'
+    - cron:  '35 4 * * *'
 jobs:
   build:
     runs-on: ubuntu-latest
