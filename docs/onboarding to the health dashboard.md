@@ -133,31 +133,16 @@ If there are existing separate workflow files doing the same, they can be replac
 *   Under your repository name, click Settings. 
 ![image](https://user-images.githubusercontent.com/58769601/122913522-2af1f100-d377-11eb-9c3b-09950e038450.png)
 
-<p id="gdcalert1" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image1.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert2">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-*   In the "Features" section, under "Issues," click Set up templates. \
-
-
-<p id="gdcalert2" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image2.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert3">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+*   In the "Features" section, under "Issues," click Set up templates. 
+![image](https://user-images.githubusercontent.com/58769601/122913598-4230de80-d377-11eb-8d26-6bdc4f8fc916.png)
 
 
-![alt_text](images/image2.png "image_tooltip")
+*   Use the Add template drop-down menu, and click on the custom template. 
+![image](https://user-images.githubusercontent.com/58769601/122913644-54128180-d377-11eb-9746-febf46611fb2.png)
 
-*   Use the Add template drop-down menu, and click on the custom template. \
+*   Specify the details, ensuring that label is set to “need-to-triage” 
+![image](https://user-images.githubusercontent.com/58769601/122913687-61c80700-d377-11eb-8c2e-b6b736231ad7.png)
 
-
-<p id="gdcalert3" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image3.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert4">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image3.png "image_tooltip")
-
-*   Specify the details, ensuring that label is set to “need-to-triage” \
-
-
-<p id="gdcalert4" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image4.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert5">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image4.png "image_tooltip")
 
 *   Commit these changes.
 4. **Giving permissions  - Ignore for now \
@@ -167,35 +152,18 @@ If there are existing separate workflow files doing the same, they can be replac
  In a single PR, you can do the following changes:
 
 
-
 *   In the [health-dashboard yml file](https://github.com/Azure/actions/blob/main/.github/workflows/health-dashboard.yml), add the name of your action as orgName/actionName \
 It has to be appended to the existing list of actions.
-
-     \
-
-
-<p id="gdcalert5" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image5.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert6">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image5.png "image_tooltip")
+![image](https://user-images.githubusercontent.com/58769601/122913750-77d5c780-d377-11eb-909e-8445786ad7b7.png)
 
 
 *   In the [issue-view yml file](https://github.com/Azure/actions/blob/main/.github/workflows/issue-view.yml),  add the following lines of code by replacing with your repo to the existing list of elements section
-
-    
-
-<p id="gdcalert6" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image6.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert7">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image6.png "image_tooltip")
+![image](https://user-images.githubusercontent.com/58769601/122913792-845a2000-d377-11eb-9866-3401e88d1406.png)
 
 
 *   In the [pr-view yml file](https://github.com/Azure/actions/blob/main/.github/workflows/pr-view.yml),  add the following lines of code by replacing with your repo to the existing list of elements section.
 
+![image](https://user-images.githubusercontent.com/58769601/122913831-9471ff80-d377-11eb-857a-1b6cf1d10680.png)
+
     
-
-<p id="gdcalert7" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image7.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert8">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image7.png "image_tooltip")
 
