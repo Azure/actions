@@ -17,7 +17,7 @@ For more information on actions and workflows visit [quickstart for actions](htt
 ```yml
 name: 
 
-#triggers on pull_request from both forked repo and this repo on PR type opened/labelled
+#triggers on pull_request from both forked repo and this repo on PR type opened/labeled
 
 on:
   pull_request_target:
