@@ -145,8 +145,8 @@ If there are existing separate workflow files doing the same, they can be replac
 
 
 *   Commit these changes.
-4. **Giving permissions  - Ignore for now \
-**
+4. **Giving permissions  - Ignore for now**
+
 5. **Raise a PR in Actions Repo **
 
  In a single PR, you can do the following changes:
