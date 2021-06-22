@@ -1,4 +1,4 @@
-## Steps to follow to onboard an action on the [Health-Dashboard](https://kanika1894.github.io/kp-aci-deploy/health-dashboard.html).
+## Steps to follow to onboard an action on the [Health-Dashboard](https://azure.github.io/actions/health-dashboard.html).
 
 
 
