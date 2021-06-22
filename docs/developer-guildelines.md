@@ -29,10 +29,6 @@ where username/reponame@branch is your forked repo. Remember to checkin __node_m
 
 Once code is tested and unit tests are added, please raise a PR against the actual repo’s main branch. Note that __node_modules__ should __not__ be pushed while raising PR against __main__ branch.
 
-## PR for `releases` branch
+## Releasing a new version
 
-1. Once your `main` PR is merged, cherry pick your changes to __releases/v(latest)__ branch and create a PR against this releases branch. 
-
-2. After that PR is merged the repo maintainer will create a new release with a new tag. This release will be pre-release mode until certain bug bashes/regressive testing is done. Here for __releases/v(latest)__ branch, checkin your __node_modules__ if there is a new dependency in package.json.
-
-
+Proper release tags should be maintained for releasing new versions of the Action. A standard [release process](release-process.md) is to be followed.
