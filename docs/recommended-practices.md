@@ -10,9 +10,8 @@ Notifications can be set up for [Teams](https://github.com/integrations/microsof
 
 For example, for Slack notifications on a particular channel, after you [Install the GitHub integration for Slack](https://slack.com/apps/A01BP7R4KNY-github), you can use the following commands on your channel to setup notifications for your repo (&lt;org/repository>)
 
-    _/github subscribe azure/login_
-
-    To subscribe to specific notifications like - commits, reviews, etc -
+     /github subscribe azure/login_
+To subscribe to specific notifications like - commits, reviews, etc. -
 
     _/github subscribe azure/login reviews _
 
