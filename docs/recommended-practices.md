@@ -13,7 +13,7 @@ For example, for Slack notifications on a particular channel, after you [Install
      /github subscribe azure/login_
 To subscribe to specific notifications like - commits, reviews, etc. -
 
-    _/github subscribe azure/login reviews _
+    /github subscribe azure/login reviews _
 
 *   **Sharing product roadmap**
 For customers to be aware about the upcoming features in the product, it’s good to have a public roadmap in the repository itself. One can have a look at [VSCode roadmap](https://github.com/microsoft/vscode/wiki/Roadmap) as a reference.
