@@ -6,7 +6,7 @@ Besides, one can label issues as “good first issue” so that contributors can
 
 *   **Setting alerts on teams/slacks**
 We can set alerts on teams/slacks for PRs and issues on the repositories. 
-Notifications can be set up for [Teams](https://github.com/integrations/microsoft-teams) as well as [Slack](https://github.com/integrations/slack)** **
+Notifications can be set up for [Teams](https://github.com/integrations/microsoft-teams) as well as [Slack](https://github.com/integrations/slack)
 
 For example, for Slack notifications on a particular channel, after you [Install the GitHub integration for Slack](https://slack.com/apps/A01BP7R4KNY-github), you can use the following commands on your channel to setup notifications for your repo (&lt;org/repository>)
 
