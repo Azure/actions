@@ -131,11 +131,9 @@ If there are existing separate workflow files doing the same, they can be replac
 
 *   On GitHub, navigate to the main page of the repository.
 *   Under your repository name, click Settings. 
-
+![image](https://user-images.githubusercontent.com/58769601/122913522-2af1f100-d377-11eb-9c3b-09950e038450.png)
 
 <p id="gdcalert1" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image1.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert2">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-![alt_text](images/image1.png "image_tooltip")
 
 *   In the "Features" section, under "Issues," click Set up templates. \
 
