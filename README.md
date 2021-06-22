@@ -35,7 +35,7 @@ Following are the guideliens to author new Azure Actions and also to contribute 
 
 ## Health Dashboard for Azure Action repos
 
-This [health dashboard](https://azure.github.io/actions/health-dashboard.html) provides information on open issues and PRs for all the Azure Action repos. There are certain [steps] (https://github.com/Azure/actions/blob/kanika/docsUpdate/docs/onboarding%20to%20the%20health%20dashboard.md) to be followed to onboard any action on the dashboard.
+This [health dashboard](https://azure.github.io/actions/health-dashboard.html) provides information on open issues and PRs for all the Azure Action repos. There are certain [steps](docs/onboarding to the health dashboard.md) to be followed to onboard any action on the dashboard.
 
 ## Contributing License Agreement
 
