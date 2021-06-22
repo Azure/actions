@@ -1,8 +1,8 @@
 # Recommended practices
 
 *   **Triaging issues** 
-While triaging the issues on the repo, one should use the standard set of labels defined in the process of [onboarding to health-dashboard](https://docs.google.com/document/d/1kW04WxeNtpx9VQD3v3UJdij5-frJ5D91ZSA26Hs34OA/edit). \
-Besides, one can label issues as “good first issue” so that contributors can pick up those issues. Those can be the ones which require small fix/documentation updates/ clarification of some features, etc. \
+While triaging the issues on the repo, one should use the standard set of labels defined in the process of [onboarding to health-dashboard](docs\onboarding-to-dashboard.md). \
+Besides, one can label issues as “good first issue” so that contributors can pick up those issues. Those can be the ones which require small fix/documentation updates/ clarification of some features, etc. 
 
 *   **Setting alerts on teams/slacks**
 We can set alerts on teams/slacks for PRs and issues on the repositories. 
