@@ -32,14 +32,6 @@ In the action repository, define the following labels:
    </td>
   </tr>
   <tr>
-   <td>stale
-   </td>
-   <td>90 days old
-   </td>
-   <td>#A9A9A9
-   </td>
-  </tr>
-  <tr>
    <td>question	 
    </td>
    <td>Requiring some clarification
