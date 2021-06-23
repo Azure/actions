@@ -1,16 +1,16 @@
 # Automating test workflows in the PR checks.
-Test workflows for actions can be automated in the action repo so that whenever a new PR occurs to master or releases/* branches these workflows evaluate on the branch from which PR is raised. Once the checks are successful and are not breaking any existing scenarios, the PR will be merged subsequently.
-For more information on actions and workflows visit [quickstart for actions](https://docs.github.com/en/actions).
+Test workflows for actions can be automated in the action repo so that whenever a new PR is raised to __master__ or __releases/*__  branches these workflows evaluate on the branch from which PR is raised. Once the checks are successful and are not breaking any existing scenarios, the PR will be merged subsequently.
 ## Process to automate the workflows: 
-1.  Create a ```.yml``` workflow in **.github/workflows** of the action repo.
+1.  Create a ```test.yml``` workflow in **.github/workflows** of the action repo.
 
 2.  Put the triggering condition for this workflow as ```on: pull_request_target``` if forked repo PR checks need to be checked automatically otherwise ```on: pull_request```  should do. Visit [pull_request_target](https://docs.github.com/en/actions/reference/events-that-trigger-workflows#pull_request_target) for more details.
 3. Steps include:
     1. Checkout the repo.
     2. Install the **node_modules** using ```npm install``` as the PRs raised to master branch will not have __node_modules__ without which the workflow fails.
-    3. Build the action using ```npm run build```. Since some action repos don’t have the updated ```lib/.js``` files as they recommend to exempt ```lib/.js``` to PRs. This step ensures the action to have updated lib files.
-    4. Setup any workflow/action specific dependencies.(for example if a .net app needs to be deployed ,make sure you resolve those dependencies here).
+    3. Build the action using ```npm run build```( Since some action repos don’t have the updated ```lib/.js``` files as they recommend to exempt ```lib/.js``` in PRs. This step ensures the action to have updated lib files).
+    4. Here we are targeting to run a sample test for the action.For multiple scenarios, one can mention different scenarios in the same file and have multiple steps in the WF file calling the necessary actions for the required setup(For example if a .Net app needs to be deployed ,make sure you set up .Net using *actions/setup-dotnet@v1* and resolve those dependencies here).
     5. Run the action with ```uses: ./``` which will pick the current branch of the repo to execute the workflow. Specify the input parameters which are required by the action in the ```with: ``` parameters.
+ 4. This process of automated testing enables one to run tests on PRs from a branch in a repo/ PRs from a forked repo. Post reviewing the PR for security vulnerabilities, the author(s) / admin(s) can set a label as "safe to run test" on the PR which will trigger this workflow automatically. This will ensure that the new PR is not breaking any existing flow.
 
 ## Sample template: 
 
@@ -49,4 +49,3 @@ jobs:
           #input parameters of the action.
 
 ```
-NOTE: The  ___if condition___ should not be skipped as the ```pull_request_target``` accepts PRs from forked repo. The PR reviewer should ensure that the PR code is safe to execute. Once the review is done, the label ```'safe to run test'``` should be given to that PR by the reviewer following which this test workflow is automattically triggered.
