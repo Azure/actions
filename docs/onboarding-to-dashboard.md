@@ -12,7 +12,7 @@ In the action repository, define the following labels:
    </td>
    <td><strong>Description</strong>
    </td>
-   <td><strong>Color</strong>
+   <td><strong>Color (Optional)</strong>
    </td>
   </tr>
   <tr>
