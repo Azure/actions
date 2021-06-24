@@ -209,6 +209,7 @@ jobs:
                   url: '{{ userdata.url("Azure/k8s-create-secret","stale") }}'
                 - value: '{{ userdata.count("Azure/k8s-create-secret","closed") }}'
                   url: '{{ userdata.url("Azure/k8s-create-secret","closed") }}'
+
   
         token: ${{ github.token }}
 
