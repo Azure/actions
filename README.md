@@ -29,13 +29,14 @@ Following are the guideliens to author new Azure Actions and also to contribute 
   - [Guidelines for repository permissions](docs/Process_of_Authoring_GitHub_Actions_for_Azure.md#guidelines-for-setting-permissions-on-the-repo)
   - [Action Versioning](docs/Process_of_Authoring_GitHub_Actions_for_Azure.md#action-versioning)
   - [Releasing a new version](docs/release-process.md)
-  - [Testing GitHub Actions](docs/Testing-GitHub-Actions.md)
+  - [Testing GitHub Actions](docs/Testing-docs/Testing-GitHub-Actions.md)
+  - [Automated test process](docs/Testing-docs/Test-workflows-automation.md)
   - [Publish to Marketplace](docs/Process_of_Authoring_GitHub_Actions_for_Azure.md#publish-the-action-to-marketplace)
   - [Communication guidelines](communication%20guidelines.md)
 
 ## Health Dashboard for Azure Action repos
 
-This [health dashboard](https://azure.github.io/actions/health-dashboard.html) provides information on open issues and PRs for all the Azure Action repos.
+This [health dashboard](https://azure.github.io/actions/health-dashboard.html) provides information on open issues and PRs for all the Azure Action repos. These are the [steps](docs/onboarding-to-dashboard.md) that can be followed to onboard any action on the dashboard.
 
 ## Contributing License Agreement
 
