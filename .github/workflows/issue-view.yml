@@ -61,7 +61,7 @@ jobs:
                   var today = new Date();
                   var pastDate = new Date(today);
                   if(label === "" ) {
-                    url = 'https://github.com/'+repo+'/issues?q=is%3Aissue+is%3A'+ 'open'
+                    url = 'https://github.com/'+repo+'/issues?q=is%3Aissue+is%3A'+ 'open'+ ' -label%3Aenhancement'
                   }
                   else if(label === "closed"){
                     pastDate.setDate(pastDate.getDate() - 30);
