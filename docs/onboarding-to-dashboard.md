@@ -8,7 +8,7 @@ In the action repository, define the following labels:
 
 <table>
   <tr>
-   <td><strong>Issue</strong>
+   <td><strong>Label</strong>
    </td>
    <td><strong>Description</strong>
    </td>
