@@ -64,7 +64,7 @@ jobs:
                     
                     if(label === "") {
                       if(itemType === "issue") {
-                        url = 'https://github.com/search?q='+ repos + '+is%3A'+ itemType + '+is%3Aopen' + '-label%3Aenhancement'
+                        url = 'https://github.com/search?q='+ repos + '+is%3A'+ itemType + '+is%3Aopen' + ' -label%3Aenhancement'
                       }
                       else {
                         url = 'https://github.com/search?q='+ repos + '+is%3A'+ itemType + '+is%3Aopen'
