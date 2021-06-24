@@ -23,9 +23,16 @@ jobs:
                   userdata.count = async function(itemType,label) {
                     var results
                     if(label === "") {
-                        results = await github.search.issuesAndPullRequests(
-                        { q: `${repos} is:${itemType} is:open`}
-                        )
+                        if(itemType === "issue") {                        
+                          results = await github.search.issuesAndPullRequests(
+                          { q: `${repos} is:${itemType} is:open -label:enhancement`}
+                          )
+                        }
+                        else {
+                          results = await github.search.issuesAndPullRequests(
+                          { q: `${repos} is:${itemType} is:open`}
+                          )
+                        }
                     }
                     else if(label === "closed") {
                         results = await github.search.issuesAndPullRequests(
