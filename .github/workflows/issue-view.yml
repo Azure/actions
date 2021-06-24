@@ -84,7 +84,7 @@ jobs:
               - type: 'table'
                 headers:
                 - 'Action'
-                - 'Open(excluding enhancements)'
+                - 'Open (excl. enhancements)'
                 - 'Need-to-triage'
                 - 'Enhancement'
                 - 'Question'
