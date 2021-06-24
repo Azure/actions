@@ -96,7 +96,7 @@ jobs:
             - title: 'Issues'
               widgets:
               - type: 'number'
-                title: 'Open'
+                title: 'Open (Excluding enhancements)'
                 value: '{{ userdata.count("issue","") }}'
                 url: '{{ userdata.url("issue","") }}'
               - type: 'number'
