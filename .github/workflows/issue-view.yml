@@ -30,7 +30,7 @@ jobs:
                   var results;
                   if(label === "" ) {
                     results = await github.search.issuesAndPullRequests(
-                    { q: `repo:${repo} is:issue is:open` }
+                    { q: `repo:${repo} is:issue is:open -label:enhancement` }
                     )
                   }
                   else if(label === "closed"){
@@ -84,7 +84,7 @@ jobs:
               - type: 'table'
                 headers:
                 - 'Action'
-                - 'Open'
+                - 'Open(excluding enhancements)'
                 - 'Need-to-triage'
                 - 'Enhancement'
                 - 'Question'
@@ -382,6 +382,58 @@ jobs:
                     url: '{{ userdata.url("Azure/sql-action","stale") }}'
                   - value: '{{ userdata.count("Azure/sql-action","closed") }}'
                     url: '{{ userdata.url("Azure/sql-action","closed") }}'
+
+                - - value: 'appservice-settings'
+                  - value: '{{ userdata.count("Azure/appservice-settings","") }}'
+                    url: '{{ userdata.url("Azure/appservice-settings","") }}'
+                  - value: '{{ userdata.count("Azure/appservice-settings","need-to-triage") }}'
+                    url: '{{ userdata.url("Azure/appservice-settings","need-to-triage") }}'
+                  - value: '{{ userdata.count("Azure/appservice-settings","enhancement") }}'
+                    url: '{{ userdata.url("Azure/appservice-settings","enhancement") }}'
+                  - value: '{{ userdata.count("Azure/appservice-settings","question") }}'
+                    url: '{{ userdata.url("Azure/appservice-settings","question") }}'
+                  - value: '{{ userdata.count("Azure/appservice-settings","bug") }}'
+                    url: '{{ userdata.url("Azure/appservice-settings","bug") }}'
+                  - value: '{{ userdata.count("Azure/appservice-settings","documentation") }}'
+                    url: '{{ userdata.url("Azure/appservice-settings","documentation") }}'
+                  - value: '{{ userdata.count("Azure/appservice-settings","performance-issue") }}'
+                    url: '{{ userdata.url("Azure/appservice-settings","performance-issue") }}'
+                  - value: '{{ userdata.count("Azure/appservice-settings","waiting-for-customer") }}'
+                    url: '{{ userdata.url("Azure/appservice-settings","waiting-for-customer") }}'
+                  - value: '{{ userdata.count("Azure/appservice-settings","external-dependency") }}'
+                    url: '{{ userdata.url("Azure/appservice-settings","external-dependency") }}'
+                  - value: '{{ userdata.count("Azure/appservice-settings","idle") }}'
+                    url: '{{ userdata.url("Azure/appservice-settings","idle") }}'
+                  - value: '{{ userdata.count("Azure/appservice-settings","stale") }}'
+                    url: '{{ userdata.url("Azure/appservice-settings","stale") }}'
+                  - value: '{{ userdata.count("Azure/appservice-settings","closed") }}'
+                    url: '{{ userdata.url("Azure/appservice-settings","closed") }}'
+                
+                - - value: 'variable-substitution'
+                  - value: '{{ userdata.count("microsoft/variable-substitution","") }}'
+                    url: '{{ userdata.url("microsoft/variable-substitution","") }}'
+                  - value: '{{ userdata.count("microsoft/variable-substitution","need-to-triage") }}'
+                    url: '{{ userdata.url("microsoft/variable-substitution","need-to-triage") }}'
+                  - value: '{{ userdata.count("microsoft/variable-substitution","enhancement") }}'
+                    url: '{{ userdata.url("microsoft/variable-substitution","enhancement") }}'
+                  - value: '{{ userdata.count("microsoft/variable-substitution","question") }}'
+                    url: '{{ userdata.url("microsoft/variable-substitution","question") }}'
+                  - value: '{{ userdata.count("microsoft/variable-substitution","bug") }}'
+                    url: '{{ userdata.url("microsoft/variable-substitution","bug") }}'
+                  - value: '{{ userdata.count("microsoft/variable-substitution","documentation") }}'
+                    url: '{{ userdata.url("microsoft/variable-substitution","documentation") }}'
+                  - value: '{{ userdata.count("microsoft/variable-substitution","performance-issue") }}'
+                    url: '{{ userdata.url("microsoft/variable-substitution","performance-issue") }}'
+                  - value: '{{ userdata.count("microsoft/variable-substitution","waiting-for-customer") }}'
+                    url: '{{ userdata.url("microsoft/variable-substitution","waiting-for-customer") }}'
+                  - value: '{{ userdata.count("microsoft/variable-substitution","external-dependency") }}'
+                    url: '{{ userdata.url("microsoft/variable-substitution","external-dependency") }}'
+                  - value: '{{ userdata.count("microsoft/variable-substitution","idle") }}'
+                    url: '{{ userdata.url("microsoft/variable-substitution","idle") }}'
+                  - value: '{{ userdata.count("microsoft/variable-substitution","stale") }}'
+                    url: '{{ userdata.url("microsoft/variable-substitution","stale") }}'
+                  - value: '{{ userdata.count("microsoft/variable-substitution","closed") }}'
+                    url: '{{ userdata.url("microsoft/variable-substitution","closed") }}'
 
           token: ${{ github.token }}
 
