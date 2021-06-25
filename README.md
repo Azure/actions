@@ -31,6 +31,7 @@ Following are the guideliens to author new Azure Actions and also to contribute 
   - [Releasing a new version](docs/release-process.md)
   - [Testing GitHub Actions](docs/Testing-docs/Testing-GitHub-Actions.md)
   - [Automated test process](docs/Testing-docs/Test-workflows-automation.md)
+  - [Validations for Action repository](docs/validations-action-repo.md)
   - [Publish to Marketplace](docs/Process_of_Authoring_GitHub_Actions_for_Azure.md#publish-the-action-to-marketplace)
   - [Communication guidelines](communication%20guidelines.md)
 
