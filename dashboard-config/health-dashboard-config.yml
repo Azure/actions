@@ -1,140 +1,140 @@
-title: 'Health Dashboard'
-    output:
-      format: html
-      filename: 'docs/health-dashboard.html'
-    setup: | 
-          const repos = 'repo:Azure/login repo:Microsoft/variable-substitution repo:Azure/appservice-settings repo:Azure/webapps-deploy repo:Azure/aci-deploy repo:build-vm-image repo:Azure/deploy-to-azure-cli-extension repo:Azure/functions-action repo:Azure/functions-container-action repo:Azure/mysql repo:Azure/postgresql repo:Azure/powershell repo:Azure/sql-action repo:Azure/policy-compliance-scan repo:Azure/k8s-create-secret repo:Azure/k8s-lint repo:Azure/k8s-deploy'
-          userdata.count = async function(itemType,label) {
-            var results
-            if(label === "") {
-                if(itemType === "issue") {                        
-                  results = await github.search.issuesAndPullRequests(
-                  { q: `${repos} is:${itemType} is:open -label:enhancement`}
-                  )
-                }
-                else {
-                  results = await github.search.issuesAndPullRequests(
-                  { q: `${repos} is:${itemType} is:open`}
-                  )
-                }
-            }
-            else if(label === "closed") {
-                results = await github.search.issuesAndPullRequests(
-                { q: `${repos} is:${itemType} is:closed closed:>${date("-30 days")}`}
-                )
-            }
-            else if(label === "stale") {
-              results = await github.search.issuesAndPullRequests(
-              { q: `${repos} is:${itemType} is:open created:<${date("-90 days")}`}
-              )
-            } 
-            else{
-              results = await github.search.issuesAndPullRequests(
-              { q: `${repos} is:${itemType} is:open label:${label}`}
-              )
-            }
-            if(results.data.items.length === 0){
-              return '0'
-            }
-            else{
-              return results.data.total_count 
-            }
-          }
+title: "Health Dashboard"
+output:
+  format: html
+  filename: "docs/health-dashboard.html"
+setup: |
+  const repos = 'repo:Azure/login repo:Microsoft/variable-substitution repo:Azure/appservice-settings repo:Azure/webapps-deploy repo:Azure/aci-deploy repo:build-vm-image repo:Azure/deploy-to-azure-cli-extension repo:Azure/functions-action repo:Azure/functions-container-action repo:Azure/mysql repo:Azure/postgresql repo:Azure/powershell repo:Azure/sql-action repo:Azure/policy-compliance-scan repo:Azure/k8s-create-secret repo:Azure/k8s-lint repo:Azure/k8s-deploy'
+  userdata.count = async function(itemType,label) {
+    var results
+    if(label === "") {
+        if(itemType === "issue") {                        
+          results = await github.search.issuesAndPullRequests(
+          { q: `${repos} is:${itemType} is:open -label:enhancement`}
+          )
+        }
+        else {
+          results = await github.search.issuesAndPullRequests(
+          { q: `${repos} is:${itemType} is:open`}
+          )
+        }
+    }
+    else if(label === "closed") {
+        results = await github.search.issuesAndPullRequests(
+        { q: `${repos} is:${itemType} is:closed closed:>${date("-30 days")}`}
+        )
+    }
+    else if(label === "stale") {
+      results = await github.search.issuesAndPullRequests(
+      { q: `${repos} is:${itemType} is:open created:<${date("-90 days")}`}
+      )
+    } 
+    else{
+      results = await github.search.issuesAndPullRequests(
+      { q: `${repos} is:${itemType} is:open label:${label}`}
+      )
+    }
+    if(results.data.items.length === 0){
+      return '0'
+    }
+    else{
+      return results.data.total_count 
+    }
+  }
 
-          userdata.url = async function(itemType,label) {
-            var today = new Date();
-            var pastDate = new Date(today);
-            var url, closedDate, staleDate;
+  userdata.url = async function(itemType,label) {
+    var today = new Date();
+    var pastDate = new Date(today);
+    var url, closedDate, staleDate;
+    
+    if(label === "") {
+      if(itemType === "issue") {
+        url = 'https://github.com/search?q='+ repos + '+is%3A'+ itemType + '+is%3Aopen' + ' -label%3Aenhancement'
+      }
+      else {
+        url = 'https://github.com/search?q='+ repos + '+is%3A'+ itemType + '+is%3Aopen'
+      }
+    }
+    else if(label === "closed") {
+      pastDate.setDate(pastDate.getDate() - 30);
+      closedDate = pastDate.toISOString().split("T")[0];
+      url = 'https://github.com/search?q='+ repos + '+is%3A'+ itemType + '+is%3Aclosed' + '+closed%3A>'+ closedDate
+    }
+    else if(label === "stale") {
+      pastDate.setDate(pastDate.getDate() - 90);
+      staleDate = pastDate.toISOString().split("T")[0];
+      url = 'https://github.com/search?q=' + repos + '+is%3A' + itemType + '+is%3Aopen' + '+created%3A<'+ staleDate
+    }
+    else{
+      url = 'https://github.com/search?q='+ repos + '+is%3A'+ itemType + '+is%3Aopen' + '+label%3A' + label
+    }
+    return url
+  } 
+  userdata.getTimeStamp = async function(itemType,label) {
+    var today = new Date();
+    var utcTime = today.getTime() + (today.getTimezoneOffset() * 60000);
+    var istTime = new Date(utcTime + (3600000*5.5));
+    return istTime.toLocaleString();
+  }
 
-            if(label === "") {
-              if(itemType === "issue") {
-                url = 'https://github.com/search?q='+ repos + '+is%3A'+ itemType + '+is%3Aopen' + ' -label%3Aenhancement'
-              }
-              else {
-                url = 'https://github.com/search?q='+ repos + '+is%3A'+ itemType + '+is%3Aopen'
-              }
-            }
-            else if(label === "closed") {
-              pastDate.setDate(pastDate.getDate() - 30);
-              closedDate = pastDate.toISOString().split("T")[0];
-              url = 'https://github.com/search?q='+ repos + '+is%3A'+ itemType + '+is%3Aclosed' + '+closed%3A>'+ closedDate
-            }
-            else if(label === "stale") {
-              pastDate.setDate(pastDate.getDate() - 90);
-              staleDate = pastDate.toISOString().split("T")[0];
-              url = 'https://github.com/search?q=' + repos + '+is%3A' + itemType + '+is%3Aopen' + '+created%3A<'+ staleDate
-            }
-            else{
-              url = 'https://github.com/search?q='+ repos + '+is%3A'+ itemType + '+is%3Aopen' + '+label%3A' + label
-            }
-            return url
-          } 
-          userdata.getTimeStamp = async function(itemType,label) {
-            var today = new Date();
-            var utcTime = today.getTime() + (today.getTimezoneOffset() * 60000);
-            var istTime = new Date(utcTime + (3600000*5.5));
-            return istTime.toLocaleString();
-          }
-
-    sections:
-    - title: 'Issues'
-      widgets:
-      - type: 'number'
-        title: 'Open (Excluding enhancements)'
+sections:
+  - title: "Issues"
+    widgets:
+      - type: "number"
+        title: "Open (Excluding enhancements)"
         value: '{{ userdata.count("issue","") }}'
         url: '{{ userdata.url("issue","") }}'
-      - type: 'number'
-        title: 'Idle (inactive >14days)'
+      - type: "number"
+        title: "Idle (inactive >14days)"
         value: '{{ userdata.count("issue","idle") }}'
         url: '{{ userdata.url("issue","idle") }}'
-      - type: 'number'
-        title: 'Stale (90 days old)'
+      - type: "number"
+        title: "Stale (90 days old)"
         value: '{{ userdata.count("issue","stale") }}'
         url: '{{ userdata.url("issue","stale") }}'
-      - type: 'number'
-        title: 'Closed (last 30 days)'
+      - type: "number"
+        title: "Closed (last 30 days)"
         value: '{{ userdata.count("issue","closed") }}'
         url: '{{ userdata.url("issue","closed") }}'
-      - type: 'number'
-        title: 'P0 bugs'
+      - type: "number"
+        title: "P0 bugs"
         value: '{{ userdata.count("issue","P0") }}'
         url: '{{ userdata.url("issue","P0") }}'
-      - type: 'number'
-        title: 'P1 bugs'
+      - type: "number"
+        title: "P1 bugs"
         value: '{{ userdata.count("issue","P1") }}'
         url: '{{ userdata.url("issue","P1") }}'
-      - type: 'number'
-        title: 'Enhancements'
+      - type: "number"
+        title: "Enhancements"
         value: '{{ userdata.count("issue","enhancement") }}'
         url: '{{ userdata.url("issue","enhancement") }}'
 
-    - title: 'Pull Requests'
-      widgets:
-      - type: 'number'
-        title: 'Open'
+  - title: "Pull Requests"
+    widgets:
+      - type: "number"
+        title: "Open"
         value: '{{ userdata.count("pr","") }}'
         url: '{{ userdata.url("pr","") }}'
-      - type: 'number'
-        title: 'Idle (inactive >14days)'
+      - type: "number"
+        title: "Idle (inactive >14days)"
         value: '{{ userdata.count("pr","idle") }}'
         url: '{{ userdata.url("pr","idle") }}'
-      - type: 'number'
-        title: 'Stale (90 days old)'
+      - type: "number"
+        title: "Stale (90 days old)"
         value: '{{ userdata.count("pr","stale") }}'
-        url: '{{ userdata.url("pr","stale") }}' 
-      - type: 'number'
-        title: 'Closed (last 30 days)'
+        url: '{{ userdata.url("pr","stale") }}'
+      - type: "number"
+        title: "Closed (last 30 days)"
         value: '{{ userdata.count("pr","closed") }}'
         url: '{{ userdata.url("pr","closed") }}'
 
-    - title: 'Details'
-      widgets:
-      - type: 'string'
-        value: 'Issues detailed information'
-        url: 'issue.html'
-      - type: 'string'
-        value: 'PR detailed information'
-        url: 'pr.html'
-      - type: 'string'
-        value: 'Last updated : {{ userdata.getTimeStamp() }} IST'
-        color: black                  
+  - title: "Details"
+    widgets:
+      - type: "string"
+        value: "Issues detailed information"
+        url: "issue.html"
+      - type: "string"
+        value: "PR detailed information"
+        url: "pr.html"
+      - type: "string"
+        value: "Last updated : {{ userdata.getTimeStamp() }} IST"
+        color: black
