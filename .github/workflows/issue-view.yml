@@ -14,6 +14,7 @@ jobs:
         uses: GH-ACE/issue-dashboard@v1
         with:
           config: ./dashboard-config/issue-view-config.yml
+          configType: file
           token: ${{ github.token }}
 
       - name: Commit files
