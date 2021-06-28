@@ -1,11 +1,13 @@
 # Automating test workflows in the PR checks.
 Test workflows for actions can be automated in the action repo so that whenever a new PR is raised to __master__ or __releases/*__  branches these workflows evaluate on the branch from which PR is raised. <br>
 
-This process of automated testing enables one to run tests on PRs from a branch in a repo and also  PRs from a forked repo. Post reviewing the PR for security vulnerabilities, the author(s) / admin(s) can set a label as  ```safe to run test``` on the PR which will trigger this workflow automatically. This will ensure that the new PR is not breaking any existing flow. Once the checks are successful and are not breaking any existing scenarios, the PR will be merged subsequently.
+This process of automated testing enables one to run tests on PRs from a branch in a repo and also  PRs from a forked repo. Inorder to ensure the safety of secrets which are used by the pr-check workflows and to prevent pwn requests, the pr-check workflow and secrets should be a part of a [github environment](https://docs.github.com/en/actions/reference/environments) and set appropriate approval policy for triggering this workflow on a new PR. <br>
+
+So whenever a new PR occurs (especially from a forked repo) , the PR is __manually reviewed__ for security vulneribilities and then approved after which the pr-check workflow is triggered for the new PR.
     
 ## Process to automate the workflows: 
     
-1.  Create a ```test.yml``` workflow in **.github/workflows** of the action repo.
+1.  Create a ```pr-check.yml``` workflow in **.github/workflows** of the action repo.
 
 2.  Put the triggering condition for this workflow as ```on: pull_request_target``` if forked repo PR checks need to be checked automatically otherwise ```on: pull_request```  should do. Visit [pull_request_target](https://docs.github.com/en/actions/reference/events-that-trigger-workflows#pull_request_target) for more details.
 3. Steps include:
@@ -25,16 +27,13 @@ name:
 
 on:
   pull_request_target:
-    types: [labeled, opened]
     branches:
       - master
       - 'releases/*'
 
 jobs:
-
     deploy:
-      # runs this deploy on when the PR is labelled as 'safe to run test'
-      if: contains(github.event.pull_request.labels.*.name, 'safe to run test')
+      environment: your-environment-name
       runs-on: windows-latest
       steps:
       - name: Checkout from PR branch  
