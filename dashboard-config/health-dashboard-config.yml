@@ -25,7 +25,7 @@ setup: |
     }
     else if(label === "stale") {
       results = await github.search.issuesAndPullRequests(
-      { q: `${repos} is:${itemType} is:open created:<${date("-90 days")}`}
+      { q: `${repos} is:${itemType} is:open -label:enhancement created:<${date("-90 days")}`}
       )
     } 
     else{
