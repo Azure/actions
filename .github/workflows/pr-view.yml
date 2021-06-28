@@ -14,7 +14,7 @@ jobs:
       id: dashboard
       uses: GH-ACE/issue-dashboard@v1
       with:
-        config: ./dashboard-conf/pr-view-config.yml
+        config: ./dashboard-config/pr-view-config.yml
         token: ${{ github.token }}
 
     - name: Commit files
