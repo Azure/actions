@@ -19,13 +19,20 @@ jobs:
               format: html
               filename: 'docs/health-dashboard.html'
             setup: | 
-                  const repos = 'repo:Azure/login repo:Azure/webapps-deploy repo:Azure/aci-deploy repo:build-vm-image repo:Azure/deploy-to-azure-cli-extension repo:Azure/functions-action repo:Azure/functions-container-action repo:Azure/mysql repo:Azure/postgresql repo:Azure/powershell repo:Azure/sql-action'
+                  const repos = 'repo:Azure/login repo:Microsoft/variable-substitution repo:Azure/appservice-settings repo:Azure/webapps-deploy repo:Azure/aci-deploy repo:build-vm-image repo:Azure/deploy-to-azure-cli-extension repo:Azure/functions-action repo:Azure/functions-container-action repo:Azure/mysql repo:Azure/postgresql repo:Azure/powershell repo:Azure/sql-action repo:Azure/policy-compliance-scan repo:Azure/k8s-create-secret repo:Azure/k8s-lint repo:Azure/k8s-deploy'
                   userdata.count = async function(itemType,label) {
                     var results
                     if(label === "") {
-                        results = await github.search.issuesAndPullRequests(
-                        { q: `${repos} is:${itemType} is:open`}
-                        )
+                        if(itemType === "issue") {                        
+                          results = await github.search.issuesAndPullRequests(
+                          { q: `${repos} is:${itemType} is:open -label:enhancement`}
+                          )
+                        }
+                        else {
+                          results = await github.search.issuesAndPullRequests(
+                          { q: `${repos} is:${itemType} is:open`}
+                          )
+                        }
                     }
                     else if(label === "closed") {
                         results = await github.search.issuesAndPullRequests(
@@ -56,7 +63,12 @@ jobs:
                     var url, closedDate, staleDate;
                     
                     if(label === "") {
-                      url = 'https://github.com/search?q='+ repos + '+is%3A'+ itemType + '+is%3Aopen'
+                      if(itemType === "issue") {
+                        url = 'https://github.com/search?q='+ repos + '+is%3A'+ itemType + '+is%3Aopen' + ' -label%3Aenhancement'
+                      }
+                      else {
+                        url = 'https://github.com/search?q='+ repos + '+is%3A'+ itemType + '+is%3Aopen'
+                      }
                     }
                     else if(label === "closed") {
                       pastDate.setDate(pastDate.getDate() - 30);
@@ -84,7 +96,7 @@ jobs:
             - title: 'Issues'
               widgets:
               - type: 'number'
-                title: 'Open'
+                title: 'Open (Excluding enhancements)'
                 value: '{{ userdata.count("issue","") }}'
                 url: '{{ userdata.url("issue","") }}'
               - type: 'number'

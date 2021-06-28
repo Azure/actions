@@ -56,7 +56,7 @@ div#footer {
 
 div.sections {
     background-color: #ffffff;
-    width: 90%;  /* edit: Updated from 900px to adjust screen display */
+    width: 100%;  /* edit: Updated from 900px to adjust screen display */
     min-height: 250px;
     padding: 15px 50px 50px 50px;
     border: solid 1px #dddddd;

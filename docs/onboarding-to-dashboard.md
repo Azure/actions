@@ -8,11 +8,11 @@ In the action repository, define the following labels:
 
 <table>
   <tr>
-   <td><strong>Issue</strong>
+   <td><strong>Label</strong>
    </td>
    <td><strong>Description</strong>
    </td>
-   <td><strong>Color</strong>
+   <td><strong>Color (Optional)</strong>
    </td>
   </tr>
   <tr>
@@ -29,14 +29,6 @@ In the action repository, define the following labels:
    <td>Inactive for 14 days
    </td>
    <td>#9A777A
-   </td>
-  </tr>
-  <tr>
-   <td>stale
-   </td>
-   <td>90 days old
-   </td>
-   <td>#A9A9A9
    </td>
   </tr>
   <tr>

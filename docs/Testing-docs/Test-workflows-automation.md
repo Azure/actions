@@ -8,7 +8,6 @@ So whenever a new PR occurs (especially from a forked repo) , the PR is __manual
 ## Process to automate the workflows: 
     
 1.  Create a ```pr-check.yml``` workflow in **.github/workflows** of the action repo.
-
 2.  Put the triggering condition for this workflow as ```on: pull_request_target``` if forked repo PR checks need to be checked automatically otherwise ```on: pull_request```  should do. Visit [pull_request_target](https://docs.github.com/en/actions/reference/events-that-trigger-workflows#pull_request_target) for more details.
 3. Steps include:
     1. Checkout the repo.
