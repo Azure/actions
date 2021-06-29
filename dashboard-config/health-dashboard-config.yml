@@ -29,9 +29,15 @@ setup: |
       )
     } 
     else{
-      results = await github.search.issuesAndPullRequests(
-      { q: `${repos} is:${itemType} is:open label:${label}`}
-      )
+      if(label === "idle" and itemType === "issue"){
+         { q: `${repos} is:${itemType} is:open label:idle -label:enhancement`}
+        )
+      }
+      else {
+        results = await github.search.issuesAndPullRequests(
+        { q: `${repos} is:${itemType} is:open label:${label}`}
+        )
+      }
     }
     if(results.data.items.length === 0){
       return '0'
