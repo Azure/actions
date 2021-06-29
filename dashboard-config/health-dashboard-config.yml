@@ -29,7 +29,7 @@ setup: |
       )
     } 
     else{
-      if(label === "idle" and itemType === "issue"){
+      if(label === "idle" && itemType === "issue"){
          { q: `${repos} is:${itemType} is:open label:idle -label:enhancement`}
         )
       }
