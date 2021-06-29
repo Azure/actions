@@ -32,7 +32,7 @@ on:
 
 jobs:
     deploy:
-      environment: your-environment-name
+      environment: automation test
       runs-on: windows-latest
       steps:
       - name: Checkout from PR branch  
