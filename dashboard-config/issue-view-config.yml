@@ -28,7 +28,7 @@ setup: |
         )
       }
       else{
-        if(label === "idle" && itemType === "issue"){
+        if(label === "idle"){
            results = await github.search.issuesAndPullRequests(
            { q: `repo:${repo} is:issue is:open label:idle -label:enhancement`}
           )
