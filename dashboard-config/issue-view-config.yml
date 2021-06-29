@@ -24,10 +24,15 @@ setup: |
       }
       else if(label === "stale") {
         results = await github.search.issuesAndPullRequests(
-        { q: `repo:${repo} is:issue is:open created:<${date("-90 days")}`}
+        { q: `repo:${repo} is:issue is:open -label:enhancement created:<${date("-90 days")}`}
         )
       }
-      else{
+      else if(label === "idle"){
+        results = await github.search.issuesAndPullRequests(
+        { q: `repo:${repo} is:issue is:open label:idle -label:enhancement`}
+        )
+      }
+      else {
         results = await github.search.issuesAndPullRequests(
         { q: `repo:${repo} is:issue is:open label:${label}`}
         )
@@ -55,7 +60,10 @@ setup: |
       else if(label === "stale") {
         pastDate.setDate(pastDate.getDate() - 90);
         var staledate = pastDate.toISOString().split("T")[0];
-        url = 'https://github.com/' + repo + '/issues?q=is%3Aissue+is%3A' + 'open' + '+created%3A<'+staledate
+        url = 'https://github.com/' + repo + '/issues?q=is%3Aissue+is%3A' + 'open' + '+created%3A<'+staledate + ' -label%3Aenhancement'
+      }
+      else if(label === "idle") {
+        url = 'https://github.com/' + repo + '/issues?q=is%3Aissue+is%3A' + 'open' + '+label%3A'+ 'idle' + ' -label%3Aenhancement'
       }
       else{
         url = 'https://github.com/'+repo+'/issues?q=is%3Aissue+is%3A'+'open'+'+label%3A'+label
