@@ -24,13 +24,20 @@ setup: |
       }
       else if(label === "stale") {
         results = await github.search.issuesAndPullRequests(
-        { q: `repo:${repo} is:issue is:open created:<${date("-90 days")}`}
+        { q: `repo:${repo} is:issue is:open -label:enhancement created:<${date("-90 days")}`}
         )
       }
       else{
-        results = await github.search.issuesAndPullRequests(
-        { q: `repo:${repo} is:issue is:open label:${label}`}
-        )
+        if(label === "idle" && itemType === "issue"){
+           results = await github.search.issuesAndPullRequests(
+           { q: `repo:${repo} is:issue is:open label:idle -label:enhancement`}
+          )
+        }
+        else {
+          results = await github.search.issuesAndPullRequests(
+          { q: `repo:${repo} is:issue is:open label:${label}`}
+          )
+        }
       }
       if(results.data.items.length === 0){
         return '0'
