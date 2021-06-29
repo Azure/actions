@@ -76,8 +76,16 @@ sections:
   - type: 'table'
     headers:
     - 'Action'
-    - 'Open'
-    - 'Idle(inactive>14days)'	
+    - 'Open (excl. enhancements)'
+    - 'Need-to-triage'
+    - 'Enhancement'
+    - 'Question'
+    - 'Bug'
+    - 'Documentation'
+    - 'Performance-issue'
+    - 'Waiting-for-customer'
+    - 'External-dependency'
+    - 'Idle(inactive>14days)'
     - 'Stale(90_days old)'
     - 'Closed(last_30 days)'
     elements:
