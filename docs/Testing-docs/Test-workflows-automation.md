@@ -7,7 +7,7 @@ So whenever a new PR occurs (especially from a forked repo) , the PR is __manual
     
 ## Process to automate the workflows: 
     
-1.  Create a ```pr-check.yml``` workflow in **.github/workflows** of the action repo.
+1.  Create a ```pr-check.yml``` workflow in **.github/workflows** of the action repo. Setup __Automation test__ environment in the action and enable appropriate approval policy which includes adding reviewers list to approve the PR to run the pr-check. Visit [this](https://docs.github.com/en/actions/reference/environments) to know more about environments.
 2.  Put the triggering condition for this workflow as ```on: pull_request_target``` if forked repo PR checks need to be checked automatically otherwise ```on: pull_request```  should do. Visit [pull_request_target](https://docs.github.com/en/actions/reference/events-that-trigger-workflows#pull_request_target) for more details.
 3. Steps include:
     1. Checkout the repo.
@@ -32,7 +32,7 @@ on:
 
 jobs:
     deploy:
-      environment: automation test
+      environment: Automation test
       runs-on: windows-latest
       steps:
       - name: Checkout from PR branch  
