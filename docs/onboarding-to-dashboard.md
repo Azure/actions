@@ -144,16 +144,16 @@ If there are existing separate workflow files doing the same, they can be replac
  In a single PR, you can do the following changes:
 
 
-*   In the [health-dashboard yml file](https://github.com/Azure/actions/blob/main/.github/workflows/health-dashboard.yml), add the name of your action as orgName/actionName \
+*   In the [health-dashboard-config file](https://github.com/Azure/actions/blob/main/dashboard-config/health-dashboard-config.yml), add the name of your action as orgName/actionName \
 It has to be appended to the existing list of actions.
 ![image](https://user-images.githubusercontent.com/58769601/122913750-77d5c780-d377-11eb-909e-8445786ad7b7.png)
 
 
-*   In the [issue-view yml file](https://github.com/Azure/actions/blob/main/.github/workflows/issue-view.yml),  add the following lines of code by replacing with your repo to the existing list of elements section
+*   In the [issue-view-config file](https://github.com/Azure/actions/blob/main/dashboard-config/issue-view-config.yml),  add the following lines of code by replacing with your repo to the existing list of elements section
 ![image](https://user-images.githubusercontent.com/58769601/122913792-845a2000-d377-11eb-9866-3401e88d1406.png)
 
 
-*   In the [pr-view yml file](https://github.com/Azure/actions/blob/main/.github/workflows/pr-view.yml),  add the following lines of code by replacing with your repo to the existing list of elements section.
+*   In the [pr-view-config file](https://github.com/Azure/actions/blob/main/dashboard-config/pr-view-config.yml),  add the following lines of code by replacing with your repo to the existing list of elements section.
 
 ![image](https://user-images.githubusercontent.com/58769601/122913831-9471ff80-d377-11eb-857a-1b6cf1d10680.png)
 
