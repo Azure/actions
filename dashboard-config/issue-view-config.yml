@@ -63,8 +63,6 @@ setup: |
         url = 'https://github.com/' + repo + '/issues?q=is%3Aissue+is%3A' + 'open' + '+created%3A<'+staledate + ' -label%3Aenhancement'
       }
       else if(label === "idle") {
-        pastDate.setDate(pastDate.getDate() - 90);
-        var staledate = pastDate.toISOString().split("T")[0];
         url = 'https://github.com/' + repo + '/issues?q=is%3Aissue+is%3A' + 'open' + '+label%3A'+ 'idle' + ' -label%3Aenhancement'
       }
       else{
