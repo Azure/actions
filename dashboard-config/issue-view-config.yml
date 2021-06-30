@@ -713,8 +713,6 @@ sections:
       - value: '{{ userdata.count("Azure/AppConfiguration-Sync","closed") }}'
         url: '{{ userdata.url("Azure/AppConfiguration-Sync","closed") }}'
     
-    
-    
     - - value: 'k8s-set-context'
       - value: '{{ userdata.count("Azure/k8s-set-context","") }}'
         url: '{{ userdata.url("Azure/k8s-set-context","") }}'
