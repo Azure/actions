@@ -113,16 +113,6 @@ sections:
       - value: '{{ userdata.count("Azure/build-vm-image","closed") }}'
         url: '{{ userdata.url("Azure/build-vm-image","closed") }}'
         
-    - - value: 'deploy-to-azure-cli-extension' 
-      - value: '{{ userdata.count("Azure/deploy-to-azure-cli-extension","") }}'
-        url: '{{ userdata.url("Azure/deploy-to-azure-cli-extension","") }}'
-      - value: '{{ userdata.count("Azure/deploy-to-azure-cli-extension","idle") }}'
-        url: '{{ userdata.url("Azure/deploy-to-azure-cli-extension","idle") }}'
-      - value: '{{ userdata.count("Azure/deploy-to-azure-cli-extension","stale") }}'
-        url: '{{ userdata.url("Azure/deploy-to-azure-cli-extension","stale") }}'
-      - value: '{{ userdata.count("Azure/deploy-to-azure-cli-extension","closed") }}'
-        url: '{{ userdata.url("Azure/deploy-to-azure-cli-extension","closed") }}'
-        
     - - value: 'functions-action' 
       - value: '{{ userdata.count("Azure/functions-action","") }}'
         url: '{{ userdata.url("Azure/functions-action","") }}'
