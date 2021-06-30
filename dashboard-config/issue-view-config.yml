@@ -687,7 +687,7 @@ sections:
       - value: '{{ userdata.count("Azure/setup-helm","closed") }}'
         url: '{{ userdata.url("Azure/setup-helm","closed") }}'
 
-      - - value: 'container-scan'
+    - - value: 'container-scan'
       - value: '{{ userdata.count("Azure/container-scan","") }}'
         url: '{{ userdata.url("Azure/container-scan","") }}'
       - value: '{{ userdata.count("Azure/container-scan","need-to-triage") }}'
@@ -713,7 +713,7 @@ sections:
       - value: '{{ userdata.count("Azure/container-scan","closed") }}'
         url: '{{ userdata.url("Azure/container-scan","closed") }}'
 
-      - - value: 'docker-login'
+    - - value: 'docker-login'
       - value: '{{ userdata.count("Azure/docker-login","") }}'
         url: '{{ userdata.url("Azure/docker-login","") }}'
       - value: '{{ userdata.count("Azure/docker-login","need-to-triage") }}'
@@ -739,7 +739,7 @@ sections:
       - value: '{{ userdata.count("Azure/docker-login","closed") }}'
         url: '{{ userdata.url("Azure/docker-login","closed") }}'
 
-      - - value: 'publish-security-assessments'
+    - - value: 'publish-security-assessments'
       - value: '{{ userdata.count("Azure/publish-security-assessments","") }}'
         url: '{{ userdata.url("Azure/publish-security-assessments","") }}'
       - value: '{{ userdata.count("Azure/publish-security-assessments","need-to-triage") }}'
