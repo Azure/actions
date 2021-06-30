@@ -153,7 +153,7 @@
   </tr>
           <tr>
    <td>
-<h4>Keyword Based Assignment</h2>
+<h4>VS Code Issue Triage Bot</h2>
 
 
    </td>
