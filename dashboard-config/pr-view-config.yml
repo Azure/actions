@@ -372,6 +372,7 @@ sections:
         url: '{{ userdata.url("Azure/arm-deploy","stale") }}'
       - value: '{{ userdata.count("Azure/arm-deploy","closed") }}'
         url: '{{ userdata.url("Azure/arm-deploy","closed") }}'
+        
     - - value: 'Azure/cli' 
       - value: '{{ userdata.count("Azure/cli","") }}'
         url: '{{ userdata.url("Azure/cli","") }}'
