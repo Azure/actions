@@ -20,9 +20,7 @@ So whenever a new PR occurs (especially from a forked repo) , the PR is __manual
 ## Sample template: 
 
 ```yml
-name: 
-
-#triggers on pull_request from both forked repo and this repo on PR type opened/labeled
+name: pr-check
 
 on:
   pull_request_target:
