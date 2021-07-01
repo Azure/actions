@@ -3,7 +3,7 @@ Test workflows for actions can be automated in the action repo so that whenever 
 
 This process of automated testing enables one to run tests on PRs from a branch in a repo and also  PRs from a forked repo. Inorder to ensure the safety of secrets which are used by the pr-check workflows and to prevent pwn requests, the pr-check workflow and secrets should be a part of a [github environment](https://docs.github.com/en/actions/reference/environments) and set appropriate approval policy for triggering this workflow on a new PR. <br>
 
-So whenever a new PR occurs (especially from a forked repo) , the PR is __manually reviewed__ for security vulneribilities and then approved after which the pr-check workflow is triggered for the new PR.
+So whenever a new PR occurs (especially from a forked repo) , the PR is __manually reviewed__ for security vulneribilities and then approved after which the pr-check workflow is triggered for the new PR. Approvers should manually review for [these](https://securitylab.github.com/research/github-actions-preventing-pwn-requests/) before approving the check to run on PR.
     
 ## Process to automate the workflows: 
     

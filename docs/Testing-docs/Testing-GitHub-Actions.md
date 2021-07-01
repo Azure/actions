@@ -146,4 +146,6 @@ npm install chai mocha ts-node @types/chai @types/mocha --save-dev
 - Hot fix scenario:
   - Work on code changes in the target releases branch. Update the functional test workflow, to cover the hot fix code changes. E.g. Add the action use case which was failing, and to fix it this hotfix is getting released. This update needs to be made into a job targeting the release branch where the fix is getting pushed.
   - On the code push workflow will get executed with an updated functional scenario, and it will catch any regressions or breakages.
-  - Post confirming the functional test workflow is successful, one is ready to update the releases tag to new hot fix commit.
+  - Post confirming the functional test workflow is successful, one is ready to update the releases tag to new hot fix commit. 
+
+NOTE : Refer [automated test process](https://github.com/Azure/actions/blob/main/docs/Testing-docs/Test-workflows-automation.md) to automate the test workflows within action repository as PR checks.
