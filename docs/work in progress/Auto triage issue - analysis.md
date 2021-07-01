@@ -40,6 +40,28 @@
 3. It uses a simple Gated Recurrent Unit (GRU) based model architecture. 
 
     [https://github.com/machine-learning-apps/Issue-Label-Bot](https://github.com/machine-learning-apps/Issue-Label-Bot)
+    
+    
+    
+### VS Code Issue Triage Bot
+
+
+
+1. All recent issues are passed through two models that map the issue to a feature area and determine the assignee with an accuracy of roughly 75%.
+2. If the bot cannot verify an issue on its own, it labels it as author-verification-requested. Once verified, the bot labels the issue as verified.
+3. The bot supports commands that can close issues, add labels, remove labels, and add comments. 
+4. This is the basic triaging flow:
+![image](https://user-images.githubusercontent.com/84702817/123509847-7ec14a80-d695-11eb-9ae8-a9725fbceec7.png)
+5. The bot can close the issues for 14 reasons as listed [here](https://github.com/microsoft/vscode/wiki/Issues-Triaging#closing-issues)
+6. It can assign backlog labels including Backlog, On-deck and Backlog-candidates.
+7. Good-first-issue, help-wanted and investigation-wanted labels are used to ask for help.
+8. This is the decision making tree that the bot uses:
+![image](https://user-images.githubusercontent.com/84702817/123510135-6ce0a700-d697-11eb-954e-f91f4d4f9a4e.png)
+9. The bot closes bugs as wont-fix if there is a negative cost-benefit balance.
+10. Upstream label means that the issue is in a package or library that the bot consumes and that cannot be fixed independently. 
+
+
+    [https://github.com/vscode-triage-bot](https://github.com/vscode-triage-bot)
 
 
 
@@ -129,6 +151,36 @@
 </ol>
    </td>
   </tr>
+          <tr>
+   <td>
+<h4>VS Code Issue Triage Bot</h2>
+
+
+   </td>
+   <td>
+<ol>
+
+<li>The bot can assign an issue to an owner
+
+<li>The bot can help in closing the issues and can assign duplicate label.
+
+<li>The bot monitors all issues labeled as need-more-info.
+    
+<li> The bot monitors the issues assigned to Backlog Candidates. 
+</li>
+</ol>
+   </td>
+   <td>
+<ol>
+
+<li>The owner has to assign type and feature-area label.
+
+<li>The bot does not assign standard labels like bug, feature-request, documentation.
+
+</li>
+</ol>
+   </td>
+  </tr>
   <tr>
    <td><h4>Labelling Using NLP
    </td>
@@ -158,6 +210,7 @@
 </ol>
    </td>
   </tr>
+
 </table>
 
 
