@@ -22,18 +22,27 @@ Please try out the [GitHub Actions for Azure](https://docs.microsoft.com/azure/d
 # Contributing to Azure Actions
 
 Following are the guideliens to author new Azure Actions and also to contribute to the existing ones.
+### Authoring and making changes
   - [Create a new GitHub Action for Azure or Microsoft](docs/Process_of_Authoring_GitHub_Actions_for_Azure.md#creating-a-new-github-action-for-azure-or-microsoft)
   - [Contributing to the existing actions](docs/developer-guildelines.md)
   - [Building GitHub Actions from Azure Pipeline Tasks](docs/action-from-pipeline-task.md)
-  - [Azure Actions toolkit](https://github.com/Azure/actions-toolkit) hosting node modules to help write your azure actions
+ 
+### Actions Repository Permissions
   - [Guidelines for repository permissions](docs/Process_of_Authoring_GitHub_Actions_for_Azure.md#guidelines-for-setting-permissions-on-the-repo)
+
+### Testing
+  - [Testing GitHub Actions](docs/Testing-docs/Testing-GitHub-Actions.md)
+  - [Automated test workflows](docs/Testing-docs/Test-workflows-automation.md)
+  - [Automatic Validation of recommended practices for an Actions repository](docs/validations-action-repo.md)
+
+### Release 
   - [Action Versioning](docs/Process_of_Authoring_GitHub_Actions_for_Azure.md#action-versioning)
   - [Releasing a new version](docs/release-process.md)
-  - [Testing GitHub Actions](docs/Testing-docs/Testing-GitHub-Actions.md)
-  - [Automated test process](docs/Testing-docs/Test-workflows-automation.md)
-  - [Validations for Action repository](docs/validations-action-repo.md)
   - [Publish to Marketplace](docs/Process_of_Authoring_GitHub_Actions_for_Azure.md#publish-the-action-to-marketplace)
   - [Communication guidelines](communication%20guidelines.md)
+
+## Azure Actions toolkit 
+[Azure Actions toolkit](https://github.com/Azure/actions-toolkit) hosting node modules to help write your azure actions
 
 ## Health Dashboard for Azure Action repos
 
