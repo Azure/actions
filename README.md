@@ -33,6 +33,7 @@ Following are the guideliens to author new Azure Actions and also to contribute 
 ### Testing
   - [Testing GitHub Actions](docs/Testing-docs/Testing-GitHub-Actions.md)
   - [Automated test workflows](docs/Testing-docs/Test-workflows-automation.md)
+  - [Automates tests for updated runner images](docs/Test-docs/Runner-infra-tests.md)
   - [Automatic Validation of recommended practices for an Actions repository](docs/validations-action-repo.md)
 
 ### Release 
@@ -47,6 +48,7 @@ Following are the guideliens to author new Azure Actions and also to contribute 
 ## Health Dashboard for Azure Action repos
 
 This [health dashboard](https://azure.github.io/actions/health-dashboard.html) provides information on open issues and PRs for all the Azure Action repos. These are the [steps](docs/onboarding-to-dashboard.md) that can be followed to onboard any action on the dashboard.
+We are also planning add a feature to highlight any dip in the action specific usage telemetry in the dashboard.
 
 ## Contributing License Agreement
 
