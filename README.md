@@ -33,7 +33,7 @@ Following are the guideliens to author new Azure Actions and also to contribute 
 ### Testing
   - [Testing GitHub Actions](docs/Testing-docs/Testing-GitHub-Actions.md)
   - [Automated test workflows](docs/Testing-docs/Test-workflows-automation.md)
-  - [Automates tests for updated runner images](docs/Test-docs/Runner-infra-tests.md)
+  - [Automates tests for updated runner images](docs/Testing-docs/Runner-infra-tests.md)
   - [Automatic Validation of recommended practices for an Actions repository](docs/validations-action-repo.md)
 
 ### Release 
