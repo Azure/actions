@@ -10,11 +10,11 @@ a {
 }
 
 :root {
-    --color-red-background: #ee0000;
+    --color-red-background: #FF8080; /* Changing background red color */
     --color-red-foreground: #ffffff;
     --color-red-border: #cc0000;
 
-    --color-yellow-background: #eeee00;
+    --color-yellow-background: #FFF4A3; /* Changing background yellow color */
     --color-yellow-foreground: #000000;
     --color-yellow-border: #cccc00;
 
