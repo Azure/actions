@@ -72,11 +72,11 @@ setup: |
     } 
     userdata.color = async function(value,label) {
         var resultColor='#282A35'
-        if((label === '') && (value>5))
+        if((label === '') && (value>=5))
             resultColor='red'
-        else if((label === 'need-to-triage') && (value>3))
+        else if((label === 'need-to-triage') && (value>=3))
             resultColor='yellow'
-        else if((label === 'stale') && (value>3))
+        else if((label === 'stale') && (value>=3))
             resultColor='red'
         return resultColor
     }
