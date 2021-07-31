@@ -1,0 +1,56 @@
+<script>
+window.onload = function() {
+  	// Side navigation menu: Highlight active item
+	function menuActiveScroll(e) {
+	  	$("#menu a").removeClass("active"); 			// Disable all menu options
+	  	var scrollBar = $(window).scrollTop(); 			// Get value from scroll
+	  	var active = $("section:last").attr("id"); 		// Select the last active section
+	  	$("section").each(function(indice) {  			// For each section do this ...
+		    var posTop = $(this).offset().top;			// Get position
+		    var height = $(this).height();				// Get heigh
+		    var scrollBarA = scrollBar + 50;
+		    // Detect which section is in the viewport
+		    if (scrollBarA < posTop + height) {
+		      	active = $(this).attr("id");
+		      	return false;
+		    }
+	  	});
+	  	$("#menu a[href='#" + active + "']").addClass("active");	// Add active class to visible section (last by default)
+	}
+	// Execute the function when loading the page and when scrolling
+	$(window).scroll(menuActiveScroll);
+	$(document).ready(menuActiveScroll);
+
+	// Home section: Parallax Efect
+  	var layer1 = document.getElementsByClassName('layer1');
+  	scroll = window.pageYOffset;
+  	document.addEventListener('scroll', function (e) {
+  	  	var offset = window.pageYOffset;
+  		scroll = offset;
+  		if (scroll <= 10) {
+  			layer1[0].style.bottom = -190 + 'px';
+  		}else{
+  			var sum = 70;
+  			layer1[0].style.bottom = (-190 + scroll + sum++) + 'px';
+  		}
+  	});
+
+  	var layer2 = document.getElementsByClassName('layer2');
+  	scroll = window.pageYOffset;
+  	document.addEventListener('scroll', function (e) {
+  		var offset = window.pageYOffset;
+  		scroll = offset;
+  		if (scroll <= 10) {
+  			layer2[0].style.bottom = 100 + 'px';
+  		}else{
+  			var sum = 1;
+  			layer2[0].style.bottom = (100 + scroll + sum++) + 'px';
+  		}
+  	});
+
+  	// Hide collapsible Bootstrap navbar on click
+	$('.navbar-nav>li>a').on('click', function(){
+	    $('.navbar-collapse').collapse('hide');
+	});
+}
+</script>
