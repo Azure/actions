@@ -1,6 +1,9 @@
 name: "repo-validation"
 
-on: workflow_dispatch
+on: 
+  workflow_dispatch:
+  schedule:
+    - cron:  '0 0 * * MON,THU'
 
 jobs:
   build:
@@ -20,7 +23,7 @@ jobs:
       with:
         name: "validation-dashboard/result.json"
         json: "${{steps.checks_validation.outputs.validationResult}}"
-    - name: validation result and  Commit file
+    - name: validation result and  Commit json result file
       id: commit1
       continue-on-error: true
       run: |
