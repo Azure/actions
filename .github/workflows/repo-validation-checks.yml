@@ -55,7 +55,6 @@ jobs:
       id: commit2
       continue-on-error: true
       run: |
-           cat index.json
            git config --local user.email "action@github.com"
            git config --local user.name "GitHub Action"
            git pull
