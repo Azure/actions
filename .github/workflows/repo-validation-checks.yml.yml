@@ -1,0 +1,72 @@
+name: "repo-validation"
+
+on: workflow_dispatch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: validating action repos
+      id: checks_validation
+      uses: GH-ACE/action-repo-validation@releases/validation-dashboard
+      continue-on-error: true
+      with:
+        GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
+        repositories: 'login,webapps-deploy,aci-deploy,build-vm-image,functions-action,functions-container-action,mysql,postgresql,powershell,sql-action,appservice-settings,variable-substitution,policy-compliance-scan,k8s-create-secret,k8s-deploy,k8s-lint,manage-azure-policy,setup-kubectl,aks-set-context,k8s-bake,static-web-apps-deploy,get-keyvault-secrets,AppConfiguration-Sync,k8s-set-context,setup-helm,container-scan,docker-login,publish-security-assessments,arm-deploy,cli'
+    - name: create-json
+      id: create-json
+      uses: jsdaniell/create-json@1.1.2
+      with:
+        name: "index.json"
+        json: "${{steps.checks_validation.outputs.validationResult}}"
+    - name: validation result and  Commit file
+      id: commit1
+      continue-on-error: true
+      run: |
+           cat index.json
+           git config --local user.email "balaga-gayatri@github.com"
+           git config --local user.name "balaga-gayatri"
+           git pull
+           git add --all
+           if [-z "$(git status --porcelain)"]; then
+             echo "::set-output name=push::false"
+           else
+             git commit -m "Add changes" -a
+             echo "::set-output name=push::true"
+           fi
+      shell: bash
+    - name: Push changes
+      if: steps.commit.outputs.push == 'true'
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: "${{ secrets.GITHUB_TOKEN }}"
+    
+    - uses: actions/setup-python@v2
+      with:
+        python-version: '3.9.0-alpha - 3.9.0' # SemVer's version range syntax
+    - run: |
+        pip3 install json2html
+        python ./json2htmlrunner.py
+
+    - name: validation result and  Commit file for html
+      id: commit2
+      continue-on-error: true
+      run: |
+           cat index.json
+           git config --local user.email "balaga-gayatri@github.com"
+           git config --local user.name "balaga-gayatri"
+           git pull
+           git add --all
+           if [-z "$(git status --porcelain)"]; then
+             echo "::set-output name=push::false"
+           else
+             git commit -m "Add changes" -a
+             echo "::set-output name=push::true"
+           fi
+      shell: bash
+    - name: Push changes
+      if: steps.commit2.outputs.push == 'true'
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: "${{ secrets.GITHUB_TOKEN }}"
