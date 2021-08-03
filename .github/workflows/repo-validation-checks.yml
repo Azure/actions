@@ -24,8 +24,8 @@ jobs:
       id: commit1
       continue-on-error: true
       run: |
-           git config --local user.email "balaga-gayatri@github.com"
-           git config --local user.name "balaga-gayatri"
+           git config --local user.email "action@github.com"
+           git config --local user.name "GitHub Action"
            git pull
            git add --all
            if [-z "$(git status --porcelain)"]; then
@@ -53,8 +53,8 @@ jobs:
       continue-on-error: true
       run: |
            cat index.json
-           git config --local user.email "balaga-gayatri@github.com"
-           git config --local user.name "balaga-gayatri"
+           git config --local user.email "action@github.com"
+           git config --local user.name "GitHub Action"
            git pull
            git add --all
            if [-z "$(git status --porcelain)"]; then
