@@ -18,7 +18,7 @@ jobs:
       id: create-json
       uses: jsdaniell/create-json@1.1.2
       with:
-        name: "index.json"
+        name: "validation-dashboard/result.json"
         json: "${{steps.checks_validation.outputs.validationResult}}"
     - name: validation result and  Commit file
       id: commit1
@@ -47,7 +47,7 @@ jobs:
         python-version: '3.9.0-alpha - 3.9.0' # SemVer's version range syntax
     - run: |
         pip3 install json2html
-        python ./json2htmlrunner.py
+        python ./validation-dashboard/json2htmlrunner.py
 
     - name: validation result and  Commit file for html
       id: commit2
