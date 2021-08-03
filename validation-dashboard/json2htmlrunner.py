@@ -18,7 +18,6 @@ f = open('docs/validation-result.html', 'a')
 f.write("""<link rel="stylesheet" href="validation-result.css" type="text/css" media="all">
            <script>
             window.onload = function color() {
-                console.log('test')
                 var value = document.getElementsByTagName("td");
                 for (var j = 0; j < value.length; j++) {
                     if (value[j].innerHTML == "No") { 
