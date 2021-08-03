@@ -8,7 +8,7 @@ b. Contribution guidelines
 2. The code owners should be mentioned in a CODEOWNERS file in .github folder. Here is one [sample file](https://github.com/Azure/actions/blob/main/.github/workflows/CODEOWNERS).
 3. For typescript actions, node_modules should: \
 a. Not be present in master/main branch \
-b. Be present in releases/* branch
+b. Be present in releases/* branch _(For releasing the action, one should have branches named as releases/v1, releases/v1.2.0)_
 4. Proper branch permissions should be set, PRs in main and releases/* branch should require at least one approval. More information on branch protection can be found [here](https://docs.github.com/en/github/administering-a-repository/defining-the-mergeability-of-pull-requests/managing-a-branch-protection-rule).
 5. Security and vulnerability BOTs should be set up for the repo. Dependabot alerts and Dependaobot security updates should be set up in the repository Settings. 
 ![image](https://user-images.githubusercontent.com/58769601/123243496-b5199100-d500-11eb-9524-6589e4671ca7.png)
