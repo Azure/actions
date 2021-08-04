@@ -12,7 +12,7 @@ jobs:
     - uses: actions/checkout@v2
     - name: validating action repos
       id: checks_validation
-      uses: GH-ACE/action-repo-validation@releases/validation-dashboard
+      uses: GH-ACE/action-repo-validation@users/balaga-gayatri/release-patch
       continue-on-error: true
       with:
         GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
