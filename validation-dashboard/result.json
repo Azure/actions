@@ -3,7 +3,7 @@
 		"repoName": "login",
 		"readme": "Yes",
 		"codeOwner": "Yes",
-		"branchPermission": "Yes",
+		"branchPermission": "Access reqd",
 		"vulnerabilityBot": "Yes",
 		"issueTemplate": "Yes",
 		"standardLabels": "Yes",
@@ -123,7 +123,7 @@
 	{
 		"repoName": "variable-substitution",
 		"readme": "unknown",
-		"codeOwner": "No",
+		"codeOwner": "Access reqd",
 		"branchPermission": "Access reqd",
 		"vulnerabilityBot": "Access reqd",
 		"issueTemplate": "Access reqd",
@@ -134,7 +134,7 @@
 	{
 		"repoName": "policy-compliance-scan",
 		"readme": "Yes",
-		"codeOwner": "No",
+		"codeOwner": "Access reqd",
 		"branchPermission": "Access reqd",
 		"vulnerabilityBot": "Yes",
 		"issueTemplate": "Yes",
@@ -189,7 +189,7 @@
 	{
 		"repoName": "setup-kubectl",
 		"readme": "Yes",
-		"codeOwner": "No",
+		"codeOwner": "Access reqd",
 		"branchPermission": "Yes",
 		"vulnerabilityBot": "Yes",
 		"issueTemplate": "Yes",
@@ -222,7 +222,7 @@
 	{
 		"repoName": "static-web-apps-deploy",
 		"readme": "Yes",
-		"codeOwner": "No",
+		"codeOwner": "Access reqd",
 		"branchPermission": "Access reqd",
 		"vulnerabilityBot": "Access reqd",
 		"issueTemplate": "Access reqd",
@@ -267,7 +267,7 @@
 		"repoName": "setup-helm",
 		"readme": "Yes",
 		"codeOwner": "Yes",
-		"branchPermission": "Access reqd",
+		"branchPermission": "Yes",
 		"vulnerabilityBot": "Yes",
 		"issueTemplate": "Yes",
 		"standardLabels": "Yes",
