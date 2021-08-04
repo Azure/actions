@@ -20,7 +20,7 @@ f.write("""<link rel="stylesheet" href="validation-result.css" type="text/css" m
             window.onload = function color() {
                 var value = document.getElementsByTagName("td");
                 for (var j = 0; j < value.length; j++) {
-                    if (value[j].innerHTML == "No") { 
+                    if (value[j].innerHTML == "fail") { 
                         value[j].style.backgroundColor = "#ff8080";
                     }
                     if (value[j].innerHTML == "Access reqd") { 
