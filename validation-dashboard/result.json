@@ -3,12 +3,12 @@
 		"repoName": "login",
 		"readme": "pass",
 		"codeOwner": "fail",
-		"branchPermission": "pass",
+		"branchPermission": "Access reqd",
 		"vulnerabilityBot": "pass",
 		"issueTemplate": "pass",
 		"standardLabels": "pass",
-		"faildeModules(.TS)": "pass",
-		"releasesfaildeModules(.TS)": "fail"
+		"nodeModules(.TS)": "pass",
+		"releasesnodeModules(.TS)": "pass"
 	},
 	{
 		"repoName": "webapps-deploy",
@@ -18,19 +18,19 @@
 		"vulnerabilityBot": "pass",
 		"issueTemplate": "pass",
 		"standardLabels": "pass",
-		"faildeModules(.TS)": "pass",
-		"releasesfaildeModules(.TS)": "fail"
+		"nodeModules(.TS)": "pass",
+		"releasesnodeModules(.TS)": "pass"
 	},
 	{
 		"repoName": "aci-deploy",
 		"readme": "pass",
 		"codeOwner": "fail",
-		"branchPermission": "pass",
+		"branchPermission": "Access reqd",
 		"vulnerabilityBot": "pass",
 		"issueTemplate": "pass",
 		"standardLabels": "pass",
-		"faildeModules(.TS)": "pass",
-		"releasesfaildeModules(.TS)": "fail"
+		"nodeModules(.TS)": "pass",
+		"releasesnodeModules(.TS)": "pass"
 	},
 	{
 		"repoName": "build-vm-image",
@@ -40,8 +40,8 @@
 		"vulnerabilityBot": "pass",
 		"issueTemplate": "pass",
 		"standardLabels": "pass",
-		"faildeModules(.TS)": "pass",
-		"releasesfaildeModules(.TS)": "fail"
+		"nodeModules(.TS)": "pass",
+		"releasesnodeModules(.TS)": "pass"
 	},
 	{
 		"repoName": "functions-action",
@@ -51,8 +51,8 @@
 		"vulnerabilityBot": "pass",
 		"issueTemplate": "pass",
 		"standardLabels": "pass",
-		"faildeModules(.TS)": "pass",
-		"releasesfaildeModules(.TS)": "fail"
+		"nodeModules(.TS)": "pass",
+		"releasesnodeModules(.TS)": "pass"
 	},
 	{
 		"repoName": "functions-container-action",
@@ -62,8 +62,8 @@
 		"vulnerabilityBot": "pass",
 		"issueTemplate": "pass",
 		"standardLabels": "pass",
-		"faildeModules(.TS)": "pass",
-		"releasesfaildeModules(.TS)": "fail"
+		"nodeModules(.TS)": "pass",
+		"releasesnodeModules(.TS)": "pass"
 	},
 	{
 		"repoName": "mysql",
@@ -73,8 +73,8 @@
 		"vulnerabilityBot": "pass",
 		"issueTemplate": "pass",
 		"standardLabels": "pass",
-		"faildeModules(.TS)": "pass",
-		"releasesfaildeModules(.TS)": "fail"
+		"nodeModules(.TS)": "fail",
+		"releasesnodeModules(.TS)": "pass"
 	},
 	{
 		"repoName": "postgresql",
@@ -84,8 +84,8 @@
 		"vulnerabilityBot": "pass",
 		"issueTemplate": "pass",
 		"standardLabels": "pass",
-		"faildeModules(.TS)": "pass",
-		"releasesfaildeModules(.TS)": "fail"
+		"nodeModules(.TS)": "pass",
+		"releasesnodeModules(.TS)": "pass"
 	},
 	{
 		"repoName": "powershell",
@@ -95,8 +95,8 @@
 		"vulnerabilityBot": "pass",
 		"issueTemplate": "pass",
 		"standardLabels": "fail",
-		"faildeModules(.TS)": "pass",
-		"releasesfaildeModules(.TS)": "fail"
+		"nodeModules(.TS)": "pass",
+		"releasesnodeModules(.TS)": "pass"
 	},
 	{
 		"repoName": "sql-action",
@@ -106,8 +106,8 @@
 		"vulnerabilityBot": "pass",
 		"issueTemplate": "pass",
 		"standardLabels": "pass",
-		"faildeModules(.TS)": "pass",
-		"releasesfaildeModules(.TS)": "fail"
+		"nodeModules(.TS)": "pass",
+		"releasesnodeModules(.TS)": "pass"
 	},
 	{
 		"repoName": "appservice-settings",
@@ -117,8 +117,8 @@
 		"vulnerabilityBot": "pass",
 		"issueTemplate": "pass",
 		"standardLabels": "pass",
-		"faildeModules(.TS)": "pass",
-		"releasesfaildeModules(.TS)": "fail"
+		"nodeModules(.TS)": "pass",
+		"releasesnodeModules(.TS)": "pass"
 	},
 	{
 		"repoName": "variable-substitution",
@@ -128,8 +128,8 @@
 		"vulnerabilityBot": "Access reqd",
 		"issueTemplate": "Access reqd",
 		"standardLabels": "Access reqd",
-		"faildeModules(.TS)": "Access reqd",
-		"releasesfaildeModules(.TS)": "Access reqd"
+		"nodeModules(.TS)": "Access reqd",
+		"releasesnodeModules(.TS)": "Access reqd"
 	},
 	{
 		"repoName": "policy-compliance-scan",
@@ -139,8 +139,8 @@
 		"vulnerabilityBot": "pass",
 		"issueTemplate": "pass",
 		"standardLabels": "pass",
-		"faildeModules(.TS)": "pass",
-		"releasesfaildeModules(.TS)": "fail"
+		"nodeModules(.TS)": "fail",
+		"releasesnodeModules(.TS)": "pass"
 	},
 	{
 		"repoName": "k8s-create-secret",
@@ -150,8 +150,8 @@
 		"vulnerabilityBot": "pass",
 		"issueTemplate": "pass",
 		"standardLabels": "pass",
-		"faildeModules(.TS)": "pass",
-		"releasesfaildeModules(.TS)": "fail"
+		"nodeModules(.TS)": "pass",
+		"releasesnodeModules(.TS)": "pass"
 	},
 	{
 		"repoName": "k8s-deploy",
@@ -161,8 +161,8 @@
 		"vulnerabilityBot": "pass",
 		"issueTemplate": "pass",
 		"standardLabels": "pass",
-		"faildeModules(.TS)": "pass",
-		"releasesfaildeModules(.TS)": "fail"
+		"nodeModules(.TS)": "pass",
+		"releasesnodeModules(.TS)": "pass"
 	},
 	{
 		"repoName": "k8s-lint",
@@ -172,8 +172,8 @@
 		"vulnerabilityBot": "pass",
 		"issueTemplate": "Access reqd",
 		"standardLabels": "pass",
-		"faildeModules(.TS)": "pass",
-		"releasesfaildeModules(.TS)": "fail"
+		"nodeModules(.TS)": "pass",
+		"releasesnodeModules(.TS)": "pass"
 	},
 	{
 		"repoName": "manage-azure-policy",
@@ -183,19 +183,19 @@
 		"vulnerabilityBot": "pass",
 		"issueTemplate": "pass",
 		"standardLabels": "pass",
-		"faildeModules(.TS)": "pass",
-		"releasesfaildeModules(.TS)": "fail"
+		"nodeModules(.TS)": "pass",
+		"releasesnodeModules(.TS)": "pass"
 	},
 	{
 		"repoName": "setup-kubectl",
 		"readme": "pass",
 		"codeOwner": "fail",
-		"branchPermission": "pass",
+		"branchPermission": "Access reqd",
 		"vulnerabilityBot": "pass",
 		"issueTemplate": "pass",
 		"standardLabels": "pass",
-		"faildeModules(.TS)": "pass",
-		"releasesfaildeModules(.TS)": "fail"
+		"nodeModules(.TS)": "fail",
+		"releasesnodeModules(.TS)": "pass"
 	},
 	{
 		"repoName": "aks-set-context",
@@ -205,8 +205,8 @@
 		"vulnerabilityBot": "pass",
 		"issueTemplate": "pass",
 		"standardLabels": "pass",
-		"faildeModules(.TS)": "pass",
-		"releasesfaildeModules(.TS)": "fail"
+		"nodeModules(.TS)": "pass",
+		"releasesnodeModules(.TS)": "pass"
 	},
 	{
 		"repoName": "k8s-bake",
@@ -216,8 +216,8 @@
 		"vulnerabilityBot": "pass",
 		"issueTemplate": "pass",
 		"standardLabels": "pass",
-		"faildeModules(.TS)": "pass",
-		"releasesfaildeModules(.TS)": "fail"
+		"nodeModules(.TS)": "pass",
+		"releasesnodeModules(.TS)": "pass"
 	},
 	{
 		"repoName": "static-web-apps-deploy",
@@ -227,19 +227,19 @@
 		"vulnerabilityBot": "Access reqd",
 		"issueTemplate": "Access reqd",
 		"standardLabels": "fail",
-		"faildeModules(.TS)": "NA",
-		"releasesfaildeModules(.TS)": "NA"
+		"nodeModules(.TS)": "NA",
+		"releasesnodeModules(.TS)": "NA"
 	},
 	{
 		"repoName": "get-keyvault-secrets",
 		"readme": "pass",
 		"codeOwner": "fail",
-		"branchPermission": "Access reqd",
+		"branchPermission": "pass",
 		"vulnerabilityBot": "pass",
 		"issueTemplate": "pass",
 		"standardLabels": "pass",
-		"faildeModules(.TS)": "pass",
-		"releasesfaildeModules(.TS)": "fail"
+		"nodeModules(.TS)": "pass",
+		"releasesnodeModules(.TS)": "pass"
 	},
 	{
 		"repoName": "AppConfiguration-Sync",
@@ -249,8 +249,8 @@
 		"vulnerabilityBot": "Access reqd",
 		"issueTemplate": "pass",
 		"standardLabels": "pass",
-		"faildeModules(.TS)": "pass",
-		"releasesfaildeModules(.TS)": "NA"
+		"nodeModules(.TS)": "pass",
+		"releasesnodeModules(.TS)": "NA"
 	},
 	{
 		"repoName": "k8s-set-context",
@@ -260,19 +260,19 @@
 		"vulnerabilityBot": "pass",
 		"issueTemplate": "pass",
 		"standardLabels": "pass",
-		"faildeModules(.TS)": "pass",
-		"releasesfaildeModules(.TS)": "fail"
+		"nodeModules(.TS)": "pass",
+		"releasesnodeModules(.TS)": "pass"
 	},
 	{
 		"repoName": "setup-helm",
 		"readme": "pass",
 		"codeOwner": "fail",
-		"branchPermission": "pass",
+		"branchPermission": "Access reqd",
 		"vulnerabilityBot": "pass",
 		"issueTemplate": "pass",
 		"standardLabels": "pass",
-		"faildeModules(.TS)": "pass",
-		"releasesfaildeModules(.TS)": "fail"
+		"nodeModules(.TS)": "pass",
+		"releasesnodeModules(.TS)": "pass"
 	},
 	{
 		"repoName": "container-scan",
@@ -282,8 +282,8 @@
 		"vulnerabilityBot": "pass",
 		"issueTemplate": "pass",
 		"standardLabels": "pass",
-		"faildeModules(.TS)": "pass",
-		"releasesfaildeModules(.TS)": "fail"
+		"nodeModules(.TS)": "pass",
+		"releasesnodeModules(.TS)": "pass"
 	},
 	{
 		"repoName": "docker-login",
@@ -293,8 +293,8 @@
 		"vulnerabilityBot": "pass",
 		"issueTemplate": "pass",
 		"standardLabels": "pass",
-		"faildeModules(.TS)": "pass",
-		"releasesfaildeModules(.TS)": "fail"
+		"nodeModules(.TS)": "pass",
+		"releasesnodeModules(.TS)": "pass"
 	},
 	{
 		"repoName": "publish-security-assessments",
@@ -304,19 +304,19 @@
 		"vulnerabilityBot": "pass",
 		"issueTemplate": "pass",
 		"standardLabels": "pass",
-		"faildeModules(.TS)": "pass",
-		"releasesfaildeModules(.TS)": "fail"
+		"nodeModules(.TS)": "pass",
+		"releasesnodeModules(.TS)": "pass"
 	},
 	{
 		"repoName": "arm-deploy",
 		"readme": "pass",
 		"codeOwner": "pass",
-		"branchPermission": "Access reqd",
+		"branchPermission": "pass",
 		"vulnerabilityBot": "pass",
 		"issueTemplate": "pass",
 		"standardLabels": "pass",
-		"faildeModules(.TS)": "pass",
-		"releasesfaildeModules(.TS)": "fail"
+		"nodeModules(.TS)": "pass",
+		"releasesnodeModules(.TS)": "fail"
 	},
 	{
 		"repoName": "cli",
@@ -326,7 +326,7 @@
 		"vulnerabilityBot": "pass",
 		"issueTemplate": "pass",
 		"standardLabels": "pass",
-		"faildeModules(.TS)": "pass",
-		"releasesfaildeModules(.TS)": "fail"
+		"nodeModules(.TS)": "pass",
+		"releasesnodeModules(.TS)": "fail"
 	}
 ]
