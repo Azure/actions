@@ -1,124 +1,124 @@
 [
 	{
 		"repoName": "login",
-		"readme": "Yes",
+		"readme": "Access reqd",
 		"codeOwner": "Access reqd",
 		"branchPermission": "Access reqd",
 		"vulnerabilityBot": "Access reqd",
-		"issueTemplate": "Yes",
-		"standardLabels": "Yes",
+		"issueTemplate": "Access reqd",
+		"standardLabels": "Access reqd",
 		"nodeModules(.TS)": "Access reqd",
-		"releasesNodeModules(.TS)": "Yes"
+		"releasesNodeModules(.TS)": "Access reqd"
 	},
 	{
 		"repoName": "webapps-deploy",
-		"readme": "Yes",
-		"codeOwner": "Yes",
-		"branchPermission": "Yes",
-		"vulnerabilityBot": "Yes",
-		"issueTemplate": "Yes",
-		"standardLabels": "Yes",
+		"readme": "Access reqd",
+		"codeOwner": "Access reqd",
+		"branchPermission": "Access reqd",
+		"vulnerabilityBot": "Access reqd",
+		"issueTemplate": "Access reqd",
+		"standardLabels": "Access reqd",
 		"nodeModules(.TS)": "Access reqd",
-		"releasesNodeModules(.TS)": "Yes"
+		"releasesNodeModules(.TS)": "Access reqd"
 	},
 	{
 		"repoName": "aci-deploy",
-		"readme": "Yes",
+		"readme": "Access reqd",
 		"codeOwner": "Access reqd",
 		"branchPermission": "Access reqd",
 		"vulnerabilityBot": "Access reqd",
-		"issueTemplate": "Yes",
-		"standardLabels": "Yes",
+		"issueTemplate": "Access reqd",
+		"standardLabels": "Access reqd",
 		"nodeModules(.TS)": "Access reqd",
-		"releasesNodeModules(.TS)": "Yes"
+		"releasesNodeModules(.TS)": "Access reqd"
 	},
 	{
 		"repoName": "build-vm-image",
-		"readme": "Yes",
-		"codeOwner": "Yes",
-		"branchPermission": "Access reqd",
-		"vulnerabilityBot": "Access reqd",
-		"issueTemplate": "Yes",
-		"standardLabels": "Yes",
-		"nodeModules(.TS)": "Access reqd",
-		"releasesNodeModules(.TS)": "Yes"
-	},
-	{
-		"repoName": "functions-action",
-		"readme": "Yes",
-		"codeOwner": "Yes",
-		"branchPermission": "Access reqd",
-		"vulnerabilityBot": "Access reqd",
-		"issueTemplate": "Yes",
-		"standardLabels": "Yes",
-		"nodeModules(.TS)": "Access reqd",
-		"releasesNodeModules(.TS)": "Yes"
-	},
-	{
-		"repoName": "functions-container-action",
-		"readme": "Yes",
-		"codeOwner": "Yes",
-		"branchPermission": "Access reqd",
-		"vulnerabilityBot": "Access reqd",
-		"issueTemplate": "Yes",
-		"standardLabels": "Yes",
-		"nodeModules(.TS)": "Access reqd",
-		"releasesNodeModules(.TS)": "Yes"
-	},
-	{
-		"repoName": "mysql",
-		"readme": "Yes",
-		"codeOwner": "Yes",
-		"branchPermission": "Access reqd",
-		"vulnerabilityBot": "Access reqd",
-		"issueTemplate": "Yes",
-		"standardLabels": "Yes",
-		"nodeModules(.TS)": "No",
-		"releasesNodeModules(.TS)": "Yes"
-	},
-	{
-		"repoName": "postgresql",
-		"readme": "Yes",
-		"codeOwner": "Yes",
-		"branchPermission": "Access reqd",
-		"vulnerabilityBot": "Access reqd",
-		"issueTemplate": "Yes",
-		"standardLabels": "Yes",
-		"nodeModules(.TS)": "Access reqd",
-		"releasesNodeModules(.TS)": "Yes"
-	},
-	{
-		"repoName": "powershell",
-		"readme": "Yes",
+		"readme": "Access reqd",
 		"codeOwner": "Access reqd",
 		"branchPermission": "Access reqd",
 		"vulnerabilityBot": "Access reqd",
-		"issueTemplate": "Yes",
-		"standardLabels": "No",
+		"issueTemplate": "Access reqd",
+		"standardLabels": "Access reqd",
 		"nodeModules(.TS)": "Access reqd",
-		"releasesNodeModules(.TS)": "Yes"
+		"releasesNodeModules(.TS)": "Access reqd"
+	},
+	{
+		"repoName": "functions-action",
+		"readme": "Access reqd",
+		"codeOwner": "Access reqd",
+		"branchPermission": "Access reqd",
+		"vulnerabilityBot": "Access reqd",
+		"issueTemplate": "Access reqd",
+		"standardLabels": "Access reqd",
+		"nodeModules(.TS)": "Access reqd",
+		"releasesNodeModules(.TS)": "Access reqd"
+	},
+	{
+		"repoName": "functions-container-action",
+		"readme": "Access reqd",
+		"codeOwner": "Access reqd",
+		"branchPermission": "Access reqd",
+		"vulnerabilityBot": "Access reqd",
+		"issueTemplate": "Access reqd",
+		"standardLabels": "Access reqd",
+		"nodeModules(.TS)": "Access reqd",
+		"releasesNodeModules(.TS)": "Access reqd"
+	},
+	{
+		"repoName": "mysql",
+		"readme": "Access reqd",
+		"codeOwner": "Access reqd",
+		"branchPermission": "Access reqd",
+		"vulnerabilityBot": "Access reqd",
+		"issueTemplate": "Access reqd",
+		"standardLabels": "Access reqd",
+		"nodeModules(.TS)": "Access reqd",
+		"releasesNodeModules(.TS)": "Access reqd"
+	},
+	{
+		"repoName": "postgresql",
+		"readme": "Access reqd",
+		"codeOwner": "Access reqd",
+		"branchPermission": "Access reqd",
+		"vulnerabilityBot": "Access reqd",
+		"issueTemplate": "Access reqd",
+		"standardLabels": "Access reqd",
+		"nodeModules(.TS)": "Access reqd",
+		"releasesNodeModules(.TS)": "Access reqd"
+	},
+	{
+		"repoName": "powershell",
+		"readme": "Access reqd",
+		"codeOwner": "Access reqd",
+		"branchPermission": "Access reqd",
+		"vulnerabilityBot": "Access reqd",
+		"issueTemplate": "Access reqd",
+		"standardLabels": "Access reqd",
+		"nodeModules(.TS)": "Access reqd",
+		"releasesNodeModules(.TS)": "Access reqd"
 	},
 	{
 		"repoName": "sql-action",
-		"readme": "Yes",
-		"codeOwner": "Yes",
+		"readme": "Access reqd",
+		"codeOwner": "Access reqd",
 		"branchPermission": "Access reqd",
 		"vulnerabilityBot": "Access reqd",
-		"issueTemplate": "Yes",
-		"standardLabels": "Yes",
+		"issueTemplate": "Access reqd",
+		"standardLabels": "Access reqd",
 		"nodeModules(.TS)": "Access reqd",
-		"releasesNodeModules(.TS)": "Yes"
+		"releasesNodeModules(.TS)": "Access reqd"
 	},
 	{
 		"repoName": "appservice-settings",
-		"readme": "Yes",
-		"codeOwner": "Yes",
+		"readme": "Access reqd",
+		"codeOwner": "Access reqd",
 		"branchPermission": "Access reqd",
 		"vulnerabilityBot": "Access reqd",
-		"issueTemplate": "Yes",
-		"standardLabels": "Yes",
+		"issueTemplate": "Access reqd",
+		"standardLabels": "Access reqd",
 		"nodeModules(.TS)": "Access reqd",
-		"releasesNodeModules(.TS)": "Yes"
+		"releasesNodeModules(.TS)": "Access reqd"
 	},
 	{
 		"repoName": "variable-substitution",
@@ -133,200 +133,200 @@
 	},
 	{
 		"repoName": "policy-compliance-scan",
-		"readme": "Yes",
+		"readme": "Access reqd",
 		"codeOwner": "Access reqd",
 		"branchPermission": "Access reqd",
 		"vulnerabilityBot": "Access reqd",
-		"issueTemplate": "Yes",
-		"standardLabels": "Yes",
-		"nodeModules(.TS)": "No",
-		"releasesNodeModules(.TS)": "Yes"
+		"issueTemplate": "Access reqd",
+		"standardLabels": "Access reqd",
+		"nodeModules(.TS)": "Access reqd",
+		"releasesNodeModules(.TS)": "Access reqd"
 	},
 	{
 		"repoName": "k8s-create-secret",
-		"readme": "Yes",
+		"readme": "Access reqd",
 		"codeOwner": "Access reqd",
 		"branchPermission": "Access reqd",
 		"vulnerabilityBot": "Access reqd",
-		"issueTemplate": "Yes",
-		"standardLabels": "Yes",
+		"issueTemplate": "Access reqd",
+		"standardLabels": "Access reqd",
 		"nodeModules(.TS)": "Access reqd",
-		"releasesNodeModules(.TS)": "Yes"
+		"releasesNodeModules(.TS)": "Access reqd"
 	},
 	{
 		"repoName": "k8s-deploy",
-		"readme": "Yes",
+		"readme": "Access reqd",
 		"codeOwner": "Access reqd",
 		"branchPermission": "Access reqd",
 		"vulnerabilityBot": "Access reqd",
-		"issueTemplate": "Yes",
-		"standardLabels": "Yes",
+		"issueTemplate": "Access reqd",
+		"standardLabels": "Access reqd",
 		"nodeModules(.TS)": "Access reqd",
-		"releasesNodeModules(.TS)": "Yes"
+		"releasesNodeModules(.TS)": "Access reqd"
 	},
 	{
 		"repoName": "k8s-lint",
-		"readme": "Yes",
+		"readme": "Access reqd",
 		"codeOwner": "Access reqd",
 		"branchPermission": "Access reqd",
 		"vulnerabilityBot": "Access reqd",
 		"issueTemplate": "Access reqd",
-		"standardLabels": "Yes",
+		"standardLabels": "Access reqd",
 		"nodeModules(.TS)": "Access reqd",
-		"releasesNodeModules(.TS)": "Yes"
+		"releasesNodeModules(.TS)": "Access reqd"
 	},
 	{
 		"repoName": "manage-azure-policy",
-		"readme": "Yes",
-		"codeOwner": "Access reqd",
-		"branchPermission": "Access reqd",
-		"vulnerabilityBot": "Access reqd",
-		"issueTemplate": "Yes",
-		"standardLabels": "Yes",
-		"nodeModules(.TS)": "Access reqd",
-		"releasesNodeModules(.TS)": "Yes"
-	},
-	{
-		"repoName": "setup-kubectl",
-		"readme": "Yes",
-		"codeOwner": "Access reqd",
-		"branchPermission": "Access reqd",
-		"vulnerabilityBot": "Access reqd",
-		"issueTemplate": "Yes",
-		"standardLabels": "Yes",
-		"nodeModules(.TS)": "No",
-		"releasesNodeModules(.TS)": "Yes"
-	},
-	{
-		"repoName": "aks-set-context",
-		"readme": "Yes",
-		"codeOwner": "Access reqd",
-		"branchPermission": "Access reqd",
-		"vulnerabilityBot": "Access reqd",
-		"issueTemplate": "Yes",
-		"standardLabels": "Yes",
-		"nodeModules(.TS)": "Access reqd",
-		"releasesNodeModules(.TS)": "Yes"
-	},
-	{
-		"repoName": "k8s-bake",
-		"readme": "Yes",
-		"codeOwner": "Access reqd",
-		"branchPermission": "Access reqd",
-		"vulnerabilityBot": "Access reqd",
-		"issueTemplate": "Yes",
-		"standardLabels": "Yes",
-		"nodeModules(.TS)": "Access reqd",
-		"releasesNodeModules(.TS)": "Yes"
-	},
-	{
-		"repoName": "static-web-apps-deploy",
-		"readme": "Yes",
+		"readme": "Access reqd",
 		"codeOwner": "Access reqd",
 		"branchPermission": "Access reqd",
 		"vulnerabilityBot": "Access reqd",
 		"issueTemplate": "Access reqd",
-		"standardLabels": "No",
-		"nodeModules(.TS)": "NA",
-		"releasesNodeModules(.TS)": "NA"
+		"standardLabels": "Access reqd",
+		"nodeModules(.TS)": "Access reqd",
+		"releasesNodeModules(.TS)": "Access reqd"
+	},
+	{
+		"repoName": "setup-kubectl",
+		"readme": "Access reqd",
+		"codeOwner": "Access reqd",
+		"branchPermission": "Access reqd",
+		"vulnerabilityBot": "Access reqd",
+		"issueTemplate": "Access reqd",
+		"standardLabels": "Access reqd",
+		"nodeModules(.TS)": "Access reqd",
+		"releasesNodeModules(.TS)": "Access reqd"
+	},
+	{
+		"repoName": "aks-set-context",
+		"readme": "Access reqd",
+		"codeOwner": "Access reqd",
+		"branchPermission": "Access reqd",
+		"vulnerabilityBot": "Access reqd",
+		"issueTemplate": "Access reqd",
+		"standardLabels": "Access reqd",
+		"nodeModules(.TS)": "Access reqd",
+		"releasesNodeModules(.TS)": "Access reqd"
+	},
+	{
+		"repoName": "k8s-bake",
+		"readme": "Access reqd",
+		"codeOwner": "Access reqd",
+		"branchPermission": "Access reqd",
+		"vulnerabilityBot": "Access reqd",
+		"issueTemplate": "Access reqd",
+		"standardLabels": "Access reqd",
+		"nodeModules(.TS)": "Access reqd",
+		"releasesNodeModules(.TS)": "Access reqd"
+	},
+	{
+		"repoName": "static-web-apps-deploy",
+		"readme": "Access reqd",
+		"codeOwner": "Access reqd",
+		"branchPermission": "Access reqd",
+		"vulnerabilityBot": "Access reqd",
+		"issueTemplate": "Access reqd",
+		"standardLabels": "Access reqd",
+		"nodeModules(.TS)": "Access reqd",
+		"releasesNodeModules(.TS)": "Access reqd"
 	},
 	{
 		"repoName": "get-keyvault-secrets",
-		"readme": "Yes",
+		"readme": "Access reqd",
 		"codeOwner": "Access reqd",
 		"branchPermission": "Access reqd",
 		"vulnerabilityBot": "Access reqd",
-		"issueTemplate": "Yes",
-		"standardLabels": "Yes",
+		"issueTemplate": "Access reqd",
+		"standardLabels": "Access reqd",
 		"nodeModules(.TS)": "Access reqd",
-		"releasesNodeModules(.TS)": "Yes"
+		"releasesNodeModules(.TS)": "Access reqd"
 	},
 	{
 		"repoName": "AppConfiguration-Sync",
-		"readme": "Yes",
+		"readme": "Access reqd",
 		"codeOwner": "Access reqd",
 		"branchPermission": "Access reqd",
 		"vulnerabilityBot": "Access reqd",
-		"issueTemplate": "Yes",
-		"standardLabels": "Yes",
+		"issueTemplate": "Access reqd",
+		"standardLabels": "Access reqd",
 		"nodeModules(.TS)": "Access reqd",
-		"releasesNodeModules(.TS)": "NA"
+		"releasesNodeModules(.TS)": "Access reqd"
 	},
 	{
 		"repoName": "k8s-set-context",
-		"readme": "Yes",
+		"readme": "Access reqd",
 		"codeOwner": "Access reqd",
 		"branchPermission": "Access reqd",
 		"vulnerabilityBot": "Access reqd",
-		"issueTemplate": "Yes",
-		"standardLabels": "Yes",
+		"issueTemplate": "Access reqd",
+		"standardLabels": "Access reqd",
 		"nodeModules(.TS)": "Access reqd",
-		"releasesNodeModules(.TS)": "Yes"
+		"releasesNodeModules(.TS)": "Access reqd"
 	},
 	{
 		"repoName": "setup-helm",
-		"readme": "Yes",
+		"readme": "Access reqd",
 		"codeOwner": "Access reqd",
 		"branchPermission": "Access reqd",
 		"vulnerabilityBot": "Access reqd",
-		"issueTemplate": "Yes",
-		"standardLabels": "Yes",
+		"issueTemplate": "Access reqd",
+		"standardLabels": "Access reqd",
 		"nodeModules(.TS)": "Access reqd",
-		"releasesNodeModules(.TS)": "Yes"
+		"releasesNodeModules(.TS)": "Access reqd"
 	},
 	{
 		"repoName": "container-scan",
-		"readme": "Yes",
+		"readme": "Access reqd",
 		"codeOwner": "Access reqd",
 		"branchPermission": "Access reqd",
 		"vulnerabilityBot": "Access reqd",
-		"issueTemplate": "Yes",
-		"standardLabels": "Yes",
+		"issueTemplate": "Access reqd",
+		"standardLabels": "Access reqd",
 		"nodeModules(.TS)": "Access reqd",
-		"releasesNodeModules(.TS)": "Yes"
+		"releasesNodeModules(.TS)": "Access reqd"
 	},
 	{
 		"repoName": "docker-login",
-		"readme": "Yes",
+		"readme": "Access reqd",
 		"codeOwner": "Access reqd",
 		"branchPermission": "Access reqd",
 		"vulnerabilityBot": "Access reqd",
-		"issueTemplate": "Yes",
-		"standardLabels": "Yes",
+		"issueTemplate": "Access reqd",
+		"standardLabels": "Access reqd",
 		"nodeModules(.TS)": "Access reqd",
-		"releasesNodeModules(.TS)": "Yes"
+		"releasesNodeModules(.TS)": "Access reqd"
 	},
 	{
 		"repoName": "publish-security-assessments",
-		"readme": "Yes",
+		"readme": "Access reqd",
 		"codeOwner": "Access reqd",
 		"branchPermission": "Access reqd",
 		"vulnerabilityBot": "Access reqd",
-		"issueTemplate": "Yes",
-		"standardLabels": "Yes",
+		"issueTemplate": "Access reqd",
+		"standardLabels": "Access reqd",
 		"nodeModules(.TS)": "Access reqd",
-		"releasesNodeModules(.TS)": "Yes"
+		"releasesNodeModules(.TS)": "Access reqd"
 	},
 	{
 		"repoName": "arm-deploy",
-		"readme": "Yes",
-		"codeOwner": "Yes",
-		"branchPermission": "Access reqd",
-		"vulnerabilityBot": "Access reqd",
-		"issueTemplate": "Yes",
-		"standardLabels": "Yes",
-		"nodeModules(.TS)": "Access reqd",
-		"releasesNodeModules(.TS)": "No"
-	},
-	{
-		"repoName": "cli",
-		"readme": "Yes",
+		"readme": "Access reqd",
 		"codeOwner": "Access reqd",
 		"branchPermission": "Access reqd",
 		"vulnerabilityBot": "Access reqd",
-		"issueTemplate": "Yes",
-		"standardLabels": "Yes",
+		"issueTemplate": "Access reqd",
+		"standardLabels": "Access reqd",
 		"nodeModules(.TS)": "Access reqd",
-		"releasesNodeModules(.TS)": "No"
+		"releasesNodeModules(.TS)": "Access reqd"
+	},
+	{
+		"repoName": "cli",
+		"readme": "Access reqd",
+		"codeOwner": "Access reqd",
+		"branchPermission": "Access reqd",
+		"vulnerabilityBot": "Access reqd",
+		"issueTemplate": "Access reqd",
+		"standardLabels": "Access reqd",
+		"nodeModules(.TS)": "Access reqd",
+		"releasesNodeModules(.TS)": "Access reqd"
 	}
 ]
