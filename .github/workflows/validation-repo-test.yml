@@ -16,7 +16,7 @@ jobs:
       continue-on-error: true
       with:
         GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
-        repositories: 'login,webapps-deploy,aci-deploy,build-vm-image,functions-action,functions-container-action,mysql,postgresql,powershell,sql-action,appservice-settings,variable-substitution,policy-compliance-scan,k8s-create-secret,k8s-deploy,k8s-lint,manage-azure-policy,setup-kubectl,aks-set-context,k8s-bake,static-web-apps-deploy,get-keyvault-secrets,AppConfiguration-Sync,k8s-set-context,setup-helm,container-scan,docker-login,publish-security-assessments,arm-deploy,cli'
+        repositories: 'Azure/login,Azure/webapps-deploy,Azure/aci-deploy,Azure/build-vm-image,Azure/functions-action,Azure/functions-container-action,Azure/mysql,Azure/postgresql,Azure/powershell,Azure/sql-action,Azure/appservice-settings,Azure/policy-compliance-scan,Azure/k8s-create-secret,Azure/k8s-deploy,Azure/k8s-lint,Azure/manage-azure-policy,Azure/setup-kubectl,Azure/aks-set-context,Azure/k8s-bake,Azure/static-web-apps-deploy,Azure/get-keyvault-secrets,Azure/AppConfiguration-Sync,Azure/k8s-set-context,Azure/setup-helm,Azure/container-scan,Azure/docker-login,Azure/publish-security-assessments,Azure/arm-deploy,Azure/cli'
     - name: create-json
       id: create-json
       uses: jsdaniell/create-json@1.1.2
