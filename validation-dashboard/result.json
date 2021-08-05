@@ -13,7 +13,7 @@
 	{
 		"repoName": "webapps-deploy",
 		"readme": "pass",
-		"codeOwner": "fail",
+		"codeOwner": "pass",
 		"branchPermission": "pass",
 		"vulnerabilityBot": "pass",
 		"issueTemplate": "pass",
@@ -25,7 +25,7 @@
 		"repoName": "aci-deploy",
 		"readme": "pass",
 		"codeOwner": "fail",
-		"branchPermission": "pass",
+		"branchPermission": "fail",
 		"vulnerabilityBot": "pass",
 		"issueTemplate": "pass",
 		"standardLabels": "pass",
@@ -128,8 +128,8 @@
 		"vulnerabilityBot": "Access reqd",
 		"issueTemplate": "fail",
 		"standardLabels": "Access reqd",
-		"nodeModules(.TS)": "Access reqd",
-		"releasesnodeModules(.TS)": "Access reqd"
+		"nodeModules(.TS)": "Access reqd2",
+		"releasesnodeModules(.TS)": "Access reqd2"
 	},
 	{
 		"repoName": "policy-compliance-scan",
@@ -190,7 +190,7 @@
 		"repoName": "setup-kubectl",
 		"readme": "pass",
 		"codeOwner": "fail",
-		"branchPermission": "fail",
+		"branchPermission": "pass",
 		"vulnerabilityBot": "pass",
 		"issueTemplate": "pass",
 		"standardLabels": "pass",
@@ -234,7 +234,7 @@
 		"repoName": "get-keyvault-secrets",
 		"readme": "pass",
 		"codeOwner": "fail",
-		"branchPermission": "pass",
+		"branchPermission": "fail",
 		"vulnerabilityBot": "pass",
 		"issueTemplate": "pass",
 		"standardLabels": "pass",
