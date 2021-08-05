@@ -267,7 +267,7 @@
 		"repoName": "setup-helm",
 		"readme": "pass",
 		"codeOwner": "fail",
-		"branchPermission": "Access reqd",
+		"branchPermission": "pass",
 		"vulnerabilityBot": "pass",
 		"issueTemplate": "pass",
 		"standardLabels": "pass",
