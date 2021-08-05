@@ -9,7 +9,7 @@ b. Contribution guidelines
 3. For typescript actions, node_modules should: \
 a. Not be present in master/main branch \
 b. Be present in releases/* branch _(For releasing the action, one should have branches named as releases/v1, releases/v1.2.0)_
-4. Proper branch permissions should be set, PRs in main and releases/* branch should require at least one approval. More information on branch protection can be found [here](https://docs.github.com/en/github/administering-a-repository/defining-the-mergeability-of-pull-requests/managing-a-branch-protection-rule).
+4. Proper branch rules should be set for master/main and releases/* branch.More information on branch rules can be found [here](https://docs.github.com/en/github/administering-a-repository/defining-the-mergeability-of-pull-requests/managing-a-branch-protection-rule).We recommend setting at-least one approval mandatory for PRs.
 5. Security and vulnerability BOTs should be set up for the repo. Dependabot alerts and Dependaobot security updates should be set up in the repository Settings. 
 ![image](https://user-images.githubusercontent.com/58769601/123243496-b5199100-d500-11eb-9524-6589e4671ca7.png)
 
