@@ -23,22 +23,25 @@ setup: |
         { q: `${repos} is:${itemType} is:closed closed:>${date("-30 days")}`}
         )
     }
+    else if(label === "others") {
+        results = await github.search.issuesAndPullRequests(
+        { q: `${repos} is:${itemType} is:open -label:enhancement -label:P0 -label:P1`}
+        )
+    }
+    else if(label === "active") {
+      results = await github.search.issuesAndPullRequests(
+      { q: `${repos} is:${itemType} is:open -label:enhancement created:>${date("-30 days")}`}
+      )
+    } 
     else if(label === "stale") {
       results = await github.search.issuesAndPullRequests(
-      { q: `${repos} is:${itemType} is:open -label:enhancement created:<${date("-90 days")}`}
+      { q: `${repos} is:${itemType} is:open -label:enhancement created:<${date("-30 days")}`}
       )
     } 
     else{
-      if(label === "idle" && itemType === "issue"){
-         results = await github.search.issuesAndPullRequests(
-         { q: `${repos} is:${itemType} is:open label:idle -label:enhancement`}
-        )
-      }
-      else {
         results = await github.search.issuesAndPullRequests(
         { q: `${repos} is:${itemType} is:open label:${label}`}
         )
-      }
     }
     if(results.data.items.length === 0){
       return '0'
@@ -66,8 +69,16 @@ setup: |
       closedDate = pastDate.toISOString().split("T")[0];
       url = 'https://github.com/search?q='+ repos + '+is%3A'+ itemType + '+is%3Aclosed' + '+closed%3A>'+ closedDate
     }
+    else if(label === "others") {
+      url = 'https://github.com/search?q='+ repos + '+is%3A'+ itemType + '+is%3Aopen' + ' -label%3Aenhancement' + ' -label%3AP0' + ' -label%3AP1'
+    }
+    else if(label === "active") {
+      pastDate.setDate(pastDate.getDate() - 30);
+      staleDate = pastDate.toISOString().split("T")[0];
+      url = 'https://github.com/search?q=' + repos + '+is%3A' + itemType + '+is%3Aopen' + '+created%3A>'+ staleDate
+    }
     else if(label === "stale") {
-      pastDate.setDate(pastDate.getDate() - 90);
+      pastDate.setDate(pastDate.getDate() - 30);
       staleDate = pastDate.toISOString().split("T")[0];
       url = 'https://github.com/search?q=' + repos + '+is%3A' + itemType + '+is%3Aopen' + '+created%3A<'+ staleDate
     }
@@ -90,26 +101,46 @@ sections:
         title: "Open (Excluding enhancements)"
         value: '{{ userdata.count("issue","") }}'
         url: '{{ userdata.url("issue","") }}'
-      - type: "number"
-        title: "Idle (inactive >14days)"
-        value: '{{ userdata.count("issue","idle") }}'
-        url: '{{ userdata.url("issue","idle") }}'
-      - type: "number"
-        title: "Stale (90 days old)"
-        value: '{{ userdata.count("issue","stale") }}'
-        url: '{{ userdata.url("issue","stale") }}'
+        color: 'yellow'
       - type: "number"
         title: "Closed (last 30 days)"
         value: '{{ userdata.count("issue","closed") }}'
         url: '{{ userdata.url("issue","closed") }}'
+        color: 'green'
+
+  - title: "Open Issues by Priority"
+    widgets:
       - type: "number"
         title: "P0 bugs"
         value: '{{ userdata.count("issue","P0") }}'
         url: '{{ userdata.url("issue","P0") }}'
+        color: 'yellow'
       - type: "number"
         title: "P1 bugs"
         value: '{{ userdata.count("issue","P1") }}'
         url: '{{ userdata.url("issue","P1") }}'
+        color: 'yellow'
+      - type: "number"
+        title: "Others"
+        value: '{{ userdata.count("issue","others") }}'
+        url: '{{ userdata.url("issue","others") }}'
+        color: 'yellow'
+
+  - title: "Open Issues by Age"
+    widgets:
+      - type: "number"
+        title: "Active"
+        value: '{{ userdata.count("issue","active") }}'
+        url: '{{ userdata.url("issue","active") }}'
+        color: 'yellow'
+      - type: "number"
+        title: "Stale (30 days old)"
+        value: '{{ userdata.count("issue","stale") }}'
+        url: '{{ userdata.url("issue","stale") }}'
+        color: 'yellow'
+
+  - title: "Enhancements"
+    widgets:
       - type: "number"
         title: "Enhancements"
         value: '{{ userdata.count("issue","enhancement") }}'
@@ -121,18 +152,17 @@ sections:
         title: "Open"
         value: '{{ userdata.count("pr","") }}'
         url: '{{ userdata.url("pr","") }}'
+        color: 'yellow'
       - type: "number"
-        title: "Idle (inactive >14days)"
-        value: '{{ userdata.count("pr","idle") }}'
-        url: '{{ userdata.url("pr","idle") }}'
-      - type: "number"
-        title: "Stale (90 days old)"
+        title: "Stale (30 days old)"
         value: '{{ userdata.count("pr","stale") }}'
         url: '{{ userdata.url("pr","stale") }}'
+        color: 'yellow'
       - type: "number"
         title: "Closed (last 30 days)"
         value: '{{ userdata.count("pr","closed") }}'
         url: '{{ userdata.url("pr","closed") }}'
+        color: 'green'
 
   - title: "Details"
     widgets:
@@ -145,4 +175,3 @@ sections:
       - type: "string"
         value: "Last updated : {{ userdata.getTimeStamp() }} IST"
         color: black
-        
