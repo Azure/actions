@@ -24,14 +24,6 @@ In the action repository, define the following labels:
    </td>
   </tr>
   <tr>
-   <td>idle 
-   </td>
-   <td>Inactive for 14 days
-   </td>
-   <td>#9A777A
-   </td>
-  </tr>
-  <tr>
    <td>question	 
    </td>
    <td>Requiring some clarification
@@ -108,16 +100,7 @@ In the action repository, define the following labels:
 
 While triaging any issue, you can assign any of these labels to the issue, accordingly they will be reflected on the dashboard.
 
-
-
-2. **Workflow for assigning default labels**
-
-Add a workflow file to create default labels to the action repository. 
-If there are existing separate workflow files doing the same, they can be replaced by this [workflow file](https://github.com/Azure/actions/blob/main/.github/workflows/defaultLabels.yml).
-
-
-
-3. **Adding Issue template**
+2. **Adding Issue template**
 
     For issues that will get created in the repo, the default label should be “need-to-triage”. This can be ensured using an issue template as follows :
 
@@ -137,9 +120,9 @@ If there are existing separate workflow files doing the same, they can be replac
 
 *   Make sure the name of the issue template file is ```bug-report-feature-request.md``` if the template is created using UI or when issue template file is explicitly added.
 *   Commit these changes.
-4. **Giving permissions  - Ignore for now**
+3. **Giving permissions  - Ignore for now**
 
-5. **Raise a PR in Actions Repo**
+4. **Raise a PR in Actions Repo**
 
  In a single PR, you can do the following changes:
 
@@ -150,12 +133,11 @@ It has to be appended to the existing list of actions.
 
 
 *   In the [issue-view-config file](https://github.com/Azure/actions/blob/main/dashboard-config/issue-view-config.yml),  add the following lines of code by replacing with your repo to the existing list of elements section
-![image](https://user-images.githubusercontent.com/58769601/122913792-845a2000-d377-11eb-9866-3401e88d1406.png)
-
+![image](https://user-images.githubusercontent.com/58769601/128728244-ef54ef8a-3baf-4347-80ec-5b2b38a635fd.png)
 
 *   In the [pr-view-config file](https://github.com/Azure/actions/blob/main/dashboard-config/pr-view-config.yml),  add the following lines of code by replacing with your repo to the existing list of elements section.
+![image](https://user-images.githubusercontent.com/58769601/128728289-6cb66761-515b-427b-8e5d-ef00028fded4.png)
 
-![image](https://user-images.githubusercontent.com/58769601/122913831-9471ff80-d377-11eb-857a-1b6cf1d10680.png)
 
     
 
