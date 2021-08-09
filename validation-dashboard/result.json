@@ -5,7 +5,7 @@
 		"codeOwner": "pass",
 		"branchPermission": "pass",
 		"vulnerabilityBot": "pass",
-		"issueTemplate": "fail",
+		"issueTemplate": "pass",
 		"standardLabels": "pass",
 		"nodeModules(.TS)": "pass",
 		"releasesnodeModules(.TS)": "pass"
@@ -25,9 +25,9 @@
 		"repoName": "aci-deploy",
 		"readme": "pass",
 		"codeOwner": "pass",
-		"branchPermission": "pass",
+		"branchPermission": "fail",
 		"vulnerabilityBot": "pass",
-		"issueTemplate": "fail",
+		"issueTemplate": "pass",
 		"standardLabels": "pass",
 		"nodeModules(.TS)": "pass",
 		"releasesnodeModules(.TS)": "pass"
@@ -45,7 +45,7 @@
 	},
 	{
 		"repoName": "functions-action",
-		"readme": "fail",
+		"readme": "pass",
 		"codeOwner": "pass",
 		"branchPermission": "fail",
 		"vulnerabilityBot": "pass",
@@ -56,7 +56,7 @@
 	},
 	{
 		"repoName": "functions-container-action",
-		"readme": "fail",
+		"readme": "pass",
 		"codeOwner": "pass",
 		"branchPermission": "fail",
 		"vulnerabilityBot": "pass",
@@ -82,7 +82,7 @@
 		"codeOwner": "pass",
 		"branchPermission": "pass",
 		"vulnerabilityBot": "pass",
-		"issueTemplate": "fail",
+		"issueTemplate": "pass",
 		"standardLabels": "pass",
 		"nodeModules(.TS)": "pass",
 		"releasesnodeModules(.TS)": "pass"
@@ -94,7 +94,7 @@
 		"branchPermission": "fail",
 		"vulnerabilityBot": "pass",
 		"issueTemplate": "pass",
-		"standardLabels": "fail",
+		"standardLabels": "pass",
 		"nodeModules(.TS)": "pass",
 		"releasesnodeModules(.TS)": "pass"
 	},
@@ -115,7 +115,7 @@
 		"codeOwner": "pass",
 		"branchPermission": "pass",
 		"vulnerabilityBot": "pass",
-		"issueTemplate": "fail",
+		"issueTemplate": "pass",
 		"standardLabels": "pass",
 		"nodeModules(.TS)": "pass",
 		"releasesnodeModules(.TS)": "pass"
@@ -179,7 +179,7 @@
 		"repoName": "setup-kubectl",
 		"readme": "fail",
 		"codeOwner": "fail",
-		"branchPermission": "fail",
+		"branchPermission": "pass",
 		"vulnerabilityBot": "pass",
 		"issueTemplate": "pass",
 		"standardLabels": "pass",
@@ -223,7 +223,7 @@
 		"repoName": "get-keyvault-secrets",
 		"readme": "pass",
 		"codeOwner": "fail",
-		"branchPermission": "pass",
+		"branchPermission": "fail",
 		"vulnerabilityBot": "pass",
 		"issueTemplate": "pass",
 		"standardLabels": "pass",
