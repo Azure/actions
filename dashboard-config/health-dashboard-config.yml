@@ -134,7 +134,7 @@ sections:
         url: '{{ userdata.url("issue","active") }}'
         color: 'yellow'
       - type: "number"
-        title: "Stale (90 days old)"
+        title: "Stale (30 days old)"
         value: '{{ userdata.count("issue","stale") }}'
         url: '{{ userdata.url("issue","stale") }}'
         color: 'yellow'
