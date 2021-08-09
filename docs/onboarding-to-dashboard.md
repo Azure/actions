@@ -135,7 +135,7 @@ If there are existing separate workflow files doing the same, they can be replac
 *   Specify the details, ensuring that label is set to “need-to-triage” 
 ![image](https://user-images.githubusercontent.com/58769601/122913687-61c80700-d377-11eb-8c2e-b6b736231ad7.png)
 
-
+*   Make sure the name of the issue template file is ```bug-report-feature-request.md``` if the template is created using UI or when issue template file is explicitly added.
 *   Commit these changes.
 4. **Giving permissions  - Ignore for now**
 
