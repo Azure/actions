@@ -3,8 +3,8 @@
 
 
 1. The action should have a readMe having information about the action. It should include : \
-a. At least one Example workflow \
-b. Contribution guidelines
+a. At least one Example workflow (Use example/sample as the heading) \
+b. Contribution guidelines 
 2. The code owners should be mentioned in a CODEOWNERS file in .github folder. Here is one [sample file](https://github.com/Azure/actions/blob/main/.github/workflows/CODEOWNERS).
 3. For typescript actions, node_modules should: \
 a. Not be present in master/main branch \
