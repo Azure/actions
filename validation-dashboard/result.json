@@ -126,7 +126,7 @@
 		"codeOwner": "fail",
 		"branchPermission": "fail",
 		"vulnerabilityBot": "pass",
-		"issueTemplate": "fail",
+		"issueTemplate": "pass",
 		"standardLabels": "pass",
 		"nodeModules(.TS)": "fail",
 		"releasesnodeModules(.TS)": "pass"
@@ -137,7 +137,7 @@
 		"codeOwner": "fail",
 		"branchPermission": "fail",
 		"vulnerabilityBot": "pass",
-		"issueTemplate": "fail",
+		"issueTemplate": "pass",
 		"standardLabels": "pass",
 		"nodeModules(.TS)": "pass",
 		"releasesnodeModules(.TS)": "pass"
@@ -148,7 +148,7 @@
 		"codeOwner": "fail",
 		"branchPermission": "pass",
 		"vulnerabilityBot": "pass",
-		"issueTemplate": "fail",
+		"issueTemplate": "pass",
 		"standardLabels": "pass",
 		"nodeModules(.TS)": "pass",
 		"releasesnodeModules(.TS)": "pass"
@@ -170,7 +170,7 @@
 		"codeOwner": "fail",
 		"branchPermission": "fail",
 		"vulnerabilityBot": "pass",
-		"issueTemplate": "fail",
+		"issueTemplate": "pass",
 		"standardLabels": "pass",
 		"nodeModules(.TS)": "pass",
 		"releasesnodeModules(.TS)": "pass"
@@ -236,7 +236,7 @@
 		"codeOwner": "fail",
 		"branchPermission": "fail",
 		"vulnerabilityBot": 404,
-		"issueTemplate": "fail",
+		"issueTemplate": "pass",
 		"standardLabels": "pass",
 		"nodeModules(.TS)": "pass",
 		"releasesnodeModules(.TS)": "NA"
@@ -245,9 +245,9 @@
 		"repoName": "k8s-set-context",
 		"readme": "pass",
 		"codeOwner": "fail",
-		"branchPermission": "fail",
+		"branchPermission": "pass",
 		"vulnerabilityBot": "pass",
-		"issueTemplate": "fail",
+		"issueTemplate": "pass",
 		"standardLabels": "pass",
 		"nodeModules(.TS)": "pass",
 		"releasesnodeModules(.TS)": "pass"
@@ -256,9 +256,9 @@
 		"repoName": "setup-helm",
 		"readme": "fail",
 		"codeOwner": "fail",
-		"branchPermission": "fail",
+		"branchPermission": "pass",
 		"vulnerabilityBot": "pass",
-		"issueTemplate": "fail",
+		"issueTemplate": "pass",
 		"standardLabels": "pass",
 		"nodeModules(.TS)": "pass",
 		"releasesnodeModules(.TS)": "pass"
@@ -302,7 +302,7 @@
 		"codeOwner": "pass",
 		"branchPermission": "fail",
 		"vulnerabilityBot": "pass",
-		"issueTemplate": "fail",
+		"issueTemplate": "pass",
 		"standardLabels": "pass",
 		"nodeModules(.TS)": "pass",
 		"releasesnodeModules(.TS)": "fail"
@@ -313,7 +313,7 @@
 		"codeOwner": "fail",
 		"branchPermission": "pass",
 		"vulnerabilityBot": "pass",
-		"issueTemplate": "fail",
+		"issueTemplate": "pass",
 		"standardLabels": "pass",
 		"nodeModules(.TS)": "pass",
 		"releasesnodeModules(.TS)": "fail"
