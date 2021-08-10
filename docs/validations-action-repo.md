@@ -13,7 +13,7 @@ b. Be present in releases/* branch _(For releasing the action, one should have b
 5. Security and vulnerability BOTs should be set up for the repo. Dependabot alerts and Dependaobot security updates should be set up in the repository Settings. 
 ![image](https://user-images.githubusercontent.com/58769601/123243496-b5199100-d500-11eb-9524-6589e4671ca7.png)
 
-6. An issue template should be defined to set the default label as need-to-triage.One can follow these [steps](https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/configuring-issue-templates-for-your-repository)  to set up a template. 
+6. An issue template should be defined to set the default label as need-to-triage.One can follow these [steps](https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/configuring-issue-templates-for-your-repository)  to set up a template. Make sure the name of the issue template file is ```bug-report-feature-request.md``` if the template is created using UI or when issue template file is explicitly added.
 
 7. The repo should have some standard labels defined. The following labels should be there : 
 <table>
