@@ -55,7 +55,7 @@ setup: |
       else if(label === "stale") {
         pastDate.setDate(pastDate.getDate() - 30);
         var staledate = pastDate.toISOString().split("T")[0];
-        url = 'https://github.com/' + repo + '/issues?q=is%3Aissue+is%3A' + 'open' + '+created%3A<'+staledate + ' -label%3Aenhancement'
+        url = 'https://github.com/' + repo + '/issues?q=is%3Aissue+is%3A' + 'open' + ' -label%3Aenhancement' + '+created%3A<'+ staledate
       }
       else{
         url = 'https://github.com/'+repo+'/issues?q=is%3Aissue+is%3A'+'open'+'+label%3A'+label
