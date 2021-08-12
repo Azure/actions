@@ -32,5 +32,6 @@ f.write("""<link rel="stylesheet" href="validation-result.css" type="text/css" m
                 }
             }
             </script>
+            <p> Note : These are the <a href="https://github.com/Azure/actions/blob/main/docs/validations-action-repo.md"> validations </a> against which the action repositories are tested. </p>
          """)
 f.close()
