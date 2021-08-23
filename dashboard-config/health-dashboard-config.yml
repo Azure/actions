@@ -176,6 +176,6 @@ sections:
         value: "Last updated : {{ userdata.getTimeStamp() }} IST"
         color: black
       - type: "string"
-        value: "click here to share feedback or raise queries"
+        value: "Click here to share feedback or raise queries"
         url: "https://github.com/Azure/actions/issues/new"
 
