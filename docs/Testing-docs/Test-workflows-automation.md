@@ -36,6 +36,8 @@ jobs:
       steps:
       - name: Checkout from PR branch  
         uses: actions/checkout@v2
+        with: 
+          ref: ${{ github.event.pull_request.head.ref }}
         
         #Using 12.x version as an example
       - name: Set Node.js 12.x for GitHub Action
