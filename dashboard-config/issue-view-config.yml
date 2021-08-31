@@ -898,4 +898,9 @@ sections:
         url: '{{ userdata.url("Azure/cli","stale") }}'
         color: '{{ userdata.color(value,"stale") }}'
       - value: '{{ userdata.count("Azure/cli","closed") }}'
-        url: '{{ userdata.url("Azure/cli","closed") }}'     
+        url: '{{ userdata.url("Azure/cli","closed") }}' 
+        
+        
+  - type: "string"
+    value: "Click here for color coding details"
+    url: "https://github.com/Azure/actions/blob/main/docs/issue-view-colors.md"
