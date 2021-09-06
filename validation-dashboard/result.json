@@ -223,7 +223,7 @@
 		"repoName": "get-keyvault-secrets",
 		"readme": "pass",
 		"codeOwner": "fail",
-		"branchPermission": "fail",
+		"branchPermission": "pass",
 		"vulnerabilityBot": "pass",
 		"issueTemplate": "pass",
 		"standardLabels": "pass",
