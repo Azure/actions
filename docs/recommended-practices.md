@@ -4,6 +4,10 @@
 While triaging the issues on the repo, one should use the standard set of labels defined in the process of [onboarding to health-dashboard](onboarding-to-dashboard.md). \
 Besides, one can label issues as “good first issue” so that contributors can pick up those issues. Those can be the ones which require small fix/documentation updates/ clarification of some features, etc. 
 
+
+*   **Auto assigning issues** 
+To notify the repo maintainers of a new issue on the repository, one can use the [Auto-assign](https://github.com/marketplace/actions/auto-assign-issue) action that will auto-assign the issue to the specified users.
+
 *   **Setting alerts on teams/slacks**
 We can set alerts on teams/slacks for PRs and issues on the repositories. 
 Notifications can be set up for [Teams](https://github.com/integrations/microsoft-teams) as well as [Slack](https://github.com/integrations/slack)
