@@ -6,7 +6,7 @@ Besides, one can label issues as “good first issue” so that contributors can
 
 
 *   **Auto assigning issues** 
-To notify the repo maintainers of a new issue on the repository, one can use the [Auto-assign](https://github.com/marketplace/actions/auto-assign-issue) action that will auto-assign the issue to the specified users and will send a mail to notify.
+To notify the repo maintainers of a new issue on the repository, one can use the [Auto-assign](https://github.com/marketplace/actions/auto-assign-issue) action that will auto-assign the issue to the specified users and will send an e-mail to notify.
 
 *   **Setting alerts on teams/slacks**
 We can set alerts on teams/slacks for PRs and issues on the repositories. 
