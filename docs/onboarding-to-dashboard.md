@@ -24,14 +24,6 @@ In the action repository, define the following labels:
    </td>
   </tr>
   <tr>
-   <td>idle 
-   </td>
-   <td>Inactive for 14 days
-   </td>
-   <td>#9A777A
-   </td>
-  </tr>
-  <tr>
    <td>question	 
    </td>
    <td>Requiring some clarification
