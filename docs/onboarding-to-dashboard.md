@@ -100,16 +100,7 @@ In the action repository, define the following labels:
 
 While triaging any issue, you can assign any of these labels to the issue, accordingly they will be reflected on the dashboard.
 
-
-
-2. **Workflow for assigning default labels**
-
-Add a workflow file to create default labels to the action repository. 
-If there are existing separate workflow files doing the same, they can be replaced by this [workflow file](https://github.com/Azure/actions/blob/main/.github/workflows/defaultLabels.yml).
-
-
-
-3. **Adding Issue template**
+2. **Adding Issue template**
 
     For issues that will get created in the repo, the default label should be “need-to-triage”. This can be ensured using an issue template as follows :
 
@@ -129,9 +120,9 @@ If there are existing separate workflow files doing the same, they can be replac
 
 *   Make sure the name of the issue template file is ```bug-report-feature-request.md``` if the template is created using UI or when issue template file is explicitly added.
 *   Commit these changes.
-4. **Giving permissions  - Ignore for now**
+3. **Giving permissions  - Ignore for now**
 
-5. **Raise a PR in Actions Repo**
+4. **Raise a PR in Actions Repo**
 
  In a single PR, you can do the following changes:
 
@@ -149,5 +140,4 @@ It has to be appended to the existing list of actions.
 
 ![image](https://user-images.githubusercontent.com/58769601/122913831-9471ff80-d377-11eb-857a-1b6cf1d10680.png)
 
-    
-
+   
