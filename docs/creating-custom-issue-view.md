@@ -21,7 +21,7 @@ You can replicate [one made for the ace team](https://github.com/Azure/actions/b
 ### Step 2: Setting a workflow
 
 In the [workflows folder](https://github.com/Azure/actions/tree/main/.github/workflows), create a workflow file to publish your data on GitHub Pages. \
-You can replicate [one made for the ace team](https://github.com/Azure/actions/blob/main/.github/workflows/issues-ace-team.yml), and name the file as per your team name. Depending upon the frequency at which you want the data to be updated, you can set a cron job on the workflow. \
+You can replicate [one made for the ace team](https://github.com/Azure/actions/blob/main/.github/workflows/issues-ace-team.yml), and name the workflow & file as per your team name. Depending upon the frequency at which you want the data to be updated, you can set a cron job on the workflow. \
  \
 All set! This will create your custom issues page🥳
 
