@@ -1,0 +1,211 @@
+title: 'Issues detailed view - ACE Team'
+output:
+  format: html
+  filename: 'docs/ace-team-issues.html'
+setup: |
+    function sleep(milliseconds) {
+      const date = Date.now();
+      let currentDate = null;
+      do {currentDate = Date.now();} 
+      while (currentDate - date < milliseconds);
+    }
+    userdata.count = async function(repo,label) {
+      sleep(2000)
+      var results;
+      if(label === "" ) {
+        results = await github.search.issuesAndPullRequests(
+        { q: `repo:${repo} is:issue is:open -label:enhancement` }
+        )
+      }
+      else if(label === "closed"){
+        results = await github.search.issuesAndPullRequests(
+        { q: `repo:${repo} is:issue is:closed closed:>${date("-30 days")}`}
+        )
+      }
+      else if(label === "stale") {
+        results = await github.search.issuesAndPullRequests(
+        { q: `repo:${repo} is:issue is:open -label:enhancement created:<${date("-30 days")}`}
+        )
+      }
+      else {
+        results = await github.search.issuesAndPullRequests(
+        { q: `repo:${repo} is:issue is:open label:${label}`}
+        )
+      }
+      if(results.data.items.length === 0){
+        return '0'
+      }
+      else{
+        return results.data.total_count
+      }
+    }
+    userdata.url = async function(repo,label) {
+      sleep(2000)
+      var url;
+      var today = new Date();
+      var pastDate = new Date(today);
+      if(label === "" ) {
+        url = 'https://github.com/'+repo+'/issues?q=is%3Aissue+is%3A'+ 'open'+ ' -label%3Aenhancement'
+      }
+      else if(label === "closed"){
+        pastDate.setDate(pastDate.getDate() - 30);
+        var closedDate = pastDate.toISOString().split("T")[0];
+        url = 'https://github.com/' + repo + '/issues?q=is%3Aissue+is%3A' + 'closed' + '+closed%3A>'+ closedDate
+      }
+      else if(label === "stale") {
+        pastDate.setDate(pastDate.getDate() - 30);
+        var staledate = pastDate.toISOString().split("T")[0];
+        url = 'https://github.com/' + repo + '/issues?q=is%3Aissue+is%3A' + 'open' + ' -label%3Aenhancement' + '+created%3A<'+ staledate
+      }
+      else{
+        url = 'https://github.com/'+repo+'/issues?q=is%3Aissue+is%3A'+'open'+'+label%3A'+label
+      }
+      return url
+    } 
+    userdata.color = async function(value,label) {
+        var resultColor='#282A35'
+        if((label === '') && (value>=5))
+            resultColor='red'
+        else if((label === 'need-to-triage') && (value>=3))
+            resultColor='yellow'
+        else if((label === 'stale') && (value>=3))
+            resultColor='red'
+        return resultColor
+    }
+sections:
+- title: '' 
+  widgets:
+  - type: 'table'
+    headers:
+    - 'Action'
+    - 'Open (excl. enhancements)'
+    - 'Need-to-triage'
+    - 'Enhancement'
+    - 'Question'
+    - 'Bug'
+    - 'Documentation'
+    - 'Performance-issue'
+    - 'Waiting-for-customer'
+    - 'External-dependency'
+    - 'Stale(30_days old)'
+    - 'Closed(last_30 days)'
+    elements:
+    - - value: 'azure login'
+      - value: '{{ userdata.count("Azure/login","") }}'
+        url: '{{ userdata.url("Azure/login","") }}'
+      - value: '{{ userdata.count("Azure/login","need-to-triage") }}'
+        url: '{{ userdata.url("Azure/login","need-to-triage") }}'
+      - value: '{{ userdata.count("Azure/login","enhancement") }}'
+        url: '{{ userdata.url("Azure/login","enhancement") }}'
+      - value: '{{ userdata.count("Azure/login","question") }}'
+        url: '{{ userdata.url("Azure/login","question") }}'
+      - value: '{{ userdata.count("Azure/login","bug") }}'
+        url: '{{ userdata.url("Azure/login","bug") }}'
+      - value: '{{ userdata.count("Azure/login","documentation") }}'
+        url: '{{ userdata.url("Azure/login","documentation") }}'
+      - value: '{{ userdata.count("Azure/login","performance-issue") }}'
+        url: '{{ userdata.url("Azure/login","performance-issue") }}'
+      - value: '{{ userdata.count("Azure/login","waiting-for-customer") }}'
+        url: '{{ userdata.url("Azure/login","waiting-for-customer") }}'
+      - value: '{{ userdata.count("Azure/login","external-dependency") }}'
+        url: '{{ userdata.url("Azure/login","external-dependency") }}'
+      - value: '{{ userdata.count("Azure/login","stale") }}'
+        url: '{{ userdata.url("Azure/login","stale") }}'
+      - value: '{{ userdata.count("Azure/login","closed") }}'
+        url: '{{ userdata.url("Azure/login","closed") }}'
+
+    - - value: 'aci-deploy'
+      - value: '{{ userdata.count("Azure/aci-deploy","") }}'
+        url: '{{ userdata.url("Azure/aci-deploy","") }}'
+      - value: '{{ userdata.count("Azure/aci-deploy","need-to-triage") }}'
+        url: '{{ userdata.url("Azure/aci-deploy","need-to-triage") }}'
+      - value: '{{ userdata.count("Azure/aci-deploy","enhancement") }}'
+        url: '{{ userdata.url("Azure/aci-deploy","enhancement") }}'
+      - value: '{{ userdata.count("Azure/aci-deploy","question") }}'
+        url: '{{ userdata.url("Azure/aci-deploy","question") }}'
+      - value: '{{ userdata.count("Azure/aci-deploy","bug") }}'
+        url: '{{ userdata.url("Azure/aci-deploy","bug") }}'
+      - value: '{{ userdata.count("Azure/aci-deploy","documentation") }}'
+        url: '{{ userdata.url("Azure/aci-deploy","documentation") }}'
+      - value: '{{ userdata.count("Azure/aci-deploy","performance-issue") }}'
+        url: '{{ userdata.url("Azure/aci-deploy","performance-issue") }}'
+      - value: '{{ userdata.count("Azure/aci-deploy","waiting-for-customer") }}'
+        url: '{{ userdata.url("Azure/aci-deploy","waiting-for-customer") }}'
+      - value: '{{ userdata.count("Azure/aci-deploy","external-dependency") }}'
+        url: '{{ userdata.url("Azure/aci-deploy","external-dependency") }}'
+      - value: '{{ userdata.count("Azure/aci-deploy","stale") }}'
+        url: '{{ userdata.url("Azure/aci-deploy","stale") }}'
+      - value: '{{ userdata.count("Azure/aci-deploy","closed") }}'
+        url: '{{ userdata.url("Azure/aci-deploy","closed") }}'
+
+    - - value: 'build-vm-image'
+      - value: '{{ userdata.count("Azure/build-vm-image","") }}'
+        url: '{{ userdata.url("Azure/build-vm-image","") }}'
+      - value: '{{ userdata.count("Azure/build-vm-image","need-to-triage") }}'
+        url: '{{ userdata.url("Azure/build-vm-image","need-to-triage") }}'
+      - value: '{{ userdata.count("Azure/build-vm-image","enhancement") }}'
+        url: '{{ userdata.url("Azure/build-vm-image","enhancement") }}'
+      - value: '{{ userdata.count("Azure/build-vm-image","question") }}'
+        url: '{{ userdata.url("Azure/build-vm-image","question") }}'
+      - value: '{{ userdata.count("Azure/build-vm-image","bug") }}'
+        url: '{{ userdata.url("Azure/build-vm-image","bug") }}'
+      - value: '{{ userdata.count("Azure/build-vm-image","documentation") }}'
+        url: '{{ userdata.url("Azure/build-vm-image","documentation") }}'
+      - value: '{{ userdata.count("Azure/build-vm-image","performance-issue") }}'
+        url: '{{ userdata.url("Azure/build-vm-image","performance-issue") }}'
+      - value: '{{ userdata.count("Azure/build-vm-image","waiting-for-customer") }}'
+        url: '{{ userdata.url("Azure/build-vm-image","waiting-for-customer") }}'
+      - value: '{{ userdata.count("Azure/build-vm-image","external-dependency") }}'
+        url: '{{ userdata.url("Azure/build-vm-image","external-dependency") }}'
+      - value: '{{ userdata.count("Azure/build-vm-image","stale") }}'
+        url: '{{ userdata.url("Azure/build-vm-image","stale") }}'
+      - value: '{{ userdata.count("Azure/build-vm-image","closed") }}'
+        url: '{{ userdata.url("Azure/build-vm-image","closed") }}'
+        
+    - - value: 'powershell'
+      - value: '{{ userdata.count("Azure/powershell","") }}'
+        url: '{{ userdata.url("Azure/powershell","") }}'
+      - value: '{{ userdata.count("Azure/powershell","need-to-triage") }}'
+        url: '{{ userdata.url("Azure/powershell","need-to-triage") }}'
+      - value: '{{ userdata.count("Azure/powershell","enhancement") }}'
+        url: '{{ userdata.url("Azure/powershell","enhancement") }}'
+      - value: '{{ userdata.count("Azure/powershell","question") }}'
+        url: '{{ userdata.url("Azure/powershell","question") }}'
+      - value: '{{ userdata.count("Azure/powershell","bug") }}'
+        url: '{{ userdata.url("Azure/powershell","bug") }}'
+      - value: '{{ userdata.count("Azure/powershell","documentation") }}'
+        url: '{{ userdata.url("Azure/powershell","documentation") }}'
+      - value: '{{ userdata.count("Azure/powershell","performance-issue") }}'
+        url: '{{ userdata.url("Azure/powershell","performance-issue") }}'
+      - value: '{{ userdata.count("Azure/powershell","waiting-for-customer") }}'
+        url: '{{ userdata.url("Azure/powershell","waiting-for-customer") }}'
+      - value: '{{ userdata.count("Azure/powershell","external-dependency") }}'
+        url: '{{ userdata.url("Azure/powershell","external-dependency") }}'
+      - value: '{{ userdata.count("Azure/powershell","stale") }}'
+        url: '{{ userdata.url("Azure/powershell","stale") }}'
+      - value: '{{ userdata.count("Azure/powershell","closed") }}'
+        url: '{{ userdata.url("Azure/powershell","closed") }}'
+    
+    - - value: 'get-keyvault-secrets'
+      - value: '{{ userdata.count("Azure/get-keyvault-secrets","") }}'
+        url: '{{ userdata.url("Azure/get-keyvault-secrets","") }}'
+      - value: '{{ userdata.count("Azure/get-keyvault-secrets","need-to-triage") }}'
+        url: '{{ userdata.url("Azure/get-keyvault-secrets","need-to-triage") }}'
+      - value: '{{ userdata.count("Azure/get-keyvault-secrets","enhancement") }}'
+        url: '{{ userdata.url("Azure/get-keyvault-secrets","enhancement") }}'
+      - value: '{{ userdata.count("Azure/get-keyvault-secrets","question") }}'
+        url: '{{ userdata.url("Azure/get-keyvault-secrets","question") }}'
+      - value: '{{ userdata.count("Azure/get-keyvault-secrets","bug") }}'
+        url: '{{ userdata.url("Azure/get-keyvault-secrets","bug") }}'
+      - value: '{{ userdata.count("Azure/get-keyvault-secrets","documentation") }}'
+        url: '{{ userdata.url("Azure/get-keyvault-secrets","documentation") }}'
+      - value: '{{ userdata.count("Azure/get-keyvault-secrets","performance-issue") }}'
+        url: '{{ userdata.url("Azure/get-keyvault-secrets","performance-issue") }}'
+      - value: '{{ userdata.count("Azure/get-keyvault-secrets","waiting-for-customer") }}'
+        url: '{{ userdata.url("Azure/get-keyvault-secrets","waiting-for-customer") }}'
+      - value: '{{ userdata.count("Azure/get-keyvault-secrets","external-dependency") }}'
+        url: '{{ userdata.url("Azure/get-keyvault-secrets","external-dependency") }}'
+      - value: '{{ userdata.count("Azure/get-keyvault-secrets","stale") }}'
+        url: '{{ userdata.url("Azure/get-keyvault-secrets","stale") }}'
+      - value: '{{ userdata.count("Azure/get-keyvault-secrets","closed") }}'
+        url: '{{ userdata.url("Azure/get-keyvault-secrets","closed") }}'
