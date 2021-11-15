@@ -300,7 +300,7 @@
 		"repoName": "arm-deploy",
 		"readme": "pass",
 		"codeOwner": "pass",
-		"branchPermission": "pass",
+		"branchPermission": "fail",
 		"vulnerabilityBot": "pass",
 		"issueTemplate": "pass",
 		"standardLabels": "pass",
