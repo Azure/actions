@@ -1,4 +1,4 @@
-name: issues_ace_team
+name: transitioned_issues
 on: workflow_dispatch
 jobs:
   build:
