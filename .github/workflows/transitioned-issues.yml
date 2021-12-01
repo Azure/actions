@@ -1,5 +1,8 @@
 name: transitioned_issues
-on: workflow_dispatch
+on:
+  workflow_dispatch:
+  schedule:
+    - cron:  '0 3 30 * *'
 jobs:
   build:
     runs-on: windows-latest
