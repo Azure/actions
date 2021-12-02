@@ -2,7 +2,7 @@ name: issues_ace_team
 on:
   workflow_dispatch:
   schedule:
-    - cron:  '0 2 30 * *'
+    - cron:  '30 2 * * *'
 jobs:
   build:
     runs-on: windows-latest
