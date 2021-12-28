@@ -21,7 +21,7 @@ Please try out the [GitHub Actions for Azure](https://docs.microsoft.com/azure/d
 
 # Contributing to Azure Actions
 
-Following are the guideliens to author new Azure Actions and also to contribute to the existing ones.
+Following are the guidelines to author new Azure Actions and also to contribute to the existing ones.
 ### Authoring and making changes
   - [Create a new GitHub Action for Azure or Microsoft](docs/Process_of_Authoring_GitHub_Actions_for_Azure.md#creating-a-new-github-action-for-azure-or-microsoft)
   - [Contributing to the existing actions](docs/developer-guildelines.md)
