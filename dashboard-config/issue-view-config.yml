@@ -857,4 +857,3 @@ sections:
         url: '{{ userdata.url("Azure/load-testing","stale") }}'
       - value: '{{ userdata.count("Azure/load-testing","closed") }}'
         url: '{{ userdata.url("Azure/load-testing","closed") }}'  
-        
