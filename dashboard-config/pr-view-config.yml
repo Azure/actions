@@ -239,15 +239,7 @@ sections:
         url: '{{ userdata.url("Azure/static-web-apps-deploy","stale") }}'
       - value: '{{ userdata.count("Azure/static-web-apps-deploy","closed") }}'
         url: '{{ userdata.url("Azure/static-web-apps-deploy","closed") }}'
-    
-    - - value: 'get-keyvault-secrets' 
-      - value: '{{ userdata.count("Azure/get-keyvault-secrets","") }}'
-        url: '{{ userdata.url("Azure/get-keyvault-secrets","") }}'
-      - value: '{{ userdata.count("Azure/get-keyvault-secrets","stale") }}'
-        url: '{{ userdata.url("Azure/get-keyvault-secrets","stale") }}'
-      - value: '{{ userdata.count("Azure/get-keyvault-secrets","closed") }}'
-        url: '{{ userdata.url("Azure/get-keyvault-secrets","closed") }}'
-    
+        
     - - value: 'AppConfiguration-Sync' 
       - value: '{{ userdata.count("Azure/AppConfiguration-Sync","") }}'
         url: '{{ userdata.url("Azure/AppConfiguration-Sync","") }}'
