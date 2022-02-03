@@ -3,7 +3,7 @@
 		"repoName": "login",
 		"readme": "pass",
 		"codeOwner": "pass",
-		"branchPermission": "pass",
+		"branchPermission": "fail",
 		"vulnerabilityBot": "pass",
 		"issueTemplate": "pass",
 		"standardLabels": "pass",
@@ -145,10 +145,10 @@
 	{
 		"repoName": "k8s-deploy",
 		"readme": "pass",
-		"codeOwner": "fail",
+		"codeOwner": "pass",
 		"branchPermission": "fail",
 		"vulnerabilityBot": 404,
-		"issueTemplate": "pass",
+		"issueTemplate": "fail",
 		"standardLabels": "pass",
 		"nodeModules(.TS)": "pass",
 		"releasesnodeModules(.TS)": "pass"
@@ -156,7 +156,7 @@
 	{
 		"repoName": "k8s-lint",
 		"readme": "fail",
-		"codeOwner": "fail",
+		"codeOwner": "pass",
 		"branchPermission": "fail",
 		"vulnerabilityBot": 404,
 		"issueTemplate": "fail",
