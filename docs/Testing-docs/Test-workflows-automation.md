@@ -1,61 +1,58 @@
-# Automating test workflows in the PR checks.
-Test workflows for actions can be automated in the action repo so that whenever a new PR is raised to __master__ or __releases/*__  branches these workflows evaluate on the branch from which PR is raised. <br>
+# Automating test workflows in PR checks
+Test workflows for actions can be automated in the action repo so that whenever a new PR is raised to `master` or `releases/*` branches, these workflows run in the branch which the PR is raised from.
 
-This process of automated testing enables one to run tests on PRs from a branch in a repo and also  PRs from a forked repo. Inorder to ensure the safety of secrets which are used by the pr-check workflows and to prevent pwn requests, the pr-check workflow and secrets should be a part of a [github environment](https://docs.github.com/en/actions/reference/environments) and set appropriate approval policy for triggering this workflow on a new PR. <br>
+This process of automated testing enables us to run tests on PRs from a branch in our repo and PRs from a forked repo. To ensure the safety of secrets that are used by the *pr-check* workflow and to prevent [pwn requests](https://securitylab.github.com/research/github-actions-preventing-pwn-requests/), the *pr-check* workflow and its secrets should be a part of a [GitHub environment](https://docs.github.com/en/actions/reference/environments) with a suitable approval policy for triggering this workflow on a new PR.
 
-So whenever a new PR occurs (especially from a forked repo) , the PR is __manually reviewed__ for security vulneribilities and then approved after which the pr-check workflow is triggered for the new PR. Approvers should manually review for [these](https://securitylab.github.com/research/github-actions-preventing-pwn-requests/) before approving the check to run on PR.
+Whenever a new PR occurs, especially from a forked repo, the PR is __manually reviewed__ for security vulnerabilities and then approved after which the *pr-check* workflow is triggered for the new PR. Approvers should manually review for [pwn requests](https://securitylab.github.com/research/github-actions-preventing-pwn-requests/) before approving the checks to run on the PR.
     
-## Process to automate the workflows: 
+## How to create an automated test workflow
     
-1.  Create a ```pr-check.yml``` workflow in **.github/workflows** of the action repo. Setup __Automation test__ environment in the action and enable appropriate approval policy which includes adding reviewers list to approve the PR to run the pr-check. Visit [this](https://docs.github.com/en/actions/reference/environments) to know more about environments.
-2.  Put the triggering condition for this workflow as ```on: pull_request_target``` if forked repo PR checks need to be checked automatically otherwise ```on: pull_request```  should do. Visit [pull_request_target](https://docs.github.com/en/actions/reference/events-that-trigger-workflows#pull_request_target) for more details.
+1. Create a `pr-check.yml` workflow in the `.github/workflows` directory of the action repo. Set up a *Test automation* GitHub environment in the action and enable an suitable approval policy which includes adding a reviewer list to approve the PR before running the *pr-check* workflow.
+2. Make this workflow trigger `on: pull_request_target` ([reference](https://docs.github.com/en/actions/reference/events-that-trigger-workflows#pull_request_target)) if PRs from forked repos need to be checked automatically, otherwise use `on: pull_request`.
 3. Steps include:
-    1. Checkout the repo.
-    2. Setup the Node.js for github action.
-    3. Install the **node_modules** using ```npm install``` as the PRs raised to master branch will not have __node_modules__ without which the workflow fails.
-    4. Build the action using ```npm run build```( Since some action repos don’t have the updated ```lib/.js``` files as they recommend to exempt ```lib/.js``` in PRs. This step ensures the action to have updated lib files).
-    5. Here we are targeting to run a sample test for the action.For multiple scenarios, one can mention different scenarios in the same file and have multiple steps in the WF file calling the necessary actions for the required setup(For example if a .Net app needs to be deployed ,make sure you set up .Net using *actions/setup-dotnet@v1* and resolve those dependencies here).
-    6. Run the action with ```uses: ./``` which will pick the current branch of the repo to execute the workflow. Specify the input parameters which are required by the action in the ```with: ``` parameters.
- 
+  1. Check out the repo.
+  2. Set up Node.js for the GitHub action.
+  3. Install `node_modules` using `npm install` as the PRs raised to the `main` branch will not have `node_modules`, causing the workflow to fail.
+  4. Build the action using `npm run build` since some action repos don't have the updated `lib/.js` files as exempting `lib/.js` in PRs is recommended. This step ensures that the action has updated lib files.
+  5. Here, we are targeting to run a sample test for the action. For multiple scenarios, we can mention different scenarios in the same file and have multiple steps in the workflow calling the necessary actions for the required setup. For example, if a .NET app needs to be deployed, we set up .NET using `actions/setup-dotnet` and resolve those dependencies here.
+  6. Run the action with `uses: ./` which will execute the workflow in the current branch of the repo. Specify the input parameters required by the action using the `with:` parameters.
 
-## Sample template: 
-
+## Sample template
 ```yml
 name: pr-check
 
 on:
   pull_request_target:
     branches:
-      - master
-      - 'releases/*'
+      - main
+      - releases/*
 
 jobs:
-    deploy:
-      environment: Automation test
-      runs-on: windows-latest
-      steps:
-      - name: Checkout from PR branch  
-        uses: actions/checkout@v2
-        with: 
-          repository: ${{ github.event.pull_request.head.repo.full_name }}
-          ref: ${{ github.event.pull_request.head.ref }}
-        
-        #Using 12.x version as an example
-      - name: Set Node.js 12.x for GitHub Action
-        uses: actions/setup-node@v1
-        with:
-          node-version: 12.x
-
-      - name: installing node_modules
-        run: npm install 
-       
-      - name: Build GitHub Action
-        run: npm run build
-          
-      # include any workflow/action specific dependencies
+  deploy:
+    environment: Automation test
+    runs-on: windows-latest
+    steps:
+    - name: Check out the PR branch  
+      uses: actions/checkout@v3
+      with: 
+        repository: ${{ github.event.pull_request.head.repo.full_name }}
+        ref: ${{ github.event.pull_request.head.ref }}
       
-      - uses: ./                  #picks the current action PR code.
-        with:
-          #input parameters of the action.
+    # using the 16.x version as an example
+    - name: Set Node.js 16.x for GitHub Action
+      uses: actions/setup-node@v3
+      with:
+        node-version: 16.x
 
+    - name: Install node_modules
+      run: npm install 
+      
+    - name: Build GitHub action
+      run: npm run build
+        
+    # include any workflow and action-specific dependencies here
+    
+    - uses: ./ # pick the code of current action PR
+      with:
+        # specify input parameters for the action here
 ```
