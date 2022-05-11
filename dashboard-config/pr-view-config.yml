@@ -248,14 +248,6 @@ sections:
       - value: '{{ userdata.count("Azure/AppConfiguration-Sync","closed") }}'
         url: '{{ userdata.url("Azure/AppConfiguration-Sync","closed") }}'
         
-    - - value: 'Pipelines' 
-      - value: '{{ userdata.count("Azure/pipelines","") }}'
-        url: '{{ userdata.url("Azure/pipelines","") }}'
-      - value: '{{ userdata.count("Azure/pipelines","stale") }}'
-        url: '{{ userdata.url("Azure/pipelines","stale") }}'
-      - value: '{{ userdata.count("Azure/pipelines","closed") }}'
-        url: '{{ userdata.url("Azure/pipelines","closed") }}'
-
     - - value: 'k8s-set-context' 
       - value: '{{ userdata.count("Azure/k8s-set-context","") }}'
         url: '{{ userdata.url("Azure/k8s-set-context","") }}'
