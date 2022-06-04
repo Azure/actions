@@ -1,0 +1,18 @@
+[
+  {
+    "number": 13,
+    "title": "defunct?",
+    "html_url": "https://github.com/Azure/functions-container-action/issues/13",
+    "labels": [
+      {
+        "id": 1528272722,
+        "node_id": "MDU6TGFiZWwxNTI4MjcyNzIy",
+        "url": "https://api.github.com/repos/Azure/functions-container-action/labels/question",
+        "name": "question",
+        "color": "d876e3",
+        "default": true,
+        "description": "Further information is requested"
+      }
+    ]
+  }
+]

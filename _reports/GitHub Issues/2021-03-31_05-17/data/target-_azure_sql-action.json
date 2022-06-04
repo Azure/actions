@@ -1,0 +1,50 @@
+[
+  {
+    "number": 32,
+    "title": "feature request : Add support of Xml PublishProfile configuration",
+    "html_url": "https://github.com/Azure/sql-action/issues/32",
+    "labels": [
+      {
+        "id": 2387356227,
+        "node_id": "MDU6TGFiZWwyMzg3MzU2MjI3",
+        "url": "https://api.github.com/repos/Azure/sql-action/labels/need-to-triage",
+        "name": "need-to-triage",
+        "color": "fbca04",
+        "default": false,
+        "description": ""
+      }
+    ]
+  },
+  {
+    "number": 31,
+    "title": "sql-action failing to deploy to Azure Gov for Synapse Workspace, but works in Azure Commercial",
+    "html_url": "https://github.com/Azure/sql-action/issues/31",
+    "labels": [
+      {
+        "id": 1576987351,
+        "node_id": "MDU6TGFiZWwxNTc2OTg3MzUx",
+        "url": "https://api.github.com/repos/Azure/sql-action/labels/question",
+        "name": "question",
+        "color": "d876e3",
+        "default": true,
+        "description": "Further information is requested"
+      }
+    ]
+  },
+  {
+    "number": 11,
+    "title": "Linux support?",
+    "html_url": "https://github.com/Azure/sql-action/issues/11",
+    "labels": [
+      {
+        "id": 1576987340,
+        "node_id": "MDU6TGFiZWwxNTc2OTg3MzQw",
+        "url": "https://api.github.com/repos/Azure/sql-action/labels/enhancement",
+        "name": "enhancement",
+        "color": "a2eeef",
+        "default": true,
+        "description": "New feature or request"
+      }
+    ]
+  }
+]

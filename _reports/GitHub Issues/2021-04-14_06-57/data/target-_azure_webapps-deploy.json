@@ -1,0 +1,146 @@
+[
+  {
+    "number": 130,
+    "title": "Web Deploy to Azure Linux Web Apps Causes Random Exceptions",
+    "html_url": "https://github.com/Azure/webapps-deploy/issues/130",
+    "labels": [
+      {
+        "id": 2387353928,
+        "node_id": "MDU6TGFiZWwyMzg3MzUzOTI4",
+        "url": "https://api.github.com/repos/Azure/webapps-deploy/labels/need-to-triage",
+        "name": "need-to-triage",
+        "color": "fbca04",
+        "default": false,
+        "description": ""
+      }
+    ]
+  },
+  {
+    "number": 129,
+    "title": "Does not seem to support Docker Compose (preview) in app service for containers",
+    "html_url": "https://github.com/Azure/webapps-deploy/issues/129",
+    "labels": [
+      {
+        "id": 2387353928,
+        "node_id": "MDU6TGFiZWwyMzg3MzUzOTI4",
+        "url": "https://api.github.com/repos/Azure/webapps-deploy/labels/need-to-triage",
+        "name": "need-to-triage",
+        "color": "fbca04",
+        "default": false,
+        "description": ""
+      }
+    ]
+  },
+  {
+    "number": 128,
+    "title": "This action does not remove old files during upload!",
+    "html_url": "https://github.com/Azure/webapps-deploy/issues/128",
+    "labels": [
+      {
+        "id": 2387353928,
+        "node_id": "MDU6TGFiZWwyMzg3MzUzOTI4",
+        "url": "https://api.github.com/repos/Azure/webapps-deploy/labels/need-to-triage",
+        "name": "need-to-triage",
+        "color": "fbca04",
+        "default": false,
+        "description": ""
+      }
+    ]
+  },
+  {
+    "number": 124,
+    "title": "FAIL: run azure webapp deploy action using publish profile credentials",
+    "html_url": "https://github.com/Azure/webapps-deploy/issues/124",
+    "labels": [
+      {
+        "id": 2387353928,
+        "node_id": "MDU6TGFiZWwyMzg3MzUzOTI4",
+        "url": "https://api.github.com/repos/Azure/webapps-deploy/labels/need-to-triage",
+        "name": "need-to-triage",
+        "color": "fbca04",
+        "default": false,
+        "description": ""
+      }
+    ]
+  },
+  {
+    "number": 120,
+    "title": "Add log stream to deployment",
+    "html_url": "https://github.com/Azure/webapps-deploy/issues/120",
+    "labels": [
+      {
+        "id": 1536433402,
+        "node_id": "MDU6TGFiZWwxNTM2NDMzNDAy",
+        "url": "https://api.github.com/repos/Azure/webapps-deploy/labels/question",
+        "name": "question",
+        "color": "d876e3",
+        "default": true,
+        "description": "Further information is requested"
+      }
+    ]
+  },
+  {
+    "number": 119,
+    "title": "Add docs for efficiently deploying Node.js Express apps",
+    "html_url": "https://github.com/Azure/webapps-deploy/issues/119",
+    "labels": [
+      {
+        "id": 1536433396,
+        "node_id": "MDU6TGFiZWwxNTM2NDMzMzk2",
+        "url": "https://api.github.com/repos/Azure/webapps-deploy/labels/documentation",
+        "name": "documentation",
+        "color": "0075ca",
+        "default": true,
+        "description": "Improvements or additions to documentation"
+      }
+    ]
+  },
+  {
+    "number": 118,
+    "title": "Provide the commit message in the zip deploy API",
+    "html_url": "https://github.com/Azure/webapps-deploy/issues/118",
+    "labels": [
+      {
+        "id": 1536433398,
+        "node_id": "MDU6TGFiZWwxNTM2NDMzMzk4",
+        "url": "https://api.github.com/repos/Azure/webapps-deploy/labels/enhancement",
+        "name": "enhancement",
+        "color": "a2eeef",
+        "default": true,
+        "description": "New feature or request"
+      }
+    ]
+  },
+  {
+    "number": 117,
+    "title": "Install private repository during deploy",
+    "html_url": "https://github.com/Azure/webapps-deploy/issues/117",
+    "labels": [
+      {
+        "id": 1536433402,
+        "node_id": "MDU6TGFiZWwxNTM2NDMzNDAy",
+        "url": "https://api.github.com/repos/Azure/webapps-deploy/labels/question",
+        "name": "question",
+        "color": "d876e3",
+        "default": true,
+        "description": "Further information is requested"
+      }
+    ]
+  },
+  {
+    "number": 106,
+    "title": "Action does not support app service with kind api",
+    "html_url": "https://github.com/Azure/webapps-deploy/issues/106",
+    "labels": [
+      {
+        "id": 1536433398,
+        "node_id": "MDU6TGFiZWwxNTM2NDMzMzk4",
+        "url": "https://api.github.com/repos/Azure/webapps-deploy/labels/enhancement",
+        "name": "enhancement",
+        "color": "a2eeef",
+        "default": true,
+        "description": "New feature or request"
+      }
+    ]
+  }
+]

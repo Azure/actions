@@ -1,0 +1,66 @@
+[
+  {
+    "number": 117,
+    "title": "Install private repository during deploy",
+    "html_url": "https://github.com/Azure/webapps-deploy/issues/117",
+    "labels": [
+      {
+        "id": 1536433402,
+        "node_id": "MDU6TGFiZWwxNTM2NDMzNDAy",
+        "url": "https://api.github.com/repos/Azure/webapps-deploy/labels/question",
+        "name": "question",
+        "color": "d876e3",
+        "default": true,
+        "description": "Further information is requested"
+      }
+    ]
+  },
+  {
+    "number": 31,
+    "title": "sql-action failing to deploy to Azure Gov for Synapse Workspace, but works in Azure Commercial",
+    "html_url": "https://github.com/Azure/sql-action/issues/31",
+    "labels": [
+      {
+        "id": 1576987351,
+        "node_id": "MDU6TGFiZWwxNTc2OTg3MzUx",
+        "url": "https://api.github.com/repos/Azure/sql-action/labels/question",
+        "name": "question",
+        "color": "d876e3",
+        "default": true,
+        "description": "Further information is requested"
+      }
+    ]
+  },
+  {
+    "number": 69,
+    "title": "publish-profile : should be a valid XML.",
+    "html_url": "https://github.com/Azure/functions-action/issues/69",
+    "labels": [
+      {
+        "id": 1528266684,
+        "node_id": "MDU6TGFiZWwxNTI4MjY2Njg0",
+        "url": "https://api.github.com/repos/Azure/functions-action/labels/question",
+        "name": "question",
+        "color": "d876e3",
+        "default": true,
+        "description": "Further information is requested"
+      }
+    ]
+  },
+  {
+    "number": 13,
+    "title": "defunct?",
+    "html_url": "https://github.com/Azure/functions-container-action/issues/13",
+    "labels": [
+      {
+        "id": 1528272722,
+        "node_id": "MDU6TGFiZWwxNTI4MjcyNzIy",
+        "url": "https://api.github.com/repos/Azure/functions-container-action/labels/question",
+        "name": "question",
+        "color": "d876e3",
+        "default": true,
+        "description": "Further information is requested"
+      }
+    ]
+  }
+]

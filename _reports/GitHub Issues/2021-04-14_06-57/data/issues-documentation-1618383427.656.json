@@ -1,0 +1,34 @@
+[
+  {
+    "number": 119,
+    "title": "Add docs for efficiently deploying Node.js Express apps",
+    "html_url": "https://github.com/Azure/webapps-deploy/issues/119",
+    "labels": [
+      {
+        "id": 1536433396,
+        "node_id": "MDU6TGFiZWwxNTM2NDMzMzk2",
+        "url": "https://api.github.com/repos/Azure/webapps-deploy/labels/documentation",
+        "name": "documentation",
+        "color": "0075ca",
+        "default": true,
+        "description": "Improvements or additions to documentation"
+      }
+    ]
+  },
+  {
+    "number": 76,
+    "title": "Add documentation for .NET Isolated",
+    "html_url": "https://github.com/Azure/functions-action/issues/76",
+    "labels": [
+      {
+        "id": 1528266678,
+        "node_id": "MDU6TGFiZWwxNTI4MjY2Njc4",
+        "url": "https://api.github.com/repos/Azure/functions-action/labels/documentation",
+        "name": "documentation",
+        "color": "0075ca",
+        "default": true,
+        "description": "Improvements or additions to documentation"
+      }
+    ]
+  }
+]

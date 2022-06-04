@@ -1,0 +1,84 @@
+[
+  {
+    "number": 38,
+    "title": "Unknown error with  parameter allowedValues refering to other parameter",
+    "html_url": "https://github.com/Azure/arm-deploy/issues/38",
+    "labels": [
+      {
+        "id": 2375301264,
+        "node_id": "MDU6TGFiZWwyMzc1MzAxMjY0",
+        "url": "https://api.github.com/repos/Azure/arm-deploy/labels/default",
+        "name": "default",
+        "color": "75bc0b",
+        "default": false,
+        "description": ""
+      }
+    ]
+  },
+  {
+    "number": 37,
+    "title": "ResourceGroupLocation in example is incorrect format with spacing",
+    "html_url": "https://github.com/Azure/arm-deploy/issues/37",
+    "labels": [
+      {
+        "id": 2375301264,
+        "node_id": "MDU6TGFiZWwyMzc1MzAxMjY0",
+        "url": "https://api.github.com/repos/Azure/arm-deploy/labels/default",
+        "name": "default",
+        "color": "75bc0b",
+        "default": false,
+        "description": ""
+      }
+    ]
+  },
+  {
+    "number": 36,
+    "title": "JSON array as parameter input",
+    "html_url": "https://github.com/Azure/arm-deploy/issues/36",
+    "labels": [
+      {
+        "id": 2375301264,
+        "node_id": "MDU6TGFiZWwyMzc1MzAxMjY0",
+        "url": "https://api.github.com/repos/Azure/arm-deploy/labels/default",
+        "name": "default",
+        "color": "75bc0b",
+        "default": false,
+        "description": ""
+      },
+      {
+        "id": 2406503268,
+        "node_id": "MDU6TGFiZWwyNDA2NTAzMjY4",
+        "url": "https://api.github.com/repos/Azure/arm-deploy/labels/stale",
+        "name": "stale",
+        "color": "ededed",
+        "default": false,
+        "description": null
+      }
+    ]
+  },
+  {
+    "number": 33,
+    "title": "Arm deployment for Azure Data Factory failed without error message",
+    "html_url": "https://github.com/Azure/arm-deploy/issues/33",
+    "labels": [
+      {
+        "id": 2375301264,
+        "node_id": "MDU6TGFiZWwyMzc1MzAxMjY0",
+        "url": "https://api.github.com/repos/Azure/arm-deploy/labels/default",
+        "name": "default",
+        "color": "75bc0b",
+        "default": false,
+        "description": ""
+      },
+      {
+        "id": 2406503268,
+        "node_id": "MDU6TGFiZWwyNDA2NTAzMjY4",
+        "url": "https://api.github.com/repos/Azure/arm-deploy/labels/stale",
+        "name": "stale",
+        "color": "ededed",
+        "default": false,
+        "description": null
+      }
+    ]
+  }
+]

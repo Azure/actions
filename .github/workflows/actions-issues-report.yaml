@@ -1,0 +1,27 @@
+name: "Generate a report for Open issues for Azure Actions"
+on:
+  push:
+  workflow_dispatch:
+    
+jobs:
+    Issues_Report:
+
+        strategy:
+            fail-fast: false
+        
+        runs-on: ubuntu-latest 
+
+        steps:
+        - uses: actions/checkout@v2
+        - uses: bryanmacfarlane/project-reports-action@v1-alpha5
+          with: 
+            token: ${{ secrets.GITHUB_TOKEN }}
+            configPath: issues-report-config.yml
+        - if: ${{ github.ref == 'refs/heads/users/kaverma/actionReposHealth1' }}
+          run: |
+            git config --local user.email "action@github.com"
+            git config --local user.name "GitHubAction" 
+            git pull
+            git add ./_reports
+            git commit -m "adding reports"
+            git push origin refs/heads/users/kaverma/actionReposHealth1

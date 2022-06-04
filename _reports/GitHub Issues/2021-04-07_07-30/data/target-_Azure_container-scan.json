@@ -1,0 +1,18 @@
+[
+  {
+    "number": 59,
+    "title": "Allow to scan multiple image variants in one go",
+    "html_url": "https://github.com/Azure/container-scan/issues/59",
+    "labels": [
+      {
+        "id": 1935919214,
+        "node_id": "MDU6TGFiZWwxOTM1OTE5MjE0",
+        "url": "https://api.github.com/repos/Azure/container-scan/labels/enhancement",
+        "name": "enhancement",
+        "color": "a2eeef",
+        "default": true,
+        "description": "New feature or request"
+      }
+    ]
+  }
+]

@@ -1,0 +1,116 @@
+[
+  {
+    "number": 126,
+    "title": "Support different manifest delimiters",
+    "html_url": "https://github.com/Azure/k8s-deploy/issues/126",
+    "labels": [
+      {
+        "id": 2912923114,
+        "node_id": "MDU6TGFiZWwyOTEyOTIzMTE0",
+        "url": "https://api.github.com/repos/Azure/k8s-deploy/labels/default",
+        "name": "default",
+        "color": "896960",
+        "default": false,
+        "description": ""
+      }
+    ]
+  },
+  {
+    "number": 120,
+    "title": "Support running in an in-cluster self-hosted worker without separately setting context",
+    "html_url": "https://github.com/Azure/k8s-deploy/issues/120",
+    "labels": [
+      {
+        "id": 2912923114,
+        "node_id": "MDU6TGFiZWwyOTEyOTIzMTE0",
+        "url": "https://api.github.com/repos/Azure/k8s-deploy/labels/default",
+        "name": "default",
+        "color": "896960",
+        "default": false,
+        "description": ""
+      }
+    ]
+  },
+  {
+    "number": 113,
+    "title": "Option to ignore error from certificate auto signed",
+    "html_url": "https://github.com/Azure/k8s-deploy/issues/113",
+    "labels": [
+      {
+        "id": 1536279772,
+        "node_id": "MDU6TGFiZWwxNTM2Mjc5Nzcy",
+        "url": "https://api.github.com/repos/Azure/k8s-deploy/labels/bug",
+        "name": "bug",
+        "color": "d73a4a",
+        "default": true,
+        "description": "Something isn't working"
+      }
+    ]
+  },
+  {
+    "number": 112,
+    "title": "Potential issue in Annotations",
+    "html_url": "https://github.com/Azure/k8s-deploy/issues/112",
+    "labels": [
+      {
+        "id": 2912923114,
+        "node_id": "MDU6TGFiZWwyOTEyOTIzMTE0",
+        "url": "https://api.github.com/repos/Azure/k8s-deploy/labels/default",
+        "name": "default",
+        "color": "896960",
+        "default": false,
+        "description": ""
+      }
+    ]
+  },
+  {
+    "number": 111,
+    "title": "Actions - Traceability Schema",
+    "html_url": "https://github.com/Azure/k8s-deploy/issues/111",
+    "labels": [
+      {
+        "id": 1536279775,
+        "node_id": "MDU6TGFiZWwxNTM2Mjc5Nzc1",
+        "url": "https://api.github.com/repos/Azure/k8s-deploy/labels/enhancement",
+        "name": "enhancement",
+        "color": "a2eeef",
+        "default": true,
+        "description": "New feature or request"
+      },
+      {
+        "id": 2672322395,
+        "node_id": "MDU6TGFiZWwyNjcyMzIyMzk1",
+        "url": "https://api.github.com/repos/Azure/k8s-deploy/labels/proposal",
+        "name": "proposal",
+        "color": "C07695",
+        "default": false,
+        "description": ""
+      },
+      {
+        "id": 2672322002,
+        "node_id": "MDU6TGFiZWwyNjcyMzIyMDAy",
+        "url": "https://api.github.com/repos/Azure/k8s-deploy/labels/traceability",
+        "name": "traceability",
+        "color": "144E70",
+        "default": false,
+        "description": ""
+      }
+    ]
+  },
+  {
+    "number": 72,
+    "title": "Possibility to inform environment variable to be replaced in the container",
+    "html_url": "https://github.com/Azure/k8s-deploy/issues/72",
+    "labels": [
+      {
+        "id": 1536279775,
+        "node_id": "MDU6TGFiZWwxNTM2Mjc5Nzc1",
+        "url": "https://api.github.com/repos/Azure/k8s-deploy/labels/enhancement",
+        "name": "enhancement",
+        "color": "a2eeef",
+        "default": true,
+        "description": "New feature or request"
+      }
+    ]
+  }
+]
