@@ -809,11 +809,11 @@ sections:
         url: '{{ userdata.url("Azure/load-testing","stale") }}'
       - value: '{{ userdata.count("Azure/load-testing","closed") }}'
         url: '{{ userdata.url("Azure/load-testing","closed") }}'  
- - title: "Details"
-   widgets:
-   - type: "string"
-     value: "ACE team owned actions issue view"
-     url: "ace-team-issues.html"
-   - type: "string"
-     value: "Transitioned actions issue view"
-     url: "transitioned-issues.html"
+- title: "Details"
+  widgets:
+  - type: "string"
+    value: "ACE team owned actions issue view"
+    url: "ace-team-issues.html"
+  - type: "string"
+    value: "Transitioned actions issue view"
+    url: "transitioned-issues.html"
