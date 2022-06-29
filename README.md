@@ -41,6 +41,10 @@ Following are the guideliens to author new Azure Actions and also to contribute 
   - [Releasing a new version](docs/release-process.md)
   - [Publish to Marketplace](docs/Process_of_Authoring_GitHub_Actions_for_Azure.md#publish-the-action-to-marketplace)
   - [Communication guidelines](communication%20guidelines.md)
+### Monitoring
+  The below app integrations can be used to subscribe to the events like issues and PRs of an action repository for monitoring.
+  - [Slack integration](https://github.com/integrations/slack#subscribing-and-unsubscribing)
+  - [MS-Teams integration](https://github.com/integrations/microsoft-teams)
 
 ## Azure Actions toolkit 
 [Azure Actions toolkit](https://github.com/Azure/actions-toolkit) hosting node modules to help write your azure actions
