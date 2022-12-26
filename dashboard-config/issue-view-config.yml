@@ -10,7 +10,7 @@ setup: |
       while (currentDate - date < milliseconds);
     }
     userdata.count = async function(repo,label) {
-      sleep(2000)
+      sleep(4000)
       var results;
       if(label === "" ) {
         results = await github.search.issuesAndPullRequests(
