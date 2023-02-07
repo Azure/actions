@@ -10,7 +10,7 @@ setup: |
       while (currentDate - date < milliseconds);
     }
     userdata.count = async function(repo,label) {
-      sleep(4000)
+      sleep(8000)
       var results;
       if(label === "" ) {
         results = await github.search.issuesAndPullRequests(
@@ -40,7 +40,7 @@ setup: |
       }
     }
     userdata.url = async function(repo,label) {
-      sleep(2000)
+      sleep(8000)
       var url;
       var today = new Date();
       var pastDate = new Date(today);
