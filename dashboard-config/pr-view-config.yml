@@ -191,15 +191,7 @@ sections:
         url: '{{ userdata.url("Azure/appservice-settings","stale") }}'
       - value: '{{ userdata.count("Azure/appservice-settings","closed") }}'
         url: '{{ userdata.url("Azure/appservice-settings","closed") }}'
-        
-    - - value: 'variable-substitution' 
-      - value: '{{ userdata.count("microsoft/variable-substitution","") }}'
-        url: '{{ userdata.url("microsoft/variable-substitution","") }}'
-      - value: '{{ userdata.count("microsoft/variable-substitution","stale") }}'
-        url: '{{ userdata.url("microsoft/variable-substitution","stale") }}'
-      - value: '{{ userdata.count("microsoft/variable-substitution","closed") }}'
-        url: '{{ userdata.url("microsoft/variable-substitution","closed") }}'
-        
+ 
     - - value: 'manage-azure-policy' 
       - value: '{{ userdata.count("Azure/manage-azure-policy","") }}'
         url: '{{ userdata.url("Azure/manage-azure-policy","") }}'
@@ -263,14 +255,6 @@ sections:
         url: '{{ userdata.url("Azure/setup-helm","stale") }}'
       - value: '{{ userdata.count("Azure/setup-helm","closed") }}'
         url: '{{ userdata.url("Azure/setup-helm","closed") }}'
-        
-    - - value: 'container-scan' 
-      - value: '{{ userdata.count("Azure/container-scan","") }}'
-        url: '{{ userdata.url("Azure/container-scan","") }}'
-      - value: '{{ userdata.count("Azure/container-scan","stale") }}'
-        url: '{{ userdata.url("Azure/container-scan","stale") }}'
-      - value: '{{ userdata.count("Azure/container-scan","closed") }}'
-        url: '{{ userdata.url("Azure/container-scan","closed") }}'
 
     - - value: 'docker-login' 
       - value: '{{ userdata.count("Azure/docker-login","") }}'
@@ -279,14 +263,6 @@ sections:
         url: '{{ userdata.url("Azure/docker-login","stale") }}'
       - value: '{{ userdata.count("Azure/docker-login","closed") }}'
         url: '{{ userdata.url("Azure/docker-login","closed") }}'
-
-    - - value: 'publish-security-assessments' 
-      - value: '{{ userdata.count("Azure/publish-security-assessments","") }}'
-        url: '{{ userdata.url("Azure/publish-security-assessments","") }}'
-      - value: '{{ userdata.count("Azure/publish-security-assessments","stale") }}'
-        url: '{{ userdata.url("Azure/publish-security-assessments","stale") }}'
-      - value: '{{ userdata.count("Azure/publish-security-assessments","closed") }}'
-        url: '{{ userdata.url("Azure/publish-security-assessments","closed") }}'
     
     - - value: 'arm-deploy' 
       - value: '{{ userdata.count("Azure/arm-deploy","") }}'
