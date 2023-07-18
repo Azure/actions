@@ -1,0 +1,289 @@
+title: 'Pull requests detailed view'
+output:
+  format: html
+  filename: 'docs/pr.html'
+setup: |
+    function sleep(milliseconds) {
+      const date = Date.now();
+      let currentDate = null;
+      do {currentDate = Date.now();} 
+      while (currentDate - date < milliseconds);
+    }
+    userdata.count = async function(repo,label) {
+      sleep(1000)
+      var results;
+      if(label === "" ) {
+        results = await github.search.issuesAndPullRequests(
+        { q: `repo:${repo} is:pr is:open` }
+        )
+      }
+      else if(label === "closed") {
+        results = await github.search.issuesAndPullRequests(
+        { q: `repo:${repo} is:pr is:closed closed:>${date("-30 days")}`}
+        )
+      }
+      else if(label === "stale") {
+        results = await github.search.issuesAndPullRequests(
+        { q: `repo:${repo} is:pr is:open created:<${date("-30 days")}`}
+        )
+      }
+      else{
+        results = await github.search.issuesAndPullRequests(
+        { q: `repo:${repo} is:pr is:open label:${label}`}
+        )
+      }
+      if(results.data.items.length === 0){
+        return '0'
+      }
+      else{
+        return results.data.total_count 
+      }
+    }
+    userdata.url = async function(repo,label) {
+      sleep(1000)
+      var url;
+      var today = new Date();
+      var pastDate = new Date(today);
+      if(label === "") {
+        url = 'https://github.com/'+repo+'/pulls?q=is%3Apr+is%3A'+ 'open'
+      }
+      else if(label === "closed") {
+        pastDate.setDate(pastDate.getDate() - 30);
+        var closedDate = pastDate.toISOString().split("T")[0];
+        url = 'https://github.com/' + repo + '/pulls?q=is%3Aissue+is%3A' + 'closed' + '+closed%3A>'+ closedDate
+      }
+      else if(label === "stale") {
+        pastDate.setDate(pastDate.getDate() - 30);
+        var staledate = pastDate.toISOString().split("T")[0];
+        url = 'https://github.com/' + repo + '/pulls?q=is%3Apr+is%3A' + 'open' + '+created%3A<'+staledate
+      }
+      else{
+        url = 'https://github.com/'+repo+'/pulls?q=is%3Apr+is%3A'+'open'+'+label%3A'+label
+      }
+      return url
+    } 
+sections:
+- title: '' 
+  widgets:
+  - type: 'table'
+    headers:
+    - 'Action'
+    - 'Open'
+    - 'Stale(30_days old)'
+    - 'Closed(last_30 days)'
+    elements:
+    - - value: 'azure login'
+      - value: '{{ userdata.count("Azure/login","") }}'
+        url: '{{ userdata.url("Azure/login","") }}'
+      - value: '{{ userdata.count("Azure/login","stale") }}'
+        url: '{{ userdata.url("Azure/login","stale") }}'
+      - value: '{{ userdata.count("Azure/login","closed") }}'
+        url: '{{ userdata.url("Azure/login","closed") }}'
+        
+    - - value: 'webapps-deploy'
+      - value: '{{ userdata.count("Azure/webapps-deploy","") }}'
+        url: '{{ userdata.url("Azure/webapps-deploy","") }}'
+      - value: '{{ userdata.count("Azure/webapps-deploy","stale") }}'
+        url: '{{ userdata.url("Azure/webapps-deploy","stale") }}'
+      - value: '{{ userdata.count("Azure/webapps-deploy","closed") }}'
+        url: '{{ userdata.url("Azure/webapps-deploy","closed") }}'
+        
+    - - value: 'aci-deploy'
+      - value: '{{ userdata.count("Azure/aci-deploy","") }}'
+        url: '{{ userdata.url("Azure/aci-deploy","") }}'
+      - value: '{{ userdata.count("Azure/aci-deploy","stale") }}'
+        url: '{{ userdata.url("Azure/aci-deploy","stale") }}'
+      - value: '{{ userdata.count("Azure/aci-deploy","closed") }}'
+        url: '{{ userdata.url("Azure/aci-deploy","closed") }}'
+        
+    - - value: 'build-vm-image' 
+      - value: '{{ userdata.count("Azure/build-vm-image","") }}'
+        url: '{{ userdata.url("Azure/build-vm-image","") }}'
+      - value: '{{ userdata.count("Azure/build-vm-image","stale") }}'
+        url: '{{ userdata.url("Azure/build-vm-image","stale") }}'
+      - value: '{{ userdata.count("Azure/build-vm-image","closed") }}'
+        url: '{{ userdata.url("Azure/build-vm-image","closed") }}'
+        
+    - - value: 'functions-action' 
+      - value: '{{ userdata.count("Azure/functions-action","") }}'
+        url: '{{ userdata.url("Azure/functions-action","") }}'
+      - value: '{{ userdata.count("Azure/functions-action","stale") }}'
+        url: '{{ userdata.url("Azure/functions-action","stale") }}'
+      - value: '{{ userdata.count("Azure/functions-action","closed") }}'
+        url: '{{ userdata.url("Azure/functions-action","closed") }}'
+        
+    - - value: 'functions-container-action' 
+      - value: '{{ userdata.count("Azure/functions-container-action","") }}'
+        url: '{{ userdata.url("Azure/functions-container-action","") }}'
+      - value: '{{ userdata.count("Azure/functions-container-action","stale") }}'
+        url: '{{ userdata.url("Azure/functions-container-action","stale") }}'
+      - value: '{{ userdata.count("Azure/functions-container-action","closed") }}'
+        url: '{{ userdata.url("Azure/functions-container-action","closed") }}'
+        
+    - - value: 'mysql' 
+      - value: '{{ userdata.count("Azure/mysql","") }}'
+        url: '{{ userdata.url("Azure/mysql","") }}'
+      - value: '{{ userdata.count("Azure/mysql","stale") }}'
+        url: '{{ userdata.url("Azure/mysql","stale") }}'
+      - value: '{{ userdata.count("Azure/mysql","closed") }}'
+        url: '{{ userdata.url("Azure/mysql","closed") }}'
+        
+    - - value: 'postgresql' 
+      - value: '{{ userdata.count("Azure/postgresql","") }}'
+        url: '{{ userdata.url("Azure/postgresql","") }}'
+      - value: '{{ userdata.count("Azure/postgresql","stale") }}'
+        url: '{{ userdata.url("Azure/postgresql","stale") }}'
+      - value: '{{ userdata.count("Azure/postgresql","closed") }}'
+        url: '{{ userdata.url("Azure/postgresql","closed") }}'
+        
+    - - value: 'powershell' 
+      - value: '{{ userdata.count("Azure/powershell","") }}'
+        url: '{{ userdata.url("Azure/powershell","") }}'
+      - value: '{{ userdata.count("Azure/powershell","stale") }}'
+        url: '{{ userdata.url("Azure/powershell","stale") }}'
+      - value: '{{ userdata.count("Azure/powershell","closed") }}'
+        url: '{{ userdata.url("Azure/powershell","closed") }}'
+        
+    - - value: 'sql-action' 
+      - value: '{{ userdata.count("Azure/sql-action","") }}'
+        url: '{{ userdata.url("Azure/sql-action","") }}'
+      - value: '{{ userdata.count("Azure/sql-action","stale") }}'
+        url: '{{ userdata.url("Azure/sql-action","stale") }}'
+      - value: '{{ userdata.count("Azure/sql-action","closed") }}'
+        url: '{{ userdata.url("Azure/sql-action","closed") }}'
+        
+    - - value: 'policy-compliance-scan' 
+      - value: '{{ userdata.count("Azure/policy-compliance-scan","") }}'
+        url: '{{ userdata.url("Azure/policy-compliance-scan","") }}'
+      - value: '{{ userdata.count("Azure/policy-compliance-scan","stale") }}'
+        url: '{{ userdata.url("Azure/policy-compliance-scan","stale") }}'
+      - value: '{{ userdata.count("Azure/policy-compliance-scan","closed") }}'
+        url: '{{ userdata.url("Azure/policy-compliance-scan","closed") }}'
+        
+    - - value: 'k8s-create-secret' 
+      - value: '{{ userdata.count("Azure/k8s-create-secret","") }}'
+        url: '{{ userdata.url("Azure/k8s-create-secret","") }}'
+      - value: '{{ userdata.count("Azure/k8s-create-secret","stale") }}'
+        url: '{{ userdata.url("Azure/k8s-create-secret","stale") }}'
+      - value: '{{ userdata.count("Azure/k8s-create-secret","closed") }}'
+        url: '{{ userdata.url("Azure/k8s-create-secret","closed") }}'
+        
+    - - value: 'k8s-deploy'
+      - value: '{{ userdata.count("Azure/k8s-deploy","") }}'
+        url: '{{ userdata.url("Azure/k8s-deploy","") }}'
+      - value: '{{ userdata.count("Azure/k8s-deploy","stale") }}'
+        url: '{{ userdata.url("Azure/k8s-deploy","stale") }}'
+      - value: '{{ userdata.count("Azure/k8s-deploy","closed") }}'
+        url: '{{ userdata.url("Azure/k8s-deploy","closed") }}'
+        
+    - - value: 'k8s-lint'
+      - value: '{{ userdata.count("Azure/k8s-lint","") }}'
+        url: '{{ userdata.url("Azure/k8s-lint","") }}'
+      - value: '{{ userdata.count("Azure/k8s-lint","stale") }}'
+        url: '{{ userdata.url("Azure/k8s-lint","stale") }}'
+      - value: '{{ userdata.count("Azure/k8s-lint","closed") }}'
+        url: '{{ userdata.url("Azure/k8s-lint","closed") }}'
+        
+    - - value: 'appservice-settings' 
+      - value: '{{ userdata.count("Azure/appservice-settings","") }}'
+        url: '{{ userdata.url("Azure/appservice-settings","") }}'
+      - value: '{{ userdata.count("Azure/appservice-settings","stale") }}'
+        url: '{{ userdata.url("Azure/appservice-settings","stale") }}'
+      - value: '{{ userdata.count("Azure/appservice-settings","closed") }}'
+        url: '{{ userdata.url("Azure/appservice-settings","closed") }}'
+ 
+    - - value: 'manage-azure-policy' 
+      - value: '{{ userdata.count("Azure/manage-azure-policy","") }}'
+        url: '{{ userdata.url("Azure/manage-azure-policy","") }}'
+      - value: '{{ userdata.count("Azure/manage-azure-policy","stale") }}'
+        url: '{{ userdata.url("Azure/manage-azure-policy","stale") }}'
+      - value: '{{ userdata.count("Azure/manage-azure-policy","closed") }}'
+        url: '{{ userdata.url("Azure/manage-azure-policy","closed") }}'
+        
+    - - value: 'setup-kubectl' 
+      - value: '{{ userdata.count("Azure/setup-kubectl","") }}'
+        url: '{{ userdata.url("Azure/setup-kubectl","") }}'
+      - value: '{{ userdata.count("Azure/setup-kubectl","stale") }}'
+        url: '{{ userdata.url("Azure/setup-kubectl","stale") }}'
+      - value: '{{ userdata.count("Azure/setup-kubectl","closed") }}'
+        url: '{{ userdata.url("Azure/setup-kubectl","closed") }}'
+
+    - - value: 'aks-set-context' 
+      - value: '{{ userdata.count("Azure/aks-set-context","") }}'
+        url: '{{ userdata.url("Azure/aks-set-context","") }}'
+      - value: '{{ userdata.count("Azure/aks-set-context","stale") }}'
+        url: '{{ userdata.url("Azure/aks-set-context","stale") }}'
+      - value: '{{ userdata.count("Azure/aks-set-context","closed") }}'
+        url: '{{ userdata.url("Azure/aks-set-context","closed") }}'
+    
+    - - value: 'k8s-bake' 
+      - value: '{{ userdata.count("Azure/k8s-bake","") }}'
+        url: '{{ userdata.url("Azure/k8s-bake","") }}'
+      - value: '{{ userdata.count("Azure/k8s-bake","stale") }}'
+        url: '{{ userdata.url("Azure/k8s-bake","stale") }}'
+      - value: '{{ userdata.count("Azure/k8s-bake","closed") }}'
+        url: '{{ userdata.url("Azure/k8s-bake","closed") }}'
+    
+    - - value: 'static-web-apps-deploy' 
+      - value: '{{ userdata.count("Azure/static-web-apps-deploy","") }}'
+        url: '{{ userdata.url("Azure/static-web-apps-deploy","") }}'
+      - value: '{{ userdata.count("Azure/static-web-apps-deploy","stale") }}'
+        url: '{{ userdata.url("Azure/static-web-apps-deploy","stale") }}'
+      - value: '{{ userdata.count("Azure/static-web-apps-deploy","closed") }}'
+        url: '{{ userdata.url("Azure/static-web-apps-deploy","closed") }}'
+        
+    - - value: 'AppConfiguration-Sync' 
+      - value: '{{ userdata.count("Azure/AppConfiguration-Sync","") }}'
+        url: '{{ userdata.url("Azure/AppConfiguration-Sync","") }}'
+      - value: '{{ userdata.count("Azure/AppConfiguration-Sync","stale") }}'
+        url: '{{ userdata.url("Azure/AppConfiguration-Sync","stale") }}'
+      - value: '{{ userdata.count("Azure/AppConfiguration-Sync","closed") }}'
+        url: '{{ userdata.url("Azure/AppConfiguration-Sync","closed") }}'
+        
+    - - value: 'k8s-set-context' 
+      - value: '{{ userdata.count("Azure/k8s-set-context","") }}'
+        url: '{{ userdata.url("Azure/k8s-set-context","") }}'
+      - value: '{{ userdata.count("Azure/k8s-set-context","stale") }}'
+        url: '{{ userdata.url("Azure/k8s-set-context","stale") }}'
+      - value: '{{ userdata.count("Azure/k8s-set-context","closed") }}'
+        url: '{{ userdata.url("Azure/k8s-set-context","closed") }}'
+
+    - - value: 'setup-helm' 
+      - value: '{{ userdata.count("Azure/setup-helm","") }}'
+        url: '{{ userdata.url("Azure/setup-helm","") }}'
+      - value: '{{ userdata.count("Azure/setup-helm","stale") }}'
+        url: '{{ userdata.url("Azure/setup-helm","stale") }}'
+      - value: '{{ userdata.count("Azure/setup-helm","closed") }}'
+        url: '{{ userdata.url("Azure/setup-helm","closed") }}'
+
+    - - value: 'docker-login' 
+      - value: '{{ userdata.count("Azure/docker-login","") }}'
+        url: '{{ userdata.url("Azure/docker-login","") }}'
+      - value: '{{ userdata.count("Azure/docker-login","stale") }}'
+        url: '{{ userdata.url("Azure/docker-login","stale") }}'
+      - value: '{{ userdata.count("Azure/docker-login","closed") }}'
+        url: '{{ userdata.url("Azure/docker-login","closed") }}'
+    
+    - - value: 'arm-deploy' 
+      - value: '{{ userdata.count("Azure/arm-deploy","") }}'
+        url: '{{ userdata.url("Azure/arm-deploy","") }}'
+      - value: '{{ userdata.count("Azure/arm-deploy","stale") }}'
+        url: '{{ userdata.url("Azure/arm-deploy","stale") }}'
+      - value: '{{ userdata.count("Azure/arm-deploy","closed") }}'
+        url: '{{ userdata.url("Azure/arm-deploy","closed") }}'
+        
+    - - value: 'Azure/cli' 
+      - value: '{{ userdata.count("Azure/cli","") }}'
+        url: '{{ userdata.url("Azure/cli","") }}'
+      - value: '{{ userdata.count("Azure/cli","stale") }}'
+        url: '{{ userdata.url("Azure/cli","stale") }}'
+      - value: '{{ userdata.count("Azure/cli","closed") }}'
+        url: '{{ userdata.url("Azure/cli","closed") }}'
+        
+    - - value: 'Azure/load-testing' 
+      - value: '{{ userdata.count("Azure/load-testing","") }}'
+        url: '{{ userdata.url("Azure/load-testing","") }}'
+      - value: '{{ userdata.count("Azure/load-testing","stale") }}'
+        url: '{{ userdata.url("Azure/load-testing","stale") }}'
+      - value: '{{ userdata.count("Azure/load-testing","closed") }}'
+        url: '{{ userdata.url("Azure/load-testing","closed") }}'

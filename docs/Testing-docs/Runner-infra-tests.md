@@ -1,0 +1,1 @@
+For the actions which takes dependency on hosted runner infra, we were looking at the need of having an automated testing infra where required GH Action test can run on each hosted image update to validate whether new version of hosted runner image is working fine.

@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  jekyll:
+    image: jekyll/jekyll:4
+    command: jekyll serve --livereload --verbose
+    ports:
+      - 4000:4000
+      - 35729:35729
+    volumes:
+      - .:/srv/jekyll

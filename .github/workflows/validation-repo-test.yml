@@ -1,0 +1,73 @@
+name: "repo-validation"
+
+on: 
+  workflow_dispatch:
+  schedule:
+    - cron:  '0 0 * * MON,THU'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: validating action repos
+      id: checks_validation
+      uses: GH-ACE/action-repo-validation@users/balaga-gayatri/release-patch
+      continue-on-error: true
+      with:
+        GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
+        repositories: 'Azure/login,Azure/webapps-deploy,Azure/aci-deploy,Azure/build-vm-image,Azure/functions-action,Azure/functions-container-action,Azure/mysql,Azure/postgresql,Azure/powershell,Azure/sql-action,Azure/appservice-settings,Azure/policy-compliance-scan,Azure/k8s-create-secret,Azure/k8s-deploy,Azure/k8s-lint,Azure/manage-azure-policy,Azure/setup-kubectl,Azure/aks-set-context,Azure/k8s-bake,Azure/static-web-apps-deploy,Azure/get-keyvault-secrets,Azure/AppConfiguration-Sync,Azure/k8s-set-context,Azure/setup-helm,Azure/container-scan,Azure/docker-login,Azure/publish-security-assessments,Azure/arm-deploy,Azure/cli'
+    - name: create-json
+      id: create-json
+      uses: jsdaniell/create-json@1.1.2
+      with:
+        name: "validation-dashboard/result.json"
+        json: "${{steps.checks_validation.outputs.validationResult}}"
+    - name: validation result and  Commit json result file
+      id: commit1
+      continue-on-error: true
+      run: |
+           git config --local user.email "action@github.com"
+           git config --local user.name "GitHub Action"
+           git pull
+           git add --all
+           if [-z "$(git status --porcelain)"]; then
+             echo "::set-output name=push::false"
+           else
+             git commit -m "Add changes" -a
+             echo "::set-output name=push::true"
+           fi
+      shell: bash
+    - name: Push changes
+      if: steps.commit1.outputs.push == 'true'
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: "${{ secrets.GITHUB_TOKEN }}"
+    
+    - uses: actions/setup-python@v2
+      with:
+        python-version: '3.9.0-alpha - 3.9.0' # SemVer's version range syntax
+    - run: |
+        pip3 install json2html
+        python ./validation-dashboard/json2htmlrunner.py
+
+    - name: validation result and  Commit file for html
+      id: commit2
+      continue-on-error: true
+      run: |
+           git config --local user.email "action@github.com"
+           git config --local user.name "GitHub Action"
+           git pull
+           git add --all
+           if [-z "$(git status --porcelain)"]; then
+             echo "::set-output name=push::false"
+           else
+             git commit -m "Add changes" -a
+             echo "::set-output name=push::true"
+           fi
+      shell: bash
+    - name: Push changes
+      if: steps.commit2.outputs.push == 'true'
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: "${{ secrets.GITHUB_TOKEN }}"

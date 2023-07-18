@@ -1,0 +1,39 @@
+name: transitioned_issues
+on:
+  workflow_dispatch:
+  schedule:
+    - cron:  '30 3 * * *'
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v2
+      - name: 'Generate Dashboard'
+        id: dashboard
+        uses: GH-ACE/issue-dashboard@v1
+        with:
+          config: ./dashboard-config/transitioned-issues-config.yml
+          configType: file
+          token: ${{ github.token }}
+
+      - name: Commit files
+        id: commit
+        continue-on-error: true
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add --all
+          if [-z "$(git status --porcelain)"]; then
+             echo "::set-output name=push::false"
+          else
+             git commit -m "Add changes" -a
+             echo "::set-output name=push::true"
+          fi
+        shell: bash
+
+      - name: Push changes
+        if: steps.commit.outputs.push == 'true'
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
