@@ -68,3 +68,42 @@ provided by the bot. You will only need to do this once across all repos using o
 This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
 For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or
 contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
+
+
+ - # Contribution guidelines 
+
+Welcome to [actions]! We're thrilled that you'd like to contribute. Your help is essential for making it better.
+
+## Getting Started
+
+Before you start contributing, please make sure you have read and understood our [Code of Conduct](CODE_OF_CONDUCT.md).
+
+### Fork the Repository
+
+First, fork the [repository](https://github.com/Azure/actions) to your own GitHub account. This will create a copy of the project under your account.
+
+
+### Clone the Repository
+```
+git clone https://github.com/Azure/actions
+```
+### Navigate to the project directory 📁
+```
+cd actions
+```
+Create a new branch for your feature or bug fix:
+```
+ git checkout -b feature-branch
+ ```
+
+Make your changes and commit them:
+```
+git add .
+git commit -m "Description of your changes"
+```
+Push your changes to your fork:
+```
+git push origin feature-branch
+```
+Finally Click on Create Pull request to contribute on this repository.
+
