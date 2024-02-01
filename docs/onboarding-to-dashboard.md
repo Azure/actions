@@ -133,11 +133,10 @@ It has to be appended to the existing list of actions.
 
 
 *   In the [issue-view-config file](https://github.com/Azure/actions/blob/main/dashboard-config/issue-view-config.yml),  add the following lines of code by replacing with your repo to the existing list of elements section
-![image](https://user-images.githubusercontent.com/58769601/122913792-845a2000-d377-11eb-9866-3401e88d1406.png)
-
+![image](https://user-images.githubusercontent.com/58769601/128728244-ef54ef8a-3baf-4347-80ec-5b2b38a635fd.png)
 
 *   In the [pr-view-config file](https://github.com/Azure/actions/blob/main/dashboard-config/pr-view-config.yml),  add the following lines of code by replacing with your repo to the existing list of elements section.
+![image](https://user-images.githubusercontent.com/58769601/128728289-6cb66761-515b-427b-8e5d-ef00028fded4.png)
 
-![image](https://user-images.githubusercontent.com/58769601/122913831-9471ff80-d377-11eb-857a-1b6cf1d10680.png)
 
    
