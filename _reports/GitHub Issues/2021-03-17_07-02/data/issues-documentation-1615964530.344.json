@@ -1,0 +1,34 @@
+[
+  {
+    "number": 65,
+    "title": "Developer guide?",
+    "html_url": "https://github.com/Azure/login/issues/65",
+    "labels": [
+      {
+        "id": 2548477252,
+        "node_id": "MDU6TGFiZWwyNTQ4NDc3MjUy",
+        "url": "https://api.github.com/repos/Azure/login/labels/documentation",
+        "name": "documentation",
+        "color": "bfdadc",
+        "default": true,
+        "description": ""
+      }
+    ]
+  },
+  {
+    "number": 60,
+    "title": "Deployment is *very* slow (nodeJS with publish profile)",
+    "html_url": "https://github.com/Azure/webapps-deploy/issues/60",
+    "labels": [
+      {
+        "id": 1536433396,
+        "node_id": "MDU6TGFiZWwxNTM2NDMzMzk2",
+        "url": "https://api.github.com/repos/Azure/webapps-deploy/labels/documentation",
+        "name": "documentation",
+        "color": "0075ca",
+        "default": true,
+        "description": "Improvements or additions to documentation"
+      }
+    ]
+  }
+]

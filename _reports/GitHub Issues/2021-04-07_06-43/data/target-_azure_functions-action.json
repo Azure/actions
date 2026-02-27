@@ -1,0 +1,91 @@
+[
+  {
+    "number": 69,
+    "title": "publish-profile : should be a valid XML.",
+    "html_url": "https://github.com/Azure/functions-action/issues/69",
+    "labels": [
+      {
+        "id": 1528266684,
+        "node_id": "MDU6TGFiZWwxNTI4MjY2Njg0",
+        "url": "https://api.github.com/repos/Azure/functions-action/labels/question",
+        "name": "question",
+        "color": "d876e3",
+        "default": true,
+        "description": "Further information is requested"
+      }
+    ]
+  },
+  {
+    "number": 58,
+    "title": "Support Run from Package feature",
+    "html_url": "https://github.com/Azure/functions-action/issues/58",
+    "labels": [
+      {
+        "id": 1528266680,
+        "node_id": "MDU6TGFiZWwxNTI4MjY2Njgw",
+        "url": "https://api.github.com/repos/Azure/functions-action/labels/enhancement",
+        "name": "enhancement",
+        "color": "a2eeef",
+        "default": true,
+        "description": "New feature or request"
+      }
+    ]
+  },
+  {
+    "number": 54,
+    "title": "[Feature Request] Add ability to deploy using Azure Credentials, Resource Group Name and Function Name (without publish profile)",
+    "html_url": "https://github.com/Azure/functions-action/issues/54",
+    "labels": [
+      {
+        "id": 1528266680,
+        "node_id": "MDU6TGFiZWwxNTI4MjY2Njgw",
+        "url": "https://api.github.com/repos/Azure/functions-action/labels/enhancement",
+        "name": "enhancement",
+        "color": "a2eeef",
+        "default": true,
+        "description": "New feature or request"
+      },
+      {
+        "id": 2454815254,
+        "node_id": "MDU6TGFiZWwyNDU0ODE1MjU0",
+        "url": "https://api.github.com/repos/Azure/functions-action/labels/feature_request",
+        "name": "feature_request",
+        "color": "ededed",
+        "default": false,
+        "description": null
+      }
+    ]
+  },
+  {
+    "number": 52,
+    "title": "How to preserve file permissions in zip package",
+    "html_url": "https://github.com/Azure/functions-action/issues/52",
+    "labels": [
+      {
+        "id": 1528266677,
+        "node_id": "MDU6TGFiZWwxNTI4MjY2Njc3",
+        "url": "https://api.github.com/repos/Azure/functions-action/labels/bug",
+        "name": "bug",
+        "color": "d73a4a",
+        "default": true,
+        "description": "Something isn't working"
+      }
+    ]
+  },
+  {
+    "number": 39,
+    "title": "Unable to deploy a linux typescript functionapp",
+    "html_url": "https://github.com/Azure/functions-action/issues/39",
+    "labels": [
+      {
+        "id": 1528266680,
+        "node_id": "MDU6TGFiZWwxNTI4MjY2Njgw",
+        "url": "https://api.github.com/repos/Azure/functions-action/labels/enhancement",
+        "name": "enhancement",
+        "color": "a2eeef",
+        "default": true,
+        "description": "New feature or request"
+      }
+    ]
+  }
+]

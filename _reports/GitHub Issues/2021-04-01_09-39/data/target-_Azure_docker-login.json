@@ -1,0 +1,14 @@
+[
+  {
+    "number": 28,
+    "title": "Documentation request:  clarify why use this action",
+    "html_url": "https://github.com/Azure/docker-login/issues/28",
+    "labels": []
+  },
+  {
+    "number": 25,
+    "title": "Managed identity authentication support",
+    "html_url": "https://github.com/Azure/docker-login/issues/25",
+    "labels": []
+  }
+]

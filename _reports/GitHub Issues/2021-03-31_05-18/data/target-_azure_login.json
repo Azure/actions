@@ -1,0 +1,98 @@
+[
+  {
+    "number": 100,
+    "title": "Azure Portal - No update Customer Managed Keys option",
+    "html_url": "https://github.com/Azure/login/issues/100",
+    "labels": [
+      {
+        "id": 2387335285,
+        "node_id": "MDU6TGFiZWwyMzg3MzM1Mjg1",
+        "url": "https://api.github.com/repos/Azure/login/labels/need-to-triage",
+        "name": "need-to-triage",
+        "color": "efe373",
+        "default": false,
+        "description": ""
+      }
+    ]
+  },
+  {
+    "number": 98,
+    "title": "There was an error fetching tenants",
+    "html_url": "https://github.com/Azure/login/issues/98",
+    "labels": [
+      {
+        "id": 2387335285,
+        "node_id": "MDU6TGFiZWwyMzg3MzM1Mjg1",
+        "url": "https://api.github.com/repos/Azure/login/labels/need-to-triage",
+        "name": "need-to-triage",
+        "color": "efe373",
+        "default": false,
+        "description": ""
+      }
+    ]
+  },
+  {
+    "number": 56,
+    "title": "Self-Hosted Github Runner in Azure VM using Managed Identity",
+    "html_url": "https://github.com/Azure/login/issues/56",
+    "labels": [
+      {
+        "id": 1577050447,
+        "node_id": "MDU6TGFiZWwxNTc3MDUwNDQ3",
+        "url": "https://api.github.com/repos/Azure/login/labels/enhancement",
+        "name": "enhancement",
+        "color": "a2eeef",
+        "default": true,
+        "description": "New feature or request"
+      }
+    ]
+  },
+  {
+    "number": 39,
+    "title": "Feature Request: Ability to Pass Authentication Parameters Individually ",
+    "html_url": "https://github.com/Azure/login/issues/39",
+    "labels": [
+      {
+        "id": 1577050447,
+        "node_id": "MDU6TGFiZWwxNTc3MDUwNDQ3",
+        "url": "https://api.github.com/repos/Azure/login/labels/enhancement",
+        "name": "enhancement",
+        "color": "a2eeef",
+        "default": true,
+        "description": "New feature or request"
+      }
+    ]
+  },
+  {
+    "number": 27,
+    "title": "Security: Potential leak of az secrets on cmdline.",
+    "html_url": "https://github.com/Azure/login/issues/27",
+    "labels": [
+      {
+        "id": 1577050435,
+        "node_id": "MDU6TGFiZWwxNTc3MDUwNDM1",
+        "url": "https://api.github.com/repos/Azure/login/labels/bug",
+        "name": "bug",
+        "color": "d73a4a",
+        "default": true,
+        "description": "Something isn't working"
+      }
+    ]
+  },
+  {
+    "number": 20,
+    "title": "Login consistently takes 30s-60s  to complete",
+    "html_url": "https://github.com/Azure/login/issues/20",
+    "labels": [
+      {
+        "id": 2419412224,
+        "node_id": "MDU6TGFiZWwyNDE5NDEyMjI0",
+        "url": "https://api.github.com/repos/Azure/login/labels/performance-issue",
+        "name": "performance-issue",
+        "color": "5319e7",
+        "default": false,
+        "description": ""
+      }
+    ]
+  }
+]

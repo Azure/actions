@@ -1,0 +1,50 @@
+[
+  {
+    "number": 47,
+    "title": "Make the Sync Logic Pipeline agnostic",
+    "html_url": "https://github.com/Azure/manage-azure-policy/issues/47",
+    "labels": [
+      {
+        "id": 2912918226,
+        "node_id": "MDU6TGFiZWwyOTEyOTE4MjI2",
+        "url": "https://api.github.com/repos/Azure/manage-azure-policy/labels/default",
+        "name": "default",
+        "color": "5A917C",
+        "default": false,
+        "description": ""
+      }
+    ]
+  },
+  {
+    "number": 45,
+    "title": "Actions reports success when ARM API return error",
+    "html_url": "https://github.com/Azure/manage-azure-policy/issues/45",
+    "labels": [
+      {
+        "id": 2912918226,
+        "node_id": "MDU6TGFiZWwyOTEyOTE4MjI2",
+        "url": "https://api.github.com/repos/Azure/manage-azure-policy/labels/default",
+        "name": "default",
+        "color": "5A917C",
+        "default": false,
+        "description": ""
+      }
+    ]
+  },
+  {
+    "number": 43,
+    "title": "Each export creates a new Service Principal",
+    "html_url": "https://github.com/Azure/manage-azure-policy/issues/43",
+    "labels": [
+      {
+        "id": 2912918226,
+        "node_id": "MDU6TGFiZWwyOTEyOTE4MjI2",
+        "url": "https://api.github.com/repos/Azure/manage-azure-policy/labels/default",
+        "name": "default",
+        "color": "5A917C",
+        "default": false,
+        "description": ""
+      }
+    ]
+  }
+]

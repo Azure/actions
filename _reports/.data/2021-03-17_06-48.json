@@ -1,0 +1,55 @@
+{
+  "datetime": "2021-03-17T06:48:15.427Z",
+  "config": {
+    "name": "GitHub Issues",
+    "targets": {
+      "azure-arm-deploy": {
+        "type": "repo",
+        "htmlUrl": "https://github.com/Azure/arm-deploy"
+      },
+      "azure-cli": {
+        "type": "repo",
+        "htmlUrl": "https://github.com/Azure/cli"
+      }
+    },
+    "output": "_reports",
+    "reports": [
+      {
+        "name": "GitHub Issues",
+        "title": "{{{ config.name }}} Report",
+        "kind": "markdown",
+        "timezoneOffset": 5.5,
+        "sections": [
+          {
+            "name": "repo-issues",
+            "targets": [
+              "azure-arm-deploy"
+            ],
+            "config": {
+              "breakdown-by-labels": [
+                "default",
+                "stale",
+                "backlog"
+              ]
+            }
+          },
+          {
+            "name": "repo-issues",
+            "targets": [
+              "azure-cli"
+            ],
+            "config": {
+              "breakdown-by-labels": [
+                "default",
+                "stale",
+                "backlog"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "datetimeString": "2021-03-17_06-48",
+  "rootPath": "/home/runner/work/actions/actions/_reports"
+}

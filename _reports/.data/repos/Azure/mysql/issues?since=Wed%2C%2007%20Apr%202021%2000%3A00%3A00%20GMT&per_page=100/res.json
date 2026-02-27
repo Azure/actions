@@ -1,0 +1,29 @@
+{
+  "status": 200,
+  "url": "https://api.github.com/repos/Azure/mysql/issues?since=Wed%2C%2007%20Apr%202021%2000%3A00%3A00%20GMT&per_page=100",
+  "headers": {
+    "access-control-allow-origin": "*",
+    "access-control-expose-headers": "ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Used, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, Deprecation, Sunset",
+    "cache-control": "private, max-age=60, s-maxage=60",
+    "connection": "close",
+    "content-length": "2",
+    "content-security-policy": "default-src 'none'",
+    "content-type": "application/json; charset=utf-8",
+    "date": "Wed, 14 Apr 2021 06:57:05 GMT",
+    "etag": "\"de8917bb67fdb33bea645f29adb3a3420b87739ab2cf8a987ee3cf753fe35f15\"",
+    "referrer-policy": "origin-when-cross-origin, strict-origin-when-cross-origin",
+    "server": "GitHub.com",
+    "strict-transport-security": "max-age=31536000; includeSubdomains; preload",
+    "vary": "Accept, Authorization, Cookie, X-GitHub-OTP, Accept-Encoding, Accept, X-Requested-With",
+    "x-content-type-options": "nosniff",
+    "x-frame-options": "deny",
+    "x-github-media-type": "github.squirrel-girl-preview; format=json, github.inertia-preview; format=json, github.starfox-preview; format=json, github.mockingbird-preview; param=sailor-v-preview; format=json, github.squirrel-girl-preview; format=json, github.inertia-preview; format=json, github.starfox-preview; format=json, github.mockingbird-preview; param=sailor-v-preview; format=json",
+    "x-github-request-id": "07CD:036B:13A97EF:21C1D39:60769241",
+    "x-ratelimit-limit": "15000",
+    "x-ratelimit-remaining": "14988",
+    "x-ratelimit-reset": "1618387023",
+    "x-ratelimit-used": "12",
+    "x-xss-protection": "0"
+  },
+  "data": []
+}

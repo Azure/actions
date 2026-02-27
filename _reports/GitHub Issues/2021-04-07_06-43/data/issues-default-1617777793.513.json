@@ -1,0 +1,168 @@
+[
+  {
+    "number": 36,
+    "title": "JSON array as parameter input",
+    "html_url": "https://github.com/Azure/arm-deploy/issues/36",
+    "labels": [
+      {
+        "id": 2375301264,
+        "node_id": "MDU6TGFiZWwyMzc1MzAxMjY0",
+        "url": "https://api.github.com/repos/Azure/arm-deploy/labels/default",
+        "name": "default",
+        "color": "75bc0b",
+        "default": false,
+        "description": ""
+      }
+    ]
+  },
+  {
+    "number": 33,
+    "title": "Arm deployment for Azure Data Factory failed without error message",
+    "html_url": "https://github.com/Azure/arm-deploy/issues/33",
+    "labels": [
+      {
+        "id": 2375301264,
+        "node_id": "MDU6TGFiZWwyMzc1MzAxMjY0",
+        "url": "https://api.github.com/repos/Azure/arm-deploy/labels/default",
+        "name": "default",
+        "color": "75bc0b",
+        "default": false,
+        "description": ""
+      },
+      {
+        "id": 2406503268,
+        "node_id": "MDU6TGFiZWwyNDA2NTAzMjY4",
+        "url": "https://api.github.com/repos/Azure/arm-deploy/labels/stale",
+        "name": "stale",
+        "color": "ededed",
+        "default": false,
+        "description": null
+      }
+    ]
+  },
+  {
+    "number": 37,
+    "title": "Performance",
+    "html_url": "https://github.com/Azure/cli/issues/37",
+    "labels": [
+      {
+        "id": 2375300117,
+        "node_id": "MDU6TGFiZWwyMzc1MzAwMTE3",
+        "url": "https://api.github.com/repos/Azure/cli/labels/default",
+        "name": "default",
+        "color": "74f785",
+        "default": false,
+        "description": ""
+      },
+      {
+        "id": 2374375809,
+        "node_id": "MDU6TGFiZWwyMzc0Mzc1ODA5",
+        "url": "https://api.github.com/repos/Azure/cli/labels/stale",
+        "name": "stale",
+        "color": "ededed",
+        "default": false,
+        "description": null
+      }
+    ]
+  },
+  {
+    "number": 36,
+    "title": "Easier to identify container based action",
+    "html_url": "https://github.com/Azure/cli/issues/36",
+    "labels": [
+      {
+        "id": 2375300117,
+        "node_id": "MDU6TGFiZWwyMzc1MzAwMTE3",
+        "url": "https://api.github.com/repos/Azure/cli/labels/default",
+        "name": "default",
+        "color": "74f785",
+        "default": false,
+        "description": ""
+      },
+      {
+        "id": 2374375809,
+        "node_id": "MDU6TGFiZWwyMzc0Mzc1ODA5",
+        "url": "https://api.github.com/repos/Azure/cli/labels/stale",
+        "name": "stale",
+        "color": "ededed",
+        "default": false,
+        "description": null
+      }
+    ]
+  },
+  {
+    "number": 32,
+    "title": "Misleading docs: Azure Login is NOT required",
+    "html_url": "https://github.com/Azure/cli/issues/32",
+    "labels": [
+      {
+        "id": 2375300117,
+        "node_id": "MDU6TGFiZWwyMzc1MzAwMTE3",
+        "url": "https://api.github.com/repos/Azure/cli/labels/default",
+        "name": "default",
+        "color": "74f785",
+        "default": false,
+        "description": ""
+      },
+      {
+        "id": 2374375809,
+        "node_id": "MDU6TGFiZWwyMzc0Mzc1ODA5",
+        "url": "https://api.github.com/repos/Azure/cli/labels/stale",
+        "name": "stale",
+        "color": "ededed",
+        "default": false,
+        "description": null
+      }
+    ]
+  },
+  {
+    "number": 31,
+    "title": "Getting network connection error while deploying ARM templates using az deployment group.",
+    "html_url": "https://github.com/Azure/cli/issues/31",
+    "labels": [
+      {
+        "id": 2375300117,
+        "node_id": "MDU6TGFiZWwyMzc1MzAwMTE3",
+        "url": "https://api.github.com/repos/Azure/cli/labels/default",
+        "name": "default",
+        "color": "74f785",
+        "default": false,
+        "description": ""
+      },
+      {
+        "id": 2374375809,
+        "node_id": "MDU6TGFiZWwyMzc0Mzc1ODA5",
+        "url": "https://api.github.com/repos/Azure/cli/labels/stale",
+        "name": "stale",
+        "color": "ededed",
+        "default": false,
+        "description": null
+      }
+    ]
+  },
+  {
+    "number": 30,
+    "title": "Add service principal id, key and tenant id as environment variables",
+    "html_url": "https://github.com/Azure/cli/issues/30",
+    "labels": [
+      {
+        "id": 2375300117,
+        "node_id": "MDU6TGFiZWwyMzc1MzAwMTE3",
+        "url": "https://api.github.com/repos/Azure/cli/labels/default",
+        "name": "default",
+        "color": "74f785",
+        "default": false,
+        "description": ""
+      },
+      {
+        "id": 2374375809,
+        "node_id": "MDU6TGFiZWwyMzc0Mzc1ODA5",
+        "url": "https://api.github.com/repos/Azure/cli/labels/stale",
+        "name": "stale",
+        "color": "ededed",
+        "default": false,
+        "description": null
+      }
+    ]
+  }
+]

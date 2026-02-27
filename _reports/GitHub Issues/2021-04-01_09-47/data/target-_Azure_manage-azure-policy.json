@@ -1,0 +1,20 @@
+[
+  {
+    "number": 47,
+    "title": "Make the Sync Logic Pipeline agnostic",
+    "html_url": "https://github.com/Azure/manage-azure-policy/issues/47",
+    "labels": []
+  },
+  {
+    "number": 45,
+    "title": "Actions reports success when ARM API return error",
+    "html_url": "https://github.com/Azure/manage-azure-policy/issues/45",
+    "labels": []
+  },
+  {
+    "number": 43,
+    "title": "Each export creates a new Service Principal",
+    "html_url": "https://github.com/Azure/manage-azure-policy/issues/43",
+    "labels": []
+  }
+]

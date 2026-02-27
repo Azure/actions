@@ -1,0 +1,18 @@
+[
+  {
+    "number": 13,
+    "title": "defunct?",
+    "html_url": "https://github.com/Azure/functions-container-action/issues/13",
+    "labels": [
+      {
+        "id": 2387358838,
+        "node_id": "MDU6TGFiZWwyMzg3MzU4ODM4",
+        "url": "https://api.github.com/repos/Azure/functions-container-action/labels/need-to-triage",
+        "name": "need-to-triage",
+        "color": "fbca04",
+        "default": false,
+        "description": ""
+      }
+    ]
+  }
+]

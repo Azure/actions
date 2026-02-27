@@ -1,0 +1,14 @@
+[
+  {
+    "number": 22,
+    "title": "Feature: Inclusion of Management Group Scope",
+    "html_url": "https://github.com/Azure/policy-compliance-scan/issues/22",
+    "labels": []
+  },
+  {
+    "number": 20,
+    "title": "Feature request: ignore policy assignment",
+    "html_url": "https://github.com/Azure/policy-compliance-scan/issues/20",
+    "labels": []
+  }
+]

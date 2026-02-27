@@ -1,0 +1,18 @@
+[
+  {
+    "number": 31,
+    "title": "sql-action failing to deploy to Azure Gov for Synapse Workspace, but works in Azure Commercial",
+    "html_url": "https://github.com/Azure/sql-action/issues/31",
+    "labels": [
+      {
+        "id": 1576987351,
+        "node_id": "MDU6TGFiZWwxNTc2OTg3MzUx",
+        "url": "https://api.github.com/repos/Azure/sql-action/labels/question",
+        "name": "question",
+        "color": "d876e3",
+        "default": true,
+        "description": "Further information is requested"
+      }
+    ]
+  }
+]

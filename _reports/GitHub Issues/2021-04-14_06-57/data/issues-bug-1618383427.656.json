@@ -1,0 +1,82 @@
+[
+  {
+    "number": 100,
+    "title": "Azure Portal - No update Customer Managed Keys option",
+    "html_url": "https://github.com/Azure/login/issues/100",
+    "labels": [
+      {
+        "id": 1577050435,
+        "node_id": "MDU6TGFiZWwxNTc3MDUwNDM1",
+        "url": "https://api.github.com/repos/Azure/login/labels/bug",
+        "name": "bug",
+        "color": "d73a4a",
+        "default": true,
+        "description": "Something isn't working"
+      }
+    ]
+  },
+  {
+    "number": 27,
+    "title": "Security: Potential leak of az secrets on cmdline.",
+    "html_url": "https://github.com/Azure/login/issues/27",
+    "labels": [
+      {
+        "id": 1577050435,
+        "node_id": "MDU6TGFiZWwxNTc3MDUwNDM1",
+        "url": "https://api.github.com/repos/Azure/login/labels/bug",
+        "name": "bug",
+        "color": "d73a4a",
+        "default": true,
+        "description": "Something isn't working"
+      }
+    ]
+  },
+  {
+    "number": 33,
+    "title": "Step succeeds while error stream is written",
+    "html_url": "https://github.com/Azure/powershell/issues/33",
+    "labels": [
+      {
+        "id": 1899679442,
+        "node_id": "MDU6TGFiZWwxODk5Njc5NDQy",
+        "url": "https://api.github.com/repos/Azure/powershell/labels/bug",
+        "name": "bug",
+        "color": "d73a4a",
+        "default": true,
+        "description": "Something isn't working"
+      }
+    ]
+  },
+  {
+    "number": 52,
+    "title": "How to preserve file permissions in zip package",
+    "html_url": "https://github.com/Azure/functions-action/issues/52",
+    "labels": [
+      {
+        "id": 1528266677,
+        "node_id": "MDU6TGFiZWwxNTI4MjY2Njc3",
+        "url": "https://api.github.com/repos/Azure/functions-action/labels/bug",
+        "name": "bug",
+        "color": "d73a4a",
+        "default": true,
+        "description": "Something isn't working"
+      }
+    ]
+  },
+  {
+    "number": 21,
+    "title": "Changing the split character for variable substitution",
+    "html_url": "https://github.com/microsoft/variable-substitution/issues/21",
+    "labels": [
+      {
+        "id": 1633875436,
+        "node_id": "MDU6TGFiZWwxNjMzODc1NDM2",
+        "url": "https://api.github.com/repos/microsoft/variable-substitution/labels/bug",
+        "name": "bug",
+        "color": "d73a4a",
+        "default": true,
+        "description": "Something isn't working"
+      }
+    ]
+  }
+]

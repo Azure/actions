@@ -1,0 +1,18 @@
+[
+  {
+    "number": 21,
+    "title": "Changing the split character for variable substitution",
+    "html_url": "https://github.com/microsoft/variable-substitution/issues/21",
+    "labels": [
+      {
+        "id": 1633875436,
+        "node_id": "MDU6TGFiZWwxNjMzODc1NDM2",
+        "url": "https://api.github.com/repos/microsoft/variable-substitution/labels/bug",
+        "name": "bug",
+        "color": "d73a4a",
+        "default": true,
+        "description": "Something isn't working"
+      }
+    ]
+  }
+]

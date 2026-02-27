@@ -1,0 +1,187 @@
+[
+  {
+    "number": 56,
+    "title": "Self-Hosted Github Runner in Azure VM using Managed Identity",
+    "html_url": "https://github.com/Azure/login/issues/56",
+    "labels": [
+      {
+        "id": 1577050447,
+        "node_id": "MDU6TGFiZWwxNTc3MDUwNDQ3",
+        "url": "https://api.github.com/repos/Azure/login/labels/enhancement",
+        "name": "enhancement",
+        "color": "a2eeef",
+        "default": true,
+        "description": "New feature or request"
+      }
+    ]
+  },
+  {
+    "number": 39,
+    "title": "Feature Request: Ability to Pass Authentication Parameters Individually ",
+    "html_url": "https://github.com/Azure/login/issues/39",
+    "labels": [
+      {
+        "id": 1577050447,
+        "node_id": "MDU6TGFiZWwxNTc3MDUwNDQ3",
+        "url": "https://api.github.com/repos/Azure/login/labels/enhancement",
+        "name": "enhancement",
+        "color": "a2eeef",
+        "default": true,
+        "description": "New feature or request"
+      }
+    ]
+  },
+  {
+    "number": 14,
+    "title": "Private hosted runners",
+    "html_url": "https://github.com/Azure/powershell/issues/14",
+    "labels": [
+      {
+        "id": 1899679445,
+        "node_id": "MDU6TGFiZWwxODk5Njc5NDQ1",
+        "url": "https://api.github.com/repos/Azure/powershell/labels/enhancement",
+        "name": "enhancement",
+        "color": "a2eeef",
+        "default": true,
+        "description": "New feature or request"
+      }
+    ]
+  },
+  {
+    "number": 118,
+    "title": "Provide the commit message in the zip deploy API",
+    "html_url": "https://github.com/Azure/webapps-deploy/issues/118",
+    "labels": [
+      {
+        "id": 1536433398,
+        "node_id": "MDU6TGFiZWwxNTM2NDMzMzk4",
+        "url": "https://api.github.com/repos/Azure/webapps-deploy/labels/enhancement",
+        "name": "enhancement",
+        "color": "a2eeef",
+        "default": true,
+        "description": "New feature or request"
+      }
+    ]
+  },
+  {
+    "number": 106,
+    "title": "Action does not support app service with kind api",
+    "html_url": "https://github.com/Azure/webapps-deploy/issues/106",
+    "labels": [
+      {
+        "id": 1536433398,
+        "node_id": "MDU6TGFiZWwxNTM2NDMzMzk4",
+        "url": "https://api.github.com/repos/Azure/webapps-deploy/labels/enhancement",
+        "name": "enhancement",
+        "color": "a2eeef",
+        "default": true,
+        "description": "New feature or request"
+      }
+    ]
+  },
+  {
+    "number": 32,
+    "title": "feature request : Add support of Xml PublishProfile configuration",
+    "html_url": "https://github.com/Azure/sql-action/issues/32",
+    "labels": [
+      {
+        "id": 1576987340,
+        "node_id": "MDU6TGFiZWwxNTc2OTg3MzQw",
+        "url": "https://api.github.com/repos/Azure/sql-action/labels/enhancement",
+        "name": "enhancement",
+        "color": "a2eeef",
+        "default": true,
+        "description": "New feature or request"
+      }
+    ]
+  },
+  {
+    "number": 11,
+    "title": "Linux support?",
+    "html_url": "https://github.com/Azure/sql-action/issues/11",
+    "labels": [
+      {
+        "id": 1576987340,
+        "node_id": "MDU6TGFiZWwxNTc2OTg3MzQw",
+        "url": "https://api.github.com/repos/Azure/sql-action/labels/enhancement",
+        "name": "enhancement",
+        "color": "a2eeef",
+        "default": true,
+        "description": "New feature or request"
+      }
+    ]
+  },
+  {
+    "number": 77,
+    "title": "Support .PublishProfile with ZipDeploy section",
+    "html_url": "https://github.com/Azure/functions-action/issues/77",
+    "labels": [
+      {
+        "id": 1528266680,
+        "node_id": "MDU6TGFiZWwxNTI4MjY2Njgw",
+        "url": "https://api.github.com/repos/Azure/functions-action/labels/enhancement",
+        "name": "enhancement",
+        "color": "a2eeef",
+        "default": true,
+        "description": "New feature or request"
+      }
+    ]
+  },
+  {
+    "number": 58,
+    "title": "Support Run from Package feature",
+    "html_url": "https://github.com/Azure/functions-action/issues/58",
+    "labels": [
+      {
+        "id": 1528266680,
+        "node_id": "MDU6TGFiZWwxNTI4MjY2Njgw",
+        "url": "https://api.github.com/repos/Azure/functions-action/labels/enhancement",
+        "name": "enhancement",
+        "color": "a2eeef",
+        "default": true,
+        "description": "New feature or request"
+      }
+    ]
+  },
+  {
+    "number": 54,
+    "title": "[Feature Request] Add ability to deploy using Azure Credentials, Resource Group Name and Function Name (without publish profile)",
+    "html_url": "https://github.com/Azure/functions-action/issues/54",
+    "labels": [
+      {
+        "id": 1528266680,
+        "node_id": "MDU6TGFiZWwxNTI4MjY2Njgw",
+        "url": "https://api.github.com/repos/Azure/functions-action/labels/enhancement",
+        "name": "enhancement",
+        "color": "a2eeef",
+        "default": true,
+        "description": "New feature or request"
+      },
+      {
+        "id": 2454815254,
+        "node_id": "MDU6TGFiZWwyNDU0ODE1MjU0",
+        "url": "https://api.github.com/repos/Azure/functions-action/labels/feature_request",
+        "name": "feature_request",
+        "color": "ededed",
+        "default": false,
+        "description": null
+      }
+    ]
+  },
+  {
+    "number": 39,
+    "title": "Unable to deploy a linux typescript functionapp",
+    "html_url": "https://github.com/Azure/functions-action/issues/39",
+    "labels": [
+      {
+        "id": 1528266680,
+        "node_id": "MDU6TGFiZWwxNTI4MjY2Njgw",
+        "url": "https://api.github.com/repos/Azure/functions-action/labels/enhancement",
+        "name": "enhancement",
+        "color": "a2eeef",
+        "default": true,
+        "description": "New feature or request"
+      }
+    ]
+  }
+]

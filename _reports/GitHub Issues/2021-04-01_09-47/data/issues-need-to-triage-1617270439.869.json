@@ -1,0 +1,34 @@
+[
+  {
+    "number": 120,
+    "title": "Add log stream to deployment",
+    "html_url": "https://github.com/Azure/webapps-deploy/issues/120",
+    "labels": [
+      {
+        "id": 2387353928,
+        "node_id": "MDU6TGFiZWwyMzg3MzUzOTI4",
+        "url": "https://api.github.com/repos/Azure/webapps-deploy/labels/need-to-triage",
+        "name": "need-to-triage",
+        "color": "fbca04",
+        "default": false,
+        "description": ""
+      }
+    ]
+  },
+  {
+    "number": 119,
+    "title": "Add docs for efficiently deploying Node.js Express apps",
+    "html_url": "https://github.com/Azure/webapps-deploy/issues/119",
+    "labels": [
+      {
+        "id": 2387353928,
+        "node_id": "MDU6TGFiZWwyMzg3MzUzOTI4",
+        "url": "https://api.github.com/repos/Azure/webapps-deploy/labels/need-to-triage",
+        "name": "need-to-triage",
+        "color": "fbca04",
+        "default": false,
+        "description": ""
+      }
+    ]
+  }
+]

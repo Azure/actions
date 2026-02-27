@@ -1,0 +1,27 @@
+[
+  {
+    "number": 109,
+    "title": "App service gives \"service unavailable 503\" after successful deployment",
+    "html_url": "https://github.com/Azure/webapps-deploy/issues/109",
+    "labels": [
+      {
+        "id": 2888876285,
+        "node_id": "MDU6TGFiZWwyODg4ODc2Mjg1",
+        "url": "https://api.github.com/repos/Azure/webapps-deploy/labels/stale",
+        "name": "stale",
+        "color": "ededed",
+        "default": false,
+        "description": null
+      },
+      {
+        "id": 2607217254,
+        "node_id": "MDU6TGFiZWwyNjA3MjE3MjU0",
+        "url": "https://api.github.com/repos/Azure/webapps-deploy/labels/under-investigation",
+        "name": "under-investigation",
+        "color": "3278C8",
+        "default": false,
+        "description": ""
+      }
+    ]
+  }
+]

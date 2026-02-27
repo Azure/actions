@@ -1,0 +1,29 @@
+{
+  "status": 200,
+  "url": "https://api.github.com/repos/Azure/k8s-bake/issues?state=open&per_page=100",
+  "headers": {
+    "access-control-allow-origin": "*",
+    "access-control-expose-headers": "ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Used, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, Deprecation, Sunset",
+    "cache-control": "private, max-age=60, s-maxage=60",
+    "connection": "close",
+    "content-length": "2",
+    "content-security-policy": "default-src 'none'",
+    "content-type": "application/json; charset=utf-8",
+    "date": "Wed, 14 Apr 2021 06:57:08 GMT",
+    "etag": "\"de8917bb67fdb33bea645f29adb3a3420b87739ab2cf8a987ee3cf753fe35f15\"",
+    "referrer-policy": "origin-when-cross-origin, strict-origin-when-cross-origin",
+    "server": "GitHub.com",
+    "strict-transport-security": "max-age=31536000; includeSubdomains; preload",
+    "vary": "Accept, Authorization, Cookie, X-GitHub-OTP, Accept-Encoding, Accept, X-Requested-With",
+    "x-content-type-options": "nosniff",
+    "x-frame-options": "deny",
+    "x-github-media-type": "github.squirrel-girl-preview; format=json, github.inertia-preview; format=json, github.starfox-preview; format=json, github.mockingbird-preview; param=sailor-v-preview; format=json, github.squirrel-girl-preview; format=json, github.inertia-preview; format=json, github.starfox-preview; format=json, github.mockingbird-preview; param=sailor-v-preview; format=json",
+    "x-github-request-id": "07E0:6FD7:140A2A0:2221BAD:60769244",
+    "x-ratelimit-limit": "15000",
+    "x-ratelimit-remaining": "14969",
+    "x-ratelimit-reset": "1618387023",
+    "x-ratelimit-used": "31",
+    "x-xss-protection": "0"
+  },
+  "data": []
+}
