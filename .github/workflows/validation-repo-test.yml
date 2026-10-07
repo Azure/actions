@@ -9,7 +9,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@0717577d45739eb3c851188b29f50ed6c0b2194e # v2.8.0
     - name: validating action repos
       id: checks_validation
       uses: GH-ACE/action-repo-validation@users/balaga-gayatri/release-patch
@@ -19,7 +19,7 @@ jobs:
         repositories: 'Azure/login,Azure/webapps-deploy,Azure/aci-deploy,Azure/build-vm-image,Azure/functions-action,Azure/functions-container-action,Azure/mysql,Azure/postgresql,Azure/powershell,Azure/sql-action,Azure/appservice-settings,Azure/policy-compliance-scan,Azure/k8s-create-secret,Azure/k8s-deploy,Azure/k8s-lint,Azure/manage-azure-policy,Azure/setup-kubectl,Azure/aks-set-context,Azure/k8s-bake,Azure/static-web-apps-deploy,Azure/get-keyvault-secrets,Azure/AppConfiguration-Sync,Azure/k8s-set-context,Azure/setup-helm,Azure/container-scan,Azure/docker-login,Azure/publish-security-assessments,Azure/arm-deploy,Azure/cli'
     - name: create-json
       id: create-json
-      uses: jsdaniell/create-json@1.1.2
+      uses: jsdaniell/create-json@4a4e510bf85e1193b9fca74074d2bf4ee26de08c # 1.1.2
       with:
         name: "validation-dashboard/result.json"
         json: "${{steps.checks_validation.outputs.validationResult}}"
@@ -40,11 +40,11 @@ jobs:
       shell: bash
     - name: Push changes
       if: steps.commit1.outputs.push == 'true'
-      uses: ad-m/github-push-action@master
+      uses: ad-m/github-push-action@881a6320fdb16eb5318c5054f31c218aec2b324c # v1.3.0
       with:
         github_token: "${{ secrets.GITHUB_TOKEN }}"
     
-    - uses: actions/setup-python@v2
+    - uses: actions/setup-python@e9aba2c848f5ebd159c070c61ea2c4e2b122355e # v2.3.4
       with:
         python-version: '3.9.0-alpha - 3.9.0' # SemVer's version range syntax
     - run: |
@@ -68,6 +68,6 @@ jobs:
       shell: bash
     - name: Push changes
       if: steps.commit2.outputs.push == 'true'
-      uses: ad-m/github-push-action@master
+      uses: ad-m/github-push-action@881a6320fdb16eb5318c5054f31c218aec2b324c # v1.3.0
       with:
         github_token: "${{ secrets.GITHUB_TOKEN }}"

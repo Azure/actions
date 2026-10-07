@@ -8,10 +8,10 @@ jobs:
     runs-on: windows-latest
     steps:
       - name: Check out repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@0717577d45739eb3c851188b29f50ed6c0b2194e # v2.8.0
       - name: 'Generate Dashboard'
         id: dashboard
-        uses: GH-ACE/issue-dashboard@v1
+        uses: GH-ACE/issue-dashboard@d7968ad7cce5bc920fed58f9001b22d581338b71 # v1
         with:
           config: ./dashboard-config/issue-view-config.yml
           configType: file
@@ -34,6 +34,6 @@ jobs:
 
       - name: Push changes
         if: steps.commit.outputs.push == 'true'
-        uses: ad-m/github-push-action@master
+        uses: ad-m/github-push-action@881a6320fdb16eb5318c5054f31c218aec2b324c # v1.3.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
